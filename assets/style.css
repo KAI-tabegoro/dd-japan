@@ -476,6 +476,48 @@ html[lang=en] .feature2 b{letter-spacing:.03em}
   .banner2 .txt{position:relative;transform:none;top:auto;width:auto;margin-top:-20px;padding:0 max(16px,env(safe-area-inset-right,0px)) 26px max(16px,env(safe-area-inset-left,0px))}
 }
 
+/* ---- 新しいイラスト素材（高解像度）版 ---- */
+.hero2 .wrap{height:auto;min-height:480px;padding-block:56px}
+.hero2 .photo{left:0;right:0;top:0;bottom:0;width:100%;height:100%;aspect-ratio:auto;background:url(../img/hero.jpg) 60% 55%/cover no-repeat}
+.hero2 .shade{left:0;right:0;width:100%;height:100%;aspect-ratio:auto;
+  background:linear-gradient(90deg,rgba(11,9,7,.94) 0%,rgba(11,9,7,.82) 24%,rgba(11,9,7,.4) 42%,rgba(11,9,7,0) 58%),linear-gradient(0deg,rgba(11,9,7,.55) 0%,rgba(11,9,7,0) 22%)}
+.hero2 .shade::before{display:none}
+.hero2 .eyebrow::after{width:150px;height:34px;background:url(../img/brush.png) left center/contain no-repeat;transform:none;border-radius:0;opacity:.95}
+.cats2{background:linear-gradient(rgba(12,11,9,.62),rgba(12,11,9,.62)),url(../img/pattern.jpg) center 40%/1400px auto #0c0b09}
+.cats2 > .seigaiha{display:none}
+.cat2 img{width:54px;height:54px;filter:drop-shadow(0 0 6px rgba(232,190,110,.25))}
+@media (max-width:760px){
+  .hero2 .photo{position:relative;height:auto;aspect-ratio:1672/941;background-position:center}
+  .hero2 .shade{height:auto;aspect-ratio:1672/941;bottom:auto;background:linear-gradient(180deg,rgba(11,9,7,0) 50%,rgba(11,9,7,.85) 88%,#0b0907 100%)}
+  .hero2 .wrap{min-height:0;padding-block:0 32px;margin-top:-48px}
+  .hero2 .eyebrow{font-size:17px;gap:8px;white-space:nowrap}
+  .hero2 .eyebrow::after{width:80px;height:24px;flex:none}
+}
+
+/* ---- 個別写真素材（最終）版：写真にグラデーションで文字を重ねる ---- */
+.region2{display:block;aspect-ratio:210/143;max-width:100%}
+.region2 img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+.region2::after{display:block;content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.85) 0%,rgba(0,0,0,.35) 36%,rgba(0,0,0,0) 60%);pointer-events:none}
+.region2 b{position:absolute;left:0;right:0;bottom:7px;margin:0;padding:0 4px;background:none;z-index:1;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.9)}
+.feature2{display:block;position:relative;aspect-ratio:504/215;max-width:100%}
+.feature2 img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+.feature2::before{display:block;content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(0deg,rgba(18,12,6,.92) 0%,rgba(18,12,6,.6) 34%,rgba(18,12,6,0) 62%)}
+.feature2 .ft{position:absolute;left:0;right:0;bottom:0;margin:0;z-index:2;padding:0 48px 16px 24px;background:none}
+.banner2{height:250px}
+.banner2::before,.banner2::after{display:none}
+.banner2 .photo{width:100%;aspect-ratio:auto;height:100%;background:url(../img/fuji.jpg) 62% center/cover no-repeat}
+.banner2 .shade{width:100%;height:100%;aspect-ratio:auto;background:linear-gradient(270deg,rgba(11,20,38,.96) 0%,rgba(11,20,38,.82) 30%,rgba(11,20,38,.3) 46%,rgba(11,20,38,0) 58%)}
+.lcard{padding:0;overflow:hidden}
+.lcard .lphoto{display:block;width:100%;height:auto;aspect-ratio:254/150;object-fit:cover}
+.lcard .lbody{padding:18px 22px 22px;position:relative}
+.lcard .lbody::before{content:"";position:absolute;left:0;right:0;top:-48px;height:48px;background:linear-gradient(0deg,var(--panel),rgba(27,23,19,0))}
+@media (max-width:760px){
+  .banner2{height:auto}
+  .banner2 .photo{position:relative;height:150px;background-position:45% center}
+  .banner2 .shade{height:150px;background:linear-gradient(180deg,rgba(11,20,38,0) 45%,#0b1426 100%)}
+  .banner2 .txt{margin-top:-6px}
+}
+
 html[lang=en] nav.main a span,html[lang=en] .sec-head .latin{display:none}
 html{scroll-behavior:smooth;scroll-padding-top:110px}
 /* ---- 静的サイト版の追加 ---- */
@@ -489,3 +531,5 @@ html{scroll-behavior:smooth;scroll-padding-top:110px}
 .howto ol{margin:6px 0 0;padding-left:1.4em}
 .howto code{background:var(--panel2);padding:0 6px;border-radius:3px}
 .st.new{color:var(--warn)} .st.del{color:var(--err)}
+/* 下層ページの見出しまわりに和柄の背景 */
+body:not([data-page="home"]) main{background:linear-gradient(180deg,rgba(13,11,9,.5) 0,rgba(13,11,9,.82) 180px,var(--bg) 360px),url(../img/pattern.jpg) center top/1672px auto no-repeat}

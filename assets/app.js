@@ -246,7 +246,8 @@ function renderLearn(){
    ["ラム","Rum","サトウキビの搾り汁や糖蜜、黒糖から造る蒸留酒。沖縄や奄美、小笠原などで造られています。","Distilled from cane juice, molasses or brown sugar, made in Okinawa, Amami and other islands."],
    ["リキュール・その他","Liqueur & Others","梅酒や柚子酒など、果実や植物を漬け込んだ酒。食前酒やデザートの一杯にも向きます。","Fruit and botanical liqueurs such as umeshu and yuzushu, ideal before or after a meal."]
   ];
-  $("#learnCards").innerHTML=L.map(l=>`<div class="lcard" style="--cc:${ccVar(l[0])}"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p></div>`).join("");
+  const LIMG={"日本酒":"sake","焼酎":"shochu","ウイスキー":"whisky","ジン":"gin","ラム":"rum","リキュール・その他":"liq"};
+  $("#learnCards").innerHTML=L.map(l=>`<div class="lcard" style="--cc:${ccVar(l[0])}"><img class="lphoto" src="img/c-${LIMG[l[0]]}.jpg" alt="" width="254" height="150" loading="lazy"><div class="lbody"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p></div></div>`).join("");
   const S={sweet:["口に含んだときの甘さの感じ方。日本酒度や残糖だけでなく、飲み手の感覚で表します。","How sweet it feels on the palate, judged by taste rather than numbers alone."],
            body:["味の厚み・コク。軽快なものは食中に、濃醇なものはゆっくり一杯に。","Weight and depth. Light suits meals; rich suits slow sipping."],
            aroma:["香りの立ち方。華やかな果実・花の香りから、穏やかな穀物の香りまで。","From vivid fruit and flowers to quiet grain."],
