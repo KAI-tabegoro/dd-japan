@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>管理画面｜蔵の和</title>
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="管理画面｜蔵の和">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body data-page="admin">
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="蔵の和 KURA no WA"><img class="mark" src="img/logo-mark.png" alt="" width="96" height="96"><span class="word"><b>蔵の和</b><small>KURA no WA</small><i>JAPANESE SPIRITS</i></span></a>
+    <nav class="main" aria-label="メインメニュー">
+      <a href="products.html"><b data-i="nav.products">お酒を探す</b><span>Products</span></a>
+      <a href="breweries.html"><b data-i="nav.breweries">酒蔵・蒸溜所</b><span>Breweries</span></a>
+      <a href="finder.html"><b data-i="nav.finder">味わい診断</b><span>Taste Finder</span></a>
+      <a href="index.html#regions"><b data-i="nav.regions">産地から探す</b><span>Regions</span></a>
+      <a href="learn.html"><b data-i="nav.learn">日本のお酒を知る</b><span>Learn</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-ja" type="button" aria-pressed="true">JP</button>
+      <button id="lang-en" type="button" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="wrap" id="admin">
+  <div class="adm-head"><h1>管理画面</h1><span class="latin">Admin</span><a href="index.html">← サイトに戻る</a></div>
+  <div class="flow">
+    <div><b>1. テンプレートを配る</b>酒蔵さんに「掲載データ入力シート」を送り、記入してもらいます。<br><a class="btn ghost" href="template/kuranowa_template.xlsx" download="蔵の和_掲載データ入力シート.xlsx">入力テンプレートを保存</a></div>
+    <div><b>2. Excelを取り込んで確認</b>取り込んだ内容は、このパソコンのブラウザ内で作業中として保存されます。「確認」でサイト上の見え方を確かめます。</div>
+    <div><b>3. 公開用データを保存してGitHubへ</b>「公開用データを保存」で breweries.json を保存し、GitHub の data フォルダに上げると1〜2分でサイトに反映されます。</div>
+  </div>
+  <div class="import">
+    <label class="drop" id="drop" for="file">
+      <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M12 6h18l8 8v28H12z"/><path d="M30 6v8h8"/><path d="M24 36V22m-6 6 6-6 6 6"/></svg>
+      <b>Excelファイルをここにドロップ</b>
+      <small>またはクリックして選択（.xlsx・複数可）</small>
+      <input type="file" id="file" accept=".xlsx,.xls" multiple>
+    </label>
+    <div class="panel">
+      <h3 style="font-size:17px;margin-bottom:10px">取り込みのルール</h3>
+      <ol class="steps" id="impRules"></ol>
+      <div class="log" id="log" aria-live="polite"></div>
+    </div>
+  </div>
+  <div class="pubbar" id="pubbar">
+    <div><b id="pubState">変更はありません</b><small id="pubSub">サイトに公開中のデータと同じです。</small></div>
+    <div class="acts"><button class="abtn" type="button" id="discardBtn" hidden>作業を取り消す</button><button class="btn solid" type="button" id="exportBtn" disabled>公開用データを保存</button></div>
+  </div>
+  <div class="howto" id="howto" hidden>
+    <b>保存した breweries.json をGitHubに上げると公開されます</b>
+    <ol>
+      <li>GitHub で蔵の和のリポジトリを開き、<code>data</code> フォルダに入ります。</li>
+      <li>「Add file」→「Upload files」を選び、保存した <code>breweries.json</code> をドラッグします。</li>
+      <li>下の「Commit changes」を押します。1〜2分ほどでサイトに反映されます。</li>
+    </ol>
+  </div>
+  <h2 class="admin-sec-title">酒蔵の一覧</h2>
+  <p class="admin-sec-note">公開中の酒蔵がひとつもない間は、サイトに見本（架空データ）が表示されます。</p>
+  <div class="admmsg" id="admMsg" aria-live="polite"></div>
+  <div class="tblwrap"><table class="adm"><thead><tr><th>酒蔵</th><th>都道府県</th><th style="text-align:right">銘柄</th><th>状態</th><th>最終取込</th><th style="text-align:right">操作</th></tr></thead><tbody id="admRows"></tbody></table></div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 蔵の和 KURA no WA</span><span data-i="foot">お酒は20歳になってから。飲酒運転は法律で禁止されています。</span></div></footer>
+
+<dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

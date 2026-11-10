@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<!-- 公開準備中：検索エンジンに載せない。正式公開時にこの行を削除 -->
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>蔵の和 KURA no WA｜日本の酒を、世界の食卓へ</title>
+<meta name="description" content="小さな酒蔵・蒸溜所がつくる日本酒、焼酎、ウイスキー、ジン、ラムを、造り手の想いと味わいの特徴とともに紹介します。">
+<meta property="og:title" content="蔵の和 KURA no WA｜日本の酒を、世界の食卓へ">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo-mark.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1:wght@500;700;800&family=Noto+Sans+JP:wght@400;500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="home">
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="蔵の和 KURA no WA"><img class="mark" src="img/logo-mark.png" alt="" width="96" height="96"><span class="word"><b>蔵の和</b><small>KURA no WA</small><i>JAPANESE SPIRITS</i></span></a>
+    <nav class="main" aria-label="メインメニュー">
+      <a href="products.html"><b data-i="nav.products">お酒を探す</b><span>Products</span></a>
+      <a href="breweries.html"><b data-i="nav.breweries">酒蔵・蒸溜所</b><span>Breweries</span></a>
+      <a href="finder.html"><b data-i="nav.finder">味わい診断</b><span>Taste Finder</span></a>
+      <a href="index.html#regions"><b data-i="nav.regions">産地から探す</b><span>Regions</span></a>
+      <a href="learn.html"><b data-i="nav.learn">日本のお酒を知る</b><span>Learn</span></a>
+    </nav>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-ja" type="button" aria-pressed="true">JP</button>
+      <button id="lang-en" type="button" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero2">
+  <div class="photo" role="img" aria-label="酒器と、ウイスキー・ジンのグラス"></div><div class="shade"></div>
+  <div class="wrap">
+    <div class="copy">
+      <h1 data-i="home.h1">日本の酒を、<br>世界の食卓へ。</h1>
+      <div class="eyebrow">JAPANESE SPIRITS</div>
+      <p data-i="home.lead">日本酒、焼酎、ウイスキー、ジン、ラムなど、<br>日本でつくられる多彩なお酒の魅力を、<br>造り手の想いとともにお届けします。</p>
+      <a class="btn solid" href="products.html"><span data-i="home.cta">お酒を探す</span> ›</a>
+    </div>
+  </div>
+</section>
+<div class="cats2"><span class="seigaiha" aria-hidden="true" style="position:absolute;left:0;top:0;bottom:0;width:140px;opacity:.5;-webkit-mask:linear-gradient(90deg,#000,transparent);mask:linear-gradient(90deg,#000,transparent)"></span><span class="seigaiha" aria-hidden="true" style="position:absolute;right:0;top:0;bottom:0;width:140px;opacity:.5;-webkit-mask:linear-gradient(270deg,#000,transparent);mask:linear-gradient(270deg,#000,transparent)"></span>
+  <div class="wrap"><div class="row" id="cats"></div></div>
+</div>
+<a class="banner2" href="learn.html">
+  <div class="photo" role="img" aria-label="桜と富士山"></div><div class="shade"></div>
+  <div class="txt">
+    <h2 data-i="home.bh">日本のお酒の魅力</h2>
+    <span class="latin">The Essence of Japanese Spirits</span>
+    <p data-i="home.bp">風土が育む原料、磨かれた醸造・蒸溜の技、<br>そして地域ごとに息づく酒の文化。<br>日本のお酒が持つ奥深い魅力をご紹介します。</p>
+    <span class="btn ghost"><span data-i="home.bcta">日本のお酒を知る</span> ›</span>
+  </div>
+</a>
+<section class="block wrap" id="regions" style="padding-top:40px">
+  <div class="sec-head"><h2 data-i="regions.h">産地から探す</h2><span class="latin">Find by Region</span></div>
+  <div class="regions" id="regionTiles"></div>
+</section>
+<section class="block wrap" id="features" aria-label="特集" style="padding-top:28px">
+  <div class="features">
+    <a class="feature2" href="learn.html"><img src="img/f-learn.jpg" alt="" width="395" height="68" loading="lazy"><span class="ft"><b data-i="home.f1">製法を知る</b><small data-i="home.f1s">日本のお酒の造り方と種類</small></span></a>
+    <a class="feature2" href="breweries.html"><img src="img/f-visit.jpg" alt="" width="385" height="68" loading="lazy"><span class="ft"><b data-i="home.f2">酒蔵・蒸溜所を訪ねる</b><small data-i="home.f2s">造り手の想いとこだわり</small></span></a>
+    <button class="feature2" type="button" id="pairBtn"><img src="img/f-pair.jpg" alt="" width="395" height="68" loading="lazy"><span class="ft"><b data-i="home.f3">料理とのペアリング</b><small data-i="home.f3s">お酒が引き立てる食の魅力</small></span></button>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© 蔵の和 KURA no WA</span><span data-i="foot">お酒は20歳になってから。飲酒運転は法律で禁止されています。</span></div></footer>
+
+<dialog id="dlg"><div class="dlg" id="dlgBody"></div></dialog>
+<script src="assets/app.js" defer></script>
+</body>
+</html>

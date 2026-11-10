@@ -1,0 +1,4 @@
+# 公開準備中：検索エンジンに載せない設定です。
+# 正式公開時は下の2行を「User-agent: *」「Disallow: /admin.html」に変えてください。
+User-agent: *
+Disallow: /
