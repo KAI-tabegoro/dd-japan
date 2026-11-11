@@ -721,6 +721,10 @@ header.top .logo .word small{font-size:15px;letter-spacing:.2em;margin-top:0;lin
 .ped-list img,.ped-list .ni{width:44px;height:44px;object-fit:contain;background:#F6F2EA;border-radius:4px;display:block}
 .ped-list .pn b{display:block;font-size:14px;font-weight:500;line-height:1.4}
 .ped-list .pn small{font-size:12px;color:var(--mute)}
+.ped-list .pcat{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px;align-items:center}
+.ped-list .pcat select,.ped-list .pcat input,.ped-tools select{font:inherit;font-size:12.5px;padding:3px 6px;border:1px solid var(--line-strong);border-radius:4px;background:#fff;color:var(--ink)}
+.ped-list .pcat input{width:9em}
+.ped-list .pcat .fx{font-size:11px;color:#8a6420}
 .ped-list .pn .tag{display:inline-block;font-size:11px;padding:0 6px;border-radius:3px;background:#E9E1CF;color:#6b5420;margin-left:6px}
 .ped-list .ops{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
 .ped-list .ops .abtn{padding:4px 8px;min-width:32px}

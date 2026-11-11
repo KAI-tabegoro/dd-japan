@@ -501,7 +501,7 @@ function parseMaster(wb){
   return {groups:[...groups.values()],stats,unknownSub:[...unknownSub]};
 }
 // 既にある内容（酒蔵さんが入力した味わい・紹介文など）を残して、取引データの項目だけを更新する
-const KEEP_P=["t","tags","serve","food","buyUrl","photo","hidden","ord"];
+const KEEP_P=["t","tags","serve","food","buyUrl","photo","hidden","ord","typeFix","clsFix"];
 let PHOTOS=new Set();
 function photoKey(src){ const m=String(src||"").match(/^\/uploads\/maker\/([^/]*)\/([^/]+)$/); return m?`${m[1]||"_root"}/${m[2].replace(/\.[^.]+$/,"")}.webp`:""; }
 async function loadPhotos(){ try{ const r=await fetch("img/products/index.json",{cache:"no-cache"}); if(r.ok) PHOTOS=new Set(await r.json()); }catch(_){} }
@@ -514,6 +514,7 @@ function mergeMaster(g,old){
     const o=oldP.get(p.mid); if(!o) return p; kept++;
     const n={...p}; KEEP_P.forEach(k=>{ if(o[k]!=null&&!(Array.isArray(o[k])&&!o[k].length)&&o[k]!=="") n[k]=o[k]; });
     if(o.descSrc==="brewery"){ n.desc=o.desc; n.descEn=o.descEn; n.descSrc="brewery"; }
+    if(n.typeFix) n.type=n.typeFix; if(n.clsFix!=null) n.cls=n.clsFix;   // 管理画面で直した種類・分類は取り込み直しても残す
     return n;
   });
   const own=((old&&old.products)||[]).filter(p=>!p.mid);          // 酒蔵さんが直接入力した銘柄は残す
@@ -669,7 +670,7 @@ function buildExport(){
 }
 function adminAct(act,id){
   if(act==="preview"){ openBrewery(id,"draft"); return; }
-  if(act==="edit"){ edState={id,q:"",del:null}; renderEditor(); return; }
+  if(act==="edit"){ edState={id,q:"",t:"",del:null}; renderEditor(); return; }
   if(act==="del"){ confirmDel=id; renderAdmin(); return; }
   if(act==="del-no"){ confirmDel=null; renderAdmin(); return; }
   const name=(DRAFT[id]||PUB[id])?.brewery?.name||"";
@@ -685,19 +686,23 @@ function renderEditor(flash){
   const nh=ps.filter(p=>p.hidden).length;
   const rows=ps.map((p,i)=>{
     if(q&&!N(p.name+(p.nameEn||"")).includes(q)) return "";
+    if(edState.t&&p.type!==edState.t) return "";
     const img=p.photo?`<img src="img/products/${esc(encodeURI(p.photo))}" alt="">`:`<span class="ni"></span>`;
-    const meta=[p.cls||p.type,p.ml?p.ml+"ml":""].filter(Boolean).join("・");
+    const meta=[p.ml?p.ml+"ml":"",p.abv?p.abv+"%":""].filter(Boolean).join("・");
+    const cat=`<div class="pcat"><select data-edf="type" data-i="${i}" aria-label="種類">${TYPES.map(t=>`<option value="${esc(t.k)}"${t.k===p.type?" selected":""}>${esc(t.k)}</option>`).join("")}</select><input data-edf="cls" data-i="${i}" list="clsList" value="${esc(p.cls||"")}" placeholder="分類（例：純米吟醸）" aria-label="分類">${p.typeFix||p.clsFix!=null?`<span class="fx">変更済み</span>`:""}</div>`;
     const ops = edState.del===p.id
       ? `<span style="font-size:12.5px;color:var(--err)">${p.mid?"取引データを取り込み直すと戻ります。削除しますか？":"削除しますか？"}</span><button class="abtn danger" type="button" data-ed="del-yes" data-i="${i}">はい</button><button class="abtn" type="button" data-ed="del-no">やめる</button>`
       : `<button class="abtn" type="button" data-ed="top" data-i="${i}" title="いちばん上へ" ${i===0?"disabled":""}>⤒</button><button class="abtn" type="button" data-ed="up" data-i="${i}" title="1つ上へ" ${i===0?"disabled":""}>↑</button><button class="abtn" type="button" data-ed="down" data-i="${i}" title="1つ下へ" ${i===ps.length-1?"disabled":""}>↓</button><button class="abtn" type="button" data-ed="hide" data-i="${i}">${p.hidden?"表示する":"非表示"}</button><button class="abtn danger" type="button" data-ed="del" data-i="${i}">削除</button>`;
-    return `<li class="${p.hidden?"off":""}${flash===p.id?" moved":""}" data-pid="${esc(p.id)}"><span class="no">${i+1}</span>${img}<div class="pn"><b>${esc(p.name)}${p.hidden?`<span class="tag">非表示</span>`:""}</b><small>${esc(meta)}</small></div><div class="ops">${ops}</div></li>`;
+    return `<li class="${p.hidden?"off":""}${flash===p.id?" moved":""}" data-pid="${esc(p.id)}"><span class="no">${i+1}</span>${img}<div class="pn"><b>${esc(p.name)}${p.hidden?`<span class="tag">非表示</span>`:""}</b><small>${esc(meta)}</small>${cat}</div><div class="ops">${ops}</div></li>`;
   }).join("");
   const keep=dlg.open?[$("#dlgBody").scrollTop,dlg.scrollTop]:[0,0];
   openDlg(`<div class="ped-head"><h2>${esc(doc.brewery.short||doc.brewery.name)}</h2><span style="font-size:13px;color:var(--mute)">${ps.length} 銘柄${nh?`（うち非表示 ${nh}）`:""}</span></div>
     <p class="ped-note">ここで並べた順番が、酒蔵のページに出る順番になります。「非表示」にした銘柄はサイトに出ませんが、取引データを取り込み直しても非表示のまま残ります。完全に消したい場合も、取引データにある銘柄は「非表示」がおすすめです（「削除」は取り込み直すと戻ります）。<br>変更は「公開用データを保存」してGitHubに上げるとサイトに反映されます。</p>
-    <div class="ped-tools"><input type="search" id="edQ" placeholder="銘柄名で絞り込む" value="${esc(edState.q||"")}"><button class="abtn" type="button" data-ed="showall">すべて表示にする</button></div>
+    <div class="ped-tools"><input type="search" id="edQ" placeholder="銘柄名で絞り込む" value="${esc(edState.q||"")}"><select id="edT" aria-label="種類で絞り込む"><option value="">すべての種類</option>${TYPES.map(t=>`<option${t.k===edState.t?" selected":""}>${esc(t.k)}</option>`).join("")}</select><button class="abtn" type="button" data-ed="showall">すべて表示にする</button></div>
+    <datalist id="clsList">${[...new Set(Object.values(DRAFT).flatMap(d=>(d.products||[]).map(p=>p.cls)).filter(Boolean))].sort().map(c=>`<option value="${esc(c)}">`).join("")}</datalist>
     <ul class="ped-list">${rows||`<li style="display:block;color:var(--mute);padding:16px">該当する銘柄がありません</li>`}</ul>`);
   $("#dlgBody").scrollTop=keep[0]; dlg.scrollTop=keep[1];
+  $("#edT").addEventListener("change",e=>{ edState.t=e.target.value; renderEditor(); });
   const qi=$("#edQ"); qi.addEventListener("input",()=>{ edState.q=qi.value; const pos=qi.selectionStart; renderEditor(); const n=$("#edQ"); n.focus(); n.setSelectionRange(pos,pos); });
 }
 function edAct(act,i){
@@ -717,6 +722,13 @@ function edAct(act,i){
 if(PAGE==="admin"){
   $("#dlgBody").addEventListener("click",e=>{ const b=e.target.closest("[data-ed]"); if(b&&edState){ e.preventDefault(); edAct(b.dataset.ed,+b.dataset.i); } });
   dlg.addEventListener("close",()=>{ edState=null; });
+  $("#dlgBody").addEventListener("change",e=>{
+    const el=e.target.closest("[data-edf]"); if(!el||!edState) return;
+    const p=DRAFT[edState.id].products[+el.dataset.i]; const v=el.value.trim();
+    if(el.dataset.edf==="type"){ p.type=v; p.typeFix=v; }
+    else { p.cls=v; p.clsFix=v; }
+    saveWork(); renderAdmin(); renderEditor(p.id);
+  });
   $("#admRows").addEventListener("click",e=>{ const b=e.target.closest("[data-act]"); if(b) adminAct(b.dataset.act,b.dataset.id); });
   $("#exportBtn").addEventListener("click",()=>{
     const data=buildExport();
