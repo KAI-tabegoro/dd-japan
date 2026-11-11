@@ -22,7 +22,7 @@ GitHub にファイルを上げると、Vercel が自動でサイトを更新し
 
 ## 最初の公開手順
 
-1. GitHub の KAI-tabegoro に新しいリポジトリ（現在は `kuranowa`）を作ります。
+1. GitHub の KAI-tabegoro に新しいリポジトリ（`dd-japan`）を作ります。
 2. このフォルダの中身をすべてリポジトリにアップロードします（「Add file」→「Upload files」）。
 3. Vercel の washokuzaicalendar チームで「Add New…」→「Project」を選び、作ったリポジトリを Import します。
    - Framework Preset は「Other」のままで構いません。ビルドコマンドも不要です。
