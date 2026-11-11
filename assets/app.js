@@ -103,9 +103,10 @@ const sampleDB=()=>withIds(JSON.parse(JSON.stringify(SAMPLE)));
 let DB=sampleDB();
 let PUB={}, DRAFT={};            // 共有DBの公開分・下書き分（id → 文書）
 let BASE=null;   // サイトに公開中の breweries.json
+const visibleP=ps=>(ps||[]).filter(p=>p&&!p.hidden);
 function rebuildPublic(){
   const docs=Object.values(PUB).filter(d=>d&&d.brewery);
-  if(docs.length){ DB={breweries:docs.map(d=>d.brewery),products:docs.flatMap(d=>d.products||[])}; }
+  if(docs.length){ DB={breweries:docs.map(d=>d.brewery),products:docs.flatMap(d=>visibleP(d.products))}; }
   else DB=sampleDB();
 }
 
@@ -352,7 +353,7 @@ function openProduct(id){
 }
 function openBrewery(id,src){
   const doc=src==="draft"?DRAFT[id]:src==="pub"?PUB[id]:null;
-  const b=doc?doc.brewery:brewOf(id); if(!b) return; const list=doc?(doc.products||[]):DB.products.filter(p=>p.breweryId===id);
+  const b=doc?doc.brewery:brewOf(id); if(!b) return; const list=doc?visibleP(doc.products):DB.products.filter(p=>p.breweryId===id);
   const pre=src==="draft"?`<p class="notice" style="margin:0 0 14px">${T("下書きのプレビューです。まだサイトには公開されていません。","Draft preview — not published yet.")}</p>`:"";
   openDlg(pre+`<span class="where" style="color:var(--gold);font-size:12px;letter-spacing:.1em">${b.pref?esc(b.pref)+(b.city?" "+esc(b.city):"")+"　"+esc(T("地方：","Region: "))+esc(regionOf(b.pref)):"&nbsp;"}</span>
     <h2 style="font-size:clamp(24px,3.4vw,32px);margin:4px 0 0">${esc(bshort(b))}</h2>${bshort(b)!==b.name?`<div style="color:var(--mute);font-size:13px">${esc(b.name)}</div>`:""}${b.nameEn?`<div class="latin" style="color:var(--gold);font-size:18px">${esc(b.nameEn)}</div>`:""}
@@ -500,7 +501,7 @@ function parseMaster(wb){
   return {groups:[...groups.values()],stats,unknownSub:[...unknownSub]};
 }
 // 既にある内容（酒蔵さんが入力した味わい・紹介文など）を残して、取引データの項目だけを更新する
-const KEEP_P=["t","tags","serve","food","buyUrl","photo"];
+const KEEP_P=["t","tags","serve","food","buyUrl","photo","hidden","ord"];
 let PHOTOS=new Set();
 function photoKey(src){ const m=String(src||"").match(/^\/uploads\/maker\/([^/]*)\/([^/]+)$/); return m?`${m[1]||"_root"}/${m[2].replace(/\.[^.]+$/,"")}.webp`:""; }
 async function loadPhotos(){ try{ const r=await fetch("img/products/index.json",{cache:"no-cache"}); if(r.ok) PHOTOS=new Set(await r.json()); }catch(_){} }
@@ -517,7 +518,8 @@ function mergeMaster(g,old){
   });
   const own=((old&&old.products)||[]).filter(p=>!p.mid);          // 酒蔵さんが直接入力した銘柄は残す
   const removed=((old&&old.products)||[]).filter(p=>p.mid&&!g.products.some(x=>x.mid===p.mid)).length;
-  return {doc:{brewery,products:[...products,...own],importedAt:new Date().toISOString()},kept,removed,isNew:!old};
+  const all=[...products,...own].map((p,i)=>[p,i]).sort((a,b)=>((a[0].ord??1e6+a[1])-(b[0].ord??1e6+b[1]))).map(x=>x[0]);
+  return {doc:{brewery,products:all,importedAt:new Date().toISOString()},kept,removed,isNew:!old};
 }
 async function handleMaster(wb,fileName){
   await loadPhotos();
@@ -652,12 +654,12 @@ function renderAdmin(){
     .sort((a,b)=>String(b.at).localeCompare(String(a.at)));
   $("#admRows").innerHTML = rows.length ? rows.map(r=>{
     const status = !r.p ? `<span class="st new">新規（未公開）</span>` : !r.d ? `<span class="st del">掲載終了（未公開）</span>` : same(r.p,r.d) ? `<span class="st pub">公開中</span>` : `<span class="st both">更新あり（未公開）</span>`;
-    const n=(r.d||r.p).products?.length||0;
+    const ps=(r.d||r.p).products||[], n=ps.length, nh=ps.filter(p=>p.hidden).length;
     let acts;
     if(confirmDel===r.id) acts=`<span style="font-size:12.5px;color:var(--err)">${r.p?"サイトから外します":"取り込みを取り消します"}</span><button class="abtn danger" type="button" data-act="del-yes" data-id="${esc(r.id)}">はい</button><button class="abtn" type="button" data-act="del-no">やめる</button>`;
     else if(!r.d) acts=`<button class="abtn" type="button" data-act="restore" data-id="${esc(r.id)}">元に戻す</button>`;
-    else acts=`<button class="abtn" type="button" data-act="preview" data-id="${esc(r.id)}">確認</button>${r.p&&!same(r.p,r.d)?`<button class="abtn" type="button" data-act="restore" data-id="${esc(r.id)}">変更を戻す</button>`:""}<button class="abtn danger" type="button" data-act="del" data-id="${esc(r.id)}">${r.p?"掲載をやめる":"取り消す"}</button>`;
-    return `<tr><td class="nm"><b>${esc(r.b.name)}</b><small>${esc(r.b.nameEn||"")}</small></td><td>${esc(r.b.pref)}</td><td class="num">${n}</td><td>${status}</td>
+    else acts=`<button class="abtn" type="button" data-act="edit" data-id="${esc(r.id)}">銘柄の編集</button><button class="abtn" type="button" data-act="preview" data-id="${esc(r.id)}">確認</button>${r.p&&!same(r.p,r.d)?`<button class="abtn" type="button" data-act="restore" data-id="${esc(r.id)}">変更を戻す</button>`:""}<button class="abtn danger" type="button" data-act="del" data-id="${esc(r.id)}">${r.p?"掲載をやめる":"取り消す"}</button>`;
+    return `<tr><td class="nm"><b>${esc(r.b.name)}</b><small>${esc(r.b.nameEn||"")}</small></td><td>${esc(r.b.pref)}</td><td class="num">${n-nh}${nh?`<small style="display:block;color:var(--mute)">非表示 ${nh}</small>`:""}</td><td>${status}</td>
       <td style="font-size:12.5px">${fmtDate(r.at)}<small style="display:block;color:var(--mute)">${esc((r.d||r.p).fileName||"")}</small></td><td><div class="acts">${acts}</div></td></tr>`;
   }).join("") : `<tr><td colspan="6" style="text-align:center;color:var(--mute);padding:28px">まだ酒蔵がありません。上の枠に、酒蔵さんから届いたExcelを取り込んでください。</td></tr>`;
 }
@@ -667,6 +669,7 @@ function buildExport(){
 }
 function adminAct(act,id){
   if(act==="preview"){ openBrewery(id,"draft"); return; }
+  if(act==="edit"){ edState={id,q:"",del:null}; renderEditor(); return; }
   if(act==="del"){ confirmDel=id; renderAdmin(); return; }
   if(act==="del-no"){ confirmDel=null; renderAdmin(); return; }
   const name=(DRAFT[id]||PUB[id])?.brewery?.name||"";
@@ -674,7 +677,46 @@ function adminAct(act,id){
   if(act==="restore"&&PUB[id]){ DRAFT[id]=clone(PUB[id]); saveWork(); adminMsg(`${name} を公開中の内容に戻しました。`); }
   renderAdmin();
 }
+/* ---------- 銘柄の編集（非表示・削除・並べ替え） ---------- */
+let edState=null;
+function renderEditor(flash){
+  const doc=DRAFT[edState.id]; if(!doc){ dlg.open&&dlg.close(); return; }
+  const ps=doc.products||[], q=N(edState.q||"");
+  const nh=ps.filter(p=>p.hidden).length;
+  const rows=ps.map((p,i)=>{
+    if(q&&!N(p.name+(p.nameEn||"")).includes(q)) return "";
+    const img=p.photo?`<img src="img/products/${esc(encodeURI(p.photo))}" alt="">`:`<span class="ni"></span>`;
+    const meta=[p.cls||p.type,p.ml?p.ml+"ml":""].filter(Boolean).join("・");
+    const ops = edState.del===p.id
+      ? `<span style="font-size:12.5px;color:var(--err)">${p.mid?"取引データを取り込み直すと戻ります。削除しますか？":"削除しますか？"}</span><button class="abtn danger" type="button" data-ed="del-yes" data-i="${i}">はい</button><button class="abtn" type="button" data-ed="del-no">やめる</button>`
+      : `<button class="abtn" type="button" data-ed="top" data-i="${i}" title="いちばん上へ" ${i===0?"disabled":""}>⤒</button><button class="abtn" type="button" data-ed="up" data-i="${i}" title="1つ上へ" ${i===0?"disabled":""}>↑</button><button class="abtn" type="button" data-ed="down" data-i="${i}" title="1つ下へ" ${i===ps.length-1?"disabled":""}>↓</button><button class="abtn" type="button" data-ed="hide" data-i="${i}">${p.hidden?"表示する":"非表示"}</button><button class="abtn danger" type="button" data-ed="del" data-i="${i}">削除</button>`;
+    return `<li class="${p.hidden?"off":""}${flash===p.id?" moved":""}" data-pid="${esc(p.id)}"><span class="no">${i+1}</span>${img}<div class="pn"><b>${esc(p.name)}${p.hidden?`<span class="tag">非表示</span>`:""}</b><small>${esc(meta)}</small></div><div class="ops">${ops}</div></li>`;
+  }).join("");
+  const keep=dlg.open?[$("#dlgBody").scrollTop,dlg.scrollTop]:[0,0];
+  openDlg(`<div class="ped-head"><h2>${esc(doc.brewery.short||doc.brewery.name)}</h2><span style="font-size:13px;color:var(--mute)">${ps.length} 銘柄${nh?`（うち非表示 ${nh}）`:""}</span></div>
+    <p class="ped-note">ここで並べた順番が、酒蔵のページに出る順番になります。「非表示」にした銘柄はサイトに出ませんが、取引データを取り込み直しても非表示のまま残ります。完全に消したい場合も、取引データにある銘柄は「非表示」がおすすめです（「削除」は取り込み直すと戻ります）。<br>変更は「公開用データを保存」してGitHubに上げるとサイトに反映されます。</p>
+    <div class="ped-tools"><input type="search" id="edQ" placeholder="銘柄名で絞り込む" value="${esc(edState.q||"")}"><button class="abtn" type="button" data-ed="showall">すべて表示にする</button></div>
+    <ul class="ped-list">${rows||`<li style="display:block;color:var(--mute);padding:16px">該当する銘柄がありません</li>`}</ul>`);
+  $("#dlgBody").scrollTop=keep[0]; dlg.scrollTop=keep[1];
+  const qi=$("#edQ"); qi.addEventListener("input",()=>{ edState.q=qi.value; const pos=qi.selectionStart; renderEditor(); const n=$("#edQ"); n.focus(); n.setSelectionRange(pos,pos); });
+}
+function edAct(act,i){
+  const doc=DRAFT[edState.id], ps=doc.products; const p=ps[i]; let flash=p&&p.id;
+  const mv=(from,to)=>{ const [x]=ps.splice(from,1); ps.splice(to,0,x); };
+  if(act==="up"&&i>0) mv(i,i-1);
+  else if(act==="down"&&i<ps.length-1) mv(i,i+1);
+  else if(act==="top"&&i>0) mv(i,0);
+  else if(act==="hide") p.hidden=!p.hidden||undefined;
+  else if(act==="del"){ edState.del=p.id; renderEditor(); return; }
+  else if(act==="del-no"){ edState.del=null; renderEditor(); return; }
+  else if(act==="del-yes"){ ps.splice(i,1); edState.del=null; flash=null; }
+  else if(act==="showall"){ ps.forEach(x=>{ delete x.hidden; }); flash=null; }
+  ps.forEach((x,k)=>{ x.ord=k; if(!x.hidden) delete x.hidden; });
+  saveWork(); renderAdmin(); renderEditor(flash);
+}
 if(PAGE==="admin"){
+  $("#dlgBody").addEventListener("click",e=>{ const b=e.target.closest("[data-ed]"); if(b&&edState){ e.preventDefault(); edAct(b.dataset.ed,+b.dataset.i); } });
+  dlg.addEventListener("close",()=>{ edState=null; });
   $("#admRows").addEventListener("click",e=>{ const b=e.target.closest("[data-act]"); if(b) adminAct(b.dataset.act,b.dataset.id); });
   $("#exportBtn").addEventListener("click",()=>{
     const data=buildExport();
