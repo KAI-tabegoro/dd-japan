@@ -141,8 +141,12 @@ function score(p){
   let d=0; AX.forEach(a=>{ const x=p.t[a.k]-st.pref[a.k]; d+=x*x; });
   return Math.max(0,Math.round(100-Math.sqrt(d)/8*100));
 }
-const CLS_EN={"純米大吟醸":"Junmai Daiginjo","純米吟醸":"Junmai Ginjo","特別純米":"Tokubetsu Junmai","純米":"Junmai","山廃純米":"Yamahai Junmai","大吟醸":"Daiginjo","吟醸":"Ginjo","特別本醸造":"Tokubetsu Honjozo","本醸造":"Honjozo","清酒":"Seishu","スパークリング":"Sparkling","にごり":"Nigori (cloudy)","古酒":"Koshu (aged)","芋焼酎":"Imo (sweet potato)","麦焼酎":"Mugi (barley)","米焼酎":"Kome (rice)","黒糖焼酎":"Kokuto (brown sugar)","米":"Kome (rice)","黒糖":"Kokuto (brown sugar)","玄米":"Brown rice","酒粕":"Kasutori (sake lees)","そば":"Soba (buckwheat)","栗":"Chestnut","ごま":"Sesame","じゃがいも":"Potato","にんじん":"Carrot","かぼちゃ":"Pumpkin","ピーマン":"Green pepper","わさび":"Wasabi","ジンジャー":"Ginger","黒豆":"Black soybean","ブレンド":"Blend","牛乳":"Milk","珈琲":"Coffee","緑茶":"Green tea","スピリッツ":"Spirits","ジン":"Gin","クラフトジン":"Craft gin","ラム":"Rum","ホワイトラム":"White rum","ダークラム":"Dark rum","ウォッカ":"Vodka","グラッパ":"Grappa","ブランデー":"Brandy","シングルモルト":"Single malt","リキュール":"Liqueur","梅酒":"Umeshu (plum)","スパークリング梅酒":"Sparkling umeshu","柚子酒":"Yuzushu","ゆず":"Yuzu","みかん":"Mikan (mandarin)","レモン":"Lemon","いちご":"Strawberry","かぼす":"Kabosu citrus","じゃばら":"Jabara citrus","すもも":"Sumomo plum","たんかん":"Tankan orange","へべす":"Hebesu citrus","文旦":"Buntan pomelo","河内晩柑":"Kawachi bankan citrus","もも":"Peach","りんご":"Apple","ぶどう":"Grape","ブルーベリー":"Blueberry","マンゴー":"Mango","山桃":"Yamamomo (bayberry)","はちみつ":"Honey","ほうじ茶":"Hojicha","紅茶":"Black tea","抹茶":"Matcha","生姜":"Ginger","カルダモン":"Cardamom","キャラメル":"Caramel","ヨーグルト":"Yogurt","乳酸菌":"Lactic drink","ソフトクリーム":"Soft-serve","タピオカ":"Tapioca","サングリア":"Sangria","チューハイ":"Chuhai","どぶろく":"Doburoku (unfiltered)","保命酒":"Homeishu (herbal)","味醂":"Mirin","樽熟成焼酎":"Cask-aged shochu","ノンアルコール":"Non-alcoholic","赤":"Red","白":"White","ロゼ":"Rosé"};
+const CLS_EN={"純米大吟醸":"Junmai Daiginjo","純米吟醸":"Junmai Ginjo","特別純米":"Tokubetsu Junmai","純米":"Junmai","山廃純米":"Yamahai Junmai","大吟醸":"Daiginjo","吟醸":"Ginjo","特別本醸造":"Tokubetsu Honjozo","本醸造":"Honjozo","清酒":"Seishu","スパークリング":"Sparkling","にごり":"Nigori (cloudy)","古酒":"Koshu (aged)","芋焼酎":"Imo (sweet potato)","麦焼酎":"Mugi (barley)","米焼酎":"Kome (rice)","黒糖焼酎":"Kokuto (brown sugar)","米":"Kome (rice)","黒糖":"Kokuto (brown sugar)","玄米":"Brown rice","酒粕":"Kasutori (sake lees)","そば":"Soba (buckwheat)","栗":"Chestnut","ごま":"Sesame","じゃがいも":"Potato","にんじん":"Carrot","かぼちゃ":"Pumpkin","ピーマン":"Green pepper","わさび":"Wasabi","ジンジャー":"Ginger","黒豆":"Black soybean","ブレンド":"Blend","牛乳":"Milk","珈琲":"Coffee","緑茶":"Green tea","スピリッツ":"Spirits","ジン":"Gin","クラフトジン":"Craft gin","ラム":"Rum","ホワイトラム":"White rum","ダークラム":"Dark rum","ウォッカ":"Vodka","グラッパ":"Grappa","ブランデー":"Brandy","シングルモルト":"Single malt","リキュール":"Liqueur","梅酒":"Umeshu (plum)","スパークリング梅酒":"Sparkling umeshu","柚子酒":"Yuzushu","ゆず":"Yuzu","みかん":"Mikan (mandarin)","レモン":"Lemon","いちご":"Strawberry","かぼす":"Kabosu citrus","じゃばら":"Jabara citrus","すもも":"Sumomo plum","たんかん":"Tankan orange","へべす":"Hebesu citrus","文旦":"Buntan pomelo","河内晩柑":"Kawachi bankan citrus","もも":"Peach","りんご":"Apple","ぶどう":"Grape","ブルーベリー":"Blueberry","マンゴー":"Mango","山桃":"Yamamomo (bayberry)","はちみつ":"Honey","ほうじ茶":"Hojicha","紅茶":"Black tea","抹茶":"Matcha","生姜":"Ginger","カルダモン":"Cardamom","キャラメル":"Caramel","ヨーグルト":"Yogurt","乳酸菌":"Lactic drink","ソフトクリーム":"Soft-serve","タピオカ":"Tapioca","サングリア":"Sangria","チューハイ":"Chuhai","どぶろく":"Doburoku (unfiltered)","保命酒":"Homeishu (herbal)","味醂":"Mirin","樽熟成焼酎":"Cask-aged shochu","山河":"Sanga","ノンアルコール":"Non-alcoholic","赤":"Red","白":"White","ロゼ":"Rosé"};
 const clsName=c=>T(c,CLS_EN[c]);
+const PREF_EN={"北海道":"Hokkaido","青森":"Aomori","岩手":"Iwate","宮城":"Miyagi","秋田":"Akita","山形":"Yamagata","福島":"Fukushima","茨城":"Ibaraki","栃木":"Tochigi","群馬":"Gunma","埼玉":"Saitama","千葉":"Chiba","東京":"Tokyo","神奈川":"Kanagawa","新潟":"Niigata","富山":"Toyama","石川":"Ishikawa","福井":"Fukui","山梨":"Yamanashi","長野":"Nagano","岐阜":"Gifu","静岡":"Shizuoka","愛知":"Aichi","三重":"Mie","滋賀":"Shiga","京都":"Kyoto","大阪":"Osaka","兵庫":"Hyogo","奈良":"Nara","和歌山":"Wakayama","鳥取":"Tottori","島根":"Shimane","岡山":"Okayama","広島":"Hiroshima","山口":"Yamaguchi","徳島":"Tokushima","香川":"Kagawa","愛媛":"Ehime","高知":"Kochi","福岡":"Fukuoka","佐賀":"Saga","長崎":"Nagasaki","熊本":"Kumamoto","大分":"Oita","宮崎":"Miyazaki","鹿児島":"Kagoshima","沖縄":"Okinawa"};
+const prefKey=p=>String(p||"").normalize("NFKC").trim().replace(/(?<!^)[都府県]$/,"");
+const prefName=p=>p?T(p,PREF_EN[prefKey(p)]):"";
+const regionName=pref=>{ const k=regionOf(pref), r=REGIONS.find(x=>x.k===k); return r?T(r.k,r.en):""; };
 function pname(p){ return T(p.name,p.nameEn); }
 function bname(b){ return b?T(bshort(b),b.nameEn):""; }
 
@@ -161,9 +165,9 @@ function cardHTML(p){
     <div class="body">
       <span class="typetag">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
       <h3>${esc(pname(p))}</h3>
-      <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(b.pref):""}</span>
+      <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(prefName(b.pref)):""}</span>
       ${hasT(p)?`<div class="mini">${AX.map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
-      <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}</span><span>${esc(T(b?.pref||"",regionOf(b?.pref)))}</span></div>
+      <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}</span><span>${esc(T(b?.pref||"",regionName(b?.pref)))}</span></div>
     </div></button>`;
 }
 
@@ -230,7 +234,7 @@ function filtered(){
     const b=brewOf(p.breweryId);
     if(st.type&&p.type!==st.type) return false;
     if(st.region&&regionOf(b?.pref)!==st.region) return false;
-    if(q){ const hay=[p.name,p.nameEn,p.cls,p.material,p.food,p.desc,(p.tags||[]).join(" "),b?.name,bshort(b),b?.nameEn,b?.pref].join(" ").normalize("NFKC").toLowerCase(); if(!hay.includes(q.normalize("NFKC"))) return false; }
+    if(q){ const hay=[p.name,p.nameEn,p.cls,p.material,p.food,p.desc,(p.tags||[]).join(" "),b?.name,bshort(b),b?.nameEn,b?.pref,PREF_EN[prefKey(b?.pref)]].join(" ").normalize("NFKC").toLowerCase(); if(!hay.includes(q.normalize("NFKC"))) return false; }
     return true;
   });
   const s=st.sort;
@@ -265,7 +269,7 @@ function renderBreweries(){
   const cnt={},kinds={}; DB.products.forEach(p=>{ cnt[p.breweryId]=(cnt[p.breweryId]||0)+1; (kinds[p.breweryId]=kinds[p.breweryId]||new Set()).add(p.type); });
   $("#blist").innerHTML=bs.map(b=>{
     const n=cnt[b.id]||0, ks=[...(kinds[b.id]||[])];
-    const where=[b.pref,b.city].filter(Boolean).join(" ")+(b.founded?"｜"+T("創業 ","Est. ")+b.founded:"");
+    const where=[prefName(b.pref),lang==="ja"?b.city:""].filter(Boolean).join(" ")+(b.founded?"｜"+T("創業 ","Est. ")+b.founded:"");
     return `<button class="bcard" type="button" data-b="${esc(b.id)}"><span class="seal" aria-hidden="true">${esc(bshort(b).charAt(0)||"蔵")}</span>
       <span class="where">${esc(where)||"&nbsp;"}</span>
       <h3>${esc(bshort(b))}${bshort(b)!==b.name?`<small>${esc(b.name)}</small>`:""}</h3>${b.nameEn?`<span class="latin" style="color:var(--gold);font-size:15px;margin-top:-6px">${esc(b.nameEn)}</span>`:""}
@@ -361,14 +365,14 @@ function openProduct(id){
         </dl>
       </div>
       ${/^https:\/\//.test(p.buyUrl||"")?`<a class="btn solid" style="margin-top:16px" href="${esc(p.buyUrl)}" target="_blank" rel="noopener">${T("酒蔵の販売ページで見る","View on the maker's shop")} ›</a>`:""}
-      ${b?`<button class="brewlink" type="button" data-b="${esc(b.id)}"><span><small style="color:var(--gold);display:block;font-size:11px">${T("造り手","Made by")}</small><b style="font-family:var(--f-display);font-size:17px">${esc(bshort(b))}</b> <span style="color:var(--mute);font-size:12px">${esc(b.pref||"")}</span></span><span>›</span></button>`:""}
+      ${b?`<button class="brewlink" type="button" data-b="${esc(b.id)}"><span><small style="color:var(--gold);display:block;font-size:11px">${T("造り手","Made by")}</small><b style="font-family:var(--f-display);font-size:17px">${esc(bname(b))}</b> <span style="color:var(--mute);font-size:12px">${esc(prefName(b.pref))}</span>${(lang==="en"?(b.introEn||"").split(/(?<=\.)\s/)[0]:b.catch)?`<small style="display:block;color:var(--ink);font-size:13px;margin-top:4px;line-height:1.6">${esc(lang==="en"?(b.introEn||"").split(/(?<=\.)\s/)[0]:b.catch)}</small>`:""}</span><span>›</span></button>`:""}
     </div></div>`);
 }
 function openBrewery(id,src){
   const doc=src==="draft"?DRAFT[id]:src==="pub"?PUB[id]:null;
   const b=doc?doc.brewery:brewOf(id); if(!b) return; const list=doc?visibleP(doc.products):DB.products.filter(p=>p.breweryId===id);
   const pre=src==="draft"?`<p class="notice" style="margin:0 0 14px">${T("下書きのプレビューです。まだサイトには公開されていません。","Draft preview — not published yet.")}</p>`:"";
-  openDlg(pre+`<span class="where" style="color:var(--gold);font-size:12px;letter-spacing:.1em">${b.pref?esc(b.pref)+(b.city?" "+esc(b.city):"")+"　"+esc(T("地方：","Region: "))+esc(regionOf(b.pref)):"&nbsp;"}</span>
+  openDlg(pre+`<span class="where" style="color:var(--gold);font-size:12px;letter-spacing:.1em">${b.pref?esc(prefName(b.pref))+(b.city&&lang==="ja"?" "+esc(b.city):"")+"　"+esc(T("地方：","Region: "))+esc(regionName(b.pref)):"&nbsp;"}</span>
     <h2 style="font-size:clamp(24px,3.4vw,32px);margin:4px 0 0">${esc(bshort(b))}</h2>${bshort(b)!==b.name?`<div style="color:var(--mute);font-size:13px">${esc(b.name)}</div>`:""}${b.nameEn?`<div class="latin" style="color:var(--gold);font-size:18px">${esc(b.nameEn)}</div>`:""}
     ${b.catch?`<p style="font-family:var(--f-display);font-size:18px;margin:14px 0 4px">${esc(b.catch)}</p>`:""}
     ${T(b.intro,b.introEn)?`<p class="desc" style="max-width:44em">${esc(T(b.intro,b.introEn))}</p>`:`<p class="taste-wait" style="text-align:left;margin:14px 0">${T("酒蔵の紹介は準備中です。","The brewery profile is coming soon.")}</p>`}
