@@ -744,3 +744,6 @@ header.top .logo .word small{font-size:15px;letter-spacing:.2em;margin-top:0;lin
 .howto code{background:var(--panel2);padding:0 6px;border-radius:3px}
 .st.new{color:var(--warn)} .st.del{color:var(--err)}
 /* 下層ページの見出しまわりに和柄の背景 */
+
+/* 種類の色：スピリッツ（旧ジン）・泡盛 */
+:root{--c-spirits:#5E9A72;--c-awamori:#3E7FA6}

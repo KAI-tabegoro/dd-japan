@@ -6,14 +6,25 @@
 const TYPES=[
  {k:"日本酒",en:"Sake",img:"cat-sake",c:"--c-sake",icon:'<path d="M14 8h8v6c5 3 6 8 6 14v12H10V28c0-6 1-11 4-14z"/><path d="M30 32h10l-1 8h-8z"/>'},
  {k:"焼酎",en:"Shochu",img:"cat-shochu",c:"--c-shochu",icon:'<path d="M14 12h20l-2 5c4 3 6 8 6 13 0 7-6 12-14 12S10 37 10 30c0-5 2-10 6-13z"/><path d="M14 12c0-3 4-4 10-4s10 1 10 4"/><path d="M12 26h24"/>'},
+ {k:"泡盛",en:"Awamori",img:"cat-awamori",c:"--c-awamori",icon:""},
  {k:"ウイスキー",en:"Whisky",img:"cat-whisky",c:"--c-whisky",icon:'<path d="M10 10h28l-3 30H13z"/><path d="M12 22h24"/><path d="M17 26l6 6m0-6-6 6M25 28l5 5"/>'},
- {k:"ジン",en:"Gin",img:"cat-gin",c:"--c-gin",icon:'<path d="M24 42V20"/><path d="M24 22c-6-4-8-10-6-14m6 14c6-4 8-10 6-14M24 30c-7-2-11-7-11-12m11 12c7-2 11-7 11-12"/><circle cx="17" cy="36" r="3"/><circle cx="31" cy="36" r="3"/>'},
- {k:"ラム",en:"Rum",img:"cat-rum",c:"--c-rum",icon:'<path d="M12 42 30 8M20 42 36 12M8 34l10-2M14 24l10-2M22 14l8-2"/>'},
+ {k:"スピリッツ",en:"Spirits",img:"cat-spirits",c:"--c-spirits",icon:""},
  {k:"ビール",en:"Beer",img:"cat-beer",c:"--c-beer",icon:""},
  {k:"ワイン",en:"Wine",img:"cat-wine",c:"--c-wine",icon:""},
  {k:"リキュール・その他",en:"Liqueur & Others",img:"cat-liq",c:"--c-liq",icon:'<circle cx="24" cy="24" r="5"/><circle cx="24" cy="12" r="6"/><circle cx="35" cy="21" r="6"/><circle cx="31" cy="34" r="6"/><circle cx="17" cy="34" r="6"/><circle cx="13" cy="21" r="6"/>'}
 ];
-const TYPE_ALIASES={"日本酒":"日本酒","清酒":"日本酒","sake":"日本酒","焼酎":"焼酎","本格焼酎":"焼酎","泡盛":"焼酎","shochu":"焼酎","ウイスキー":"ウイスキー","ウィスキー":"ウイスキー","whisky":"ウイスキー","whiskey":"ウイスキー","ジン":"ジン","クラフトジン":"ジン","gin":"ジン","ラム":"ラム","rum":"ラム","リキュール":"リキュール・その他","梅酒":"リキュール・その他","リキュール・その他":"リキュール・その他","その他":"リキュール・その他","その他酒類":"リキュール・その他","ウォッカ":"リキュール・その他","ビール":"ビール","発泡酒":"ビール","クラフトビール":"ビール","beer":"ビール","ワイン":"ワイン","wine":"ワイン"};
+const TYPE_ALIASES={"日本酒":"日本酒","清酒":"日本酒","sake":"日本酒","焼酎":"焼酎","本格焼酎":"焼酎","泡盛":"泡盛","awamori":"泡盛","shochu":"焼酎","ウイスキー":"ウイスキー","ウィスキー":"ウイスキー","whisky":"ウイスキー","whiskey":"ウイスキー","スピリッツ":"スピリッツ","spirits":"スピリッツ","ジン":"スピリッツ","クラフトジン":"スピリッツ","gin":"スピリッツ","ラム":"スピリッツ","rum":"スピリッツ","vodka":"スピリッツ","リキュール":"リキュール・その他","梅酒":"リキュール・その他","リキュール・その他":"リキュール・その他","その他":"リキュール・その他","その他酒類":"リキュール・その他","ウォッカ":"スピリッツ","ブランデー":"スピリッツ","brandy":"スピリッツ","グラッパ":"スピリッツ","grappa":"スピリッツ","ビール":"ビール","発泡酒":"ビール","クラフトビール":"ビール","beer":"ビール","ワイン":"ワイン","wine":"ワイン"};
+/* ---------- 種類の移行（2026/11：ジン・ラム・ウォッカ→スピリッツ、泡盛を独立） ---------- */
+const SPIRIT_CLS={"スピリッツ":"スピリッツ","spirits":"スピリッツ","ジン":"スピリッツ","クラフトジン":"スピリッツ","gin":"スピリッツ","ラム":"スピリッツ","rum":"スピリッツ","vodka":"スピリッツ","ウォッカ":"ウォッカ","vodka":"ウォッカ"};
+function migrateP(p){
+  if(!p) return p;
+  if(p.type==="ジン"||p.type==="ラム"){ const c=p.type; p.type="スピリッツ"; if(!p.cls) p.cls=c; }
+  else if(p.type==="リキュール・その他"&&(p.cls==="ウォッカ"||p.cls==="グラッパ"||p.cls==="ブランデー")){ p.type="スピリッツ"; if(p.cls!=="ウォッカ") p.typeFix="スピリッツ"; }
+  else if(p.type==="焼酎"&&p.cls==="泡盛"){ p.type="泡盛"; p.cls=""; }
+  if(p.typeFix==="ジン"||p.typeFix==="ラム"){ const c=p.typeFix; p.typeFix="スピリッツ"; if(p.clsFix==null) p.clsFix=p.cls||c; }
+  return p;
+}
+function migrateDoc(d){ if(d&&d.products) d.products.forEach(migrateP); return d; }
 const REGIONS=[
  {k:"北海道",img:"r-hokkaido",en:"Hokkaido",sky:["#2F5A41","#A8C87A"],hill:"#23402F",prefs:["北海道"]},
  {k:"東北",img:"r-tohoku",en:"Tohoku",sky:["#4E6582","#D3DDE8"],hill:"#E9EEF3",prefs:["青森","岩手","宮城","秋田","山形","福島"]},
@@ -86,13 +97,13 @@ const SAMPLE={breweries:[
  {breweryId:"shiomi",name:"汐見 黒麹仕込み",nameEn:"Shiomi Kuro-koji",type:"焼酎",cls:"芋焼酎",material:"黄金千貫、黒麹",abv:25,ml:900,t:{sweet:3,body:4,aroma:3,char:4},tags:["焼き芋","土","黒糖"],serve:["お湯割り","ロック"],food:"黒豚しゃぶしゃぶ、さつま揚げ",desc:"黒麹由来の力強いコクと、焼き芋のような香ばしさ。お湯割りにすると甘みが立ちます。",descEn:"Bold black-koji depth with roasted sweet-potato notes; sweetness rises when mixed with hot water."},
  {breweryId:"shiomi",name:"汐見 紅はるか 華",nameEn:"Shiomi Beniharuka Hana",type:"焼酎",cls:"芋焼酎",material:"紅はるか、白麹",abv:25,ml:720,t:{sweet:4,body:3,aroma:5,char:2},tags:["焼き芋","蜜","花"],serve:["ロック","ソーダ割り"],food:"豚の角煮、スイートポテト",desc:"熟成させた紅はるかを使い、花のような香りと蜜の甘さを引き出しました。芋焼酎が初めての方にも。",descEn:"Aged Beniharuka potatoes give floral aromas and honeyed sweetness. A friendly first shochu."},
  {breweryId:"kuragamori",name:"蔵ヶ森 シングルモルト 初留",nameEn:"Kuragamori Single Malt First Release",type:"ウイスキー",cls:"シングルモルト",material:"大麦麦芽（ピーテッド）",abv:46,ml:700,t:{sweet:3,body:4,aroma:3,char:5},tags:["ピート","潮","バニラ"],serve:["ストレート","水割り"],food:"燻製、生牡蠣",desc:"海霧の中で熟成した最初のシングルモルト。ピートの煙と潮気の奥に、バニラの甘さが顔を出します。",descEn:"The first single malt matured in sea fog: peat smoke and brine over a core of vanilla."},
- {breweryId:"kuragamori",name:"蔵ヶ森 クラフトジン 白樺",nameEn:"Kuragamori Craft Gin Shirakaba",type:"ジン",cls:"クラフトジン",material:"白樺樹液、北海道ハッカ、ジュニパー",abv:45,ml:500,t:{sweet:2,body:2,aroma:4,char:3},tags:["白樺","ジュニパー","ハッカ"],serve:["ジントニック","ソーダ割り"],food:"鮭のマリネ、ジンギスカン",desc:"白樺の樹液と北海道ハッカの涼やかな香り。トニックで割ると森の空気のような清涼感が広がります。",descEn:"Cool notes of birch sap and Hokkaido mint; with tonic it tastes like forest air."},
- {breweryId:"aonami",name:"碧波 アグリコール ホワイト",nameEn:"Aonami Agricole Blanc",type:"ラム",cls:"ホワイトラム",material:"サトウキビ搾り汁",abv:40,ml:700,t:{sweet:2,body:2,aroma:4,char:4},tags:["サトウキビ","青草","柑橘"],serve:["ソーダ割り","カクテル"],food:"ゴーヤーチャンプルー、島らっきょう",desc:"搾りたてのサトウキビ果汁から造る、青草と柑橘の香りが弾けるラム。シークヮーサーを搾ったソーダ割りがおすすめです。",descEn:"Made from fresh cane juice, bursting with grassy, citrus notes. Try it with soda and shikuwasa."},
- {breweryId:"aonami",name:"碧波 黒糖ラム 樽熟成",nameEn:"Aonami Kokuto Rum Cask Aged",type:"ラム",cls:"ダークラム",material:"島黒糖",abv:43,ml:700,t:{sweet:5,body:5,aroma:4,char:4},tags:["黒糖","バニラ","スパイス"],serve:["ストレート","ロック"],food:"ラフテー、ビターチョコレート",desc:"島の黒糖を樽で寝かせた、深い甘さとスパイスの余韻。食後の一杯にどうぞ。",descEn:"Island brown sugar rum rested in casks: deep sweetness and a spiced finish. A fine after-dinner pour."},
+ {breweryId:"kuragamori",name:"蔵ヶ森 クラフトジン 白樺",nameEn:"Kuragamori Craft Gin Shirakaba",type:"スピリッツ",cls:"クラフトジン",material:"白樺樹液、北海道ハッカ、ジュニパー",abv:45,ml:500,t:{sweet:2,body:2,aroma:4,char:3},tags:["白樺","ジュニパー","ハッカ"],serve:["ジントニック","ソーダ割り"],food:"鮭のマリネ、ジンギスカン",desc:"白樺の樹液と北海道ハッカの涼やかな香り。トニックで割ると森の空気のような清涼感が広がります。",descEn:"Cool notes of birch sap and Hokkaido mint; with tonic it tastes like forest air."},
+ {breweryId:"aonami",name:"碧波 アグリコール ホワイト",nameEn:"Aonami Agricole Blanc",type:"スピリッツ",cls:"ホワイトラム",material:"サトウキビ搾り汁",abv:40,ml:700,t:{sweet:2,body:2,aroma:4,char:4},tags:["サトウキビ","青草","柑橘"],serve:["ソーダ割り","カクテル"],food:"ゴーヤーチャンプルー、島らっきょう",desc:"搾りたてのサトウキビ果汁から造る、青草と柑橘の香りが弾けるラム。シークヮーサーを搾ったソーダ割りがおすすめです。",descEn:"Made from fresh cane juice, bursting with grassy, citrus notes. Try it with soda and shikuwasa."},
+ {breweryId:"aonami",name:"碧波 黒糖ラム 樽熟成",nameEn:"Aonami Kokuto Rum Cask Aged",type:"スピリッツ",cls:"ダークラム",material:"島黒糖",abv:43,ml:700,t:{sweet:5,body:5,aroma:4,char:4},tags:["黒糖","バニラ","スパイス"],serve:["ストレート","ロック"],food:"ラフテー、ビターチョコレート",desc:"島の黒糖を樽で寝かせた、深い甘さとスパイスの余韻。食後の一杯にどうぞ。",descEn:"Island brown sugar rum rested in casks: deep sweetness and a spiced finish. A fine after-dinner pour."},
  {breweryId:"kinoume",name:"紀ノ梅 南高梅酒 完熟",nameEn:"Kinoume Nanko Umeshu Kanjuku",type:"リキュール・その他",cls:"梅酒",material:"南高梅、氷砂糖、醸造アルコール",abv:12,ml:720,t:{sweet:5,body:3,aroma:4,char:1},tags:["完熟梅","蜂蜜","杏"],serve:["ロック","ソーダ割り"],food:"食前酒に、バニラアイスにかけて",desc:"木で熟して落ちた梅だけで漬けた、杏のような香りの梅酒。とろりとした甘さのあとに爽やかな酸が残ります。",descEn:"Made only with tree-ripened plums: apricot aromas, rich sweetness, refreshing acidity."},
  {breweryId:"kinoume",name:"紀ノ梅 ゆず酒",nameEn:"Kinoume Yuzushu",type:"リキュール・その他",cls:"柚子酒",material:"柚子果汁（和歌山県産）",abv:8,ml:500,t:{sweet:4,body:1,aroma:4,char:1},tags:["柚子","爽快"],serve:["ソーダ割り"],food:"天ぷら、白和え",desc:"果汁をたっぷり使った軽やかな柚子酒。ソーダで割ると、皮の香りがふわっと立ちます。",descEn:"A light yuzu liqueur full of juice; soda lifts the zest aroma."},
  {breweryId:"senba",name:"千波 純米 超辛口",nameEn:"Senba Junmai Super Dry",type:"日本酒",cls:"純米",material:"吟の夢（高知県産）",abv:16,ml:720,t:{sweet:1,body:3,aroma:2,char:2},tags:["キレ","ドライ","米"],serve:["冷や","燗"],food:"かつおのたたき、焼き鳥（塩）",desc:"かつおの脂をすっと流す、切れ味鋭い超辛口。冷やでも燗でも食事が進みます。",descEn:"Razor-dry junmai that cuts through rich bonito; great chilled or warm with food."},
- {breweryId:"koedo",name:"小江戸 ジン 茶と山椒",nameEn:"Koedo Gin Tea & Sansho",type:"ジン",cls:"クラフトジン",material:"狭山茶、山椒、ジュニパー",abv:47,ml:700,t:{sweet:2,body:3,aroma:3,char:4},tags:["緑茶","山椒","ジュニパー"],serve:["ロック","ジントニック"],food:"焼き鳥（塩）、鰻",desc:"狭山茶の渋みと山椒のしびれるような香りが重なる、和のスパイスを感じるジン。",descEn:"Sayama green tea and tingling sansho pepper make a gin with Japanese spice."},
+ {breweryId:"koedo",name:"小江戸 ジン 茶と山椒",nameEn:"Koedo Gin Tea & Sansho",type:"スピリッツ",cls:"クラフトジン",material:"狭山茶、山椒、ジュニパー",abv:47,ml:700,t:{sweet:2,body:3,aroma:3,char:4},tags:["緑茶","山椒","ジュニパー"],serve:["ロック","ジントニック"],food:"焼き鳥（塩）、鰻",desc:"狭山茶の渋みと山椒のしびれるような香りが重なる、和のスパイスを感じるジン。",descEn:"Sayama green tea and tingling sansho pepper make a gin with Japanese spice."},
  {breweryId:"koedo",name:"小江戸 麦焼酎 長期貯蔵",nameEn:"Koedo Mugi Shochu Aged",type:"焼酎",cls:"麦焼酎",material:"大麦、麦麹",abv:25,ml:720,t:{sweet:2,body:2,aroma:3,char:2},tags:["香ばしい麦","バニラ"],serve:["水割り","ロック"],food:"唐揚げ、餃子",desc:"三年以上寝かせた麦焼酎。香ばしい麦の香りに、ほんのりバニラのような甘さが重なります。",descEn:"Barley shochu aged three years or more: toasty grain with a hint of vanilla."}
 ]};
 
@@ -130,6 +141,8 @@ function score(p){
   let d=0; AX.forEach(a=>{ const x=p.t[a.k]-st.pref[a.k]; d+=x*x; });
   return Math.max(0,Math.round(100-Math.sqrt(d)/8*100));
 }
+const CLS_EN={"純米大吟醸":"Junmai Daiginjo","純米吟醸":"Junmai Ginjo","特別純米":"Tokubetsu Junmai","純米":"Junmai","山廃純米":"Yamahai Junmai","大吟醸":"Daiginjo","吟醸":"Ginjo","特別本醸造":"Tokubetsu Honjozo","本醸造":"Honjozo","清酒":"Seishu","スパークリング":"Sparkling","にごり":"Nigori (cloudy)","古酒":"Koshu (aged)","芋焼酎":"Imo (sweet potato)","麦焼酎":"Mugi (barley)","米焼酎":"Kome (rice)","黒糖焼酎":"Kokuto (brown sugar)","米":"Kome (rice)","黒糖":"Kokuto (brown sugar)","玄米":"Brown rice","酒粕":"Kasutori (sake lees)","そば":"Soba (buckwheat)","栗":"Chestnut","ごま":"Sesame","じゃがいも":"Potato","にんじん":"Carrot","かぼちゃ":"Pumpkin","ピーマン":"Green pepper","わさび":"Wasabi","ジンジャー":"Ginger","黒豆":"Black soybean","ブレンド":"Blend","牛乳":"Milk","珈琲":"Coffee","緑茶":"Green tea","スピリッツ":"Spirits","ジン":"Gin","クラフトジン":"Craft gin","ラム":"Rum","ホワイトラム":"White rum","ダークラム":"Dark rum","ウォッカ":"Vodka","グラッパ":"Grappa","ブランデー":"Brandy","シングルモルト":"Single malt","リキュール":"Liqueur","梅酒":"Umeshu (plum)","スパークリング梅酒":"Sparkling umeshu","柚子酒":"Yuzushu","ゆず":"Yuzu","みかん":"Mikan (mandarin)","レモン":"Lemon","いちご":"Strawberry","かぼす":"Kabosu citrus","じゃばら":"Jabara citrus","すもも":"Sumomo plum","たんかん":"Tankan orange","へべす":"Hebesu citrus","文旦":"Buntan pomelo","河内晩柑":"Kawachi bankan citrus","もも":"Peach","りんご":"Apple","ぶどう":"Grape","ブルーベリー":"Blueberry","マンゴー":"Mango","山桃":"Yamamomo (bayberry)","はちみつ":"Honey","ほうじ茶":"Hojicha","紅茶":"Black tea","抹茶":"Matcha","生姜":"Ginger","カルダモン":"Cardamom","キャラメル":"Caramel","ヨーグルト":"Yogurt","乳酸菌":"Lactic drink","ソフトクリーム":"Soft-serve","タピオカ":"Tapioca","サングリア":"Sangria","チューハイ":"Chuhai","どぶろく":"Doburoku (unfiltered)","保命酒":"Homeishu (herbal)","味醂":"Mirin","樽熟成焼酎":"Cask-aged shochu","ノンアルコール":"Non-alcoholic","赤":"Red","白":"White","ロゼ":"Rosé"};
+const clsName=c=>T(c,CLS_EN[c]);
 function pname(p){ return T(p.name,p.nameEn); }
 function bname(b){ return b?T(bshort(b),b.nameEn):""; }
 
@@ -146,7 +159,7 @@ function cardHTML(p){
   return `<button class="card" type="button" data-p="${esc(p.id)}" style="--cc:${ccVar(p.type)}">
     ${labelHTML(p)}
     <div class="body">
-      <span class="typetag">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(p.cls):""}</span>
+      <span class="typetag">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
       <h3>${esc(pname(p))}</h3>
       <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(b.pref):""}</span>
       ${hasT(p)?`<div class="mini">${AX.map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
@@ -264,14 +277,14 @@ function renderLearn(){
   const L=[
    ["日本酒","Sake","米と麹と水を発酵させて造る醸造酒。精米歩合や製法で「吟醸」「純米」などに分かれ、冷やから熱燗まで温度で表情が変わります。","Brewed from rice, koji and water. Grades such as ginjo and junmai reflect polishing and method; serving temperature changes its character."],
    ["焼酎","Shochu","芋・麦・米・黒糖などを原料にした蒸留酒。一度だけ蒸留する本格焼酎は、原料の香りがはっきり残るのが魅力です。","A distilled spirit from sweet potato, barley, rice or brown sugar. Single-distilled honkaku shochu keeps the raw material's aroma."],
+   ["泡盛","Awamori","沖縄で造られる、タイ米と黒麹を使った蒸留酒。全量を麹にして仕込み、甕などで長く寝かせた「古酒（クース）」はまろやかで深い香りになります。","Okinawa's distilled spirit, made entirely from rice koji (usually Thai rice and black koji). Long-aged kusu develops a mellow, deep aroma."],
    ["ウイスキー","Whisky","大麦麦芽などを蒸留し、樽で熟成させた酒。日本の四季の寒暖差が、樽との対話を深めます。","Distilled from malted barley and aged in casks; Japan's seasonal swings deepen cask maturation."],
-   ["ジン","Gin","ジュニパーベリーを軸に、柚子・山椒・緑茶など土地の植物で香りづけした蒸留酒。小さな蒸溜所の個性が出やすい分野です。","Juniper-led spirit flavored with local botanicals such as yuzu, sansho and green tea."],
-   ["ラム","Rum","サトウキビの搾り汁や糖蜜、黒糖から造る蒸留酒。沖縄や奄美、小笠原などで造られています。","Distilled from cane juice, molasses or brown sugar, made in Okinawa, Amami and other islands."],
+   ["スピリッツ","Spirits","ジン・ラム・ウォッカ・ブランデーなどの蒸留酒。柚子・山椒・緑茶といった日本の植物で香りづけしたジンや、沖縄・奄美などの島で造られるラムなど、小さな蒸溜所の個性が光る分野です。","Distilled spirits such as gin, rum, vodka and brandy: gins flavored with Japanese botanicals like yuzu, sansho and green tea, and rums from Okinawa, Amami and other islands."],
    ["ビール","Beer","麦芽とホップを発酵させた醸造酒。地域の果実や米を使ったクラフトビールなど、小さな醸造所ならではの一杯があります。","Brewed from malt and hops; small Japanese breweries add local fruit, rice and more."],
    ["ワイン","Wine","ぶどうや果実を発酵させた醸造酒。日本固有の品種や、梅などの果実を合わせたものも造られています。","Fermented from grapes and other fruit, including native Japanese varieties."],
    ["リキュール・その他","Liqueur & Others","梅酒や柚子酒など、果実や植物を漬け込んだ酒。食前酒やデザートの一杯にも向きます。","Fruit and botanical liqueurs such as umeshu and yuzushu, ideal before or after a meal."]
   ];
-  const LIMG={"日本酒":"c-sake.jpg","焼酎":"c-shochu.jpg","ウイスキー":"c-whisky.jpg","ジン":"c-gin.jpg","ラム":"c-rum.jpg","ビール":"i-beer.png","ワイン":"i-wine.png","リキュール・その他":"c-liq.jpg"};
+  const LIMG={"日本酒":"c-sake.jpg","焼酎":"c-shochu.jpg","ウイスキー":"c-whisky.jpg","泡盛":"c-awamori.jpg","スピリッツ":"c-spirits.jpg","ビール":"i-beer.png","ワイン":"i-wine.png","リキュール・その他":"c-liq.jpg"};
   $("#learnCards").innerHTML=L.map(l=>`<div class="lcard" style="--cc:${ccVar(l[0])}"><img class="lphoto${LIMG[l[0]].startsWith("i-")?" icon":""}" src="img/${LIMG[l[0]]}" alt="" width="254" height="150" loading="lazy"><div class="lbody"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p></div></div>`).join("");
   const S={sweet:["口に含んだときの甘さの感じ方。日本酒度や残糖だけでなく、飲み手の感覚で表します。","How sweet it feels on the palate, judged by taste rather than numbers alone."],
            body:["味の厚み・コク。軽快なものは食中に、濃醇なものはゆっくり一杯に。","Weight and depth. Light suits meals; rich suits slow sipping."],
@@ -326,7 +339,7 @@ function openProduct(id){
   openDlg(`<div class="pd">
     ${labelHTML(p,true)}
     <div>
-      <span class="typetag" style="--cc:${ccVar(p.type)}">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(p.cls):""}</span>
+      <span class="typetag" style="--cc:${ccVar(p.type)}">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
       <h2>${esc(p.name)}</h2>${p.nameEn?`<div class="en-name">${esc(p.nameEn)}</div>`:""}
       <div class="specs">
         <div><small>${T("アルコール度数","ABV")}</small>${esc(abvStr(p))||"—"}</div>
@@ -422,7 +435,7 @@ function parseWorkbook(wb){
     const desc=String(get("desc")).trim(); if(!desc) e.push(T("商品説明が空欄","description missing"));
     if(e.length){ rowErrors.push({row:excelRow,name:name||"（無題）",msgs:e}); return; }
     const ml=num(get("ml")), buy=String(get("buyUrl")).trim();
-    products.push({id:brewery.id+"-"+products.length,breweryId:brewery.id,name,nameEn:String(get("nameEn")).trim(),type,cls:String(get("cls")).trim(),material:String(get("material")).trim(),
+    products.push({id:brewery.id+"-"+products.length,breweryId:brewery.id,name,nameEn:String(get("nameEn")).trim(),type,cls:String(get("cls")).trim()||SPIRIT_CLS[tRaw]||SPIRIT_CLS[tRaw.toLowerCase()]||"",material:String(get("material")).trim(),
       abv,ml:isNaN(ml)?null:ml,buyUrl:/^https:\/\//.test(buy)?buy:"",t,tags:list(get("tags")),serve:list(get("serve")),food:String(get("food")).trim(),desc,descEn:String(get("descEn")).trim(),img:String(get("img")).trim()});
   });
   return {brewery,products,rowErrors,warns,errors:[]};
@@ -435,8 +448,8 @@ function saveDraft(res,fileName){
 
 /* ---------- 取引データ（商品マスタ）の取り込み ---------- */
 // 取引システムから書き出した一覧（1行1商品・仕入元＝酒蔵）を読み込む。価格・入数などの取引条件は取り込まない。
-const SUBCAT={"日本酒":["日本酒",""],"焼酎（芋）":["焼酎","芋焼酎"],"焼酎（麦）":["焼酎","麦焼酎"],"焼酎（米）":["焼酎","米焼酎"],"焼酎（黒糖）":["焼酎","黒糖焼酎"],"焼酎（その他）":["焼酎",""],"泡盛":["焼酎","泡盛"],
-  "ウイスキー":["ウイスキー",""],"ジン":["ジン",""],"ラム":["ラム",""],"リキュール":["リキュール・その他","リキュール"],"ウォッカ":["リキュール・その他","ウォッカ"],"その他酒類":["リキュール・その他",""],"ビール":["ビール",""],"ワイン":["ワイン",""]};
+const SUBCAT={"日本酒":["日本酒",""],"焼酎（芋）":["焼酎","芋焼酎"],"焼酎（麦）":["焼酎","麦焼酎"],"焼酎（米）":["焼酎","米焼酎"],"焼酎（黒糖）":["焼酎","黒糖焼酎"],"焼酎（その他）":["焼酎",""],"泡盛":["泡盛",""],
+  "ウイスキー":["ウイスキー",""],"ジン":["スピリッツ","ジン"],"ラム":["スピリッツ","ラム"],"リキュール":["リキュール・その他","リキュール"],"ウォッカ":["スピリッツ","ウォッカ"],"ブランデー":["スピリッツ","ブランデー"],"グラッパ":["スピリッツ","グラッパ"],"ブランデー":["スピリッツ","ブランデー"],"グラッパ":["スピリッツ","グラッパ"],"その他酒類":["リキュール・その他",""],"ビール":["ビール",""],"ワイン":["ワイン",""]};
 const SAKE_CLS=["純米大吟醸","純米吟醸","特別純米","純米","大吟醸","特別本醸造","本醸造","吟醸"];
 function isMaster(wb){ const ws=wb.Sheets[wb.SheetNames[0]]; if(!ws) return false; const h=(XLSX.utils.sheet_to_json(ws,{header:1,range:0,defval:""})[0]||[]).map(N); return h.includes(N("仕入元事業者名"))&&h.includes(N("JANコード"))&&h.includes(N("商品名")); }
 function parseAbv(src){
@@ -751,11 +764,11 @@ async function loadData(){
     const r=await fetch("data/breweries.json",{cache:"no-cache"});
     if(r.ok) BASE=await r.json();
   }catch(_){ BASE=null; }
-  PUB={}; (BASE&&BASE.breweries||[]).forEach(d=>{ if(d&&d.brewery&&d.brewery.id) PUB[d.brewery.id]=d; });
+  PUB={}; (BASE&&BASE.breweries||[]).forEach(d=>{ if(d&&d.brewery&&d.brewery.id) PUB[d.brewery.id]=migrateDoc(d); });
   rebuildPublic();
   if(PAGE==="admin"){
     const w=loadWork();
-    if(w&&w.base===(BASE&&BASE.updatedAt||null)){ DRAFT=w.items; if(changes().total) adminMsg("前回の作業の続きです。"); }
+    if(w&&w.base===(BASE&&BASE.updatedAt||null)){ DRAFT=w.items; Object.values(DRAFT).forEach(migrateDoc); if(changes().total) adminMsg("前回の作業の続きです。"); }
     else { DRAFT=clone(PUB); if(w&&w.base!==(BASE&&BASE.updatedAt||null)&&Object.keys(w.items).length) adminMsg("サイトのデータが更新されていたため、最新の公開データから作業を始めます。"); saveWork(); }
   }
 }
