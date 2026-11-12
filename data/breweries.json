@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-11T09:30:01.712Z",
+ "updatedAt": "2026-11-12T00:46:01.143Z",
  "breweries": [
   {
    "brewery": {
@@ -8027,7 +8027,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1741",
-     "photo": "243/k0226 (30).webp"
+     "photo": "243/k0226 (30).webp",
+     "ord": 0
     },
     {
      "mid": "1742",
@@ -8056,35 +8057,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1742",
-     "photo": "243/k0226 (31).webp"
-    },
-    {
-     "mid": "1743",
-     "name": "大吟醸日光誉 原酒",
-     "nameEn": "Daiginjo Nikkohomare Gensyu",
-     "nameZh": "Daiginjo Nikko Honor 生酒",
-     "type": "日本酒",
-     "cls": "大吟醸",
-     "material": "",
-     "materialEn": "",
-     "abv": null,
-     "abvText": "",
-     "ml": 200,
-     "spec": null,
-     "storage": "常温",
-     "storageEn": "normal temperatures",
-     "desc": "",
-     "descEn": "",
-     "descZh": "",
-     "jan": "",
-     "imgSrc": "/uploads/maker/243/20160622_65aed0.jpg",
-     "t": null,
-     "tags": [],
-     "serve": [],
-     "food": "",
-     "src": "master",
-     "breweryId": "m243",
-     "id": "m243-1743"
+     "photo": "243/k0226 (31).webp",
+     "ord": 1
     },
     {
      "mid": "1744",
@@ -8113,7 +8087,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1744",
-     "photo": "243/iuyy.webp"
+     "photo": "243/iuyy.webp",
+     "ord": 2
     },
     {
      "mid": "1745",
@@ -8142,35 +8117,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1745",
-     "photo": "243/k0226 (34).webp"
-    },
-    {
-     "mid": "1746",
-     "name": "純米大吟醸 清開 山田錦",
-     "nameEn": "Junmaidaiginjo Seikai　Yamadanishiki",
-     "nameZh": "Junmai Daiginjo Kiyokai Yamada Nishiki（大吟酿清海山田锦）",
-     "type": "日本酒",
-     "cls": "純米大吟醸",
-     "material": "",
-     "materialEn": "",
-     "abv": null,
-     "abvText": "",
-     "ml": 300,
-     "spec": null,
-     "storage": "常温",
-     "storageEn": "normal temperatures",
-     "desc": "",
-     "descEn": "",
-     "descZh": "",
-     "jan": "",
-     "imgSrc": "/uploads/maker/243/oiu.jpg",
-     "t": null,
-     "tags": [],
-     "serve": [],
-     "food": "",
-     "src": "master",
-     "breweryId": "m243",
-     "id": "m243-1746"
+     "photo": "243/k0226 (34).webp",
+     "ord": 3
     },
     {
      "mid": "1747",
@@ -8199,7 +8147,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1747",
-     "photo": "243/k0226 (36).webp"
+     "photo": "243/k0226 (36).webp",
+     "ord": 4
     },
     {
      "mid": "1748",
@@ -8228,7 +8177,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1748",
-     "photo": "243/k0226 (37).webp"
+     "photo": "243/k0226 (37).webp",
+     "ord": 5
     },
     {
      "mid": "1749",
@@ -8257,7 +8207,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1749",
-     "photo": "243/k0226 (38).webp"
+     "photo": "243/k0226 (38).webp",
+     "ord": 6
     },
     {
      "mid": "1750",
@@ -8286,7 +8237,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1750",
-     "photo": "243/k0226 (39).webp"
+     "photo": "243/k0226 (39).webp",
+     "ord": 7
     },
     {
      "mid": "1751",
@@ -8315,7 +8267,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1751",
-     "photo": "243/k0226 (40).webp"
+     "photo": "243/k0226 (40).webp",
+     "ord": 8
     },
     {
      "mid": "1752",
@@ -8344,7 +8297,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1752",
-     "photo": "243/k0226 (41).webp"
+     "photo": "243/k0226 (41).webp",
+     "ord": 9
     },
     {
      "mid": "1753",
@@ -8373,7 +8327,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1753",
-     "photo": "243/k0226 (42).webp"
+     "photo": "243/k0226 (42).webp",
+     "ord": 10
     },
     {
      "mid": "1754",
@@ -8402,7 +8357,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1754",
-     "photo": "243/k0226 (43).webp"
+     "photo": "243/k0226 (43).webp",
+     "ord": 11
     },
     {
      "mid": "1755",
@@ -8431,7 +8387,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1755",
-     "photo": "243/k0226 (44).webp"
+     "photo": "243/k0226 (44).webp",
+     "ord": 12
     },
     {
      "mid": "1756",
@@ -8460,7 +8417,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1756",
-     "photo": "243/k0226 (45).webp"
+     "photo": "243/k0226 (45).webp",
+     "ord": 13
     },
     {
      "mid": "1757",
@@ -8489,7 +8447,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1757",
-     "photo": "243/k0226 (46).webp"
+     "photo": "243/k0226 (46).webp",
+     "ord": 14
     },
     {
      "mid": "1758",
@@ -8518,7 +8477,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1758",
-     "photo": "243/k0226 (47).webp"
+     "photo": "243/k0226 (47).webp",
+     "ord": 15
     },
     {
      "mid": "1759",
@@ -8547,7 +8507,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1759",
-     "photo": "243/k0226 (48).webp"
+     "photo": "243/k0226 (48).webp",
+     "ord": 16
     },
     {
      "mid": "1760",
@@ -8576,7 +8537,8 @@
      "src": "master",
      "breweryId": "m243",
      "id": "m243-1760",
-     "photo": "243/k0226 (49).webp"
+     "photo": "243/k0226 (49).webp",
+     "ord": 17
     },
     {
      "mid": "1761",
@@ -8606,7 +8568,8 @@
      "breweryId": "m243",
      "id": "m243-1761",
      "photo": "243/k0226 (50).webp",
-     "clsFix": "米"
+     "clsFix": "米",
+     "ord": 18
     },
     {
      "mid": "1762",
@@ -8636,7 +8599,8 @@
      "breweryId": "m243",
      "id": "m243-1762",
      "photo": "243/k0226 (51).webp",
-     "clsFix": "米"
+     "clsFix": "米",
+     "ord": 19
     },
     {
      "mid": "1763",
@@ -8666,7 +8630,8 @@
      "breweryId": "m243",
      "id": "m243-1763",
      "photo": "243/images.webp",
-     "clsFix": "米"
+     "clsFix": "米",
+     "ord": 20
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
