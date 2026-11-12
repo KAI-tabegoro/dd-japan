@@ -63,20 +63,35 @@ const I18N={
   "foot":"Please drink responsibly. Must be of legal drinking age."},
  ja:{}
 };
-let lang=(()=>{ try{ const q=new URLSearchParams(location.search).get("lang"); if(q==="en"||q==="ja") return q; return localStorage.getItem("kuranowa.lang")||((navigator.language||"ja").toLowerCase().startsWith("ja")?"ja":"en"); }catch(_){ return "ja"; } })();
-const T=(ja,en)=>lang==="en"&&en?en:ja;
+const LANGS=["ja","en","zh","zht","ko","es"];
+const LANG_HTML={ja:"ja",en:"en",zh:"zh-Hans",zht:"zh-Hant",ko:"ko",es:"es"};
+const LANG_LABEL={ja:"JP",en:"EN",zh:"简",zht:"繁",ko:"KO",es:"ES"};
+function detectLang(){ const n=(navigator.language||"ja").toLowerCase(); if(n.startsWith("ja")) return "ja"; if(/^zh-(tw|hk|mo|hant)/.test(n)) return "zht"; if(n.startsWith("zh")) return "zh"; if(n.startsWith("ko")) return "ko"; if(n.startsWith("es")) return "es"; return "en"; }
+let lang=(()=>{ try{ const q=new URLSearchParams(location.search).get("lang"); if(LANGS.includes(q)) return q; const s=localStorage.getItem("kuranowa.lang"); if(LANGS.includes(s)) return s; return detectLang(); }catch(_){ return "ja"; } })();
+let TRX={ui:{},desc:{},hans:{},brew:{}};   // data/translations.json
+const T=(ja,en)=>{ if(lang==="ja") return ja; if(lang==="en") return en||ja; const d=en!=null&&TRX.ui[en]; return (d&&d[lang])||en||ja; };
+const TN=(ja,en,n)=>String(T(ja,en)).replace("{n}",n);
+// 商品の項目（name・desc・material・storage）を表示中の言語で
+function D(o,k){ if(!o) return ""; const ja=o[k]||"", en=o[k+"En"]||"";
+  if(lang==="ja") return ja; if(lang==="en") return en||ja;
+  const zh=o[k+"Zh"]; if(lang==="zht"&&zh) return zh; if(lang==="zh"&&zh) return TRX.hans[zh]||zh;
+  if(k==="desc"&&en){ const t=TRX.desc[en]; if(t&&t[lang]) return t[lang]; }
+  const u=en&&TRX.ui[en]; return (u&&u[lang])||en||ja; }
+// 酒蔵の紹介文とキャッチ
+function BT(b,i){ const t=b&&TRX.brew[b.id]; return t&&t[lang]&&t[lang][i]||""; }
+function BI(b){ if(!b) return ""; if(lang==="ja") return b.intro||""; if(lang==="en") return b.introEn||b.intro||""; return BT(b,1)||b.introEn||b.intro||""; }
+function BC(b){ if(!b) return ""; if(lang==="ja") return b.catch||""; return BT(b,0)||(b.introEn||"").split(/(?<=\.)\s/)[0]; }
 function applyI18n(){
   document.querySelectorAll("[data-i]").forEach(el=>{
     const k=el.dataset.i;
     if(!el.dataset.ja) el.dataset.ja=el.innerHTML;
-    el.innerHTML = lang==="en" && I18N.en[k] ? I18N.en[k] : el.dataset.ja;
+    el.innerHTML = lang!=="ja" && I18N.en[k] ? T(el.dataset.ja,I18N.en[k]) : el.dataset.ja;
   });
-  document.documentElement.lang=lang;
+  document.documentElement.lang=LANG_HTML[lang]||lang;
   $("#q").placeholder=T("銘柄・酒蔵・香り・料理で検索","Search name, maker, aroma, food");
   try{ localStorage.setItem("kuranowa.lang",lang); }catch(_){}
-  document.getElementById("lang-ja").setAttribute("aria-pressed",lang==="ja");
-  document.getElementById("lang-en").setAttribute("aria-pressed",lang==="en");
-  { const lc=document.getElementById("langCur"); if(lc) lc.textContent=lang==="en"?"EN":"JP"; }
+  LANGS.forEach(l=>{ const b=document.getElementById("lang-"+l); if(b) b.setAttribute("aria-pressed",lang===l); });
+  { const lc=document.getElementById("langCur"); if(lc) lc.textContent=LANG_LABEL[lang]||"JP"; }
 }
 
 /* ---------- サンプルデータ（架空） ---------- */
@@ -147,8 +162,8 @@ const PREF_EN={"北海道":"Hokkaido","青森":"Aomori","岩手":"Iwate","宮城
 const prefKey=p=>String(p||"").normalize("NFKC").trim().replace(/(?<!^)[都府県]$/,"");
 const prefName=p=>p?T(p,PREF_EN[prefKey(p)]):"";
 const regionName=pref=>{ const k=regionOf(pref), r=REGIONS.find(x=>x.k===k); return r?T(r.k,r.en):""; };
-function pname(p){ return T(p.name,p.nameEn); }
-function bname(b){ return b?T(bshort(b),b.nameEn):""; }
+function pname(p){ return D(p,"name"); }
+function bname(b){ return b?((lang==="zh"||lang==="zht")?bshort(b):T(bshort(b),b.nameEn)):""; }
 
 /* ---------- 部品 ---------- */
 function labelHTML(p,big){
@@ -177,7 +192,7 @@ function renderCats(){
   const SHORT={"リキュール・その他":["リキュール","Liqueur"]};
   $("#cats").innerHTML=TYPES.map(t=>{
     const [ja,en]=SHORT[t.k]||[t.k,t.en];
-    return `<a class="tile" href="#products" data-type="${esc(t.k)}"><img src="img/t-${t.img.replace("cat-","")}.jpg" width="195" height="251" alt="" loading="lazy"><span class="tt"><b>${esc(en)}</b><small>${esc(ja)} <svg class="arw" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h24M19 1l5 4-5 4"/></svg></small></span></a>`;
+    return `<a class="tile" href="#products" data-type="${esc(t.k)}"><img src="img/t-${t.img.replace("cat-","")}.jpg" width="195" height="251" alt="" loading="lazy"><span class="tt"><b>${esc(en)}</b><small>${esc(lang==="ja"||lang==="en"?ja:T(ja,en))} <svg class="arw" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h24M19 1l5 4-5 4"/></svg></small></span></a>`;
   }).join("");
 }
 function renderFinderControls(){
@@ -234,13 +249,13 @@ function filtered(){
     const b=brewOf(p.breweryId);
     if(st.type&&p.type!==st.type) return false;
     if(st.region&&regionOf(b?.pref)!==st.region) return false;
-    if(q){ const hay=[p.name,p.nameEn,p.cls,p.material,p.food,p.desc,(p.tags||[]).join(" "),b?.name,bshort(b),b?.nameEn,b?.pref,PREF_EN[prefKey(b?.pref)]].join(" ").normalize("NFKC").toLowerCase(); if(!hay.includes(q.normalize("NFKC"))) return false; }
+    if(q){ const hay=[p.name,p.nameEn,p.nameZh,p.cls,p.material,p.food,p.desc,(p.tags||[]).join(" "),b?.name,bshort(b),b?.nameEn,b?.pref,PREF_EN[prefKey(b?.pref)]].join(" ").normalize("NFKC").toLowerCase(); if(!hay.includes(q.normalize("NFKC"))) return false; }
     return true;
   });
   const s=st.sort;
   if(s==="match") list.sort((a,b)=>(score(b)??-1)-(score(a)??-1));
-  else if(s==="name") list.sort((a,b)=>pname(a).localeCompare(pname(b),lang));
-  else if(s==="type"){ const ti=k=>TYPES.findIndex(t=>t.k===k); list.sort((a,b)=>ti(a.type)-ti(b.type)||bshort(brewOf(a.breweryId)).localeCompare(bshort(brewOf(b.breweryId)),"ja")||pname(a).localeCompare(pname(b),lang)); }
+  else if(s==="name") list.sort((a,b)=>pname(a).localeCompare(pname(b),LANG_HTML[lang]));
+  else if(s==="type"){ const ti=k=>TYPES.findIndex(t=>t.k===k); list.sort((a,b)=>ti(a.type)-ti(b.type)||bshort(brewOf(a.breweryId)).localeCompare(bshort(brewOf(b.breweryId)),"ja")||pname(a).localeCompare(pname(b),LANG_HTML[lang])); }
   else if(s==="abv") list.sort((a,b)=>(a.abv||0)-(b.abv||0));
   return list;
 }
@@ -258,7 +273,7 @@ function renderProducts(){
   $("#count").textContent=(parts.length?parts.join("・")+"　":"")+list.length+T(" 銘柄"," labels");
   const shown=list.slice(0,st.limit||60);
   const mb=document.getElementById("moreBtn");
-  if(mb){ mb.hidden=list.length<=shown.length; mb.textContent=T(`もっと見る（残り ${list.length-shown.length} 銘柄）`,`Show more (${list.length-shown.length} left)`); }
+  if(mb){ mb.hidden=list.length<=shown.length; mb.textContent=TN("もっと見る（残り {n} 銘柄）","Show more ({n} left)",list.length-shown.length); }
   $("#plist").innerHTML=list.length?shown.map(cardHTML).join(""):`<div class="empty" style="grid-column:1/-1">${T("条件に合うお酒が見つかりません。条件をゆるめてみてください。","No matches. Try loosening the filters.")}</div>`;
   $("#sampleNote").hidden=!DB.breweries.some(b=>b.sample);
   renderFoods();
@@ -273,7 +288,7 @@ function renderBreweries(){
     return `<button class="bcard" type="button" data-b="${esc(b.id)}"><span class="seal" aria-hidden="true">${esc(bshort(b).charAt(0)||"蔵")}</span>
       <span class="where">${esc(where)||"&nbsp;"}</span>
       <h3>${esc(bshort(b))}${bshort(b)!==b.name?`<small>${esc(b.name)}</small>`:""}</h3>${b.nameEn?`<span class="latin" style="color:var(--gold);font-size:15px;margin-top:-6px">${esc(b.nameEn)}</span>`:""}
-      <span class="catch">${esc(lang==="en"?(b.introEn||"").split(/(?<=\.)\s/)[0]:(b.catch||""))}</span>
+      <span class="catch">${esc(BC(b))}</span>
       <span class="foot">${ks.map(k=>`<span class="pill" style="border-color:${ccVar(k)}">${esc(T(k,typeOf(k).en))}</span>`).join("")}<span class="pill">${n}${T(" 銘柄"," labels")}</span>${b.sample?`<span class="pill" style="color:var(--mute)">SAMPLE</span>`:""}</span></button>`;
   }).join("") || `<div class="empty">${T("酒蔵データがありません","No breweries yet")}</div>`;
 }
@@ -344,7 +359,7 @@ function openProduct(id){
     ${labelHTML(p,true)}
     <div>
       <span class="typetag" style="--cc:${ccVar(p.type)}">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
-      <h2>${esc(p.name)}</h2>${p.nameEn?`<div class="en-name">${esc(p.nameEn)}</div>`:""}
+      <h2>${esc(p.name)}</h2>${(()=>{ const s=lang==="ja"?p.nameEn:D(p,"name"); return s&&s!==p.name?`<div class="en-name">${esc(s)}</div>`:""; })()}
       <div class="specs">
         <div><small>${T("アルコール度数","ABV")}</small>${esc(abvStr(p))||"—"}</div>
         <div><small>${T("容量","Volume")}</small>${p.ml?p.ml+"ml":"—"}</div>
@@ -352,20 +367,20 @@ function openProduct(id){
         ${p.spec&&p.spec.smv?`<div><small>${T("日本酒度","SMV")}</small>${esc(p.spec.smv)}</div>`:""}
         ${hasT(p)?`<div><small>${T("味わい診断の相性","Your match")}</small>${score(p)}%</div>`:""}
       </div>
-      ${T(p.desc,p.descEn)?`<p class="desc">${esc(T(p.desc,p.descEn))}</p>`:""}
+      ${D(p,"desc")?`<p class="desc">${esc(D(p,"desc"))}</p>`:""}
       <div class="two">
         <div class="radar">${hasT(p)?radar(p):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
         <dl class="kv">
-          ${p.material?`<dt>${T("原料","Ingredients")}</dt><dd>${esc(T(p.material,p.materialEn))}</dd>`:""}
+          ${p.material?`<dt>${T("原料","Ingredients")}</dt><dd>${esc(D(p,"material"))}</dd>`:""}
           ${p.spec&&p.spec.rice?`<dt>${T("使用米","Rice")}</dt><dd>${esc(p.spec.rice)}</dd>`:""}
-          ${p.storage?`<dt>${T("保存方法","Storage")}</dt><dd>${esc(T(p.storage,p.storageEn))}</dd>`:""}
+          ${p.storage?`<dt>${T("保存方法","Storage")}</dt><dd>${esc(D(p,"storage"))}</dd>`:""}
           ${p.tags?.length?`<dt>${T("香味","Notes")}</dt><dd class="tags">${p.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join("")}</dd>`:""}
           ${p.serve?.length?`<dt>${T("おすすめの飲み方","Serve")}</dt><dd>${esc(p.serve.join("、"))}</dd>`:""}
           ${p.food?`<dt>${T("合う料理","Pairing")}</dt><dd>${esc(p.food)}</dd>`:""}
         </dl>
       </div>
       ${/^https:\/\//.test(p.buyUrl||"")?`<a class="btn solid" style="margin-top:16px" href="${esc(p.buyUrl)}" target="_blank" rel="noopener">${T("酒蔵の販売ページで見る","View on the maker's shop")} ›</a>`:""}
-      ${b?`<button class="brewlink" type="button" data-b="${esc(b.id)}"><span><small style="color:var(--gold);display:block;font-size:11px">${T("造り手","Made by")}</small><b style="font-family:var(--f-display);font-size:17px">${esc(bname(b))}</b> <span style="color:var(--mute);font-size:12px">${esc(prefName(b.pref))}</span>${(lang==="en"?(b.introEn||"").split(/(?<=\.)\s/)[0]:b.catch)?`<small style="display:block;color:var(--ink);font-size:13px;margin-top:4px;line-height:1.6">${esc(lang==="en"?(b.introEn||"").split(/(?<=\.)\s/)[0]:b.catch)}</small>`:""}</span><span>›</span></button>`:""}
+      ${b?`<button class="brewlink" type="button" data-b="${esc(b.id)}"><span><small style="color:var(--gold);display:block;font-size:11px">${T("造り手","Made by")}</small><b style="font-family:var(--f-display);font-size:17px">${esc(bname(b))}</b> <span style="color:var(--mute);font-size:12px">${esc(prefName(b.pref))}</span>${BC(b)?`<small style="display:block;color:var(--ink);font-size:13px;margin-top:4px;line-height:1.6">${esc(BC(b))}</small>`:""}</span><span>›</span></button>`:""}
     </div></div>`);
 }
 function openBrewery(id,src){
@@ -374,8 +389,8 @@ function openBrewery(id,src){
   const pre=src==="draft"?`<p class="notice" style="margin:0 0 14px">${T("下書きのプレビューです。まだサイトには公開されていません。","Draft preview — not published yet.")}</p>`:"";
   openDlg(pre+`<span class="where" style="color:var(--gold);font-size:12px;letter-spacing:.1em">${b.pref?esc(prefName(b.pref))+(b.city&&lang==="ja"?" "+esc(b.city):"")+"　"+esc(T("地方：","Region: "))+esc(regionName(b.pref)):"&nbsp;"}</span>
     <h2 style="font-size:clamp(24px,3.4vw,32px);margin:4px 0 0">${esc(bshort(b))}</h2>${bshort(b)!==b.name?`<div style="color:var(--mute);font-size:13px">${esc(b.name)}</div>`:""}${b.nameEn?`<div class="latin" style="color:var(--gold);font-size:18px">${esc(b.nameEn)}</div>`:""}
-    ${b.catch?`<p style="font-family:var(--f-display);font-size:18px;margin:14px 0 4px">${esc(b.catch)}</p>`:""}
-    ${T(b.intro,b.introEn)?`<p class="desc" style="max-width:44em">${esc(T(b.intro,b.introEn))}</p>`:`<p class="taste-wait" style="text-align:left;margin:14px 0">${T("酒蔵の紹介は準備中です。","The brewery profile is coming soon.")}</p>`}
+    ${lang!=="en"&&BC(b)?`<p style="font-family:var(--f-display);font-size:18px;margin:14px 0 4px">${esc(BC(b))}</p>`:""}
+    ${BI(b)?`<p class="desc" style="max-width:44em">${esc(BI(b))}</p>`:`<p class="taste-wait" style="text-align:left;margin:14px 0">${T("酒蔵の紹介は準備中です。","The brewery profile is coming soon.")}</p>`}
     <div class="specs">
       <div><small>${T("創業","Founded")}</small>${esc(b.founded||"—")}</div>
       <div><small>${T("造り手","Maker")}</small>${esc(b.maker||"—")}</div>
@@ -385,7 +400,7 @@ function openBrewery(id,src){
     ${b.points?.length?`<div class="tags" style="margin-bottom:16px">${b.points.map(t=>`<span class="pill" style="font-size:12.5px;padding:2px 12px">${esc(t)}</span>`).join("")}</div>`:""}
     ${b.web?`<p style="font-size:13px"><a href="${esc(b.web)}" target="_blank" rel="noopener">${esc(b.web)}</a></p>`:""}
     <h3 style="font-size:17px;margin:22px 0 12px">${T("この蔵のお酒","Bottles from this maker")}</h3>
-    <div class="grid">${list.slice(0,120).map(cardHTML).join("")}</div>${list.length>120?`<p style="color:var(--mute);font-size:13px;margin-top:12px">${T(`ほか ${list.length-120} 銘柄は「お酒を探す」で酒蔵名を検索してください。`,`${list.length-120} more: search this maker on the Browse page.`)}</p>`:""}`);
+    <div class="grid">${list.slice(0,120).map(cardHTML).join("")}</div>${list.length>120?`<p style="color:var(--mute);font-size:13px;margin-top:12px">${TN("ほか {n} 銘柄は「お酒を探す」で酒蔵名を検索してください。","{n} more: search this maker on the Browse page.",list.length-120)}</p>`:""}`);
 }
 dlg.addEventListener("click",e=>{ if(e.target===dlg||e.target.closest("[data-close]")) dlg.close(); });
 
@@ -764,6 +779,7 @@ if(PAGE==="admin"){
 
 /* ---------- 公開データの読み込み ---------- */
 async function loadData(){
+  try{ const t=await fetch("data/translations.json",{cache:"no-cache"}); if(t.ok) TRX=Object.assign(TRX,await t.json()); }catch(_){}
   try{
     const r=await fetch("data/breweries.json",{cache:"no-cache"});
     if(r.ok) BASE=await r.json();
@@ -804,8 +820,7 @@ $("#fType").addEventListener("change",e=>{ st.type=e.target.value; renderCats();
 $("#fRegion").addEventListener("change",e=>{ st.region=e.target.value; renderRegions(); renderProducts(); });
 $("#sort").addEventListener("change",e=>{ st.sort=e.target.value; renderProducts(); });
 $("#clear").addEventListener("click",()=>{ st.type="";st.region="";st.q=""; $("#q").value=""; renderCats(); renderRegions(); renderToolbar(); renderProducts(); });
-$("#lang-ja").addEventListener("click",()=>{ lang="ja"; renderAll(); document.activeElement&&document.activeElement.blur(); });
-$("#lang-en").addEventListener("click",()=>{ lang="en"; renderAll(); document.activeElement&&document.activeElement.blur(); });
+LANGS.forEach(l=>{ const b=document.getElementById("lang-"+l); if(b) b.addEventListener("click",()=>{ lang=l; renderAll(); document.activeElement&&document.activeElement.blur(); }); });
 { const mb=document.getElementById("menuBtn"), dr=document.getElementById("drawer");
   const close=()=>{ dr.hidden=true; mb.setAttribute("aria-expanded","false"); };
   mb.addEventListener("click",()=>{ const open=dr.hidden; dr.hidden=!open; mb.setAttribute("aria-expanded",String(open)); });
