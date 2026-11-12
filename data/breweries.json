@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-12T01:42:16.000Z",
+ "updatedAt": "2026-11-12T01:57:35.000Z",
  "breweries": [
   {
    "brewery": {
@@ -22062,15 +22062,19 @@
     "srcIds": [
      "193"
     ],
-    "nameEn": "",
-    "pref": "大阪府",
-    "city": "大阪市",
-    "founded": "",
+    "nameEn": "Machida Shuzo",
+    "pref": "鹿児島県",
+    "city": "大島郡龍郷町",
+    "founded": "1983",
     "maker": "",
-    "catch": "",
-    "intro": "",
-    "introEn": "",
-    "points": [],
+    "catch": "奄美の黒糖焼酎、減圧蒸留の先駆け",
+    "intro": "奄美大島の龍郷町で黒糖焼酎を造る蔵です。1983年、旧住用村の酒造所から製造免許を受け継いで創業し、1991年に現在の地へ工場を移しました。黒糖焼酎の業界で初めて減圧蒸留を取り入れ、黒糖をぜいたくに使って長く貯蔵するのが基本です。代表銘柄は「里の曙」。奄美のすももやたんかんのお酒も造っています。",
+    "introEn": "A kokuto (brown sugar) shochu distillery in Tatsugo on Amami Oshima. Founded in 1983 with a license inherited from a distillery in former Sumiyo village, it moved to its current site in 1991. It was the first in the kokuto shochu industry to adopt vacuum distillation, uses brown sugar generously and ages its spirits long; flagship Sato no Akebono. It also makes Amami sumomo plum and tankan citrus liqueurs.",
+    "points": [
+     "奄美黒糖焼酎",
+     "業界初の減圧蒸留",
+     "長期貯蔵"
+    ],
     "visit": "",
     "web": "",
     "sample": false,
