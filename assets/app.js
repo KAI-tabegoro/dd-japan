@@ -971,7 +971,7 @@ window.__kura={parseWorkbook,DB:()=>DB,PUB:()=>PUB,DRAFT:()=>DRAFT,buildExport};
       while(!(imgs[n].complete&&imgs[n].naturalWidth)&&guard++<imgs.length) n=(n+1)%imgs.length;   // 読み込み途中の画像は飛ばす
       if(n===i) return;
       imgs[n].classList.add("on"); imgs[i].classList.remove("on"); i=n;
-    },6000);
+    },4000);
   };
   if(document.readyState==="complete") setTimeout(start,800); else addEventListener("load",()=>setTimeout(start,800));
 })();
