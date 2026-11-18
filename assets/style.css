@@ -757,3 +757,21 @@ header.top .logo .word small{font-size:15px;letter-spacing:.2em;margin-top:0;lin
 
 /* 種類の色：スピリッツ（旧ジン）・泡盛 */
 :root{--c-spirits:#5E9A72;--c-awamori:#3E7FA6}
+
+/* 産地の紹介（2026/11/18） */
+.rinfos{display:grid;gap:28px;margin-top:40px}
+.rinfo{border:1px solid var(--line);background:var(--panel);border-radius:var(--r);overflow:hidden;scroll-margin-top:90px}
+.rhead{position:relative;background-size:cover;background-position:center;min-height:150px;display:flex;align-items:flex-end}
+.rhead::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(14,12,10,.86) 0%,rgba(14,12,10,.55) 55%,rgba(14,12,10,.15) 100%)}
+.rhead>div{position:relative;padding:22px 26px;color:#fff}
+.rhead .latin{font-size:13px;color:var(--gold-hi);letter-spacing:.12em}
+.rhead h3{font-family:var(--f-display);font-size:26px;letter-spacing:.1em;margin:2px 0 6px;color:#fff}
+.rhead p{margin:0;font-size:14px;opacity:.92}
+.rbody{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:26px;padding:22px 26px 26px}
+.rbody h4{font-family:var(--f-display);font-size:14px;letter-spacing:.14em;color:var(--gold-deep,var(--gold));margin:0 0 6px;padding-bottom:4px;border-bottom:1px solid var(--line)}
+.rbody p{font-size:14.5px;line-height:1.9;margin:0 0 18px}
+.rbody ul{margin:0 0 18px;padding-left:1.1em;font-size:14px;line-height:1.8}
+.rmakers{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:18px}
+.rmakers .chip small{margin-left:6px;color:var(--mute);font-size:11px}
+.rbody .btn{display:inline-block}
+@media (max-width:760px){.rbody{grid-template-columns:1fr;padding:18px 16px 20px}.rhead>div{padding:18px 16px}.rhead h3{font-size:22px}}

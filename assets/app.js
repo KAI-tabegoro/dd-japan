@@ -103,7 +103,7 @@ const serveStr=p=>(p.serve||[]).map(x=>T(x,SERVE_EN[x]||x)).join(lang==="ja"||la
 
 /* ---------- 言語 ---------- */
 const I18N={
- en:{"regions.p":"Choose a region to see drinks from its breweries and distilleries.","nav.products":"Products","nav.breweries":"Breweries","nav.finder":"Taste Finder","nav.regions":"Regions","nav.learn":"Learn","nav.import":"Import",
+ en:{"regions.p":"Choose a region to read about its drinks, history, breweries and distilleries.","nav.products":"Products","nav.breweries":"Breweries","nav.finder":"Taste Finder","nav.regions":"Regions","nav.learn":"Learn","nav.import":"Import",
   "hero.title":"Japanese craft spirits,<br>to tables around the world.","hero.lead":"Sake, shochu, whisky, gin and rum from small breweries and distilleries across Japan. Explore the makers' stories and flavor profiles to find a bottle that suits you.",
   "hero.cta1":"Start the taste finder","hero.cta2":"Browse spirits","st.b":"breweries","st.p":"labels","st.r":"prefectures",
   "finder.h":"Taste Finder","finder.p":"Choose a type, then pick a style or move the sliders. Bottles are ranked by how closely they match. Each dot on the map is one bottle.","finder.types":"1. Choose a type","finder.style":"2. Pick a style, or adjust the sliders","finder.best":"Recommended for you",
@@ -289,11 +289,34 @@ function renderMap(){
   $("#map").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T("味マップ","Flavor map")+"："+T(axX.ja,axX.en)+" × "+T(axY.ja,axY.en))}">${g}${pts}${you}</svg>`;
   $("#matches").innerHTML = ranked.length ? ranked.slice(0,8).map(p=>cardHTML(p)).join("") : `<div class="taste-wait" style="grid-column:1/-1">${T("この種類には、味わいの情報があるお酒がまだありません。","No bottles of this type have tasting notes yet.")}</div>`;
 }
+let RINFO=null, RINFO_LOADING=false;
 function renderRegions(){
-  $("#regionTiles").innerHTML=REGIONS.map(r=>{
+  const el=document.getElementById("regionTiles"); if(!el) return;
+  const onPage=PAGE==="regions"&&document.getElementById("regionInfo");
+  el.innerHTML=REGIONS.map((r,i)=>{
     const n=DB.products.filter(p=>regionOf(brewOf(p.breweryId)?.pref)===r.k).length;
-    return `<button class="region2" type="button" data-region="${esc(r.k)}"><img src="img/${r.img}.jpg" width="162" height="55" alt="" loading="lazy"><b>${esc(T(r.k,r.en))}</b><i>${n}</i></button>`;
+    const inner=`<img src="img/${r.img}.jpg" width="162" height="55" alt="" loading="lazy"><b>${esc(T(r.k,r.en))}</b><i>${n}</i>`;
+    return onPage?`<a class="region2" href="#r${i}">${inner}</a>`:`<button class="region2" type="button" data-region="${esc(r.k)}">${inner}</button>`;
   }).join("");
+  if(!onPage) return;
+  if(!RINFO){ if(!RINFO_LOADING){ RINFO_LOADING=true; fetch("data/regions.json",{cache:"no-cache"}).then(r=>r.json()).then(j=>{ RINFO=j; renderRegions(); }).catch(()=>{}); } return; }
+  const L=x=>x&&(x[lang]||x.en||x.ja)||{};
+  const bn=b=>(lang==="ja"||lang==="zh"||lang==="zht")?bshort(b):(b.nameEn||bshort(b));
+  const H=(ja,en)=>`<h4>${esc(T(ja,en))}</h4>`;
+  $("#regionInfo").innerHTML=REGIONS.map((r,i)=>{
+    const x=L(RINFO[r.k]); if(!x.feature) return "";
+    const bs=DB.breweries.filter(b=>regionOf(b.pref)===r.k&&DB.products.some(p=>p.breweryId===b.id)).sort((a,b)=>String(a.pref).localeCompare(String(b.pref),"ja")||bn(a).localeCompare(bn(b),LANG_HTML[lang]));
+    const n=DB.products.filter(p=>regionOf(brewOf(p.breweryId)?.pref)===r.k).length;
+    return `<article class="rinfo" id="r${i}">
+      <div class="rhead" style="background-image:url(img/${r.img}.jpg)"><div><span class="latin">${esc(r.en)}</span><h3>${esc(T(r.k,r.en))}</h3><p>${esc(x.catch||"")}</p></div></div>
+      <div class="rbody">
+        <div>${H("特徴","Features")}<p>${esc(x.feature)}</p>${H("歴史","History")}<p>${esc(x.history)}</p></div>
+        <div>${H("知られた酒蔵・酒どころ","Notable breweries & places")}<ul>${(x.notable||[]).map(t=>`<li>${esc(t)}</li>`).join("")}</ul>
+          ${bs.length?H("このサイトで紹介している造り手","Makers on this site")+`<div class="rmakers">${bs.map(b=>`<button class="chip sm" type="button" data-b="${esc(b.id)}">${esc(bn(b))}<small>${esc(prefName(b.pref))}</small></button>`).join("")}</div>`:""}
+          <a class="btn" href="products.html?region=${encodeURIComponent(r.k)}">${esc(TN("この地方のお酒を見る（{n}）","See drinks from this region ({n})",n))}</a></div>
+      </div></article>`;
+  }).join("");
+  if(location.hash&&/^#r\d$/.test(location.hash)){ const t=document.querySelector(location.hash); t&&t.scrollIntoView(); }
 }
 function renderFoods(){
   const F=[["刺身","sashimi"],["焼き鳥","yakitori"],["チーズ","cheese"],["豚","pork"],["天ぷら","tempura"],["燻製","smoked"],["デザート・アイス","dessert"]];

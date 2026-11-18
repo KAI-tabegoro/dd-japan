@@ -1,0 +1,508 @@
+{
+ "北海道": {
+  "ja": {
+   "catch": "雪と寒さが育てる、北の新しい酒どころ",
+   "feature": "冷涼な気候と雪解けのきれいな水に恵まれ、吟風・彗星・きたしずくなど北海道生まれの酒米で、淡麗ですっきりした日本酒が多く造られています。日本酒だけでなく、余市や厚岸のウイスキー、クラフトジン、空知や余市のワインも盛んです。",
+   "history": "本格的な酒造りは明治の開拓とともに始まり、本州から渡った人々が各地に蔵を開きました。ニシン漁で栄えた増毛などの港町にも蔵が生まれました。1934年には余市にウイスキー蒸溜所が開かれ、日本のウイスキーの歴史の舞台にもなりました。",
+   "notable": [
+    "国稀酒造（増毛・日本最北の酒蔵として知られる）",
+    "高砂酒造（旭川「国士無双」）",
+    "男山（旭川）",
+    "ニッカウヰスキー余市蒸溜所"
+   ]
+  },
+  "en": {
+   "catch": "A young northern sake region shaped by snow and cold",
+   "feature": "Cool weather and clean snowmelt water suit light, crisp sake made from Hokkaido-bred rice such as Ginpu, Suisei and Kita Shizuku. The island is also known for whisky from Yoichi and Akkeshi, craft gin, and wine from Sorachi and Yoichi.",
+   "history": "Brewing took root with the Meiji-era settlement of Hokkaido, when people from Honshu opened breweries across the island, including in herring-fishing ports such as Mashike. In 1934 a whisky distillery opened in Yoichi, making the town part of Japanese whisky history.",
+   "notable": [
+    "Kunimare Shuzo (Mashike; known as Japan's northernmost sake brewery)",
+    "Takasago Shuzo (Asahikawa, \"Kokushi Muso\")",
+    "Otokoyama (Asahikawa)",
+    "Nikka Whisky Yoichi Distillery"
+   ]
+  },
+  "zh": {
+   "catch": "冰雪与严寒孕育的北方新兴酒乡",
+   "feature": "气候凉爽、雪融水清澈，多以吟风、彗星、北雫等北海道培育的酒米酿造清爽淡丽的日本酒。此外，余市和厚岸的威士忌、精酿金酒，以及空知、余市的葡萄酒也很兴盛。",
+   "history": "正式的酿酒始于明治时代的北海道开拓，来自本州的人们在各地开设酒藏，因鲱鱼捕捞而繁荣的增毛等港町也诞生了酒藏。1934年余市开设了威士忌蒸馏所，成为日本威士忌历史的舞台之一。",
+   "notable": [
+    "国稀酒造（增毛，以日本最北的酒藏闻名）",
+    "高砂酒造（旭川「国士无双」）",
+    "男山（旭川）",
+    "日果威士忌余市蒸馏所"
+   ]
+  },
+  "ko": {
+   "catch": "눈과 추위가 키운 북쪽의 새로운 술 산지",
+   "feature": "서늘한 기후와 깨끗한 눈 녹은 물 덕분에 긴푸, 스이세이, 기타시즈쿠 등 홋카이도에서 개발된 술쌀로 담백하고 깔끔한 사케가 많이 만들어집니다. 요이치와 앗케시의 위스키, 크래프트 진, 소라치와 요이치의 와인도 활발합니다.",
+   "history": "본격적인 술 빚기는 메이지 시대 홋카이도 개척과 함께 시작되었고, 혼슈에서 건너온 사람들이 각지에 양조장을 열었습니다. 청어잡이로 번성한 마시케 같은 항구 마을에도 양조장이 생겼습니다. 1934년에는 요이치에 위스키 증류소가 문을 열어 일본 위스키 역사의 무대가 되었습니다.",
+   "notable": [
+    "구니마레 주조(마시케, 일본 최북단 양조장으로 알려짐)",
+    "다카사고 주조(아사히카와 '고쿠시무소')",
+    "오토코야마(아사히카와)",
+    "닛카 위스키 요이치 증류소"
+   ]
+  },
+  "es": {
+   "catch": "Una joven región del norte forjada por la nieve y el frío",
+   "feature": "El clima fresco y el agua limpia del deshielo favorecen sakes ligeros y nítidos elaborados con arroces de Hokkaido como Ginpu, Suisei y Kita Shizuku. La isla también destaca por el whisky de Yoichi y Akkeshi, la ginebra artesanal y el vino de Sorachi y Yoichi.",
+   "history": "La elaboración arraigó con la colonización de Hokkaido en la era Meiji, cuando llegaron desde Honshu personas que abrieron bodegas por toda la isla, incluso en puertos arenqueros como Mashike. En 1934 se abrió una destilería de whisky en Yoichi, que forma parte de la historia del whisky japonés.",
+   "notable": [
+    "Kunimare Shuzo (Mashike; conocida como la bodega de sake más septentrional de Japón)",
+    "Takasago Shuzo (Asahikawa, «Kokushi Muso»)",
+    "Otokoyama (Asahikawa)",
+    "Destilería Nikka de Yoichi"
+   ]
+  },
+  "zht": {
+   "catch": "冰雪與嚴寒孕育的北方新興酒鄉",
+   "feature": "氣候涼爽、雪融水清澈，多以吟風、彗星、北雫等北海道培育的酒米釀造清爽淡麗的日本酒。此外，餘市和厚岸的威士忌、精釀金酒，以及空知、餘市的葡萄酒也很興盛。",
+   "history": "正式的釀酒始於明治時代的北海道開拓，來自本州的人們在各地開設酒藏，因鯡魚捕撈而繁榮的增毛等港町也誕生了酒藏。1934年餘市開設了威士忌蒸餾所，成為日本威士忌歷史的舞臺之一。",
+   "notable": [
+    "國稀酒造（增毛，以日本最北的酒藏聞名）",
+    "高砂酒造（旭川「國士無雙」）",
+    "男山（旭川）",
+    "日果威士忌餘市蒸餾所"
+   ]
+  }
+ },
+ "東北": {
+  "ja": {
+   "catch": "米と雪と杜氏の里",
+   "feature": "日本有数の米どころで、長く厳しい冬の寒さが、低温でゆっくり発酵させる吟醸造りに向いています。山形の出羽燦々、秋田の秋田酒こまちなど県独自の酒米や酵母も多く、香り高く上品な吟醸酒の産地として知られます。福島は全国新酒鑑評会の金賞受賞数で長く全国一を続けました。",
+   "history": "岩手の南部杜氏は日本最大の杜氏集団で、江戸時代から冬になると各地の蔵へ出向いて酒を造ってきました。山形県は県を挙げて酒米と酵母を開発し、吟醸酒の産地として名を上げました。秋田では、今では全国で使われる協会6号酵母が昭和初期に見つかっています。",
+   "notable": [
+    "南部美人（岩手・二戸）",
+    "浦霞（宮城・塩竈）",
+    "新政（秋田・協会6号酵母の蔵）",
+    "出羽桜（山形・天童）",
+    "飛露喜（福島・会津坂下）"
+   ]
+  },
+  "en": {
+   "catch": "Land of rice, snow and master brewers",
+   "feature": "One of Japan's great rice regions, its long, harsh winters suit ginjo brewing, with slow, cold fermentation. Prefectures have bred their own sake rice and yeast, such as Yamagata's Dewa Sansan and Akita's Akita Sake Komachi, and the region is known for elegant, fragrant ginjo. Fukushima led the national new-sake awards in gold medals for many years.",
+   "history": "Iwate's Nanbu toji are Japan's largest guild of master brewers; since the Edo period they have travelled to breweries across the country each winter. Yamagata developed its own rice and yeast and became famous for ginjo. In Akita, Kyokai No. 6 yeast, now used nationwide, was discovered in the early Showa era.",
+   "notable": [
+    "Nanbu Bijin (Ninohe, Iwate)",
+    "Urakasumi (Shiogama, Miyagi)",
+    "Aramasa (Akita; source of Kyokai No. 6 yeast)",
+    "Dewazakura (Tendo, Yamagata)",
+    "Hiroki (Aizubange, Fukushima)"
+   ]
+  },
+  "zh": {
+   "catch": "稻米、白雪与杜氏的故乡",
+   "feature": "日本屈指可数的稻米产区，漫长严寒的冬季适合低温缓慢发酵的吟酿酿造。山形的出羽灿灿、秋田的秋田酒小町等各县自主培育的酒米和酵母众多，以香气高雅的吟酿酒产地而闻名。福岛县长期在全国新酒鉴评会金奖数量上位居全国第一。",
+   "history": "岩手的南部杜氏是日本最大的杜氏集团，自江户时代起每到冬季便前往各地酒藏酿酒。山形县举全县之力开发酒米与酵母，作为吟酿酒产地声名鹊起。秋田在昭和初期发现了如今全国通用的协会6号酵母。",
+   "notable": [
+    "南部美人（岩手・二户）",
+    "浦霞（宫城・盐灶）",
+    "新政（秋田・协会6号酵母之藏）",
+    "出羽樱（山形・天童）",
+    "飞露喜（福岛・会津坂下）"
+   ]
+  },
+  "ko": {
+   "catch": "쌀과 눈과 도지(양조 장인)의 고장",
+   "feature": "일본 굴지의 쌀 산지로, 길고 혹독한 겨울 추위가 저온에서 천천히 발효시키는 긴조 양조에 알맞습니다. 야마가타의 데와산산, 아키타의 아키타사케코마치 등 현마다 독자적인 술쌀과 효모가 많아, 향이 높고 품위 있는 긴조슈 산지로 알려져 있습니다. 후쿠시마는 전국 신주 감평회 금상 수에서 오랫동안 전국 1위를 이어 왔습니다.",
+   "history": "이와테의 난부 도지는 일본 최대의 도지 집단으로, 에도 시대부터 겨울이 되면 각지의 양조장으로 가서 술을 빚어 왔습니다. 야마가타현은 현 차원에서 술쌀과 효모를 개발해 긴조슈 산지로 이름을 알렸습니다. 아키타에서는 지금 전국에서 쓰이는 협회 6호 효모가 쇼와 초기에 발견되었습니다.",
+   "notable": [
+    "난부비진(이와테・니노헤)",
+    "우라카스미(미야기・시오가마)",
+    "아라마사(아키타・협회 6호 효모의 양조장)",
+    "데와자쿠라(야마가타・덴도)",
+    "히로키(후쿠시마・아이즈반게)"
+   ]
+  },
+  "es": {
+   "catch": "Tierra de arroz, nieve y maestros cerveceros",
+   "feature": "Es una de las grandes regiones arroceras de Japón, y sus inviernos largos y duros favorecen el ginjo, de fermentación lenta en frío. Las prefecturas han creado arroces y levaduras propios, como el Dewa Sansan de Yamagata o el Akita Sake Komachi, y la región es conocida por ginjo elegantes y aromáticos. Fukushima encabezó durante muchos años el medallero de oro del concurso nacional de sake nuevo.",
+   "history": "Los toji de Nanbu (Iwate) forman el mayor gremio de maestros de Japón; desde la era Edo viajan cada invierno a bodegas de todo el país. Yamagata desarrolló su propio arroz y levadura y se hizo famosa por el ginjo. En Akita se descubrió a comienzos de la era Showa la levadura Kyokai n.º 6, hoy usada en todo el país.",
+   "notable": [
+    "Nanbu Bijin (Ninohe, Iwate)",
+    "Urakasumi (Shiogama, Miyagi)",
+    "Aramasa (Akita; origen de la levadura Kyokai n.º 6)",
+    "Dewazakura (Tendo, Yamagata)",
+    "Hiroki (Aizubange, Fukushima)"
+   ]
+  },
+  "zht": {
+   "catch": "稻米、白雪與杜氏的故鄉",
+   "feature": "日本屈指可數的稻米產區，漫長嚴寒的冬季適合低溫緩慢發酵的吟釀釀造。山形的出羽燦燦、秋田的秋田酒小町等各縣自主培育的酒米和酵母眾多，以香氣高雅的吟釀酒產地而聞名。福島縣長期在全國新酒鑑評會金獎數量上位居全國第一。",
+   "history": "巖手的南部杜氏是日本最大的杜氏集團，自江戶時代起每到冬季便前往各地酒藏釀酒。山形縣舉全縣之力開發酒米與酵母，作為吟釀酒產地聲名鵲起。秋田在昭和初期發現瞭如今全國通用的協會6號酵母。",
+   "notable": [
+    "南部美人（巖手・二戶）",
+    "浦霞（宮城・鹽灶）",
+    "新政（秋田・協會6號酵母之藏）",
+    "出羽櫻（山形・天童）",
+    "飛露喜（福島・會津坂下）"
+   ]
+  }
+ },
+ "関東": {
+  "ja": {
+   "catch": "江戸・東京の食卓を支えてきた地酒",
+   "feature": "利根川・荒川・鬼怒川などの豊かな水系と関東平野の米に恵まれ、茨城・栃木・埼玉・千葉などに多くの蔵があります。大消費地の東京に近く、料理に合わせやすい軽やかな酒から、新しい感覚の酒まで幅広く造られています。",
+   "history": "江戸時代、江戸で好まれたのは上方（灘・伏見）から船で運ばれる「下り酒」で、関東の酒は「地廻り酒」と呼ばれました。18世紀末には幕府が関東の酒の質を高めようと、関東の蔵に上質な酒を造らせる「御免関東上酒」を試みています。茨城には平安時代末期の創業と伝わる、日本最古級の蔵もあります。",
+   "notable": [
+    "須藤本家（茨城・笠間。日本最古級の蔵と伝わる）",
+    "小澤酒造「澤乃井」（東京・青梅）",
+    "小林酒造「鳳凰美田」（栃木・小山）",
+    "神亀酒造（埼玉・蓮田）"
+   ]
+  },
+  "en": {
+   "catch": "Local sake that has long fed Edo and Tokyo",
+   "feature": "Blessed with the Tone, Arakawa and Kinu river systems and the rice of the Kanto Plain, Ibaraki, Tochigi, Saitama and Chiba are home to many breweries. Close to the huge Tokyo market, they make everything from light, food-friendly sake to new and inventive styles.",
+   "history": "In the Edo period, the city preferred kudari-zake shipped from Kamigata (Nada and Fushimi), while Kanto sake was called jimawari-zake. In the late 18th century the shogunate tried to raise local quality by having Kanto breweries make premium sake, known as Gomen Kanto Joshu. Ibaraki is home to one of Japan's oldest breweries, said to date from the late Heian period.",
+   "notable": [
+    "Sudo Honke (Kasama, Ibaraki; said to be among Japan's oldest)",
+    "Ozawa Shuzo \"Sawanoi\" (Ome, Tokyo)",
+    "Kobayashi Shuzo \"Houou Biden\" (Oyama, Tochigi)",
+    "Shinkame Shuzo (Hasuda, Saitama)"
+   ]
+  },
+  "zh": {
+   "catch": "支撑江户・东京餐桌的地酒",
+   "feature": "得益于利根川、荒川、鬼怒川等丰富水系和关东平原的稻米，茨城、栃木、埼玉、千叶等地酒藏众多。靠近大消费地东京，从易于佐餐的轻快酒款到富有新意的酒款，酿造范围广泛。",
+   "history": "江户时代，江户人偏爱从上方（滩・伏见）用船运来的「下酒」，关东的酒则被称为「地回酒」。18世纪末，幕府为提高关东酒的品质，尝试让关东酒藏酿造上等酒，称为「御免关东上酒」。茨城还有相传创业于平安时代末期、日本最古老级别的酒藏。",
+   "notable": [
+    "须藤本家（茨城・笠间，相传为日本最古老级别的酒藏）",
+    "小泽酒造「泽乃井」（东京・青梅）",
+    "小林酒造「凤凰美田」（栃木・小山）",
+    "神龟酒造（埼玉・莲田）"
+   ]
+  },
+  "ko": {
+   "catch": "에도・도쿄의 식탁을 지켜 온 지자케",
+   "feature": "도네강・아라카와강・기누강 등 풍부한 수계와 간토 평야의 쌀 덕분에 이바라키・도치기・사이타마・지바 등에 양조장이 많습니다. 대소비지 도쿄와 가까워, 요리에 곁들이기 좋은 가벼운 술부터 새로운 감각의 술까지 폭넓게 만들어집니다.",
+   "history": "에도 시대 에도에서 사랑받은 것은 가미가타(나다・후시미)에서 배로 실어 온 '구다리자케'였고, 간토의 술은 '지마와리자케'라 불렸습니다. 18세기 말 막부는 간토 술의 품질을 높이려 간토의 양조장에 고급 술을 빚게 하는 '고멘 간토 조슈'를 시도했습니다. 이바라키에는 헤이안 시대 말기에 창업했다고 전해지는 일본 최고(最古)급 양조장도 있습니다.",
+   "notable": [
+    "스도 혼케(이바라키・가사마, 일본 최고급 양조장으로 전해짐)",
+    "오자와 주조 '사와노이'(도쿄・오메)",
+    "고바야시 주조 '호오비덴'(도치기・오야마)",
+    "신카메 주조(사이타마・하스다)"
+   ]
+  },
+  "es": {
+   "catch": "Sake local que ha alimentado Edo y Tokio",
+   "feature": "Con los ríos Tone, Arakawa y Kinu y el arroz de la llanura de Kanto, Ibaraki, Tochigi, Saitama y Chiba cuentan con muchas bodegas. Cerca del gran mercado de Tokio, elaboran desde sakes ligeros y fáciles de maridar hasta estilos nuevos.",
+   "history": "En la era Edo, la ciudad prefería el kudari-zake traído en barco desde Kamigata (Nada y Fushimi), mientras que el sake de Kanto se llamaba jimawari-zake. A finales del siglo XVIII el shogunato intentó mejorar la calidad local encargando sake de primera a bodegas de Kanto (Gomen Kanto Joshu). En Ibaraki se encuentra una de las bodegas más antiguas de Japón, que según la tradición data de finales del periodo Heian.",
+   "notable": [
+    "Sudo Honke (Kasama, Ibaraki; considerada de las más antiguas de Japón)",
+    "Ozawa Shuzo «Sawanoi» (Ome, Tokio)",
+    "Kobayashi Shuzo «Houou Biden» (Oyama, Tochigi)",
+    "Shinkame Shuzo (Hasuda, Saitama)"
+   ]
+  },
+  "zht": {
+   "catch": "支撐江戶・東京餐桌的地酒",
+   "feature": "得益於利根川、荒川、鬼怒川等豐富水系和關東平原的稻米，茨城、栃木、埼玉、千葉等地酒藏眾多。靠近大消費地東京，從易於佐餐的輕快酒款到富有新意的酒款，釀造範圍廣泛。",
+   "history": "江戶時代，江戶人偏愛從上方（灘・伏見）用船運來的「下酒」，關東的酒則被稱為「地回酒」。18世紀末，幕府為提高關東酒的品質，嘗試讓關東酒藏釀造上等酒，稱為「御免關東上酒」。茨城還有相傳創業於平安時代末期、日本最古老級別的酒藏。",
+   "notable": [
+    "須藤本家（茨城・笠間，相傳為日本最古老級別的酒藏）",
+    "小澤酒造「澤乃井」（東京・青梅）",
+    "小林酒造「鳳凰美田」（栃木・小山）",
+    "神龜酒造（埼玉・蓮田）"
+   ]
+  }
+ },
+ "中部": {
+  "ja": {
+   "catch": "淡麗辛口の新潟から、ワインの山梨まで",
+   "feature": "北陸・甲信越・東海にまたがる広い地方です。新潟は蔵の数が全国有数で、すっきりした「淡麗辛口」で知られます。石川・富山・福井は能登杜氏の流れをくむ旨みのある酒、長野は山の水と寒さを生かした酒、静岡は静岡酵母の華やかな吟醸が特徴です。山梨は甲州ぶどうを使う日本ワインの中心地です。",
+   "history": "1970年代以降の地酒ブームで、新潟の淡麗辛口が全国に広まりました。加賀（石川）の「菊酒」は室町時代から名酒として知られます。山梨では明治初期に日本で初めて本格的なワイン会社が設立され、甲州ぶどうのワイン造りが始まりました。知多半島（愛知）の酒は江戸時代に船で江戸へ送られていました。",
+   "notable": [
+    "石本酒造「越乃寒梅」（新潟）",
+    "八海醸造「八海山」（新潟）",
+    "菊姫（石川・白山）",
+    "宮坂醸造「真澄」（長野・諏訪。協会7号酵母の蔵）",
+    "磯自慢酒造（静岡・焼津）",
+    "勝沼のワイナリー（山梨）"
+   ]
+  },
+  "en": {
+   "catch": "From crisp Niigata sake to Yamanashi wine",
+   "feature": "A broad region spanning Hokuriku, Koshinetsu and Tokai. Niigata has one of the largest numbers of breweries and is known for clean, dry tanrei-karakuchi sake. Ishikawa, Toyama and Fukui make umami-rich sake in the Noto toji tradition; Nagano uses mountain water and cold; Shizuoka is known for fragrant ginjo made with Shizuoka yeast. Yamanashi is the heart of Japanese wine, made from Koshu grapes.",
+   "history": "The local-sake boom from the 1970s spread Niigata's crisp, dry style nationwide. Kaga's (Ishikawa) kikuzake has been famous since the Muromachi period. In the early Meiji era, Japan's first full-scale wine company was founded in Yamanashi, starting wine made from Koshu grapes. Sake from the Chita Peninsula (Aichi) was shipped to Edo in the Edo period.",
+   "notable": [
+    "Ishimoto Shuzo \"Koshi no Kanbai\" (Niigata)",
+    "Hakkai Jozo \"Hakkaisan\" (Niigata)",
+    "Kikuhime (Hakusan, Ishikawa)",
+    "Miyasaka Jozo \"Masumi\" (Suwa, Nagano; source of Kyokai No. 7 yeast)",
+    "Isojiman Shuzo (Yaizu, Shizuoka)",
+    "Wineries of Katsunuma (Yamanashi)"
+   ]
+  },
+  "zh": {
+   "catch": "从淡丽辛口的新潟到葡萄酒之乡山梨",
+   "feature": "横跨北陆、甲信越、东海的广阔地区。新潟的酒藏数量位居全国前列，以清爽的「淡丽辛口」闻名。石川、富山、福井承袭能登杜氏的传统，酒款富有鲜味；长野善用山泉与严寒；静冈以静冈酵母酿出的华丽吟酿为特色。山梨是使用甲州葡萄的日本葡萄酒中心。",
+   "history": "1970年代以后的地酒热潮让新潟的淡丽辛口风靡全国。加贺（石川）的「菊酒」自室町时代起便是名酒。山梨在明治初期设立了日本第一家正式的葡萄酒公司，开启了甲州葡萄酒的酿造。知多半岛（爱知）的酒在江户时代曾用船运往江户。",
+   "notable": [
+    "石本酒造「越乃寒梅」（新潟）",
+    "八海酿造「八海山」（新潟）",
+    "菊姬（石川・白山）",
+    "宫坂酿造「真澄」（长野・诹访，协会7号酵母之藏）",
+    "矶自慢酒造（静冈・焼津）",
+    "胜沼的酒庄（山梨）"
+   ]
+  },
+  "ko": {
+   "catch": "담백하고 쌉쌀한 니가타에서 와인의 야마나시까지",
+   "feature": "호쿠리쿠・고신에쓰・도카이에 걸친 넓은 지방입니다. 니가타는 양조장 수가 전국 손꼽히며 깔끔한 '단레이 가라쿠치(담백・드라이)'로 알려져 있습니다. 이시카와・도야마・후쿠이는 노토 도지의 전통을 이은 감칠맛 있는 술, 나가노는 산의 물과 추위를 살린 술, 시즈오카는 시즈오카 효모의 화려한 긴조가 특징입니다. 야마나시는 고슈 포도로 만드는 일본 와인의 중심지입니다.",
+   "history": "1970년대 이후의 지자케 붐으로 니가타의 단레이 가라쿠치가 전국으로 퍼졌습니다. 가가(이시카와)의 '기쿠자케'는 무로마치 시대부터 명주로 알려졌습니다. 야마나시에서는 메이지 초기에 일본 최초의 본격 와인 회사가 세워져 고슈 포도 와인 양조가 시작되었습니다. 지타반도(아이치)의 술은 에도 시대에 배로 에도까지 보내졌습니다.",
+   "notable": [
+    "이시모토 주조 '고시노칸바이'(니가타)",
+    "핫카이 주조 '핫카이산'(니가타)",
+    "기쿠히메(이시카와・하쿠산)",
+    "미야사카 주조 '마스미'(나가노・스와, 협회 7호 효모의 양조장)",
+    "이소지만 주조(시즈오카・야이즈)",
+    "가쓰누마의 와이너리(야마나시)"
+   ]
+  },
+  "es": {
+   "catch": "Del sake seco de Niigata al vino de Yamanashi",
+   "feature": "Una amplia región que abarca Hokuriku, Koshinetsu y Tokai. Niigata tiene uno de los mayores números de bodegas y es famosa por el sake limpio y seco (tanrei karakuchi). Ishikawa, Toyama y Fukui elaboran sakes sabrosos en la tradición de los toji de Noto; Nagano aprovecha el agua de montaña y el frío; Shizuoka destaca por ginjo aromáticos con levadura de Shizuoka. Yamanashi es el corazón del vino japonés, elaborado con uva Koshu.",
+   "history": "El auge del sake local desde los años setenta difundió por todo el país el estilo seco de Niigata. El kikuzake de Kaga (Ishikawa) es famoso desde el periodo Muromachi. A comienzos de la era Meiji se fundó en Yamanashi la primera empresa vinícola japonesa a gran escala, que inició el vino de uva Koshu. El sake de la península de Chita (Aichi) se enviaba en barco a Edo.",
+   "notable": [
+    "Ishimoto Shuzo «Koshi no Kanbai» (Niigata)",
+    "Hakkai Jozo «Hakkaisan» (Niigata)",
+    "Kikuhime (Hakusan, Ishikawa)",
+    "Miyasaka Jozo «Masumi» (Suwa, Nagano; origen de la levadura Kyokai n.º 7)",
+    "Isojiman Shuzo (Yaizu, Shizuoka)",
+    "Bodegas de Katsunuma (Yamanashi)"
+   ]
+  },
+  "zht": {
+   "catch": "從淡麗辛口的新潟到葡萄酒之鄉山梨",
+   "feature": "橫跨北陸、甲信越、東海的廣闊地區。新潟的酒藏數量位居全國前列，以清爽的「淡麗辛口」聞名。石川、富山、福井承襲能登杜氏的傳統，酒款富有鮮味；長野善用山泉與嚴寒；靜岡以靜岡酵母釀出的華麗吟釀為特色。山梨是使用甲州葡萄的日本葡萄酒中心。",
+   "history": "1970年代以後的地酒熱潮讓新潟的淡麗辛口風靡全國。加賀（石川）的「菊酒」自室町時代起便是名酒。山梨在明治初期設立了日本第一家正式的葡萄酒公司，開啟了甲州葡萄酒的釀造。知多半島（愛知）的酒在江戶時代曾用船運往江戶。",
+   "notable": [
+    "石本酒造「越乃寒梅」（新潟）",
+    "八海釀造「八海山」（新潟）",
+    "菊姬（石川・白山）",
+    "宮坂釀造「真澄」（長野・諏訪，協會7號酵母之藏）",
+    "磯自慢酒造（靜岡・焼津）",
+    "勝沼的酒莊（山梨）"
+   ]
+  }
+ },
+ "近畿": {
+  "ja": {
+   "catch": "日本酒のふるさと、灘と伏見",
+   "feature": "日本酒の歴史の中心地です。兵庫の灘五郷と京都の伏見は二大産地で、ミネラルの多い硬水「宮水」で造る灘の力強い酒は「男酒」、やわらかな伏流水で造る伏見のなめらかな酒は「女酒」と呼ばれます。兵庫は酒米の王様「山田錦」の一大産地。和歌山は梅の産地で、梅酒も名物です。",
+   "history": "室町時代、奈良の寺院で造られる「僧坊酒」が高い評価を受け、正暦寺では今の酒母（酛）のもととなる「菩提酛」が生まれたとされます。江戸時代には灘の酒が樽廻船で江戸へ運ばれ「下り酒」として人気を集めました。1840年ごろに灘で「宮水」が見いだされ、灘の酒の名声を高めました。",
+   "notable": [
+    "菊正宗酒造・白鶴酒造・剣菱酒造（兵庫・灘）",
+    "月桂冠・黄桜（京都・伏見）",
+    "正暦寺（奈良・菩提酛発祥の地とされる寺）",
+    "梅乃宿酒造（奈良・葛城）"
+   ]
+  },
+  "en": {
+   "catch": "The home of sake: Nada and Fushimi",
+   "feature": "The historic heart of sake. Hyogo's Nada Gogo and Kyoto's Fushimi are the two great centres: Nada's robust sake brewed with mineral-rich miyamizu water is called otoko-zake (\"masculine sake\"), while Fushimi's smooth sake from soft groundwater is called onna-zake (\"feminine sake\"). Hyogo grows much of Yamada Nishiki, the king of sake rice, and Wakayama is famous for ume plums and umeshu.",
+   "history": "In the Muromachi period, sobo-shu brewed at Nara temples was highly prized, and Shoryaku-ji is said to be where bodai-moto, forerunner of today's yeast starter, was born. In the Edo period, Nada sake shipped to Edo by taru-kaisen barrel ships became popular as kudari-zake. Around 1840, the discovery of miyamizu water in Nada sealed the region's fame.",
+   "notable": [
+    "Kiku-Masamune, Hakutsuru and Kenbishi (Nada, Hyogo)",
+    "Gekkeikan and Kizakura (Fushimi, Kyoto)",
+    "Shoryaku-ji Temple (Nara; regarded as the birthplace of bodai-moto)",
+    "Umenoyado Shuzo (Katsuragi, Nara)"
+   ]
+  },
+  "zh": {
+   "catch": "日本酒的故乡——滩与伏见",
+   "feature": "日本酒历史的中心。兵库的滩五乡与京都的伏见是两大产地：用富含矿物质的硬水「宫水」酿造的滩之酒浑厚有力，被称为「男酒」；用柔和伏流水酿造的伏见之酒口感顺滑，被称为「女酒」。兵库是酒米之王「山田锦」的主要产地，和歌山则以梅子与梅酒闻名。",
+   "history": "室町时代，奈良寺院酿造的「僧坊酒」备受推崇，据说正历寺诞生了现今酒母（酛）的前身「菩提酛」。江户时代，滩的酒由樽回船运往江户，作为「下酒」广受欢迎。1840年前后在滩发现了「宫水」，进一步提升了滩酒的名声。",
+   "notable": [
+    "菊正宗酒造・白鹤酒造・剑菱酒造（兵库・滩）",
+    "月桂冠・黄樱（京都・伏见）",
+    "正历寺（奈良，被视为菩提酛发祥地的寺院）",
+    "梅乃宿酒造（奈良・葛城）"
+   ]
+  },
+  "ko": {
+   "catch": "사케의 고향, 나다와 후시미",
+   "feature": "사케 역사의 중심지입니다. 효고의 나다고고와 교토의 후시미가 2대 산지로, 미네랄이 많은 경수 '미야미즈'로 빚는 나다의 힘찬 술은 '오토코자케(남자 술)', 부드러운 복류수로 빚는 후시미의 매끄러운 술은 '온나자케(여자 술)'라 불립니다. 효고는 술쌀의 왕 '야마다니시키'의 최대 산지이고, 와카야마는 매실과 우메슈로 유명합니다.",
+   "history": "무로마치 시대 나라의 사원에서 빚은 '소보슈'가 높은 평가를 받았고, 쇼랴쿠지에서는 오늘날 주모(모토)의 원형인 '보다이모토'가 탄생했다고 합니다. 에도 시대에는 나다의 술이 다루카이센(술통 운반선)으로 에도에 실려 가 '구다리자케'로 인기를 끌었습니다. 1840년경 나다에서 '미야미즈'가 발견되어 나다 술의 명성을 높였습니다.",
+   "notable": [
+    "기쿠마사무네・하쿠쓰루・겐비시(효고・나다)",
+    "겟케이칸・기자쿠라(교토・후시미)",
+    "쇼랴쿠지(나라, 보다이모토 발상지로 알려진 절)",
+    "우메노야도 주조(나라・가쓰라기)"
+   ]
+  },
+  "es": {
+   "catch": "La cuna del sake: Nada y Fushimi",
+   "feature": "El corazón histórico del sake. Nada Gogo (Hyogo) y Fushimi (Kioto) son los dos grandes centros: el sake robusto de Nada, elaborado con el agua dura y mineral miyamizu, se llama otoko-zake («sake masculino»), y el sake suave de Fushimi, de aguas subterráneas blandas, onna-zake («sake femenino»). Hyogo cultiva gran parte del Yamada Nishiki, el rey de los arroces sakeros, y Wakayama es famosa por sus ciruelas ume y el umeshu.",
+   "history": "En el periodo Muromachi el sobo-shu de los templos de Nara era muy apreciado, y se considera que en Shoryaku-ji nació el bodai-moto, precursor del pie de cuba actual. En la era Edo, el sake de Nada llegaba a Edo en barcos taru-kaisen y triunfó como kudari-zake. Hacia 1840 el descubrimiento del agua miyamizu en Nada consolidó su fama.",
+   "notable": [
+    "Kiku-Masamune, Hakutsuru y Kenbishi (Nada, Hyogo)",
+    "Gekkeikan y Kizakura (Fushimi, Kioto)",
+    "Templo Shoryaku-ji (Nara; considerado cuna del bodai-moto)",
+    "Umenoyado Shuzo (Katsuragi, Nara)"
+   ]
+  },
+  "zht": {
+   "catch": "日本酒的故鄉——灘與伏見",
+   "feature": "日本酒歷史的中心。兵庫的灘五鄉與京都的伏見是兩大產地：用富含礦物質的硬水「宮水」釀造的灘之酒渾厚有力，被稱為「男酒」；用柔和伏流水釀造的伏見之酒口感順滑，被稱為「女酒」。兵庫是酒米之王「山田錦」的主要產地，和歌山則以梅子與梅酒聞名。",
+   "history": "室町時代，奈良寺院釀造的「僧坊酒」備受推崇，據說正歷寺誕生了現今酒母（酛）的前身「菩提酛」。江戶時代，灘的酒由樽回船運往江戶，作為「下酒」廣受歡迎。1840年前後在灘發現了「宮水」，進一步提升了灘酒的名聲。",
+   "notable": [
+    "菊正宗酒造・白鶴酒造・劍菱酒造（兵庫・灘）",
+    "月桂冠・黃櫻（京都・伏見）",
+    "正歷寺（奈良，被視為菩提酛發祥地的寺院）",
+    "梅乃宿酒造（奈良・葛城）"
+   ]
+  }
+ },
+ "中国・四国": {
+  "ja": {
+   "catch": "軟水の吟醸と、雄町のふるさと",
+   "feature": "広島・西条は全国屈指の酒どころで、やわらかな軟水で造る、まろやかで香り高い酒が特徴です。岡山は酒米「雄町」の故郷。島根は出雲神話にまつわる酒の伝説が多く、日本酒発祥の地を名乗る神社もあります。四国では、高知の淡麗辛口、愛媛の柑橘を使ったリキュールなどが知られます。",
+   "history": "明治時代、広島の三浦仙三郎が、軟水でも良い酒を造れる「軟水醸造法」を確立し、それまで難しいとされた軟水の地で吟醸造りが広まりました。岡山の雄町は江戸時代末の1859年に見いだされた、現存する最古級の酒米で、山田錦など多くの酒米の祖先にあたります。",
+   "notable": [
+    "賀茂鶴酒造・白牡丹酒造（広島・西条）",
+    "旭酒造「獺祭」（山口・岩国）",
+    "司牡丹酒造（高知・佐川）",
+    "酔鯨酒造（高知）",
+    "梅錦山川（愛媛・四国中央）"
+   ]
+  },
+  "en": {
+   "catch": "Soft-water ginjo and the home of Omachi rice",
+   "feature": "Saijo in Hiroshima is one of Japan's great sake towns, known for mellow, fragrant sake brewed with soft water. Okayama is the home of Omachi rice. Shimane is rich in sake legends from Izumo mythology, and one shrine there claims to be the birthplace of sake. In Shikoku, Kochi is known for crisp, dry sake and Ehime for citrus liqueurs.",
+   "history": "In the Meiji era, Senzaburo Miura of Hiroshima established the soft-water brewing method, making fine ginjo possible where soft water had been considered unsuitable. Okayama's Omachi, found in 1859, is one of the oldest surviving sake rice varieties and an ancestor of many others, including Yamada Nishiki.",
+   "notable": [
+    "Kamotsuru and Hakubotan (Saijo, Hiroshima)",
+    "Asahi Shuzo \"Dassai\" (Iwakuni, Yamaguchi)",
+    "Tsukasabotan (Sakawa, Kochi)",
+    "Suigei (Kochi)",
+    "Umenishiki Yamakawa (Shikokuchuo, Ehime)"
+   ]
+  },
+  "zh": {
+   "catch": "软水吟酿与雄町的故乡",
+   "feature": "广岛西条是全国屈指可数的酒乡，以柔和软水酿造的圆润芳香的酒为特色。冈山是酒米「雄町」的故乡。岛根流传着许多与出云神话相关的酒的传说，还有自称日本酒发祥地的神社。四国则以高知的淡丽辛口、爱媛的柑橘利口酒等闻名。",
+   "history": "明治时代，广岛的三浦仙三郎确立了用软水也能酿出好酒的「软水酿造法」，使吟酿酿造在过去被认为不适合的软水地区普及开来。冈山的雄町于江户末期的1859年被发现，是现存最古老级别的酒米，也是山田锦等众多酒米的祖先。",
+   "notable": [
+    "贺茂鹤酒造・白牡丹酒造（广岛・西条）",
+    "旭酒造「獭祭」（山口・岩国）",
+    "司牡丹酒造（高知・佐川）",
+    "醉鲸酒造（高知）",
+    "梅锦山川（爱媛・四国中央）"
+   ]
+  },
+  "ko": {
+   "catch": "연수로 빚은 긴조와 오마치의 고향",
+   "feature": "히로시마의 사이조는 전국 굴지의 술 산지로, 부드러운 연수로 빚은 순하고 향 높은 술이 특징입니다. 오카야마는 술쌀 '오마치'의 고향입니다. 시마네에는 이즈모 신화에 얽힌 술 전설이 많고, 사케 발상지를 자처하는 신사도 있습니다. 시코쿠에서는 고치의 담백・드라이한 술, 에히메의 감귤 리큐어 등이 알려져 있습니다.",
+   "history": "메이지 시대 히로시마의 미우라 센자부로가 연수로도 좋은 술을 빚을 수 있는 '연수 양조법'을 확립해, 그때까지 어렵다고 여겨진 연수 지역에도 긴조 양조가 퍼졌습니다. 오카야마의 오마치는 에도 말기인 1859년에 발견된, 현존하는 가장 오래된 술쌀 가운데 하나로 야마다니시키 등 많은 술쌀의 조상입니다.",
+   "notable": [
+    "가모쓰루 주조・하쿠보탄 주조(히로시마・사이조)",
+    "아사히 주조 '닷사이'(야마구치・이와쿠니)",
+    "쓰카사보탄 주조(고치・사카와)",
+    "스이게이 주조(고치)",
+    "우메니시키 야마카와(에히메・시코쿠추오)"
+   ]
+  },
+  "es": {
+   "catch": "Ginjo de agua blanda y la cuna del arroz Omachi",
+   "feature": "Saijo (Hiroshima) es una de las grandes ciudades del sake, conocida por sakes redondos y aromáticos elaborados con agua blanda. Okayama es la cuna del arroz Omachi. Shimane abunda en leyendas del sake ligadas a la mitología de Izumo, y un santuario reivindica ser el lugar de nacimiento del sake. En Shikoku destacan el sake seco de Kochi y los licores cítricos de Ehime.",
+   "history": "En la era Meiji, Senzaburo Miura (Hiroshima) estableció el método de elaboración con agua blanda, que permitió hacer buen ginjo donde antes se consideraba imposible. El Omachi de Okayama, descubierto en 1859, es uno de los arroces sakeros más antiguos que se conservan y antepasado de muchos otros, como el Yamada Nishiki.",
+   "notable": [
+    "Kamotsuru y Hakubotan (Saijo, Hiroshima)",
+    "Asahi Shuzo «Dassai» (Iwakuni, Yamaguchi)",
+    "Tsukasabotan (Sakawa, Kochi)",
+    "Suigei (Kochi)",
+    "Umenishiki Yamakawa (Shikokuchuo, Ehime)"
+   ]
+  },
+  "zht": {
+   "catch": "軟水吟釀與雄町的故鄉",
+   "feature": "廣島西條是全國屈指可數的酒鄉，以柔和軟水釀造的圓潤芳香的酒為特色。岡山是酒米「雄町」的故鄉。島根流傳著許多與出雲神話相關的酒的傳說，還有自稱日本酒發祥地的神社。四國則以高知的淡麗辛口、愛媛的柑橘利口酒等聞名。",
+   "history": "明治時代，廣島的三浦仙三郎確立了用軟水也能釀出好酒的「軟水釀造法」，使吟釀釀造在過去被認為不適合的軟水地區普及開來。岡山的雄町於江戶末期的1859年被發現，是現存最古老級別的酒米，也是山田錦等眾多酒米的祖先。",
+   "notable": [
+    "賀茂鶴酒造・白牡丹酒造（廣島・西條）",
+    "旭酒造「獺祭」（山口・巖國）",
+    "司牡丹酒造（高知・佐川）",
+    "醉鯨酒造（高知）",
+    "梅錦山川（愛媛・四國中央）"
+   ]
+  }
+ },
+ "九州・沖縄": {
+  "ja": {
+   "catch": "焼酎と泡盛、蒸留酒の一大産地",
+   "feature": "温暖な気候から、日本酒より焼酎づくりが盛んになった地域です。鹿児島の芋、宮崎の芋と麦、大分の麦、熊本・球磨の米、長崎・壱岐の麦、奄美群島だけで造られる黒糖焼酎、沖縄のタイ米と黒麹で造る泡盛と、土地ごとに原料が異なります。福岡・佐賀などの北部は、日本酒の産地としても知られます。",
+   "history": "蒸留の技術は、15世紀ごろ琉球（沖縄）に東南アジアとの交易を通じて伝わり、泡盛が生まれたとされます。鹿児島では1559年の神社の落書きに「焼酎」の文字が残り、日本で最も古い記録の一つとされます。「壱岐」「球磨」「琉球」「薩摩」の焼酎・泡盛は、産地の名を守る地理的表示（GI）に指定されています。",
+   "notable": [
+    "黒木本店「百年の孤独」（宮崎・高鍋）",
+    "三和酒類「いいちこ」（大分・宇佐）",
+    "瑞泉酒造（沖縄・首里）",
+    "玄海酒造（長崎・壱岐）",
+    "繁桝 高橋商店（福岡・八女。日本酒）"
+   ]
+  },
+  "en": {
+   "catch": "Japan's great land of shochu and awamori",
+   "feature": "Its warm climate made the region a centre of shochu rather than sake. Each area has its own base: sweet potato in Kagoshima, sweet potato and barley in Miyazaki, barley in Oita, rice in Kumamoto's Kuma, barley on Iki, brown-sugar shochu made only in the Amami Islands, and awamori in Okinawa from Thai rice and black koji. The northern prefectures of Fukuoka and Saga are also known for sake.",
+   "history": "Distilling is thought to have reached Ryukyu (Okinawa) around the 15th century through trade with Southeast Asia, giving birth to awamori. In Kagoshima, graffiti left at a shrine in 1559 mentions shochu, one of the oldest records in Japan. Iki, Kuma, Ryukyu and Satsuma shochu and awamori are protected Geographical Indications (GI).",
+   "notable": [
+    "Kuroki Honten \"Hyakunen no Kodoku\" (Takanabe, Miyazaki)",
+    "Sanwa Shurui \"iichiko\" (Usa, Oita)",
+    "Zuisen Shuzo (Shuri, Okinawa)",
+    "Genkai Shuzo (Iki, Nagasaki)",
+    "Shigemasu Takahashi Shoten (Yame, Fukuoka; sake)"
+   ]
+  },
+  "zh": {
+   "catch": "烧酒与泡盛——蒸馏酒的一大产地",
+   "feature": "因气候温暖，这里比起日本酒更盛行烧酒的酿造。各地原料各不相同：鹿儿岛的番薯、宫崎的番薯与大麦、大分的大麦、熊本球磨的米、长崎壹岐的大麦、仅在奄美群岛酿造的黑糖烧酒，以及冲绳以泰国米和黑曲酿造的泡盛。福冈、佐贺等北部地区也是知名的日本酒产地。",
+   "history": "据说蒸馏技术约在15世纪经由与东南亚的贸易传入琉球（冲绳），由此诞生了泡盛。鹿儿岛一座神社在1559年留下的涂鸦中写有「烧酎」二字，被视为日本最古老的记录之一。「壹岐」「球磨」「琉球」「萨摩」的烧酒与泡盛已被认定为保护产地名称的地理标志（GI）。",
+   "notable": [
+    "黑木本店「百年的孤独」（宫崎・高锅）",
+    "三和酒类「iichiko」（大分・宇佐）",
+    "瑞泉酒造（冲绳・首里）",
+    "玄海酒造（长崎・壹岐）",
+    "繁枡 高桥商店（福冈・八女，日本酒）"
+   ]
+  },
+  "ko": {
+   "catch": "소주와 아와모리, 증류주의 일대 산지",
+   "feature": "따뜻한 기후 때문에 사케보다 소주 양조가 활발해진 지역입니다. 가고시마의 고구마, 미야자키의 고구마와 보리, 오이타의 보리, 구마모토 구마의 쌀, 나가사키 이키의 보리, 아마미 제도에서만 만드는 흑당 소주, 태국 쌀과 흑누룩으로 빚는 오키나와의 아와모리까지 지역마다 원료가 다릅니다. 후쿠오카・사가 등 북부는 사케 산지로도 알려져 있습니다.",
+   "history": "증류 기술은 15세기경 동남아시아와의 교역을 통해 류큐(오키나와)에 전해져 아와모리가 탄생했다고 합니다. 가고시마에는 1559년 신사에 남겨진 낙서에 '소주'라는 글자가 있어, 일본에서 가장 오래된 기록 중 하나로 꼽힙니다. '이키', '구마', '류큐', '사쓰마'의 소주・아와모리는 산지 이름을 지키는 지리적 표시(GI)로 지정되어 있습니다.",
+   "notable": [
+    "구로키 혼텐 '햐쿠넨노코도쿠'(미야자키・다카나베)",
+    "산와 슈루이 '이이치코'(오이타・우사)",
+    "즈이센 주조(오키나와・슈리)",
+    "겐카이 주조(나가사키・이키)",
+    "시게마스 다카하시 쇼텐(후쿠오카・야메, 사케)"
+   ]
+  },
+  "es": {
+   "catch": "La gran tierra del shochu y el awamori",
+   "feature": "Su clima cálido convirtió la región en un centro del shochu más que del sake. Cada zona tiene su base: boniato en Kagoshima, boniato y cebada en Miyazaki, cebada en Oita, arroz en Kuma (Kumamoto), cebada en Iki, shochu de azúcar moreno elaborado solo en las islas Amami, y awamori en Okinawa con arroz tailandés y koji negro. Las prefecturas del norte, Fukuoka y Saga, también son conocidas por su sake.",
+   "history": "Se cree que la destilación llegó a Ryukyu (Okinawa) hacia el siglo XV a través del comercio con el sudeste asiático, dando origen al awamori. En Kagoshima, un grafiti de 1559 en un santuario menciona el shochu, uno de los registros más antiguos de Japón. El shochu y el awamori de Iki, Kuma, Ryukyu y Satsuma son Indicaciones Geográficas (IG) protegidas.",
+   "notable": [
+    "Kuroki Honten «Hyakunen no Kodoku» (Takanabe, Miyazaki)",
+    "Sanwa Shurui «iichiko» (Usa, Oita)",
+    "Zuisen Shuzo (Shuri, Okinawa)",
+    "Genkai Shuzo (Iki, Nagasaki)",
+    "Shigemasu Takahashi Shoten (Yame, Fukuoka; sake)"
+   ]
+  },
+  "zht": {
+   "catch": "燒酒與泡盛——蒸餾酒的一大產地",
+   "feature": "因氣候溫暖，這裡比起日本酒更盛行燒酒的釀造。各地原料各不相同：鹿兒島的番薯、宮崎的番薯與大麥、大分的大麥、熊本球磨的米、長崎壹岐的大麥、僅在奄美群島釀造的黑糖燒酒，以及沖繩以泰國米和黑曲釀造的泡盛。福岡、佐賀等北部地區也是知名的日本酒產地。",
+   "history": "據說蒸餾技術約在15世紀經由與東南亞的貿易傳入琉球（沖繩），由此誕生了泡盛。鹿兒島一座神社在1559年留下的塗鴉中寫有「燒酎」二字，被視為日本最古老的記錄之一。「壹岐」「球磨」「琉球」「薩摩」的燒酒與泡盛已被認定為保護產地名稱的地理標誌（GI）。",
+   "notable": [
+    "黑木本店「百年的孤獨」（宮崎・高鍋）",
+    "三和酒類「iichiko」（大分・宇佐）",
+    "瑞泉酒造（沖繩・首裡）",
+    "玄海酒造（長崎・壹岐）",
+    "繁枡 高橋商店（福岡・八女，日本酒）"
+   ]
+  }
+ }
+}
