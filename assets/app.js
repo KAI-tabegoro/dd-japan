@@ -953,3 +953,25 @@ if(PAGE==="admin"&&typeof XLSX==="undefined"){ $("#drop").insertAdjacentHTML("be
 applyQuery(); loadData().then(()=>{ renderAll(); if(location.hash==="#foods"){ const f=document.getElementById("foods"); f&&f.scrollIntoView(); } if(location.hash==="#search"){ const q=document.getElementById("q"); q&&q.focus(); } });
 window.__kura={parseWorkbook,DB:()=>DB,PUB:()=>PUB,DRAFT:()=>DRAFT,buildExport};
 })();
+
+// トップ画像のスライド（2026/11/18）：日本酒→焼酎→泡盛→ウイスキー→ジン→ビール→ワイン→梅酒
+(function(){
+  const first=document.querySelector(".hero3 .bg"); if(!first) return;
+  const LIST=["hero-shochu.jpg","hero-awamori.jpg","hero-whisky.jpg","hero-gin.jpg","hero-beer.jpg","hero-wine.jpg","hero-umeshu.jpg"];
+  if(window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const start=()=>{
+    const imgs=[first];
+    LIST.forEach(f=>{ const im=new Image(); im.className="bg slide"; im.alt=""; im.decoding="async"; im.src="img/"+f; first.after(im); imgs.push(im); });
+    // first.after で前に入るので、並びを LIST の順に直す
+    imgs.slice(1).reverse().forEach(im=>first.after(im));
+    first.classList.add("on"); let i=0;
+    setInterval(()=>{
+      if(document.hidden) return;
+      let n=(i+1)%imgs.length, guard=0;
+      while(!(imgs[n].complete&&imgs[n].naturalWidth)&&guard++<imgs.length) n=(n+1)%imgs.length;   // 読み込み途中の画像は飛ばす
+      if(n===i) return;
+      imgs[n].classList.add("on"); imgs[i].classList.remove("on"); i=n;
+    },6000);
+  };
+  if(document.readyState==="complete") setTimeout(start,800); else addEventListener("load",()=>setTimeout(start,800));
+})();
