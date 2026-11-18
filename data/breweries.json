@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T05:00:07.000Z",
+ "updatedAt": "2026-11-18T08:35:52.000Z",
  "breweries": [
   {
    "brewery": {
@@ -8581,7 +8581,8 @@
      "src": "master",
      "breweryId": "m489",
      "id": "m489-7804",
-     "tEst": true
+     "tEst": true,
+     "photo": "_root/KAMIKIAKA.webp"
     },
     {
      "mid": "7805",
@@ -8615,7 +8616,8 @@
      "src": "master",
      "breweryId": "m489",
      "id": "m489-7805",
-     "tEst": true
+     "tEst": true,
+     "photo": "489/YOROIDAKE.webp"
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
