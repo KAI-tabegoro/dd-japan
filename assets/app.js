@@ -192,7 +192,7 @@ function renderCats(){
   const SHORT={"リキュール・その他":["リキュール","Liqueur"]};
   $("#cats").innerHTML=TYPES.map(t=>{
     const [ja,en]=SHORT[t.k]||[t.k,t.en];
-    return `<a class="tile" href="#products" data-type="${esc(t.k)}"><img src="img/t-${t.img.replace("cat-","")}.jpg" width="195" height="251" alt="" loading="lazy"><span class="tt"><b>${esc(en)}</b><small>${esc(lang==="ja"||lang==="en"?ja:T(ja,en))} <svg class="arw" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h24M19 1l5 4-5 4"/></svg></small></span></a>`;
+    return `<a class="tile" href="products.html?type=${encodeURIComponent(t.k)}" data-type="${esc(t.k)}"><img src="img/t-${t.img.replace("cat-","")}.jpg" width="195" height="251" alt="" loading="lazy"><span class="tt"><b>${esc(en)}</b><small>${esc(lang==="ja"||lang==="en"?ja:T(ja,en))} <svg class="arw" viewBox="0 0 26 10" aria-hidden="true"><path d="M0 5h24M19 1l5 4-5 4"/></svg></small></span></a>`;
   }).join("");
 }
 function renderFinderControls(){
@@ -802,8 +802,8 @@ function applyQuery(){
 
 /* ---------- イベント ---------- */
 document.addEventListener("click",e=>{
-  const c=e.target.closest("[data-type]"); if(c){ location.href="products.html?type="+encodeURIComponent(c.dataset.type); return; }
-  const r=e.target.closest("[data-region]"); if(r){ location.href="products.html?region="+encodeURIComponent(r.dataset.region); return; }
+  const c=e.target.closest("[data-type]"); if(c){ e.preventDefault(); location.href="products.html?type="+encodeURIComponent(c.dataset.type); return; }
+  const r=e.target.closest("[data-region]"); if(r){ e.preventDefault(); location.href="products.html?region="+encodeURIComponent(r.dataset.region); return; }
   const pr=e.target.closest("[data-preset]"); if(pr){ Object.assign(st.pref,PRESETS[+pr.dataset.preset].v); st.touched=true; renderFinderControls(); renderMap(); renderProducts(); return; }
   const ft=e.target.closest("[data-ft]"); if(ft){ const k=ft.dataset.ft; st.ftypes.has(k)?st.ftypes.delete(k):st.ftypes.add(k); ft.setAttribute("aria-pressed",st.ftypes.has(k)); renderMap(); return; }
   const fd=e.target.closest("[data-food]"); if(fd){ st.q=st.q===fd.dataset.food?"":fd.dataset.food; $("#q").value=st.q; renderProducts(); return; }
