@@ -1,0 +1,3510 @@
+{
+ "日本酒": {
+  "ja": {
+   "lead": "米・米麹・水だけを主な原料に、麹がでんぷんを糖に変え、同時に酵母が糖をアルコールに変える「並行複発酵」で造る醸造酒です。世界でも珍しいこの仕組みが、アルコール度数の高さと繊細な香り、米の旨みを生みます。",
+   "steps": [
+    [
+     "精米",
+     "玄米を削り、雑味のもとになる外側のたんぱく質や脂質を取り除きます。残った割合が「精米歩合」で、吟醸酒は60%以下、大吟醸は50%以下です。"
+    ],
+    [
+     "洗米・浸漬・蒸米",
+     "米を洗って水を吸わせ、甑（こしき）で蒸します。蒸し上がりの硬さが、麹や醪（もろみ）の溶け方を左右します。"
+    ],
+    [
+     "麹造り",
+     "蒸米に麹菌を振りかけ、温かい麹室（こうじむろ）で約2日かけて育てます。「一麹、二酛、三造り」といわれる最も大切な工程です。"
+    ],
+    [
+     "酒母（酛）",
+     "麹・蒸米・水に酵母を加え、健全な酵母を大量に育てます。昔ながらの生酛・山廃は自然の乳酸菌を生かし、複雑で力強い味になります。"
+    ],
+    [
+     "醪・三段仕込み",
+     "酒母に麹・蒸米・水を3回に分けて加え、3〜4週間ほどかけて低温で発酵させます。"
+    ],
+    [
+     "上槽・火入れ・貯蔵",
+     "醪を搾って酒と酒粕に分け、多くは加熱殺菌（火入れ）して貯蔵・熟成させます。火入れしないものが「生酒」です。"
+    ]
+   ],
+   "kinds": [
+    [
+     "純米酒",
+     "米・米麹・水だけで造るお酒。米の旨みとコクが出やすい。"
+    ],
+    [
+     "本醸造酒",
+     "少量の醸造アルコールを加え、軽快でキレのある味わいに。"
+    ],
+    [
+     "吟醸・大吟醸",
+     "よく磨いた米を低温でゆっくり発酵させ、果実や花のような華やかな香り（吟醸香）を引き出したもの。"
+    ],
+    [
+     "生酒・原酒・無濾過",
+     "火入れをしない「生」、水で割らない「原酒」、ろ過しない「無濾過」など、造りの違いで味わいが変わります。"
+    ],
+    [
+     "にごり酒・スパークリング",
+     "粗く搾って澱を残したにごり酒や、瓶内で発酵させた発泡性の日本酒もあります。"
+    ]
+   ],
+   "history": [
+    [
+     "古代",
+     "米を使った酒造りは稲作とともに広まり、奈良時代の記録にも酒造りが登場します。"
+    ],
+    [
+     "室町時代",
+     "奈良の寺院で造られた「僧坊酒」が高い評価を受け、正暦寺では酒母の原型「菩提酛」が生まれたとされます。"
+    ],
+    [
+     "江戸時代",
+     "灘や伏見が一大産地となり、寒い時期に造る「寒造り」や火入れなど、今に通じる技術が確立しました。"
+    ],
+    [
+     "明治〜昭和",
+     "国の醸造試験所の設立や協会酵母の配布で品質が安定し、吟醸酒も研究されました。"
+    ],
+    [
+     "現代",
+     "1970年代以降の地酒ブームを経て、各地の小さな蔵が個性ある酒を世界へ届けています。"
+    ]
+   ],
+   "famous": [
+    "灘五郷（兵庫）と伏見（京都）——日本最大級の酒どころ",
+    "新潟——すっきりとした「淡麗辛口」",
+    "広島・西条——軟水で造る香り高い吟醸",
+    "山田錦・雄町・五百万石——代表的な酒米",
+    "協会6号・7号・9号酵母——多くの蔵で使われる酵母"
+   ],
+   "enjoy": "冷酒（5〜10℃）は香りが引き締まり、常温では味の幅が、ぬる燗（40℃前後）や熱燗では旨みとふくらみが増します。同じ一本を温度を変えて飲み比べるのもおすすめです。和食だけでなく、チーズやオリーブオイルを使った料理とも好相性です。"
+  },
+  "en": {
+   "lead": "Sake is brewed mainly from rice, rice koji and water. In \"multiple parallel fermentation\", koji turns starch into sugar while yeast turns sugar into alcohol at the same time. This unusual process gives sake its relatively high alcohol, delicate aromas and the savory depth of rice.",
+   "steps": [
+    [
+     "Polishing",
+     "Brown rice is milled to remove the outer proteins and fats that cause off-flavors. The remaining percentage is the polishing ratio: 60% or less for ginjo, 50% or less for daiginjo."
+    ],
+    [
+     "Washing, soaking and steaming",
+     "The rice is washed, soaked and steamed in a koshiki. Its texture after steaming affects how it dissolves in the koji and the mash."
+    ],
+    [
+     "Making koji",
+     "Koji mold is sprinkled onto steamed rice and grown for about two days in a warm koji room. Brewers say \"first koji, second starter, third brewing\"."
+    ],
+    [
+     "Yeast starter (moto)",
+     "Koji, steamed rice and water are combined with yeast to grow a large, healthy yeast population. Traditional kimoto and yamahai starters use natural lactic bacteria for complex, robust flavors."
+    ],
+    [
+     "Mash in three additions",
+     "Koji, rice and water are added to the starter in three stages, then fermented cold for about three to four weeks."
+    ],
+    [
+     "Pressing, pasteurizing, aging",
+     "The mash is pressed into sake and lees. Most sake is pasteurized (hiire) and stored to mature; unpasteurized sake is called nama."
+    ]
+   ],
+   "kinds": [
+    [
+     "Junmai",
+     "Made only from rice, koji and water; tends to show rice umami and body."
+    ],
+    [
+     "Honjozo",
+     "A little distilled alcohol is added for a lighter, crisper style."
+    ],
+    [
+     "Ginjo / Daiginjo",
+     "Highly polished rice fermented slowly at low temperatures to bring out fruity, floral aromas."
+    ],
+    [
+     "Nama, Genshu, Muroka",
+     "Unpasteurized (nama), undiluted (genshu) and unfiltered (muroka) styles each change the taste."
+    ],
+    [
+     "Nigori and sparkling",
+     "Coarsely pressed cloudy sake, and sparkling sake fermented in the bottle."
+    ]
+   ],
+   "history": [
+    [
+     "Ancient times",
+     "Rice brewing spread with rice farming; sake-making already appears in Nara-period records."
+    ],
+    [
+     "Muromachi period",
+     "Sobo-shu from Nara temples was highly prized, and Shoryaku-ji is said to have created bodai-moto, the forerunner of the modern starter."
+    ],
+    [
+     "Edo period",
+     "Nada and Fushimi became great centers, and techniques still used today, such as winter brewing and pasteurization, were established."
+    ],
+    [
+     "Meiji to Showa",
+     "A national brewing research institute and distributed \"Kyokai\" yeasts stabilized quality, and ginjo brewing was studied."
+    ],
+    [
+     "Today",
+     "After the local-sake boom from the 1970s, small breweries across Japan are sharing distinctive sake with the world."
+    ]
+   ],
+   "famous": [
+    "Nada Gogo (Hyogo) and Fushimi (Kyoto): Japan's largest sake centers",
+    "Niigata: clean, dry tanrei-karakuchi",
+    "Saijo, Hiroshima: fragrant ginjo from soft water",
+    "Yamada Nishiki, Omachi, Gohyakumangoku: classic sake rice",
+    "Kyokai No. 6, 7 and 9 yeasts: used by many breweries"
+   ],
+   "enjoy": "Chilled (5–10°C) sake tastes focused and aromatic, room temperature shows its range, and warm (about 40°C) or hot sake brings out umami and roundness. Try the same bottle at different temperatures. It pairs well not only with Japanese food but also with cheese and dishes made with olive oil."
+  },
+  "zh": {
+   "lead": "日本酒主要以米、米曲和水为原料，通过「并行复发酵」酿成：曲将淀粉转化为糖，同时酵母将糖转化为酒精。这种世界上少见的方式，带来较高的酒精度、细腻的香气与米的鲜味。",
+   "steps": [
+    [
+     "精米",
+     "磨去糙米外层会带来杂味的蛋白质和脂质。剩余的比例称为「精米步合」，吟酿酒在60%以下，大吟酿在50%以下。"
+    ],
+    [
+     "洗米・浸渍・蒸米",
+     "洗米、吸水后用甑蒸熟。蒸米的软硬会影响曲和醪的溶解。"
+    ],
+    [
+     "制曲",
+     "在蒸米上撒曲菌，于温暖的曲室中培养约两天。业内有「一曲、二酛、三造」之说，是最重要的工序。"
+    ],
+    [
+     "酒母（酛）",
+     "将曲、蒸米、水与酵母混合，培养大量健康的酵母。传统的生酛、山废利用天然乳酸菌，风味复杂而有力。"
+    ],
+    [
+     "醪・三段投料",
+     "分三次向酒母中加入曲、蒸米和水，低温发酵约3至4周。"
+    ],
+    [
+     "压榨・火入・贮藏",
+     "压榨醪，分出清酒与酒粕。多数会加热杀菌（火入）后贮藏熟成；不加热杀菌的称为「生酒」。"
+    ]
+   ],
+   "kinds": [
+    [
+     "纯米酒",
+     "只用米、米曲和水酿造，容易呈现米的鲜味与醇厚。"
+    ],
+    [
+     "本酿造酒",
+     "加入少量酿造酒精，口感轻快利落。"
+    ],
+    [
+     "吟酿・大吟酿",
+     "用高度精磨的米低温慢发酵，引出果香、花香般的华丽香气（吟酿香）。"
+    ],
+    [
+     "生酒・原酒・无过滤",
+     "不加热杀菌的「生」、不加水的「原酒」、不过滤的「无过滤」等，酿法不同风味也不同。"
+    ],
+    [
+     "浊酒・起泡酒",
+     "粗滤保留酒渣的浊酒，以及在瓶内发酵的起泡日本酒。"
+    ]
+   ],
+   "history": [
+    [
+     "古代",
+     "以米酿酒随稻作传播，奈良时代的文献中已有酿酒记载。"
+    ],
+    [
+     "室町时代",
+     "奈良寺院酿造的「僧坊酒」备受推崇，据说正历寺诞生了酒母的雏形「菩提酛」。"
+    ],
+    [
+     "江户时代",
+     "滩和伏见成为一大产地，寒冬酿造（寒造）和火入等沿用至今的技术得以确立。"
+    ],
+    [
+     "明治～昭和",
+     "国家酿造试验所的设立和协会酵母的分发使品质趋于稳定，吟酿酒也开始被研究。"
+    ],
+    [
+     "现代",
+     "经历1970年代以后的地酒热潮，各地小酒藏正把个性鲜明的酒送向世界。"
+    ]
+   ],
+   "famous": [
+    "滩五乡（兵库）与伏见（京都）——日本最大的酒乡",
+    "新潟——清爽的「淡丽辛口」",
+    "广岛西条——以软水酿造的芳香吟酿",
+    "山田锦・雄町・五百万石——代表性酒米",
+    "协会6号・7号・9号酵母——众多酒藏使用的酵母"
+   ],
+   "enjoy": "冷饮（5～10℃）香气收敛，常温能感受味道的层次，温燗（约40℃）或热燗则让鲜味与圆润感更突出。不妨同一瓶换不同温度比较。除日本料理外，与奶酪、橄榄油料理也很相配。"
+  },
+  "zht": {
+   "lead": "日本酒主要以米、米曲和水為原料，透過「並行復發酵」釀成：曲將澱粉轉化為糖，同時酵母將糖轉化為酒精。這種世界上少見的方式，帶來較高的酒精度、細膩的香氣與米的鮮味。",
+   "steps": [
+    [
+     "精米",
+     "磨去糙米外層會帶來雜味的蛋白質和脂質。剩餘的比例稱為「精米步合」，吟釀酒在60%以下，大吟釀在50%以下。"
+    ],
+    [
+     "洗米・浸漬・蒸米",
+     "洗米、吸水後用甑蒸熟。蒸米的軟硬會影響曲和醪的溶解。"
+    ],
+    [
+     "制曲",
+     "在蒸米上撒麴菌，於溫暖的曲室中培養約兩天。業內有「一曲、二酛、三造」之說，是最重要的工序。"
+    ],
+    [
+     "酒母（酛）",
+     "將曲、蒸米、水與酵母混合，培養大量健康的酵母。傳統的生酛、山廢利用天然乳酸菌，風味複雜而有力。"
+    ],
+    [
+     "醪・三段投料",
+     "分三次向酒母中加入曲、蒸米和水，低溫發酵約3至4周。"
+    ],
+    [
+     "壓榨・火入・貯藏",
+     "壓榨醪，分出清酒與酒粕。多數會加熱殺菌（火入）後貯藏熟成；不加熱殺菌的稱為「生酒」。"
+    ]
+   ],
+   "kinds": [
+    [
+     "純米酒",
+     "只用米、米曲和水釀造，容易呈現米的鮮味與醇厚。"
+    ],
+    [
+     "本釀造酒",
+     "加入少量釀造酒精，口感輕快利落。"
+    ],
+    [
+     "吟釀・大吟釀",
+     "用高度精磨的米低溫慢發酵，引出果香、花香般的華麗香氣（吟釀香）。"
+    ],
+    [
+     "生酒・原酒・無過濾",
+     "不加熱殺菌的「生」、不加水的「原酒」、不過濾的「無過濾」等，釀法不同風味也不同。"
+    ],
+    [
+     "濁酒・起泡酒",
+     "粗濾保留酒渣的濁酒，以及在瓶內發酵的起泡日本酒。"
+    ]
+   ],
+   "history": [
+    [
+     "古代",
+     "以米釀酒隨稻作傳播，奈良時代的文獻中已有釀酒記載。"
+    ],
+    [
+     "室町時代",
+     "奈良寺院釀造的「僧坊酒」備受推崇，據說正歷寺誕生了酒母的雛形「菩提酛」。"
+    ],
+    [
+     "江戶時代",
+     "灘和伏見成為一大產地，寒冬釀造（寒造）和火入等沿用至今的技術得以確立。"
+    ],
+    [
+     "明治～昭和",
+     "國家釀造試驗所的設立和協會酵母的分發使品質趨於穩定，吟釀酒也開始被研究。"
+    ],
+    [
+     "現代",
+     "經歷1970年代以後的地酒熱潮，各地小酒藏正把個性鮮明的酒送向世界。"
+    ]
+   ],
+   "famous": [
+    "灘五鄉（兵庫）與伏見（京都）——日本最大的酒鄉",
+    "新潟——清爽的「淡麗辛口」",
+    "廣島西條——以軟水釀造的芳香吟釀",
+    "山田錦・雄町・五百萬石——代表性酒米",
+    "協會6號・7號・9號酵母——眾多酒藏使用的酵母"
+   ],
+   "enjoy": "冷飲（5～10℃）香氣收斂，常溫能感受味道的層次，溫燗（約40℃）或熱燗則讓鮮味與圓潤感更突出。不妨同一瓶換不同溫度比較。除日本料理外，與乳酪、橄欖油料理也很相配。"
+  },
+  "ko": {
+   "lead": "사케는 주로 쌀・쌀누룩(코지)・물로 빚는 양조주로, 누룩이 전분을 당으로 바꾸는 동시에 효모가 당을 알코올로 바꾸는 '병행 복발효'로 만들어집니다. 세계적으로도 드문 이 방식이 높은 알코올 도수와 섬세한 향, 쌀의 감칠맛을 낳습니다.",
+   "steps": [
+    [
+     "정미",
+     "현미의 바깥층을 깎아 잡미의 원인이 되는 단백질과 지방을 없앱니다. 남은 비율이 '정미율'로, 긴조슈는 60% 이하, 다이긴조는 50% 이하입니다."
+    ],
+    [
+     "세미・침지・증미",
+     "쌀을 씻어 물을 흡수시킨 뒤 시루(고시키)에서 찝니다. 찐 쌀의 단단함이 누룩과 술덧이 녹는 방식에 영향을 줍니다."
+    ],
+    [
+     "누룩 만들기",
+     "찐 쌀에 누룩균을 뿌리고 따뜻한 누룩방(고지무로)에서 약 이틀간 키웁니다. '첫째 누룩, 둘째 주모, 셋째 담금'이라 할 만큼 가장 중요한 공정입니다."
+    ],
+    [
+     "주모(모토)",
+     "누룩・찐 쌀・물에 효모를 더해 건강한 효모를 대량으로 키웁니다. 전통적인 기모토・야마하이는 자연 유산균을 활용해 복잡하고 힘찬 맛이 됩니다."
+    ],
+    [
+     "술덧・3단 담금",
+     "주모에 누룩・찐 쌀・물을 세 번에 나눠 넣고 3~4주 정도 저온에서 발효시킵니다."
+    ],
+    [
+     "압착・히이레・저장",
+     "술덧을 짜서 술과 술지게미로 나누고, 대부분은 가열 살균(히이레)한 뒤 저장・숙성합니다. 가열 살균하지 않은 것이 '나마자케'입니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "준마이슈",
+     "쌀・누룩・물만으로 빚은 술. 쌀의 감칠맛과 깊은 맛이 잘 드러납니다."
+    ],
+    [
+     "혼조조슈",
+     "소량의 양조 알코올을 더해 가볍고 깔끔한 맛."
+    ],
+    [
+     "긴조・다이긴조",
+     "잘 깎은 쌀을 저온에서 천천히 발효시켜 과일이나 꽃 같은 화려한 향(긴조향)을 끌어낸 술."
+    ],
+    [
+     "나마・겐슈・무로카",
+     "가열 살균하지 않은 '나마', 물을 타지 않은 '겐슈', 여과하지 않은 '무로카' 등 양조 방식에 따라 맛이 달라집니다."
+    ],
+    [
+     "니고리・스파클링",
+     "거칠게 짜서 앙금을 남긴 니고리자케, 병 안에서 발효시킨 발포성 사케도 있습니다."
+    ]
+   ],
+   "history": [
+    [
+     "고대",
+     "쌀로 빚는 술은 벼농사와 함께 퍼졌고, 나라 시대 기록에도 술 빚기가 등장합니다."
+    ],
+    [
+     "무로마치 시대",
+     "나라의 사원에서 빚은 '소보슈'가 높은 평가를 받았고, 쇼랴쿠지에서 주모의 원형 '보다이모토'가 탄생했다고 합니다."
+    ],
+    [
+     "에도 시대",
+     "나다와 후시미가 일대 산지가 되었고, 추운 시기에 빚는 '간즈쿠리'와 히이레 등 오늘날까지 이어지는 기술이 확립되었습니다."
+    ],
+    [
+     "메이지~쇼와",
+     "국립 양조 시험소 설립과 협회 효모 배포로 품질이 안정되고, 긴조슈 연구도 이루어졌습니다."
+    ],
+    [
+     "현대",
+     "1970년대 이후의 지자케 붐을 거쳐 각지의 작은 양조장이 개성 있는 술을 세계로 보내고 있습니다."
+    ]
+   ],
+   "famous": [
+    "나다고고(효고)와 후시미(교토) — 일본 최대의 술 산지",
+    "니가타 — 깔끔한 '단레이 가라쿠치'",
+    "히로시마 사이조 — 연수로 빚는 향 높은 긴조",
+    "야마다니시키・오마치・고햐쿠만고쿠 — 대표적인 술쌀",
+    "협회 6호・7호・9호 효모 — 많은 양조장이 쓰는 효모"
+   ],
+   "enjoy": "차갑게(5~10℃) 마시면 향이 또렷해지고, 상온에서는 맛의 폭이, 미지근한 간(40℃ 전후)이나 뜨거운 간에서는 감칠맛과 풍성함이 커집니다. 같은 술을 온도를 바꿔 비교해 보세요. 일식뿐 아니라 치즈나 올리브유 요리와도 잘 어울립니다."
+  },
+  "es": {
+   "lead": "El sake se elabora principalmente con arroz, koji de arroz y agua. En la «fermentación paralela múltiple», el koji convierte el almidón en azúcar mientras la levadura transforma ese azúcar en alcohol al mismo tiempo. Este proceso poco común le da una graduación relativamente alta, aromas delicados y el sabor umami del arroz.",
+   "steps": [
+    [
+     "Pulido",
+     "Se pule el arroz integral para eliminar las proteínas y grasas exteriores que causan sabores indeseados. El porcentaje restante es el grado de pulido: 60% o menos para el ginjo y 50% o menos para el daiginjo."
+    ],
+    [
+     "Lavado, remojo y vapor",
+     "El arroz se lava, se remoja y se cuece al vapor en un koshiki. Su textura influye en cómo se disuelve en el koji y el mosto."
+    ],
+    [
+     "Elaboración del koji",
+     "Se espolvorea el hongo koji sobre el arroz cocido y se cultiva unos dos días en una sala cálida. Los maestros dicen: «primero el koji, segundo el pie de cuba, tercero la fermentación»."
+    ],
+    [
+     "Pie de cuba (moto)",
+     "Koji, arroz cocido y agua se combinan con levadura para obtener una población grande y sana. Los métodos tradicionales kimoto y yamahai usan bacterias lácticas naturales para sabores complejos y robustos."
+    ],
+    [
+     "Mosto en tres adiciones",
+     "Se añaden koji, arroz y agua al pie de cuba en tres etapas y se fermenta en frío durante unas tres o cuatro semanas."
+    ],
+    [
+     "Prensado, pasteurización y reposo",
+     "El mosto se prensa para separar el sake de las lías. La mayoría se pasteuriza (hiire) y reposa; el sake sin pasteurizar se llama nama."
+    ]
+   ],
+   "kinds": [
+    [
+     "Junmai",
+     "Solo arroz, koji y agua; suele mostrar umami y cuerpo."
+    ],
+    [
+     "Honjozo",
+     "Se añade un poco de alcohol destilado para un estilo más ligero y nítido."
+    ],
+    [
+     "Ginjo / Daiginjo",
+     "Arroz muy pulido fermentado lentamente a baja temperatura para lograr aromas afrutados y florales."
+    ],
+    [
+     "Nama, Genshu, Muroka",
+     "Sin pasteurizar (nama), sin diluir (genshu) y sin filtrar (muroka): cada estilo cambia el sabor."
+    ],
+    [
+     "Nigori y espumoso",
+     "Sake turbio prensado de forma gruesa y sake espumoso fermentado en botella."
+    ]
+   ],
+   "history": [
+    [
+     "Antigüedad",
+     "La elaboración con arroz se extendió con su cultivo; ya aparece en registros del periodo Nara."
+    ],
+    [
+     "Periodo Muromachi",
+     "El sobo-shu de los templos de Nara era muy apreciado, y se dice que en Shoryaku-ji nació el bodai-moto, precursor del pie de cuba actual."
+    ],
+    [
+     "Era Edo",
+     "Nada y Fushimi se convirtieron en grandes centros y se establecieron técnicas aún vigentes, como la elaboración invernal y la pasteurización."
+    ],
+    [
+     "De Meiji a Showa",
+     "Un instituto nacional de investigación y la distribución de levaduras «Kyokai» estabilizaron la calidad, y se estudió el ginjo."
+    ],
+    [
+     "Hoy",
+     "Tras el auge del sake local desde los años setenta, pequeñas bodegas de todo Japón llevan sakes únicos al mundo."
+    ]
+   ],
+   "famous": [
+    "Nada Gogo (Hyogo) y Fushimi (Kioto): los mayores centros del sake",
+    "Niigata: sake limpio y seco (tanrei karakuchi)",
+    "Saijo (Hiroshima): ginjo aromático de agua blanda",
+    "Yamada Nishiki, Omachi, Gohyakumangoku: arroces clásicos",
+    "Levaduras Kyokai n.º 6, 7 y 9: usadas por muchas bodegas"
+   ],
+   "enjoy": "Frío (5–10 °C) resulta aromático y preciso; a temperatura ambiente muestra su amplitud; tibio (unos 40 °C) o caliente realza el umami y la redondez. Prueba la misma botella a distintas temperaturas. Marida bien con cocina japonesa y también con quesos y platos con aceite de oliva."
+  }
+ },
+ "焼酎": {
+  "ja": {
+   "lead": "芋・麦・米・黒糖・そばなどを原料に、麹で発酵させてから蒸留する日本の蒸留酒です。単式蒸留機で一度だけ蒸留する「本格焼酎（乙類）」は、原料の香りや味わいがはっきり残るのが魅力で、九州を中心に各地で造られています。",
+   "steps": [
+    [
+     "麹造り",
+     "米や麦などに麹菌を育てます。黒麹・白麹・黄麹の違いで、味わいの力強さや香りが変わります。"
+    ],
+    [
+     "一次仕込み",
+     "麹と水・酵母で「一次もろみ」を造り、酵母を増やします。"
+    ],
+    [
+     "二次仕込み",
+     "蒸した芋や麦などの主原料を加え、10日〜2週間ほど発酵させます。"
+    ],
+    [
+     "蒸留",
+     "単式蒸留機で一度だけ蒸留します。昔ながらの常圧蒸留は香りが濃く、減圧蒸留は軽やかになります。"
+    ],
+    [
+     "貯蔵・熟成",
+     "タンクや甕、樽で寝かせ、味をなじませます。長く寝かせた焼酎はまろやかになります。"
+    ]
+   ],
+   "kinds": [
+    [
+     "芋焼酎",
+     "さつまいもの甘い香りとコク。鹿児島・宮崎が中心。"
+    ],
+    [
+     "麦焼酎",
+     "香ばしく軽快。大分や長崎・壱岐（麦焼酎発祥の地とされる）。"
+    ],
+    [
+     "米焼酎",
+     "やわらかな甘みと上品な香り。熊本・球磨が名産地。"
+    ],
+    [
+     "黒糖焼酎",
+     "黒糖と米麹で造る、奄美群島だけで造ることが認められた焼酎。"
+    ],
+    [
+     "その他",
+     "そば、栗、ごま、酒粕（粕取り焼酎）など、多彩な原料があります。"
+    ]
+   ],
+   "history": [
+    [
+     "15〜16世紀",
+     "蒸留の技術が東南アジアから琉球（沖縄）を経て九州に伝わったとされます。"
+    ],
+    [
+     "1559年",
+     "鹿児島・大口の郡山八幡神社の落書きに「焼酎」の文字が残り、最古級の記録とされます。"
+    ],
+    [
+     "江戸時代",
+     "薩摩でさつまいもの栽培が広がり、芋焼酎が庶民の酒として定着しました。"
+    ],
+    [
+     "1995年〜",
+     "壱岐・球磨・薩摩などの焼酎が、産地の名を守る地理的表示（GI）に指定されました。"
+    ],
+    [
+     "2000年代",
+     "本格焼酎ブームで全国に広まり、近年は海外でも注目されています。"
+    ]
+   ],
+   "famous": [
+    "薩摩焼酎（鹿児島）——芋焼酎の本場",
+    "球磨焼酎（熊本）——米焼酎の名産地",
+    "壱岐焼酎（長崎）——麦焼酎発祥の地とされる",
+    "奄美黒糖焼酎（鹿児島・奄美群島）",
+    "黄金千貫——芋焼酎の代表的な品種"
+   ],
+   "enjoy": "ロック、水割り、お湯割り、ソーダ割りと飲み方が豊富です。芋焼酎はお湯割りで香りが開き、麦焼酎はソーダ割りで軽やかに。前日に水で割って寝かせる「前割り」は、口当たりがまろやかになります。"
+  },
+  "en": {
+   "lead": "Shochu is a Japanese spirit made by fermenting ingredients such as sweet potato, barley, rice, brown sugar or buckwheat with koji, then distilling. Honkaku (authentic) shochu is distilled only once in a pot still, so it keeps the clear character of its main ingredient. It is made across Japan, especially in Kyushu.",
+   "steps": [
+    [
+     "Making koji",
+     "Koji mold is grown on rice or barley. Black, white or yellow koji changes the strength and aroma."
+    ],
+    [
+     "First mash",
+     "Koji, water and yeast form the first mash and multiply the yeast."
+    ],
+    [
+     "Second mash",
+     "Steamed sweet potato, barley or other main ingredients are added and fermented for about 10 days to two weeks."
+    ],
+    [
+     "Distillation",
+     "Distilled once in a pot still. Traditional atmospheric distillation gives rich aromas; vacuum distillation gives a lighter style."
+    ],
+    [
+     "Storage and aging",
+     "Rested in tanks, clay pots or casks to let flavors settle. Long-aged shochu becomes mellow."
+    ]
+   ],
+   "kinds": [
+    [
+     "Imo (sweet potato)",
+     "Sweet aroma and body; centered on Kagoshima and Miyazaki."
+    ],
+    [
+     "Mugi (barley)",
+     "Toasty and light; Oita, and Iki in Nagasaki, said to be its birthplace."
+    ],
+    [
+     "Kome (rice)",
+     "Soft sweetness and refined aroma; Kuma in Kumamoto is famous."
+    ],
+    [
+     "Kokuto (brown sugar)",
+     "Made from brown sugar and rice koji, permitted only in the Amami Islands."
+    ],
+    [
+     "Others",
+     "Buckwheat, chestnut, sesame, sake lees (kasutori) and more."
+    ]
+   ],
+   "history": [
+    [
+     "15th–16th c.",
+     "Distilling is thought to have reached Kyushu from Southeast Asia via Ryukyu (Okinawa)."
+    ],
+    [
+     "1559",
+     "Graffiti at Koriyama Hachiman Shrine in Okuchi, Kagoshima, mentions shochu, one of the oldest records."
+    ],
+    [
+     "Edo period",
+     "Sweet-potato farming spread in Satsuma, and imo shochu became an everyday drink."
+    ],
+    [
+     "1995 onward",
+     "Iki, Kuma and Satsuma shochu became protected Geographical Indications (GI)."
+    ],
+    [
+     "2000s",
+     "A honkaku shochu boom spread it nationwide, and it is now gaining attention abroad."
+    ]
+   ],
+   "famous": [
+    "Satsuma shochu (Kagoshima): home of sweet-potato shochu",
+    "Kuma shochu (Kumamoto): famous for rice shochu",
+    "Iki shochu (Nagasaki): said to be the birthplace of barley shochu",
+    "Amami kokuto shochu (Amami Islands, Kagoshima)",
+    "Kogane Sengan: the classic sweet potato for shochu"
+   ],
+   "enjoy": "Enjoy it on the rocks, with cold water, with hot water or with soda. Hot water opens up imo shochu's aroma; soda makes mugi shochu light and refreshing. Mae-wari, diluted with water a day ahead, becomes especially smooth."
+  },
+  "zh": {
+   "lead": "烧酒是以番薯、大麦、米、黑糖、荞麦等为原料，用曲发酵后蒸馏而成的日本蒸馏酒。用单式蒸馏器只蒸馏一次的「本格烧酒」能清晰保留原料的香气与风味，以九州为中心在各地酿造。",
+   "steps": [
+    [
+     "制曲",
+     "在米或大麦上培养曲菌。黑曲、白曲、黄曲不同，风味的力度和香气也不同。"
+    ],
+    [
+     "一次投料",
+     "用曲、水和酵母制成「一次醪」，增殖酵母。"
+    ],
+    [
+     "二次投料",
+     "加入蒸熟的番薯、大麦等主原料，发酵约10天至2周。"
+    ],
+    [
+     "蒸馏",
+     "用单式蒸馏器只蒸馏一次。传统的常压蒸馏香气浓郁，减压蒸馏则较轻快。"
+    ],
+    [
+     "贮藏・熟成",
+     "在罐、陶瓮或酒桶中静置，使风味融合。长期熟成的烧酒更加圆润。"
+    ]
+   ],
+   "kinds": [
+    [
+     "芋烧酒",
+     "番薯的甜香与醇厚。以鹿儿岛、宫崎为中心。"
+    ],
+    [
+     "麦烧酒",
+     "焦香轻快。大分，以及被视为麦烧酒发祥地的长崎壹岐。"
+    ],
+    [
+     "米烧酒",
+     "柔和的甜味与高雅香气。熊本球磨是名产地。"
+    ],
+    [
+     "黑糖烧酒",
+     "以黑糖和米曲酿造，仅允许在奄美群岛生产。"
+    ],
+    [
+     "其他",
+     "荞麦、栗子、芝麻、酒粕（粕取烧酒）等，原料丰富多样。"
+    ]
+   ],
+   "history": [
+    [
+     "15～16世纪",
+     "据说蒸馏技术从东南亚经琉球（冲绳）传入九州。"
+    ],
+    [
+     "1559年",
+     "鹿儿岛大口郡山八幡神社的涂鸦中留有「烧酎」二字，被视为最古老的记录之一。"
+    ],
+    [
+     "江户时代",
+     "萨摩地区番薯种植普及，芋烧酒成为百姓日常的酒。"
+    ],
+    [
+     "1995年～",
+     "壹岐、球磨、萨摩等烧酒被认定为保护产地名称的地理标志（GI）。"
+    ],
+    [
+     "2000年代",
+     "本格烧酒热潮使其风靡全国，近年在海外也备受关注。"
+    ]
+   ],
+   "famous": [
+    "萨摩烧酒（鹿儿岛）——芋烧酒的发源地",
+    "球磨烧酒（熊本）——米烧酒的名产地",
+    "壹岐烧酒（长崎）——被视为麦烧酒发祥地",
+    "奄美黑糖烧酒（鹿儿岛奄美群岛）",
+    "黄金千贯——芋烧酒的代表性品种"
+   ],
+   "enjoy": "加冰、兑水、兑热水、兑苏打水，饮法多样。芋烧酒兑热水香气舒展，麦烧酒兑苏打水更显轻快。前一天兑水静置的「前割」口感尤为圆润。"
+  },
+  "zht": {
+   "lead": "燒酒是以番薯、大麥、米、黑糖、蕎麥等為原料，用曲發酵後蒸餾而成的日本蒸餾酒。用單式蒸餾器只蒸餾一次的「本格燒酒」能清晰保留原料的香氣與風味，以九州為中心在各地釀造。",
+   "steps": [
+    [
+     "制曲",
+     "在米或大麥上培養麴菌。黑曲、白曲、黃曲不同，風味的力度和香氣也不同。"
+    ],
+    [
+     "一次投料",
+     "用曲、水和酵母製成「一次醪」，增殖酵母。"
+    ],
+    [
+     "二次投料",
+     "加入蒸熟的番薯、大麥等主原料，發酵約10天至2周。"
+    ],
+    [
+     "蒸餾",
+     "用單式蒸餾器只蒸餾一次。傳統的常壓蒸餾香氣濃郁，減壓蒸餾則較輕快。"
+    ],
+    [
+     "貯藏・熟成",
+     "在罐、陶甕或酒桶中靜置，使風味融合。長期熟成的燒酒更加圓潤。"
+    ]
+   ],
+   "kinds": [
+    [
+     "芋燒酒",
+     "番薯的甜香與醇厚。以鹿兒島、宮崎為中心。"
+    ],
+    [
+     "麥燒酒",
+     "焦香輕快。大分，以及被視為麥燒酒發祥地的長崎壹岐。"
+    ],
+    [
+     "米燒酒",
+     "柔和的甜味與高雅香氣。熊本球磨是名產地。"
+    ],
+    [
+     "黑糖燒酒",
+     "以黑糖和米曲釀造，僅允許在奄美群島生產。"
+    ],
+    [
+     "其他",
+     "蕎麥、栗子、芝麻、酒粕（粕取燒酒）等，原料豐富多樣。"
+    ]
+   ],
+   "history": [
+    [
+     "15～16世紀",
+     "據說蒸餾技術從東南亞經琉球（沖繩）傳入九州。"
+    ],
+    [
+     "1559年",
+     "鹿兒島大口郡山八幡神社的塗鴉中留有「燒酎」二字，被視為最古老的記錄之一。"
+    ],
+    [
+     "江戶時代",
+     "薩摩地區番薯種植普及，芋燒酒成為百姓日常的酒。"
+    ],
+    [
+     "1995年～",
+     "壹岐、球磨、薩摩等燒酒被認定為保護產地名稱的地理標誌（GI）。"
+    ],
+    [
+     "2000年代",
+     "本格燒酒熱潮使其風靡全國，近年在海外也備受關注。"
+    ]
+   ],
+   "famous": [
+    "薩摩燒酒（鹿兒島）——芋燒酒的發源地",
+    "球磨燒酒（熊本）——米燒酒的名產地",
+    "壹岐燒酒（長崎）——被視為麥燒酒發祥地",
+    "奄美黑糖燒酒（鹿兒島奄美群島）",
+    "黃金千貫——芋燒酒的代表性品種"
+   ],
+   "enjoy": "加冰、兌水、兌熱水、兌蘇打水，飲法多樣。芋燒酒兌熱水香氣舒展，麥燒酒兌蘇打水更顯輕快。前一天兌水靜置的「前割」口感尤為圓潤。"
+  },
+  "ko": {
+   "lead": "소주(쇼추)는 고구마・보리・쌀・흑당・메밀 등을 원료로 누룩으로 발효시킨 뒤 증류한 일본의 증류주입니다. 단식 증류기로 한 번만 증류하는 '혼카쿠 쇼추'는 원료의 향과 맛이 뚜렷하게 남는 것이 매력이며, 규슈를 중심으로 각지에서 만들어집니다.",
+   "steps": [
+    [
+     "누룩 만들기",
+     "쌀이나 보리에 누룩균을 키웁니다. 흑누룩・백누룩・황누룩에 따라 맛의 힘과 향이 달라집니다."
+    ],
+    [
+     "1차 담금",
+     "누룩과 물・효모로 '1차 술덧'을 만들어 효모를 늘립니다."
+    ],
+    [
+     "2차 담금",
+     "찐 고구마나 보리 등 주원료를 넣고 10일~2주 정도 발효시킵니다."
+    ],
+    [
+     "증류",
+     "단식 증류기로 한 번만 증류합니다. 전통적인 상압 증류는 향이 진하고, 감압 증류는 가볍습니다."
+    ],
+    [
+     "저장・숙성",
+     "탱크나 옹기, 오크통에서 재워 맛을 어우러지게 합니다. 오래 숙성한 소주는 부드러워집니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "고구마 소주",
+     "고구마의 달콤한 향과 깊은 맛. 가고시마・미야자키가 중심."
+    ],
+    [
+     "보리 소주",
+     "고소하고 가벼움. 오이타와 보리 소주 발상지로 알려진 나가사키 이키."
+    ],
+    [
+     "쌀 소주",
+     "부드러운 단맛과 품위 있는 향. 구마모토 구마가 명산지."
+    ],
+    [
+     "흑당 소주",
+     "흑당과 쌀누룩으로 빚으며, 아마미 제도에서만 만들 수 있도록 인정된 소주."
+    ],
+    [
+     "기타",
+     "메밀, 밤, 참깨, 술지게미(가스토리 소주) 등 다양한 원료가 있습니다."
+    ]
+   ],
+   "history": [
+    [
+     "15~16세기",
+     "증류 기술이 동남아시아에서 류큐(오키나와)를 거쳐 규슈에 전해졌다고 합니다."
+    ],
+    [
+     "1559년",
+     "가고시마 오쿠치의 고리야마 하치만 신사 낙서에 '소주'라는 글자가 남아 있어 가장 오래된 기록 중 하나로 꼽힙니다."
+    ],
+    [
+     "에도 시대",
+     "사쓰마에서 고구마 재배가 퍼지며 고구마 소주가 서민의 술로 자리 잡았습니다."
+    ],
+    [
+     "1995년~",
+     "이키・구마・사쓰마 등의 소주가 산지 이름을 지키는 지리적 표시(GI)로 지정되었습니다."
+    ],
+    [
+     "2000년대",
+     "혼카쿠 쇼추 붐으로 전국에 퍼졌고, 최근에는 해외에서도 주목받고 있습니다."
+    ]
+   ],
+   "famous": [
+    "사쓰마 소주(가고시마) — 고구마 소주의 본고장",
+    "구마 소주(구마모토) — 쌀 소주의 명산지",
+    "이키 소주(나가사키) — 보리 소주 발상지로 알려짐",
+    "아마미 흑당 소주(가고시마 아마미 제도)",
+    "고가네센간 — 고구마 소주의 대표 품종"
+   ],
+   "enjoy": "온더록, 물 희석, 뜨거운 물 희석, 탄산수 희석 등 마시는 법이 다양합니다. 고구마 소주는 뜨거운 물에 타면 향이 피어나고, 보리 소주는 탄산수에 타면 가벼워집니다. 전날 물에 희석해 재워 두는 '마에와리'는 맛이 한층 부드러워집니다."
+  },
+  "es": {
+   "lead": "El shochu es un destilado japonés elaborado fermentando con koji ingredientes como boniato, cebada, arroz, azúcar moreno o alforfón, y destilándolos después. El honkaku shochu se destila una sola vez en alambique, por lo que conserva con claridad el carácter de su ingrediente principal. Se produce en todo Japón, sobre todo en Kyushu.",
+   "steps": [
+    [
+     "Elaboración del koji",
+     "Se cultiva el hongo koji sobre arroz o cebada. El koji negro, blanco o amarillo cambia la intensidad y el aroma."
+    ],
+    [
+     "Primer mosto",
+     "Koji, agua y levadura forman el primer mosto y multiplican la levadura."
+    ],
+    [
+     "Segundo mosto",
+     "Se añade boniato, cebada u otro ingrediente principal cocido y se fermenta de 10 días a dos semanas."
+    ],
+    [
+     "Destilación",
+     "Una sola destilación en alambique. La destilación atmosférica tradicional da aromas intensos; la destilación al vacío, un estilo más ligero."
+    ],
+    [
+     "Reposo y crianza",
+     "Reposa en tanques, tinajas o barricas para integrar sabores. El shochu con larga crianza se vuelve suave."
+    ]
+   ],
+   "kinds": [
+    [
+     "Imo (boniato)",
+     "Aroma dulce y cuerpo; centrado en Kagoshima y Miyazaki."
+    ],
+    [
+     "Mugi (cebada)",
+     "Tostado y ligero; Oita, y la isla de Iki (Nagasaki), considerada su cuna."
+    ],
+    [
+     "Kome (arroz)",
+     "Dulzor suave y aroma refinado; destaca Kuma (Kumamoto)."
+    ],
+    [
+     "Kokuto (azúcar moreno)",
+     "Azúcar moreno y koji de arroz; solo se permite en las islas Amami."
+    ],
+    [
+     "Otros",
+     "Alforfón, castaña, sésamo, lías de sake (kasutori) y más."
+    ]
+   ],
+   "history": [
+    [
+     "Siglos XV–XVI",
+     "Se cree que la destilación llegó a Kyushu desde el sudeste asiático a través de Ryukyu (Okinawa)."
+    ],
+    [
+     "1559",
+     "Un grafiti en el santuario Koriyama Hachiman de Okuchi (Kagoshima) menciona el shochu, uno de los registros más antiguos."
+    ],
+    [
+     "Era Edo",
+     "El cultivo de boniato se extendió en Satsuma y el imo shochu se convirtió en una bebida cotidiana."
+    ],
+    [
+     "Desde 1995",
+     "El shochu de Iki, Kuma y Satsuma pasó a ser Indicación Geográfica (IG) protegida."
+    ],
+    [
+     "Años 2000",
+     "Un auge del honkaku shochu lo difundió por todo el país y hoy despierta interés en el extranjero."
+    ]
+   ],
+   "famous": [
+    "Shochu de Satsuma (Kagoshima): la cuna del shochu de boniato",
+    "Shochu de Kuma (Kumamoto): famoso por el de arroz",
+    "Shochu de Iki (Nagasaki): considerado la cuna del de cebada",
+    "Shochu kokuto de Amami (islas Amami, Kagoshima)",
+    "Kogane Sengan: el boniato clásico para shochu"
+   ],
+   "enjoy": "Se disfruta con hielo, con agua fría, con agua caliente o con soda. El agua caliente abre el aroma del imo shochu; la soda aligera el mugi shochu. El mae-wari, diluido con agua el día anterior, resulta especialmente suave."
+  }
+ },
+ "泡盛": {
+  "ja": {
+   "lead": "沖縄で造られる蒸留酒で、日本で最も古い蒸留酒の一つです。タイ米を使い、原料のすべてを黒麹の麹にして仕込む「全麹仕込み」と、一度だけの蒸留が特徴。3年以上寝かせた「古酒（クース）」は、甘くまろやかな香りに育ちます。",
+   "steps": [
+    [
+     "洗米・浸漬・蒸米",
+     "硬質で粘りの少ないタイ米（インディカ米）を洗って蒸します。"
+    ],
+    [
+     "黒麹造り",
+     "蒸米すべてに黒麹菌を育てます。黒麹が出すクエン酸が雑菌を防ぎ、暖かい沖縄でも安全に発酵できます。"
+    ],
+    [
+     "もろみ",
+     "麹に水と酵母を加え、約2週間発酵させます。"
+    ],
+    [
+     "蒸留",
+     "単式蒸留機で一度だけ蒸留し、原料の風味を残します。"
+    ],
+    [
+     "貯蔵・熟成",
+     "甕やタンクで寝かせます。古い酒に新しい酒を注ぎ足して育てる「仕次ぎ」という伝統の技法もあります。"
+    ]
+   ],
+   "kinds": [
+    [
+     "一般酒",
+     "熟成3年未満。すっきりとした味わいで、水割りなどで日常的に楽しまれます。"
+    ],
+    [
+     "古酒（クース）",
+     "全量を3年以上熟成させたもの。年数表示は、その年数以上の酒だけを使った場合に限られます。"
+    ],
+    [
+     "甕貯蔵",
+     "素焼きの甕で寝かせ、まろやかで深い香りに。"
+    ],
+    [
+     "樽貯蔵",
+     "オーク樽で熟成させた、ウイスキーのような色と香りのもの。"
+    ]
+   ],
+   "history": [
+    [
+     "15世紀ごろ",
+     "シャム（タイ）などとの交易を通じて蒸留の技術が琉球に伝わったとされます。"
+    ],
+    [
+     "琉球王国時代",
+     "首里の限られた地域で、王府の管理のもと造られ、中国や江戸幕府への献上品にもなりました。"
+    ],
+    [
+     "沖縄戦",
+     "多くの古酒が失われましたが、焼け残った黒麹菌から酒造りが再開したと伝えられます。"
+    ],
+    [
+     "1995年",
+     "「琉球泡盛」が地理的表示（GI）に指定されました。"
+    ]
+   ],
+   "famous": [
+    "首里三箇（赤田・崎山・鳥堀）——王府時代の泡盛の産地",
+    "琉球泡盛（GI）",
+    "古酒（クース）と仕次ぎの文化",
+    "石垣・宮古・与那国などの離島の泡盛"
+   ],
+   "enjoy": "一般酒は水割りや炭酸割りで軽やかに。古酒はストレートや少量の水で、香りをゆっくり楽しむのがおすすめです。沖縄料理や脂のある料理とよく合います。"
+  },
+  "en": {
+   "lead": "Awamori is Okinawa's distilled spirit and one of Japan's oldest. It is made from Thai rice, all of which is turned into black-koji rice (zen-koji), and distilled only once. Kusu, aged three years or more, develops a sweet, mellow aroma.",
+   "steps": [
+    [
+     "Washing and steaming",
+     "Hard, non-sticky Thai (indica) rice is washed and steamed."
+    ],
+    [
+     "Black koji",
+     "Black koji is grown on all the rice. Its citric acid protects the mash, making fermentation safe in Okinawa's warm climate."
+    ],
+    [
+     "Mash",
+     "Water and yeast are added to the koji and fermented for about two weeks."
+    ],
+    [
+     "Distillation",
+     "Distilled once in a pot still to keep the character of the rice."
+    ],
+    [
+     "Storage and aging",
+     "Rested in clay pots or tanks. The traditional shitsugi method tops up old awamori with younger spirit to keep it maturing."
+    ]
+   ],
+   "kinds": [
+    [
+     "Ippanshu (young)",
+     "Aged under three years; clean, everyday awamori often enjoyed with water."
+    ],
+    [
+     "Kusu (aged)",
+     "All aged three years or more; an age statement means only spirit of at least that age is used."
+    ],
+    [
+     "Clay-pot aged",
+     "Rested in unglazed pots for a mellow, deep aroma."
+    ],
+    [
+     "Cask aged",
+     "Matured in oak, with whisky-like color and aroma."
+    ]
+   ],
+   "history": [
+    [
+     "Around the 15th c.",
+     "Distilling is thought to have reached Ryukyu through trade with Siam (Thailand) and others."
+    ],
+    [
+     "Ryukyu Kingdom",
+     "Made in limited districts of Shuri under royal control, and offered as tribute to China and the Edo shogunate."
+    ],
+    [
+     "Battle of Okinawa",
+     "Much old kusu was lost; brewing is said to have restarted from black koji that survived the fires."
+    ],
+    [
+     "1995",
+     "Ryukyu Awamori became a protected Geographical Indication (GI)."
+    ]
+   ],
+   "famous": [
+    "Shuri Sanka (Akata, Sakiyama, Torihori): royal-era awamori districts",
+    "Ryukyu Awamori (GI)",
+    "Kusu and the shitsugi tradition",
+    "Awamori from Ishigaki, Miyako, Yonaguni and other islands"
+   ],
+   "enjoy": "Enjoy young awamori light with water or soda. Sip kusu neat or with a little water to appreciate its aroma. It goes well with Okinawan food and richer dishes."
+  },
+  "zh": {
+   "lead": "泡盛是冲绳酿造的蒸馏酒，也是日本最古老的蒸馏酒之一。其特点是使用泰国米、全部原料制成黑曲的「全曲投料」，以及只蒸馏一次。陈放3年以上的「古酒（Kusu）」会形成甘甜圆润的香气。",
+   "steps": [
+    [
+     "洗米・浸渍・蒸米",
+     "将质地坚硬、黏性低的泰国米（籼米）洗净蒸熟。"
+    ],
+    [
+     "制黑曲",
+     "在全部蒸米上培养黑曲菌。黑曲产生的柠檬酸可抑制杂菌，使温暖的冲绳也能安全发酵。"
+    ],
+    [
+     "醪",
+     "在曲中加入水和酵母，发酵约2周。"
+    ],
+    [
+     "蒸馏",
+     "用单式蒸馏器只蒸馏一次，保留原料风味。"
+    ],
+    [
+     "贮藏・熟成",
+     "在陶瓮或罐中静置。还有一种传统技法「仕次」，即向老酒中添加新酒使其持续熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "一般酒",
+     "熟成未满3年，口感清爽，常兑水日常饮用。"
+    ],
+    [
+     "古酒（Kusu）",
+     "全部熟成3年以上。标示年数时，只能使用该年数以上的酒。"
+    ],
+    [
+     "陶瓮贮藏",
+     "在素烧陶瓮中静置，香气圆润深邃。"
+    ],
+    [
+     "橡木桶贮藏",
+     "在橡木桶中熟成，带有类似威士忌的色泽与香气。"
+    ]
+   ],
+   "history": [
+    [
+     "15世纪左右",
+     "据说蒸馏技术经由与暹罗（泰国）等地的贸易传入琉球。"
+    ],
+    [
+     "琉球王国时代",
+     "在首里的特定地区由王府管理酿造，也曾作为贡品献给中国和江户幕府。"
+    ],
+    [
+     "冲绳战役",
+     "许多古酒毁于战火，相传是从幸存的黑曲菌重新开始酿造的。"
+    ],
+    [
+     "1995年",
+     "「琉球泡盛」被认定为地理标志（GI）。"
+    ]
+   ],
+   "famous": [
+    "首里三箇（赤田・崎山・鸟堀）——王府时代的泡盛产地",
+    "琉球泡盛（GI）",
+    "古酒（Kusu）与仕次文化",
+    "石垣、宫古、与那国等离岛的泡盛"
+   ],
+   "enjoy": "一般酒适合兑水或兑苏打水轻松享用。古酒建议纯饮或加少量水，慢慢品味香气。与冲绳料理和较油腻的菜肴很搭。"
+  },
+  "zht": {
+   "lead": "泡盛是沖繩釀造的蒸餾酒，也是日本最古老的蒸餾酒之一。其特點是使用泰國米、全部原料製成黑曲的「全曲投料」，以及只蒸餾一次。陳放3年以上的「古酒（Kusu）」會形成甘甜圓潤的香氣。",
+   "steps": [
+    [
+     "洗米・浸漬・蒸米",
+     "將質地堅硬、黏性低的泰國米（秈米）洗淨蒸熟。"
+    ],
+    [
+     "制黑曲",
+     "在全部蒸米上培養黑麴菌。黑曲產生的檸檬酸可抑制雜菌，使溫暖的沖繩也能安全發酵。"
+    ],
+    [
+     "醪",
+     "在曲中加入水和酵母，發酵約2周。"
+    ],
+    [
+     "蒸餾",
+     "用單式蒸餾器只蒸餾一次，保留原料風味。"
+    ],
+    [
+     "貯藏・熟成",
+     "在陶甕或罐中靜置。還有一種傳統技法「仕次」，即向老酒中新增新酒使其持續熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "一般酒",
+     "熟成未滿3年，口感清爽，常兌水日常飲用。"
+    ],
+    [
+     "古酒（Kusu）",
+     "全部熟成3年以上。標示年數時，只能使用該年數以上的酒。"
+    ],
+    [
+     "陶甕貯藏",
+     "在素燒陶甕中靜置，香氣圓潤深邃。"
+    ],
+    [
+     "橡木桶貯藏",
+     "在橡木桶中熟成，帶有類似威士忌的色澤與香氣。"
+    ]
+   ],
+   "history": [
+    [
+     "15世紀左右",
+     "據說蒸餾技術經由與暹羅（泰國）等地的貿易傳入琉球。"
+    ],
+    [
+     "琉球王國時代",
+     "在首裡的特定地區由王府管理釀造，也曾作為貢品獻給中國和江戶幕府。"
+    ],
+    [
+     "沖繩戰役",
+     "許多古酒毀於戰火，相傳是從倖存的黑麴菌重新開始釀造的。"
+    ],
+    [
+     "1995年",
+     "「琉球泡盛」被認定為地理標誌（GI）。"
+    ]
+   ],
+   "famous": [
+    "首裡三箇（赤田・崎山・鳥堀）——王府時代的泡盛產地",
+    "琉球泡盛（GI）",
+    "古酒（Kusu）與仕次文化",
+    "石垣、宮古、與那國等離島的泡盛"
+   ],
+   "enjoy": "一般酒適合兌水或兌蘇打水輕鬆享用。古酒建議純飲或加少量水，慢慢品味香氣。與沖繩料理和較油膩的菜餚很搭。"
+  },
+  "ko": {
+   "lead": "아와모리는 오키나와에서 만드는 증류주로, 일본에서 가장 오래된 증류주 중 하나입니다. 태국 쌀을 쓰고 원료 전부를 흑누룩으로 만들어 담그는 '전량 누룩 담금'과 한 번만의 증류가 특징입니다. 3년 이상 숙성한 '쿠스(고주)'는 달콤하고 부드러운 향으로 자랍니다.",
+   "steps": [
+    [
+     "세미・침지・증미",
+     "단단하고 찰기가 적은 태국 쌀(인디카 쌀)을 씻어 찝니다."
+    ],
+    [
+     "흑누룩 만들기",
+     "찐 쌀 전부에 흑누룩균을 키웁니다. 흑누룩이 내는 구연산이 잡균을 막아 따뜻한 오키나와에서도 안전하게 발효할 수 있습니다."
+    ],
+    [
+     "술덧",
+     "누룩에 물과 효모를 넣어 약 2주간 발효시킵니다."
+    ],
+    [
+     "증류",
+     "단식 증류기로 한 번만 증류해 원료의 풍미를 남깁니다."
+    ],
+    [
+     "저장・숙성",
+     "옹기나 탱크에서 재웁니다. 오래된 술에 새 술을 보충하며 키우는 '시쓰기'라는 전통 기법도 있습니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "일반주",
+     "숙성 3년 미만. 깔끔한 맛으로 물에 타서 일상적으로 즐깁니다."
+    ],
+    [
+     "쿠스(고주)",
+     "전량을 3년 이상 숙성한 것. 연수 표시는 그 연수 이상의 술만 쓴 경우에 한합니다."
+    ],
+    [
+     "옹기 저장",
+     "유약을 바르지 않은 옹기에서 재워 부드럽고 깊은 향으로."
+    ],
+    [
+     "오크통 저장",
+     "오크통에서 숙성해 위스키 같은 색과 향을 지닌 것."
+    ]
+   ],
+   "history": [
+    [
+     "15세기경",
+     "샴(태국) 등과의 교역을 통해 증류 기술이 류큐에 전해졌다고 합니다."
+    ],
+    [
+     "류큐 왕국 시대",
+     "슈리의 한정된 지역에서 왕부의 관리 아래 빚어졌고, 중국과 에도 막부에 바치는 진상품이 되기도 했습니다."
+    ],
+    [
+     "오키나와 전투",
+     "많은 고주가 사라졌지만, 불탄 자리에서 살아남은 흑누룩균으로 술 빚기가 재개되었다고 전해집니다."
+    ],
+    [
+     "1995년",
+     "'류큐 아와모리'가 지리적 표시(GI)로 지정되었습니다."
+    ]
+   ],
+   "famous": [
+    "슈리 산카(아카타・사키야마・도리호리) — 왕부 시대의 아와모리 산지",
+    "류큐 아와모리(GI)",
+    "쿠스와 시쓰기 문화",
+    "이시가키・미야코・요나구니 등 섬의 아와모리"
+   ],
+   "enjoy": "일반주는 물이나 탄산수에 타서 가볍게. 쿠스는 스트레이트나 약간의 물을 더해 향을 천천히 즐기는 것을 추천합니다. 오키나와 요리나 기름진 요리와 잘 어울립니다."
+  },
+  "es": {
+   "lead": "El awamori es el destilado de Okinawa y uno de los más antiguos de Japón. Se elabora con arroz tailandés convertido íntegramente en koji negro (zen-koji) y se destila una sola vez. El kusu, añejado tres años o más, desarrolla un aroma dulce y redondo.",
+   "steps": [
+    [
+     "Lavado y vapor",
+     "Se lava y cuece al vapor arroz tailandés (índica), duro y poco pegajoso."
+    ],
+    [
+     "Koji negro",
+     "Se cultiva koji negro sobre todo el arroz. Su ácido cítrico protege el mosto y permite fermentar con seguridad en el clima cálido de Okinawa."
+    ],
+    [
+     "Mosto",
+     "Se añade agua y levadura al koji y se fermenta unas dos semanas."
+    ],
+    [
+     "Destilación",
+     "Una sola destilación en alambique para conservar el carácter del arroz."
+    ],
+    [
+     "Reposo y crianza",
+     "Reposa en tinajas o tanques. El método tradicional shitsugi rellena el awamori viejo con otro más joven para que siga madurando."
+    ]
+   ],
+   "kinds": [
+    [
+     "Ippanshu (joven)",
+     "Menos de tres años; limpio y cotidiano, a menudo con agua."
+    ],
+    [
+     "Kusu (añejo)",
+     "Todo añejado tres años o más; la edad indicada implica que solo se usa destilado de al menos esa edad."
+    ],
+    [
+     "Reposado en tinaja",
+     "En tinajas sin esmaltar, para un aroma redondo y profundo."
+    ],
+    [
+     "Reposado en barrica",
+     "Madurado en roble, con color y aroma parecidos al whisky."
+    ]
+   ],
+   "history": [
+    [
+     "Hacia el siglo XV",
+     "Se cree que la destilación llegó a Ryukyu mediante el comercio con Siam (Tailandia) y otros."
+    ],
+    [
+     "Reino de Ryukyu",
+     "Se elaboraba en zonas limitadas de Shuri bajo control real y se ofrecía como tributo a China y al shogunato Edo."
+    ],
+    [
+     "Batalla de Okinawa",
+     "Se perdió mucho kusu; según la tradición, la elaboración se reanudó con koji negro que sobrevivió a los incendios."
+    ],
+    [
+     "1995",
+     "El awamori de Ryukyu pasó a ser Indicación Geográfica (IG) protegida."
+    ]
+   ],
+   "famous": [
+    "Shuri Sanka (Akata, Sakiyama, Torihori): distritos del awamori en la época real",
+    "Awamori de Ryukyu (IG)",
+    "El kusu y la tradición shitsugi",
+    "Awamori de Ishigaki, Miyako, Yonaguni y otras islas"
+   ],
+   "enjoy": "El awamori joven se disfruta ligero con agua o soda. El kusu, solo o con un poco de agua para apreciar su aroma. Acompaña bien la cocina de Okinawa y los platos más grasos."
+  }
+ },
+ "ウイスキー": {
+  "ja": {
+   "lead": "大麦麦芽などの穀物を発酵・蒸留し、木の樽で熟成させたお酒です。日本のウイスキーはスコットランドに学んで始まり、四季の寒暖差による熟成、ミズナラ樽の香り、繊細なブレンドで世界的な評価を得ています。",
+   "steps": [
+    [
+     "製麦",
+     "大麦を発芽させてでんぷんを糖に変えやすくし、乾燥させます。ピート（泥炭）を焚くとスモーキーな香りがつきます。"
+    ],
+    [
+     "糖化",
+     "砕いた麦芽をお湯と混ぜ、甘い麦汁を取り出します。"
+    ],
+    [
+     "発酵",
+     "麦汁に酵母を加え、ビールのような「もろみ」にします。"
+    ],
+    [
+     "蒸留",
+     "銅製のポットスチルで通常2回蒸留します。蒸留器の形が酒質を左右します。"
+    ],
+    [
+     "樽熟成",
+     "樽で何年も寝かせ、色・甘み・香りを樽から得ます。日本の寒暖差は熟成を早め、豊かにします。"
+    ]
+   ],
+   "kinds": [
+    [
+     "シングルモルト",
+     "一つの蒸溜所の大麦麦芽だけで造ったもの。"
+    ],
+    [
+     "ブレンデッドモルト",
+     "複数の蒸溜所のモルトを合わせたもの。"
+    ],
+    [
+     "グレーン",
+     "トウモロコシなどの穀物を主に、連続式蒸留機で造る軽やかなウイスキー。"
+    ],
+    [
+     "ブレンデッド",
+     "モルトとグレーンを合わせた、最も一般的なタイプ。"
+    ],
+    [
+     "樽の違い",
+     "バーボン樽・シェリー樽・ミズナラ樽・ワイン樽など、樽で個性が大きく変わります。"
+    ]
+   ],
+   "history": [
+    [
+     "1923年",
+     "京都・山崎で日本初の本格的なモルトウイスキー蒸溜所の建設が始まりました。"
+    ],
+    [
+     "1934年",
+     "北海道・余市に蒸溜所が開かれました。"
+    ],
+    [
+     "2000年代",
+     "国際的な品評会で日本のウイスキーが相次いで高い評価を受けました。"
+    ],
+    [
+     "2021年",
+     "日本洋酒酒造組合が「ジャパニーズウイスキー」の表示基準を定めました。"
+    ],
+    [
+     "現在",
+     "各地に小さなクラフト蒸溜所が次々と生まれています。"
+    ]
+   ],
+   "famous": [
+    "山崎・白州（サントリー）",
+    "余市・宮城峡（ニッカ）",
+    "秩父（ベンチャーウイスキー）——クラフト蒸溜所の先駆け",
+    "ミズナラ樽——日本固有の香り（白檀や伽羅にたとえられる）"
+   ],
+   "enjoy": "まずはストレートで香りを確かめ、少量の水を加えると香りが開きます。日本で人気のハイボールや、氷と水で割る水割りも、食事と合わせやすい飲み方です。"
+  },
+  "en": {
+   "lead": "Whisky is made by fermenting and distilling grains such as malted barley, then aging the spirit in wooden casks. Japanese whisky began by learning from Scotland and is now praised worldwide for maturation shaped by seasonal temperature swings, the aroma of Mizunara oak and delicate blending.",
+   "steps": [
+    [
+     "Malting",
+     "Barley is germinated so its starch converts easily to sugar, then dried. Burning peat adds a smoky aroma."
+    ],
+    [
+     "Mashing",
+     "Ground malt is mixed with hot water to extract sweet wort."
+    ],
+    [
+     "Fermentation",
+     "Yeast turns the wort into a beer-like wash."
+    ],
+    [
+     "Distillation",
+     "Usually distilled twice in copper pot stills; still shape influences the spirit."
+    ],
+    [
+     "Cask aging",
+     "The spirit rests for years, drawing color, sweetness and aroma from the wood. Japan's temperature swings speed and enrich maturation."
+    ]
+   ],
+   "kinds": [
+    [
+     "Single malt",
+     "Malted barley from a single distillery."
+    ],
+    [
+     "Blended malt",
+     "Malts from several distilleries combined."
+    ],
+    [
+     "Grain",
+     "Mainly corn or other grains, made in column stills; lighter in style."
+    ],
+    [
+     "Blended",
+     "Malt and grain whisky combined; the most common type."
+    ],
+    [
+     "Casks",
+     "Bourbon, sherry, Mizunara and wine casks each give strong character."
+    ]
+   ],
+   "history": [
+    [
+     "1923",
+     "Construction of Japan's first full-scale malt whisky distillery began in Yamazaki, Kyoto."
+    ],
+    [
+     "1934",
+     "A distillery opened in Yoichi, Hokkaido."
+    ],
+    [
+     "2000s",
+     "Japanese whiskies won one top international award after another."
+    ],
+    [
+     "2021",
+     "The Japan Spirits & Liqueurs Makers Association set labeling standards for \"Japanese whisky\"."
+    ],
+    [
+     "Today",
+     "Small craft distilleries are opening across the country."
+    ]
+   ],
+   "famous": [
+    "Yamazaki and Hakushu (Suntory)",
+    "Yoichi and Miyagikyo (Nikka)",
+    "Chichibu (Venture Whisky): a pioneer of craft distilling",
+    "Mizunara oak: a uniquely Japanese aroma likened to sandalwood and incense"
+   ],
+   "enjoy": "Taste it neat first, then add a few drops of water to open the aroma. The highball, hugely popular in Japan, and mizuwari (with ice and water) are easy to pair with food."
+  },
+  "zh": {
+   "lead": "威士忌是将大麦麦芽等谷物发酵、蒸馏后，在木桶中熟成的酒。日本威士忌以苏格兰为师起步，凭借四季温差带来的熟成、水楢桶的香气和细腻的调和，赢得了世界的赞誉。",
+   "steps": [
+    [
+     "制麦",
+     "让大麦发芽，使淀粉易于转化为糖，再加以干燥。焚烧泥煤会带来烟熏香。"
+    ],
+    [
+     "糖化",
+     "将碾碎的麦芽与热水混合，提取甜麦汁。"
+    ],
+    [
+     "发酵",
+     "在麦汁中加入酵母，制成类似啤酒的发酵液。"
+    ],
+    [
+     "蒸馏",
+     "通常用铜制壶式蒸馏器蒸馏两次。蒸馏器形状影响酒质。"
+    ],
+    [
+     "橡木桶熟成",
+     "在桶中静置多年，从木桶获得颜色、甜味与香气。日本的温差使熟成更快、更丰富。"
+    ]
+   ],
+   "kinds": [
+    [
+     "单一麦芽",
+     "只用一家蒸馏所的大麦麦芽酿造。"
+    ],
+    [
+     "调和麦芽",
+     "将多家蒸馏所的麦芽威士忌调和。"
+    ],
+    [
+     "谷物威士忌",
+     "以玉米等谷物为主，用连续式蒸馏器酿造，风格轻盈。"
+    ],
+    [
+     "调和威士忌",
+     "麦芽与谷物威士忌调和，最常见的类型。"
+    ],
+    [
+     "酒桶的不同",
+     "波本桶、雪莉桶、水楢桶、葡萄酒桶等，酒桶会大幅改变个性。"
+    ]
+   ],
+   "history": [
+    [
+     "1923年",
+     "京都山崎开始建造日本第一座正式的麦芽威士忌蒸馏所。"
+    ],
+    [
+     "1934年",
+     "北海道余市的蒸馏所开业。"
+    ],
+    [
+     "2000年代",
+     "日本威士忌在国际评比中接连获得高度评价。"
+    ],
+    [
+     "2021年",
+     "日本洋酒酒造组合制定了「日本威士忌」的标示标准。"
+    ],
+    [
+     "现在",
+     "各地不断诞生小型精酿蒸馏所。"
+    ]
+   ],
+   "famous": [
+    "山崎・白州（三得利）",
+    "余市・宫城峡（日果）",
+    "秩父（Venture Whisky）——精酿蒸馏所的先驱",
+    "水楢桶——日本独有的香气（常被比作檀香、伽罗）"
+   ],
+   "enjoy": "先纯饮确认香气，加几滴水香气会更舒展。日本流行的高球，以及加冰兑水的「水割」，都很适合佐餐。"
+  },
+  "zht": {
+   "lead": "威士忌是將大麥麥芽等穀物發酵、蒸餾後，在木桶中熟成的酒。日本威士忌以蘇格蘭為師起步，憑藉四季溫差帶來的熟成、水楢桶的香氣和細膩的調和，贏得了世界的讚譽。",
+   "steps": [
+    [
+     "制麥",
+     "讓大麥發芽，使澱粉易於轉化為糖，再加以乾燥。焚燒泥煤會帶來煙燻香。"
+    ],
+    [
+     "糖化",
+     "將碾碎的麥芽與熱水混合，提取甜麥汁。"
+    ],
+    [
+     "發酵",
+     "在麥汁中加入酵母，製成類似啤酒的發酵液。"
+    ],
+    [
+     "蒸餾",
+     "通常用銅製壺式蒸餾器蒸餾兩次。蒸餾器形狀影響酒質。"
+    ],
+    [
+     "橡木桶熟成",
+     "在桶中靜置多年，從木桶獲得顏色、甜味與香氣。日本的溫差使熟成更快、更豐富。"
+    ]
+   ],
+   "kinds": [
+    [
+     "單一麥芽",
+     "只用一家蒸餾所的大麥麥芽釀造。"
+    ],
+    [
+     "調和麥芽",
+     "將多家蒸餾所的麥芽威士忌調和。"
+    ],
+    [
+     "穀物威士忌",
+     "以玉米等穀物為主，用連續式蒸餾器釀造，風格輕盈。"
+    ],
+    [
+     "調和威士忌",
+     "麥芽與穀物威士忌調和，最常見的型別。"
+    ],
+    [
+     "酒桶的不同",
+     "波本桶、雪莉桶、水楢桶、葡萄酒桶等，酒桶會大幅改變個性。"
+    ]
+   ],
+   "history": [
+    [
+     "1923年",
+     "京都山崎開始建造日本第一座正式的麥芽威士忌蒸餾所。"
+    ],
+    [
+     "1934年",
+     "北海道餘市的蒸餾所開業。"
+    ],
+    [
+     "2000年代",
+     "日本威士忌在國際評比中接連獲得高度評價。"
+    ],
+    [
+     "2021年",
+     "日本洋酒酒造組合制定了「日本威士忌」的標示標準。"
+    ],
+    [
+     "現在",
+     "各地不斷誕生小型精釀蒸餾所。"
+    ]
+   ],
+   "famous": [
+    "山崎・白州（三得利）",
+    "餘市・宮城峽（日果）",
+    "秩父（Venture Whisky）——精釀蒸餾所的先驅",
+    "水楢桶——日本獨有的香氣（常被比作檀香、伽羅）"
+   ],
+   "enjoy": "先純飲確認香氣，加幾滴水香氣會更舒展。日本流行的高球，以及加冰兌水的「水割」，都很適合佐餐。"
+  },
+  "ko": {
+   "lead": "위스키는 보리 맥아 등의 곡물을 발효・증류하고 나무통에서 숙성한 술입니다. 일본 위스키는 스코틀랜드에서 배워 시작했으며, 사계절의 기온차가 만드는 숙성, 미즈나라 통의 향, 섬세한 블렌딩으로 세계적인 평가를 받고 있습니다.",
+   "steps": [
+    [
+     "제맥",
+     "보리를 발아시켜 전분이 당으로 바뀌기 쉽게 한 뒤 건조합니다. 피트(이탄)를 태우면 스모키한 향이 납니다."
+    ],
+    [
+     "당화",
+     "분쇄한 맥아를 뜨거운 물과 섞어 달콤한 맥즙을 얻습니다."
+    ],
+    [
+     "발효",
+     "맥즙에 효모를 넣어 맥주 같은 발효액을 만듭니다."
+    ],
+    [
+     "증류",
+     "보통 구리 팟 스틸로 두 번 증류합니다. 증류기의 모양이 주질을 좌우합니다."
+    ],
+    [
+     "오크통 숙성",
+     "통에서 여러 해 재우며 색・단맛・향을 얻습니다. 일본의 기온차는 숙성을 빠르고 풍부하게 합니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "싱글 몰트",
+     "한 증류소의 보리 맥아만으로 만든 위스키."
+    ],
+    [
+     "블렌디드 몰트",
+     "여러 증류소의 몰트를 섞은 것."
+    ],
+    [
+     "그레인",
+     "옥수수 등 곡물을 주로 연속식 증류기로 만든 가벼운 위스키."
+    ],
+    [
+     "블렌디드",
+     "몰트와 그레인을 섞은, 가장 일반적인 유형."
+    ],
+    [
+     "통의 차이",
+     "버번 통・셰리 통・미즈나라 통・와인 통 등 통에 따라 개성이 크게 달라집니다."
+    ]
+   ],
+   "history": [
+    [
+     "1923년",
+     "교토 야마자키에서 일본 최초의 본격 몰트위스키 증류소 건설이 시작되었습니다."
+    ],
+    [
+     "1934년",
+     "홋카이도 요이치에 증류소가 문을 열었습니다."
+    ],
+    [
+     "2000년대",
+     "국제 품평회에서 일본 위스키가 잇따라 높은 평가를 받았습니다."
+    ],
+    [
+     "2021년",
+     "일본양주주조조합이 '재패니즈 위스키' 표시 기준을 정했습니다."
+    ],
+    [
+     "현재",
+     "각지에 작은 크래프트 증류소가 잇따라 생겨나고 있습니다."
+    ]
+   ],
+   "famous": [
+    "야마자키・하쿠슈(산토리)",
+    "요이치・미야기쿄(닛카)",
+    "지치부(벤처 위스키) — 크래프트 증류소의 선구자",
+    "미즈나라 통 — 일본 고유의 향(백단이나 침향에 비유됨)"
+   ],
+   "enjoy": "먼저 스트레이트로 향을 확인하고, 물을 몇 방울 더하면 향이 피어납니다. 일본에서 인기 있는 하이볼과 얼음・물로 희석하는 미즈와리도 식사와 곁들이기 좋습니다."
+  },
+  "es": {
+   "lead": "El whisky se elabora fermentando y destilando cereales como la cebada malteada y envejeciendo el destilado en barricas de madera. El whisky japonés nació aprendiendo de Escocia y hoy es elogiado en todo el mundo por una maduración marcada por los cambios de temperatura estacionales, el aroma del roble Mizunara y un ensamblaje delicado.",
+   "steps": [
+    [
+     "Malteado",
+     "Se germina la cebada para que su almidón se convierta fácilmente en azúcar y después se seca. Quemar turba aporta aroma ahumado."
+    ],
+    [
+     "Maceración",
+     "La malta molida se mezcla con agua caliente para extraer un mosto dulce."
+    ],
+    [
+     "Fermentación",
+     "La levadura convierte el mosto en un líquido parecido a la cerveza."
+    ],
+    [
+     "Destilación",
+     "Normalmente dos destilaciones en alambiques de cobre; su forma influye en el destilado."
+    ],
+    [
+     "Crianza en barrica",
+     "El destilado reposa años y obtiene color, dulzor y aroma de la madera. Los cambios de temperatura de Japón aceleran y enriquecen la maduración."
+    ]
+   ],
+   "kinds": [
+    [
+     "Single malt",
+     "Cebada malteada de una sola destilería."
+    ],
+    [
+     "Blended malt",
+     "Maltas de varias destilerías combinadas."
+    ],
+    [
+     "Grain",
+     "Principalmente maíz u otros cereales, en alambique continuo; estilo más ligero."
+    ],
+    [
+     "Blended",
+     "Malta y grano combinados; el tipo más común."
+    ],
+    [
+     "Barricas",
+     "Las barricas de bourbon, jerez, Mizunara o vino marcan mucho el carácter."
+    ]
+   ],
+   "history": [
+    [
+     "1923",
+     "Comenzó en Yamazaki (Kioto) la construcción de la primera destilería de whisky de malta a gran escala de Japón."
+    ],
+    [
+     "1934",
+     "Se abrió una destilería en Yoichi (Hokkaido)."
+    ],
+    [
+     "Años 2000",
+     "Los whiskies japoneses ganaron un premio internacional tras otro."
+    ],
+    [
+     "2021",
+     "La asociación japonesa de fabricantes de licores fijó normas de etiquetado para el «whisky japonés»."
+    ],
+    [
+     "Hoy",
+     "Pequeñas destilerías artesanales abren por todo el país."
+    ]
+   ],
+   "famous": [
+    "Yamazaki y Hakushu (Suntory)",
+    "Yoichi y Miyagikyo (Nikka)",
+    "Chichibu (Venture Whisky): pionera del destilado artesanal",
+    "Roble Mizunara: un aroma propio de Japón, comparado con el sándalo y el incienso"
+   ],
+   "enjoy": "Pruébalo primero solo y añade unas gotas de agua para abrir el aroma. El highball, muy popular en Japón, y el mizuwari (con hielo y agua) son fáciles de combinar con comida."
+  }
+ },
+ "スピリッツ": {
+  "ja": {
+   "lead": "ジン・ラム・ウォッカ・ブランデーなど、焼酎・泡盛・ウイスキー以外の蒸留酒をまとめて紹介します。日本では、柚子や山椒、緑茶、桜など日本の植物を使ったクラフトジンや、南の島のサトウキビで造るラムなど、小さな蒸溜所が個性的な酒を生み出しています。",
+   "steps": [
+    [
+     "ベースの酒を造る",
+     "穀物・芋・サトウキビ・果実などを発酵させ、蒸留してベースの酒を造ります。"
+    ],
+    [
+     "ジン：香りづけ",
+     "ベースの酒にジュニパーベリー（杜松の実）と各地の植物（ボタニカル）を漬け込み、再び蒸留して香りを移します。"
+    ],
+    [
+     "ラム：サトウキビから",
+     "サトウキビの搾り汁や糖蜜を発酵・蒸留します。樽で熟成させると色と甘みが加わります。"
+    ],
+    [
+     "ウォッカ：澄んだ酒に",
+     "蒸留を重ね、白樺の炭などでろ過して、クリアな味に仕上げます。"
+    ],
+    [
+     "ブランデー：果実から",
+     "ぶどうやりんごなどのワインを蒸留し、樽で熟成させます。"
+    ]
+   ],
+   "kinds": [
+    [
+     "ジン",
+     "ジュニパーベリーが主役。日本のクラフトジンは柚子・山椒・玉露・ヒノキなどが特徴。"
+    ],
+    [
+     "ラム",
+     "サトウキビが原料。ホワイトは軽やか、ゴールドやダークは樽の香りが豊か。"
+    ],
+    [
+     "ウォッカ",
+     "クセのない澄んだ蒸留酒。米など日本の原料を使ったものもあります。"
+    ],
+    [
+     "ブランデー・グラッパ",
+     "果実の蒸留酒。グラッパはぶどうの搾りかすから造ります。"
+    ]
+   ],
+   "history": [
+    [
+     "明治時代",
+     "西洋の蒸留酒が日本に紹介され、国内でも洋酒造りが始まりました。"
+    ],
+    [
+     "戦後",
+     "南西諸島などでサトウキビを使ったラム造りが行われるようになりました。"
+    ],
+    [
+     "2016年",
+     "京都で日本初のクラフトジン専門蒸溜所が誕生し、クラフトジンの流れが広がりました。"
+    ],
+    [
+     "現在",
+     "酒蔵や焼酎蔵がジンやラムに挑戦し、地域の植物を生かした酒が次々と生まれています。"
+    ]
+   ],
+   "famous": [
+    "京都・季の美（京都蒸溜所）——日本初のクラフトジン専門蒸溜所",
+    "柚子・山椒・玉露・桜——日本のジンの代表的なボタニカル",
+    "南大東島・奄美・沖縄などのサトウキビのラム",
+    "酒蔵・焼酎蔵が造るクラフトジン"
+   ],
+   "enjoy": "ジンはトニックやソーダで割ると植物の香りが引き立ちます。ラムはロックやソーダ割り、熟成したものはストレートで。カクテルのベースとしても幅広く使えます。"
+  },
+  "en": {
+   "lead": "This section covers distilled spirits other than shochu, awamori and whisky: gin, rum, vodka, brandy and more. In Japan, small distilleries make distinctive spirits such as craft gin flavored with yuzu, sansho, green tea or cherry blossom, and rum from sugarcane grown on southern islands.",
+   "steps": [
+    [
+     "Base spirit",
+     "Grain, potato, sugarcane or fruit is fermented and distilled into a base spirit."
+    ],
+    [
+     "Gin: botanicals",
+     "Juniper berries and local botanicals are steeped in the base spirit and redistilled to capture their aroma."
+    ],
+    [
+     "Rum: from sugarcane",
+     "Sugarcane juice or molasses is fermented and distilled; cask aging adds color and sweetness."
+    ],
+    [
+     "Vodka: clarity",
+     "Repeated distillation and filtering, for example through birch charcoal, give a clean taste."
+    ],
+    [
+     "Brandy: from fruit",
+     "Grape or apple wine is distilled and aged in casks."
+    ]
+   ],
+   "kinds": [
+    [
+     "Gin",
+     "Juniper leads; Japanese craft gins feature yuzu, sansho, gyokuro, hinoki and more."
+    ],
+    [
+     "Rum",
+     "Made from sugarcane; white rum is light, gold and dark rums show cask aromas."
+    ],
+    [
+     "Vodka",
+     "A clean, neutral spirit; some use Japanese ingredients such as rice."
+    ],
+    [
+     "Brandy and grappa",
+     "Fruit spirits; grappa is made from grape pomace."
+    ]
+   ],
+   "history": [
+    [
+     "Meiji era",
+     "Western spirits were introduced, and domestic production began."
+    ],
+    [
+     "Postwar",
+     "Rum made from sugarcane appeared in the southwestern islands."
+    ],
+    [
+     "2016",
+     "Japan's first dedicated craft gin distillery opened in Kyoto, sparking the craft gin movement."
+    ],
+    [
+     "Today",
+     "Sake and shochu makers are turning to gin and rum, creating spirits that showcase local plants."
+    ]
+   ],
+   "famous": [
+    "Ki No Bi (The Kyoto Distillery): Japan's first dedicated craft gin distillery",
+    "Yuzu, sansho, gyokuro and cherry blossom: classic Japanese gin botanicals",
+    "Sugarcane rums from Minamidaito, Amami and Okinawa",
+    "Craft gins from sake and shochu breweries"
+   ],
+   "enjoy": "Mix gin with tonic or soda to highlight the botanicals. Enjoy rum on the rocks or with soda, and aged rum neat. These spirits also make versatile cocktail bases."
+  },
+  "zh": {
+   "lead": "这里介绍烧酒、泡盛、威士忌以外的蒸馏酒，如金酒、朗姆酒、伏特加、白兰地等。在日本，小型蒸馏所正以柚子、山椒、绿茶、樱花等日本植物酿造精酿金酒，并用南方岛屿的甘蔗酿造朗姆酒，个性十足。",
+   "steps": [
+    [
+     "酿造基酒",
+     "将谷物、薯类、甘蔗、水果等发酵、蒸馏，制成基酒。"
+    ],
+    [
+     "金酒：增香",
+     "在基酒中浸泡杜松子和各地植物（植物原料），再次蒸馏以转移香气。"
+    ],
+    [
+     "朗姆酒：源自甘蔗",
+     "将甘蔗汁或糖蜜发酵、蒸馏。经橡木桶熟成后增添颜色与甜味。"
+    ],
+    [
+     "伏特加：澄澈之酒",
+     "反复蒸馏，并用白桦炭等过滤，使口感清澈。"
+    ],
+    [
+     "白兰地：源自水果",
+     "将葡萄或苹果等酿成的酒蒸馏，并在桶中熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "金酒",
+     "以杜松子为主角。日本精酿金酒以柚子、山椒、玉露、桧木等为特色。"
+    ],
+    [
+     "朗姆酒",
+     "以甘蔗为原料。白朗姆轻快，金朗姆与黑朗姆富有桶香。"
+    ],
+    [
+     "伏特加",
+     "没有杂味的清澈蒸馏酒，也有使用米等日本原料的。"
+    ],
+    [
+     "白兰地・格拉帕",
+     "水果蒸馏酒。格拉帕以葡萄榨汁后的果渣酿造。"
+    ]
+   ],
+   "history": [
+    [
+     "明治时代",
+     "西洋蒸馏酒传入日本，国内也开始酿造洋酒。"
+    ],
+    [
+     "战后",
+     "西南诸岛等地开始用甘蔗酿造朗姆酒。"
+    ],
+    [
+     "2016年",
+     "京都诞生了日本第一家精酿金酒专门蒸馏所，精酿金酒潮流随之扩展。"
+    ],
+    [
+     "现在",
+     "酒藏和烧酒藏纷纷挑战金酒和朗姆酒，活用地方植物的酒款不断问世。"
+    ]
+   ],
+   "famous": [
+    "京都・季之美（京都蒸馏所）——日本第一家精酿金酒专门蒸馏所",
+    "柚子・山椒・玉露・樱花——日本金酒的代表性植物原料",
+    "南大东岛、奄美、冲绳等地的甘蔗朗姆酒",
+    "酒藏・烧酒藏酿造的精酿金酒"
+   ],
+   "enjoy": "金酒兑汤力水或苏打水，植物香气更突出。朗姆酒适合加冰或兑苏打水，陈年款可纯饮。也是用途广泛的鸡尾酒基酒。"
+  },
+  "zht": {
+   "lead": "這裡介紹燒酒、泡盛、威士忌以外的蒸餾酒，如金酒、朗姆酒、伏特加、白蘭地等。在日本，小型蒸餾所正以柚子、山椒、綠茶、櫻花等日本植物釀造精釀金酒，並用南方島嶼的甘蔗釀造朗姆酒，個性十足。",
+   "steps": [
+    [
+     "釀造基酒",
+     "將穀物、薯類、甘蔗、水果等發酵、蒸餾，製成基酒。"
+    ],
+    [
+     "金酒：增香",
+     "在基酒中浸泡杜松子和各地植物（植物原料），再次蒸餾以轉移香氣。"
+    ],
+    [
+     "朗姆酒：源自甘蔗",
+     "將甘蔗汁或糖蜜發酵、蒸餾。經橡木桶熟成後增添顏色與甜味。"
+    ],
+    [
+     "伏特加：澄澈之酒",
+     "反覆蒸餾，並用白樺炭等過濾，使口感清澈。"
+    ],
+    [
+     "白蘭地：源自水果",
+     "將葡萄或蘋果等釀成的酒蒸餾，並在桶中熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "金酒",
+     "以杜松子為主角。日本精釀金酒以柚子、山椒、玉露、檜木等為特色。"
+    ],
+    [
+     "朗姆酒",
+     "以甘蔗為原料。白朗姆輕快，金朗姆與黑朗姆富有桶香。"
+    ],
+    [
+     "伏特加",
+     "沒有雜味的清澈蒸餾酒，也有使用米等日本原料的。"
+    ],
+    [
+     "白蘭地・格拉帕",
+     "水果蒸餾酒。格拉帕以葡萄榨汁後的果渣釀造。"
+    ]
+   ],
+   "history": [
+    [
+     "明治時代",
+     "西洋蒸餾酒傳入日本，國內也開始釀造洋酒。"
+    ],
+    [
+     "戰後",
+     "西南諸島等地開始用甘蔗釀造朗姆酒。"
+    ],
+    [
+     "2016年",
+     "京都誕生了日本第一家精釀金酒專門蒸餾所，精釀金酒潮流隨之擴充套件。"
+    ],
+    [
+     "現在",
+     "酒藏和燒酒藏紛紛挑戰金酒和朗姆酒，活用地方植物的酒款不斷問世。"
+    ]
+   ],
+   "famous": [
+    "京都・季之美（京都蒸餾所）——日本第一家精釀金酒專門蒸餾所",
+    "柚子・山椒・玉露・櫻花——日本金酒的代表性植物原料",
+    "南大東島、奄美、沖繩等地的甘蔗朗姆酒",
+    "酒藏・燒酒藏釀造的精釀金酒"
+   ],
+   "enjoy": "金酒兌湯力水或蘇打水，植物香氣更突出。朗姆酒適合加冰或兌蘇打水，陳年款可純飲。也是用途廣泛的雞尾酒基酒。"
+  },
+  "ko": {
+   "lead": "소주・아와모리・위스키 이외의 증류주인 진・럼・보드카・브랜디 등을 소개합니다. 일본에서는 유자・산초・녹차・벚꽃 등 일본 식물을 쓴 크래프트 진이나 남쪽 섬의 사탕수수로 만드는 럼 등, 작은 증류소들이 개성 있는 술을 만들고 있습니다.",
+   "steps": [
+    [
+     "베이스 술 만들기",
+     "곡물・감자・사탕수수・과일 등을 발효・증류해 베이스 술을 만듭니다."
+    ],
+    [
+     "진: 향 입히기",
+     "베이스 술에 주니퍼베리와 각지의 식물(보태니컬)을 담갔다가 다시 증류해 향을 옮깁니다."
+    ],
+    [
+     "럼: 사탕수수에서",
+     "사탕수수 즙이나 당밀을 발효・증류합니다. 통에서 숙성하면 색과 단맛이 더해집니다."
+    ],
+    [
+     "보드카: 맑은 술로",
+     "증류를 거듭하고 자작나무 숯 등으로 여과해 깨끗한 맛으로 완성합니다."
+    ],
+    [
+     "브랜디: 과일에서",
+     "포도나 사과 등으로 빚은 와인을 증류해 통에서 숙성합니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "진",
+     "주니퍼베리가 주인공. 일본 크래프트 진은 유자・산초・교쿠로・히노키 등이 특징."
+    ],
+    [
+     "럼",
+     "사탕수수가 원료. 화이트는 가볍고, 골드나 다크는 통의 향이 풍부."
+    ],
+    [
+     "보드카",
+     "잡맛 없는 맑은 증류주. 쌀 등 일본 원료를 쓴 것도 있습니다."
+    ],
+    [
+     "브랜디・그라파",
+     "과일 증류주. 그라파는 포도를 짜고 남은 찌꺼기로 만듭니다."
+    ]
+   ],
+   "history": [
+    [
+     "메이지 시대",
+     "서양 증류주가 일본에 소개되어 국내에서도 양주 제조가 시작되었습니다."
+    ],
+    [
+     "전후",
+     "남서 제도 등에서 사탕수수를 쓴 럼 제조가 이루어지게 되었습니다."
+    ],
+    [
+     "2016년",
+     "교토에 일본 최초의 크래프트 진 전문 증류소가 생겨 크래프트 진의 흐름이 퍼졌습니다."
+    ],
+    [
+     "현재",
+     "사케 양조장과 소주 양조장이 진과 럼에 도전하며 지역 식물을 살린 술이 잇따라 탄생하고 있습니다."
+    ]
+   ],
+   "famous": [
+    "교토 '기노비'(교토 증류소) — 일본 최초의 크래프트 진 전문 증류소",
+    "유자・산초・교쿠로・벚꽃 — 일본 진의 대표적 보태니컬",
+    "미나미다이토지마・아마미・오키나와 등의 사탕수수 럼",
+    "사케・소주 양조장이 만드는 크래프트 진"
+   ],
+   "enjoy": "진은 토닉이나 탄산수에 타면 식물의 향이 살아납니다. 럼은 온더록이나 탄산수에 타서, 숙성한 것은 스트레이트로. 칵테일 베이스로도 폭넓게 쓰입니다."
+  },
+  "es": {
+   "lead": "Aquí presentamos los destilados distintos del shochu, el awamori y el whisky: ginebra, ron, vodka, brandy y más. En Japón, pequeñas destilerías crean bebidas únicas, como ginebras con yuzu, sansho, té verde o flor de cerezo, y ron de caña de azúcar de las islas del sur.",
+   "steps": [
+    [
+     "Destilado base",
+     "Cereales, patata, caña de azúcar o fruta se fermentan y destilan para obtener la base."
+    ],
+    [
+     "Ginebra: botánicos",
+     "Se maceran bayas de enebro y botánicos locales en la base y se redestila para captar su aroma."
+    ],
+    [
+     "Ron: de la caña",
+     "Se fermenta y destila zumo de caña o melaza; la crianza en barrica aporta color y dulzor."
+    ],
+    [
+     "Vodka: pureza",
+     "Destilaciones repetidas y filtrado, por ejemplo con carbón de abedul, dan un sabor limpio."
+    ],
+    [
+     "Brandy: de la fruta",
+     "Se destila vino de uva o manzana y se envejece en barrica."
+    ]
+   ],
+   "kinds": [
+    [
+     "Ginebra",
+     "Protagoniza el enebro; las japonesas destacan por yuzu, sansho, gyokuro, hinoki y más."
+    ],
+    [
+     "Ron",
+     "De caña de azúcar; el blanco es ligero, el dorado y el oscuro muestran aromas de barrica."
+    ],
+    [
+     "Vodka",
+     "Destilado limpio y neutro; algunos usan ingredientes japoneses como el arroz."
+    ],
+    [
+     "Brandy y grappa",
+     "Destilados de fruta; la grappa se elabora con orujo de uva."
+    ]
+   ],
+   "history": [
+    [
+     "Era Meiji",
+     "Llegaron los destilados occidentales y comenzó la producción nacional."
+    ],
+    [
+     "Posguerra",
+     "Apareció el ron de caña de azúcar en las islas del suroeste."
+    ],
+    [
+     "2016",
+     "Abrió en Kioto la primera destilería japonesa dedicada a la ginebra artesanal, que impulsó el movimiento."
+    ],
+    [
+     "Hoy",
+     "Bodegas de sake y shochu se lanzan a la ginebra y el ron con plantas locales."
+    ]
+   ],
+   "famous": [
+    "Ki No Bi (The Kyoto Distillery): primera destilería japonesa dedicada a la ginebra artesanal",
+    "Yuzu, sansho, gyokuro y flor de cerezo: botánicos clásicos de la ginebra japonesa",
+    "Rones de caña de Minamidaito, Amami y Okinawa",
+    "Ginebras artesanales de bodegas de sake y shochu"
+   ],
+   "enjoy": "Mezcla la ginebra con tónica o soda para resaltar los botánicos. El ron, con hielo o soda, y el añejo, solo. Son bases muy versátiles para cócteles."
+  }
+ },
+ "ビール": {
+  "ja": {
+   "lead": "麦芽・ホップ・水・酵母から造る醸造酒です。1994年の規制緩和で小さな醸造所が造れるようになり、「地ビール」から「クラフトビール」へと発展。今では全国に数百の醸造所があり、地域の果実や米、お茶などを使った個性的なビールが生まれています。",
+   "steps": [
+    [
+     "製麦・粉砕",
+     "発芽させて乾燥させた大麦の麦芽を砕きます。焙煎の度合いで色や香ばしさが変わります。"
+    ],
+    [
+     "糖化",
+     "麦芽をお湯と混ぜて、でんぷんを糖に変え、甘い麦汁を造ります。"
+    ],
+    [
+     "煮沸・ホップ",
+     "麦汁を煮沸し、ホップを加えて苦味と香りをつけます。"
+    ],
+    [
+     "発酵",
+     "冷やした麦汁に酵母を加えます。上面発酵はエール、下面発酵はラガーになります。"
+    ],
+    [
+     "熟成・仕上げ",
+     "低温で寝かせて味をなじませ、炭酸を整えて缶や瓶、樽に詰めます。"
+    ]
+   ],
+   "kinds": [
+    [
+     "ピルスナー・ラガー",
+     "すっきりと爽快な、日本で最もなじみのあるスタイル。"
+    ],
+    [
+     "ペールエール・IPA",
+     "ホップの香りと苦味が豊か。IPAはより力強いタイプ。"
+    ],
+    [
+     "ヴァイツェン・ホワイトエール",
+     "小麦を使い、バナナやスパイスのような香りでやわらか。"
+    ],
+    [
+     "スタウト・黒ビール",
+     "焙煎した麦芽で、コーヒーやチョコレートのような香り。"
+    ],
+    [
+     "フルーツ・和素材",
+     "柚子、桃、米、緑茶など、地域の素材を生かしたビール。"
+    ]
+   ],
+   "history": [
+    [
+     "1870年",
+     "横浜で外国人による本格的なビール醸造が始まりました（スプリング・バレー・ブルワリー）。"
+    ],
+    [
+     "明治時代",
+     "大手のビール会社が次々に創業し、ビールが広まりました。"
+    ],
+    [
+     "1994年",
+     "酒税法の改正で年間の最低製造量が引き下げられ、小規模な「地ビール」が誕生しました。"
+    ],
+    [
+     "2010年代〜",
+     "「クラフトビール」として人気が高まり、醸造所の数が大きく増えました。"
+    ]
+   ],
+   "famous": [
+    "横浜——日本のビール発祥の地の一つ",
+    "北海道・東北・新潟などの地域のブルワリー",
+    "柚子・桃・米など和素材のクラフトビール",
+    "缶入りクラフトビールの広がり"
+   ],
+   "enjoy": "ラガーはよく冷やして、エールや黒ビールは少し温度を上げると香りが立ちます。グラスに注いで泡と香りを楽しみましょう。揚げ物や焼き鳥、チーズとよく合います。"
+  },
+  "en": {
+   "lead": "Beer is brewed from malt, hops, water and yeast. After deregulation in 1994 let small breweries open, \"ji-beer\" grew into today's craft beer scene. Hundreds of breweries across Japan now make distinctive beers with local fruit, rice, tea and more.",
+   "steps": [
+    [
+     "Malting and milling",
+     "Germinated, dried barley malt is crushed; roasting level changes color and toastiness."
+    ],
+    [
+     "Mashing",
+     "Malt and hot water convert starch to sugar, producing sweet wort."
+    ],
+    [
+     "Boiling and hops",
+     "The wort is boiled and hops are added for bitterness and aroma."
+    ],
+    [
+     "Fermentation",
+     "Yeast is added to the cooled wort: top fermentation makes ales, bottom fermentation makes lagers."
+    ],
+    [
+     "Conditioning",
+     "The beer rests cold to round out, is carbonated, and is filled into cans, bottles or kegs."
+    ]
+   ],
+   "kinds": [
+    [
+     "Pilsner / Lager",
+     "Crisp and refreshing; the most familiar style in Japan."
+    ],
+    [
+     "Pale ale / IPA",
+     "Rich hop aroma and bitterness; IPA is the bolder version."
+    ],
+    [
+     "Weizen / White ale",
+     "Brewed with wheat; soft, with banana or spice notes."
+    ],
+    [
+     "Stout / Dark beer",
+     "Roasted malt with coffee and chocolate aromas."
+    ],
+    [
+     "Fruit and Japanese ingredients",
+     "Yuzu, peach, rice, green tea and other local ingredients."
+    ]
+   ],
+   "history": [
+    [
+     "1870",
+     "Full-scale brewing began in Yokohama with the Spring Valley Brewery, founded by a foreign brewer."
+    ],
+    [
+     "Meiji era",
+     "Major beer companies were founded and beer spread across Japan."
+    ],
+    [
+     "1994",
+     "A liquor tax law change lowered minimum production volumes, giving birth to small ji-beer breweries."
+    ],
+    [
+     "2010s onward",
+     "Craft beer boomed, and the number of breweries grew sharply."
+    ]
+   ],
+   "famous": [
+    "Yokohama: one of the birthplaces of Japanese beer",
+    "Regional breweries in Hokkaido, Tohoku, Niigata and beyond",
+    "Craft beers with yuzu, peach, rice and other Japanese ingredients",
+    "The rise of canned craft beer"
+   ],
+   "enjoy": "Serve lagers well chilled; let ales and dark beers warm slightly to release aroma. Pour into a glass to enjoy the foam and aroma. Great with fried food, yakitori and cheese."
+  },
+  "zh": {
+   "lead": "啤酒是用麦芽、啤酒花、水和酵母酿造的酒。1994年放宽管制后，小型酿酒厂得以开设，从「地啤酒」发展为「精酿啤酒」。如今全国有数百家酿酒厂，酿出使用当地水果、米、茶等的个性啤酒。",
+   "steps": [
+    [
+     "制麦・粉碎",
+     "将发芽干燥的大麦麦芽碾碎。烘焙程度会改变颜色与焦香。"
+    ],
+    [
+     "糖化",
+     "将麦芽与热水混合，使淀粉转化为糖，制成甜麦汁。"
+    ],
+    [
+     "煮沸・啤酒花",
+     "煮沸麦汁并加入啤酒花，赋予苦味与香气。"
+    ],
+    [
+     "发酵",
+     "在冷却的麦汁中加入酵母。上面发酵成为艾尔，下面发酵成为拉格。"
+    ],
+    [
+     "熟成・收尾",
+     "低温静置使风味融合，调整碳酸后灌装到罐、瓶或桶中。"
+    ]
+   ],
+   "kinds": [
+    [
+     "皮尔森・拉格",
+     "清爽畅快，日本最熟悉的风格。"
+    ],
+    [
+     "淡色艾尔・IPA",
+     "啤酒花香气与苦味丰富，IPA更为浓烈。"
+    ],
+    [
+     "小麦啤酒・白艾尔",
+     "使用小麦，带有香蕉或香料般的香气，口感柔和。"
+    ],
+    [
+     "世涛・黑啤",
+     "使用烘焙麦芽，带有咖啡、巧克力般的香气。"
+    ],
+    [
+     "水果・和风原料",
+     "活用柚子、桃、米、绿茶等地方原料的啤酒。"
+    ]
+   ],
+   "history": [
+    [
+     "1870年",
+     "外国人在横滨开始正式酿造啤酒（Spring Valley Brewery）。"
+    ],
+    [
+     "明治时代",
+     "大型啤酒公司相继创立，啤酒逐渐普及。"
+    ],
+    [
+     "1994年",
+     "酒税法修订降低了年最低产量，小规模的「地啤酒」诞生。"
+    ],
+    [
+     "2010年代～",
+     "「精酿啤酒」人气高涨，酿酒厂数量大幅增加。"
+    ]
+   ],
+   "famous": [
+    "横滨——日本啤酒的发祥地之一",
+    "北海道、东北、新潟等地的地方酿酒厂",
+    "使用柚子、桃、米等和风原料的精酿啤酒",
+    "罐装精酿啤酒的普及"
+   ],
+   "enjoy": "拉格充分冰镇，艾尔和黑啤稍微回温香气更佳。倒入杯中享受泡沫与香气。与炸物、烤鸡串、奶酪都很相配。"
+  },
+  "zht": {
+   "lead": "啤酒是用麥芽、啤酒花、水和酵母釀造的酒。1994年放寬管制後，小型釀酒廠得以開設，從「地啤酒」發展為「精釀啤酒」。如今全國有數百家釀酒廠，釀出使用當地水果、米、茶等的個性啤酒。",
+   "steps": [
+    [
+     "制麥・粉碎",
+     "將發芽乾燥的大麥麥芽碾碎。烘焙程度會改變顏色與焦香。"
+    ],
+    [
+     "糖化",
+     "將麥芽與熱水混合，使澱粉轉化為糖，製成甜麥汁。"
+    ],
+    [
+     "煮沸・啤酒花",
+     "煮沸麥汁並加入啤酒花，賦予苦味與香氣。"
+    ],
+    [
+     "發酵",
+     "在冷卻的麥汁中加入酵母。上面發酵成為艾爾，下面發酵成為拉格。"
+    ],
+    [
+     "熟成・收尾",
+     "低溫靜置使風味融合，調整碳酸後灌裝到罐、瓶或桶中。"
+    ]
+   ],
+   "kinds": [
+    [
+     "皮爾森・拉格",
+     "清爽暢快，日本最熟悉的風格。"
+    ],
+    [
+     "淡色艾爾・IPA",
+     "啤酒花香氣與苦味豐富，IPA更為濃烈。"
+    ],
+    [
+     "小麥啤酒・白艾爾",
+     "使用小麥，帶有香蕉或香料般的香氣，口感柔和。"
+    ],
+    [
+     "世濤・黑啤",
+     "使用烘焙麥芽，帶有咖啡、巧克力般的香氣。"
+    ],
+    [
+     "水果・和風原料",
+     "活用柚子、桃、米、綠茶等地方原料的啤酒。"
+    ]
+   ],
+   "history": [
+    [
+     "1870年",
+     "外國人在橫濱開始正式釀造啤酒（Spring Valley Brewery）。"
+    ],
+    [
+     "明治時代",
+     "大型啤酒公司相繼創立，啤酒逐漸普及。"
+    ],
+    [
+     "1994年",
+     "酒稅法修訂降低了年最低產量，小規模的「地啤酒」誕生。"
+    ],
+    [
+     "2010年代～",
+     "「精釀啤酒」人氣高漲，釀酒廠數量大幅增加。"
+    ]
+   ],
+   "famous": [
+    "橫濱——日本啤酒的發祥地之一",
+    "北海道、東北、新潟等地的地方釀酒廠",
+    "使用柚子、桃、米等和風原料的精釀啤酒",
+    "罐裝精釀啤酒的普及"
+   ],
+   "enjoy": "拉格充分冰鎮，艾爾和黑啤稍微回溫香氣更佳。倒入杯中享受泡沫與香氣。與炸物、烤雞串、乳酪都很相配。"
+  },
+  "ko": {
+   "lead": "맥주는 맥아・홉・물・효모로 빚는 양조주입니다. 1994년 규제 완화로 작은 양조장이 맥주를 만들 수 있게 되면서 '지비루'에서 '크래프트 맥주'로 발전했습니다. 지금은 전국에 수백 곳의 양조장이 있으며, 지역의 과일・쌀・차 등을 쓴 개성 있는 맥주가 탄생하고 있습니다.",
+   "steps": [
+    [
+     "제맥・분쇄",
+     "발아시켜 건조한 보리 맥아를 분쇄합니다. 볶은 정도에 따라 색과 고소함이 달라집니다."
+    ],
+    [
+     "당화",
+     "맥아를 뜨거운 물과 섞어 전분을 당으로 바꾸고 달콤한 맥즙을 만듭니다."
+    ],
+    [
+     "끓이기・홉",
+     "맥즙을 끓이며 홉을 넣어 쓴맛과 향을 냅니다."
+    ],
+    [
+     "발효",
+     "식힌 맥즙에 효모를 넣습니다. 상면 발효는 에일, 하면 발효는 라거가 됩니다."
+    ],
+    [
+     "숙성・마무리",
+     "저온에서 재워 맛을 어우러지게 하고, 탄산을 맞춰 캔・병・케그에 담습니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "필스너・라거",
+     "깔끔하고 상쾌한, 일본에서 가장 친숙한 스타일."
+    ],
+    [
+     "페일 에일・IPA",
+     "홉의 향과 쓴맛이 풍부. IPA는 더 강렬한 유형."
+    ],
+    [
+     "바이첸・화이트 에일",
+     "밀을 사용해 바나나나 향신료 같은 향이 나고 부드러움."
+    ],
+    [
+     "스타우트・흑맥주",
+     "볶은 맥아로 커피나 초콜릿 같은 향."
+    ],
+    [
+     "과일・일본 재료",
+     "유자・복숭아・쌀・녹차 등 지역 재료를 살린 맥주."
+    ]
+   ],
+   "history": [
+    [
+     "1870년",
+     "요코하마에서 외국인에 의한 본격적인 맥주 양조가 시작되었습니다(스프링 밸리 브루어리)."
+    ],
+    [
+     "메이지 시대",
+     "대형 맥주 회사가 잇따라 창업하며 맥주가 퍼졌습니다."
+    ],
+    [
+     "1994년",
+     "주세법 개정으로 연간 최저 제조량이 낮아져 소규모 '지비루'가 탄생했습니다."
+    ],
+    [
+     "2010년대~",
+     "'크래프트 맥주'로 인기가 높아지며 양조장 수가 크게 늘었습니다."
+    ]
+   ],
+   "famous": [
+    "요코하마 — 일본 맥주 발상지 중 하나",
+    "홋카이도・도호쿠・니가타 등 지역의 브루어리",
+    "유자・복숭아・쌀 등 일본 재료의 크래프트 맥주",
+    "캔 크래프트 맥주의 확산"
+   ],
+   "enjoy": "라거는 차갑게, 에일과 흑맥주는 온도를 조금 올리면 향이 살아납니다. 잔에 따라 거품과 향을 즐겨 보세요. 튀김・야키토리・치즈와 잘 어울립니다."
+  },
+  "es": {
+   "lead": "La cerveza se elabora con malta, lúpulo, agua y levadura. Tras la liberalización de 1994, que permitió abrir pequeñas fábricas, la «ji-beer» evolucionó hacia la cerveza artesanal actual. Hoy cientos de cerveceras japonesas elaboran cervezas únicas con fruta, arroz, té y otros ingredientes locales.",
+   "steps": [
+    [
+     "Malteado y molienda",
+     "Se tritura la malta de cebada germinada y secada; el tostado cambia el color y las notas tostadas."
+    ],
+    [
+     "Maceración",
+     "Malta y agua caliente convierten el almidón en azúcar y producen un mosto dulce."
+    ],
+    [
+     "Hervido y lúpulo",
+     "Se hierve el mosto y se añade lúpulo para el amargor y el aroma."
+    ],
+    [
+     "Fermentación",
+     "Se añade levadura al mosto enfriado: la fermentación alta da ales y la baja, lagers."
+    ],
+    [
+     "Maduración",
+     "La cerveza reposa en frío, se carbonata y se envasa en latas, botellas o barriles."
+    ]
+   ],
+   "kinds": [
+    [
+     "Pilsner / Lager",
+     "Nítida y refrescante; el estilo más conocido en Japón."
+    ],
+    [
+     "Pale ale / IPA",
+     "Mucho aroma y amargor de lúpulo; la IPA es más intensa."
+    ],
+    [
+     "Weizen / White ale",
+     "Con trigo; suave, con notas de plátano o especias."
+    ],
+    [
+     "Stout / Negra",
+     "Malta tostada con aromas de café y chocolate."
+    ],
+    [
+     "Fruta e ingredientes japoneses",
+     "Yuzu, melocotón, arroz, té verde y otros ingredientes locales."
+    ]
+   ],
+   "history": [
+    [
+     "1870",
+     "Comenzó en Yokohama la elaboración a gran escala con la Spring Valley Brewery, fundada por un cervecero extranjero."
+    ],
+    [
+     "Era Meiji",
+     "Se fundaron grandes cerveceras y la cerveza se extendió por Japón."
+    ],
+    [
+     "1994",
+     "Un cambio en la ley de impuestos sobre el alcohol redujo el volumen mínimo de producción y nacieron las pequeñas «ji-beer»."
+    ],
+    [
+     "Desde 2010",
+     "La cerveza artesanal se popularizó y el número de cerveceras creció mucho."
+    ]
+   ],
+   "famous": [
+    "Yokohama: una de las cunas de la cerveza japonesa",
+    "Cerveceras regionales de Hokkaido, Tohoku, Niigata y otras zonas",
+    "Cervezas artesanales con yuzu, melocotón, arroz y otros ingredientes japoneses",
+    "El auge de la cerveza artesanal en lata"
+   ],
+   "enjoy": "Sirve las lagers bien frías; deja que las ales y las negras se templen un poco para liberar aromas. Sírvela en vaso para disfrutar la espuma y el aroma. Va genial con fritos, yakitori y queso."
+  }
+ },
+ "ワイン": {
+  "ja": {
+   "lead": "ぶどうなどの果実を発酵させて造る醸造酒です。日本のワインは山梨・長野・北海道などが主な産地で、日本固有の白ぶどう「甲州」や赤の「マスカット・ベーリーA」から、繊細で和食に合うワインが造られています。",
+   "steps": [
+    [
+     "収穫",
+     "ぶどうが熟した秋に収穫し、傷んだ房を取り除きます。"
+    ],
+    [
+     "除梗・破砕・圧搾",
+     "白ワインはすぐに搾って果汁だけを、赤ワインは皮や種ごと発酵させます。"
+    ],
+    [
+     "発酵",
+     "酵母がぶどうの糖をアルコールに変えます。赤は皮から色や渋みが溶け出します。"
+    ],
+    [
+     "熟成",
+     "タンクや樽で寝かせ、味をなじませます。樽熟成ではバニラのような香りが加わります。"
+    ],
+    [
+     "瓶詰め",
+     "ろ過や清澄を経て瓶に詰め、さらに瓶の中で熟成することもあります。"
+    ]
+   ],
+   "kinds": [
+    [
+     "白ワイン",
+     "甲州・シャルドネなど。すっきりした酸味が魅力。"
+    ],
+    [
+     "赤ワイン",
+     "マスカット・ベーリーA・メルローなど。果実味とやわらかな渋み。"
+    ],
+    [
+     "ロゼ",
+     "赤ぶどうの皮を短時間だけ漬けた、淡い色のワイン。"
+    ],
+    [
+     "スパークリング",
+     "瓶内やタンクで発酵させた発泡性のワイン。"
+    ],
+    [
+     "果実酒",
+     "梅やりんごなど、ぶどう以外の果実を使ったもの。"
+    ]
+   ],
+   "history": [
+    [
+     "奈良時代",
+     "甲州ぶどうの栽培は奈良時代や鎌倉時代に始まったという言い伝えがあります。"
+    ],
+    [
+     "1877年",
+     "山梨で日本初の本格的なワイン会社が設立され、フランスに若者を派遣して学びました。"
+    ],
+    [
+     "1927年",
+     "川上善兵衛がマスカット・ベーリーAを生み出しました。"
+    ],
+    [
+     "2018年",
+     "「日本ワイン」（国産ぶどうだけで国内で造ったワイン）の表示ルールが始まりました。"
+    ]
+   ],
+   "famous": [
+    "山梨・勝沼——日本ワインの中心地",
+    "甲州——日本固有の白ぶどう（OIVに登録）",
+    "マスカット・ベーリーA——日本生まれの赤ぶどう",
+    "長野・北海道——冷涼な気候のワイン産地"
+   ],
+   "enjoy": "白やスパークリングはよく冷やして、赤は少しだけ冷やすのがおすすめ。甲州のすっきりとした味わいは、刺身や天ぷらなど和食とよく合います。"
+  },
+  "en": {
+   "lead": "Wine is fermented from grapes and other fruit. Japan's main regions are Yamanashi, Nagano and Hokkaido, where native varieties such as the white Koshu and red Muscat Bailey A make delicate wines that pair well with Japanese food.",
+   "steps": [
+    [
+     "Harvest",
+     "Ripe grapes are picked in autumn and damaged bunches removed."
+    ],
+    [
+     "Destemming, crushing, pressing",
+     "White wine is pressed quickly to use only the juice; red wine ferments with skins and seeds."
+    ],
+    [
+     "Fermentation",
+     "Yeast turns grape sugar into alcohol; red wine draws color and tannin from the skins."
+    ],
+    [
+     "Aging",
+     "Wine rests in tanks or barrels; oak adds vanilla-like aromas."
+    ],
+    [
+     "Bottling",
+     "After filtering and fining it is bottled, and may age further in the bottle."
+    ]
+   ],
+   "kinds": [
+    [
+     "White",
+     "Koshu, Chardonnay and more; crisp acidity."
+    ],
+    [
+     "Red",
+     "Muscat Bailey A, Merlot and more; fruity with soft tannins."
+    ],
+    [
+     "Rosé",
+     "Red grapes with brief skin contact for a pale color."
+    ],
+    [
+     "Sparkling",
+     "Fermented in bottle or tank for bubbles."
+    ],
+    [
+     "Fruit wine",
+     "Made from ume, apple and other fruit besides grapes."
+    ]
+   ],
+   "history": [
+    [
+     "Nara period",
+     "Legend says Koshu grape growing began in the Nara or Kamakura period."
+    ],
+    [
+     "1877",
+     "Japan's first full-scale wine company was founded in Yamanashi and sent young men to France to learn."
+    ],
+    [
+     "1927",
+     "Zenbei Kawakami created Muscat Bailey A."
+    ],
+    [
+     "2018",
+     "Labeling rules for \"Japan Wine\" (made in Japan from only Japanese-grown grapes) took effect."
+    ]
+   ],
+   "famous": [
+    "Katsunuma, Yamanashi: the heart of Japanese wine",
+    "Koshu: a native white grape registered with the OIV",
+    "Muscat Bailey A: a red grape born in Japan",
+    "Nagano and Hokkaido: cool-climate wine regions"
+   ],
+   "enjoy": "Chill whites and sparkling wines well, and reds only slightly. Koshu's clean taste pairs beautifully with sashimi, tempura and other Japanese dishes."
+  },
+  "zh": {
+   "lead": "葡萄酒是以葡萄等水果发酵酿成的酒。日本葡萄酒的主要产地有山梨、长野、北海道等，用日本特有的白葡萄「甲州」和红葡萄「贝利A麝香」等酿出细腻、适合日本料理的葡萄酒。",
+   "steps": [
+    [
+     "采收",
+     "秋季葡萄成熟时采收，并剔除受损的果串。"
+    ],
+    [
+     "去梗・破碎・压榨",
+     "白葡萄酒立即压榨只取果汁，红葡萄酒则连同果皮与籽一起发酵。"
+    ],
+    [
+     "发酵",
+     "酵母将葡萄的糖转化为酒精。红葡萄酒会从果皮中溶出颜色与涩味。"
+    ],
+    [
+     "熟成",
+     "在罐或橡木桶中静置。橡木桶熟成会增添香草般的香气。"
+    ],
+    [
+     "装瓶",
+     "经过过滤、澄清后装瓶，有时还会在瓶中继续熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "白葡萄酒",
+     "甲州、霞多丽等，清爽的酸味是其魅力。"
+    ],
+    [
+     "红葡萄酒",
+     "贝利A麝香、梅洛等，果味与柔和的涩味。"
+    ],
+    [
+     "桃红葡萄酒",
+     "红葡萄的果皮只短时间浸渍，颜色淡雅。"
+    ],
+    [
+     "起泡酒",
+     "在瓶内或罐内发酵的起泡葡萄酒。"
+    ],
+    [
+     "果实酒",
+     "使用梅子、苹果等葡萄以外的水果。"
+    ]
+   ],
+   "history": [
+    [
+     "奈良时代",
+     "相传甲州葡萄的栽培始于奈良时代或镰仓时代。"
+    ],
+    [
+     "1877年",
+     "山梨设立了日本第一家正式的葡萄酒公司，并派青年赴法国学习。"
+    ],
+    [
+     "1927年",
+     "川上善兵卫培育出贝利A麝香。"
+    ],
+    [
+     "2018年",
+     "「日本葡萄酒」（仅用国产葡萄在国内酿造）的标示规则开始实施。"
+    ]
+   ],
+   "famous": [
+    "山梨胜沼——日本葡萄酒的中心",
+    "甲州——日本特有的白葡萄（已在OIV登记）",
+    "贝利A麝香——日本培育的红葡萄",
+    "长野・北海道——凉爽气候的葡萄酒产地"
+   ],
+   "enjoy": "白葡萄酒和起泡酒充分冰镇，红葡萄酒稍微冰一下即可。甲州清爽的风味与刺身、天妇罗等日本料理十分相配。"
+  },
+  "zht": {
+   "lead": "葡萄酒是以葡萄等水果發酵釀成的酒。日本葡萄酒的主要產地有山梨、長野、北海道等，用日本特有的白葡萄「甲州」和紅葡萄「貝利A麝香」等釀出細膩、適合日本料理的葡萄酒。",
+   "steps": [
+    [
+     "採收",
+     "秋季葡萄成熟時採收，並剔除受損的果串。"
+    ],
+    [
+     "去梗・破碎・壓榨",
+     "白葡萄酒立即壓榨只取果汁，紅葡萄酒則連同果皮與籽一起發酵。"
+    ],
+    [
+     "發酵",
+     "酵母將葡萄的糖轉化為酒精。紅葡萄酒會從果皮中溶出顏色與澀味。"
+    ],
+    [
+     "熟成",
+     "在罐或橡木桶中靜置。橡木桶熟成會增添香草般的香氣。"
+    ],
+    [
+     "裝瓶",
+     "經過過濾、澄清後裝瓶，有時還會在瓶中繼續熟成。"
+    ]
+   ],
+   "kinds": [
+    [
+     "白葡萄酒",
+     "甲州、霞多麗等，清爽的酸味是其魅力。"
+    ],
+    [
+     "紅葡萄酒",
+     "貝利A麝香、梅洛等，果味與柔和的澀味。"
+    ],
+    [
+     "桃紅葡萄酒",
+     "紅葡萄的果皮只短時間浸漬，顏色淡雅。"
+    ],
+    [
+     "起泡酒",
+     "在瓶內或罐內發酵的起泡葡萄酒。"
+    ],
+    [
+     "果實酒",
+     "使用梅子、蘋果等葡萄以外的水果。"
+    ]
+   ],
+   "history": [
+    [
+     "奈良時代",
+     "相傳甲州葡萄的栽培始於奈良時代或鎌倉時代。"
+    ],
+    [
+     "1877年",
+     "山梨設立了日本第一家正式的葡萄酒公司，並派青年赴法國學習。"
+    ],
+    [
+     "1927年",
+     "川上善兵衛培育出貝利A麝香。"
+    ],
+    [
+     "2018年",
+     "「日本葡萄酒」（僅用國產葡萄在國內釀造）的標示規則開始實施。"
+    ]
+   ],
+   "famous": [
+    "山梨勝沼——日本葡萄酒的中心",
+    "甲州——日本特有的白葡萄（已在OIV登記）",
+    "貝利A麝香——日本培育的紅葡萄",
+    "長野・北海道——涼爽氣候的葡萄酒產地"
+   ],
+   "enjoy": "白葡萄酒和起泡酒充分冰鎮，紅葡萄酒稍微冰一下即可。甲州清爽的風味與刺身、天婦羅等日本料理十分相配。"
+  },
+  "ko": {
+   "lead": "와인은 포도 등 과일을 발효시켜 만드는 양조주입니다. 일본 와인은 야마나시・나가노・홋카이도 등이 주요 산지로, 일본 고유의 청포도 '고슈'와 적포도 '머스캣 베일리 A' 등으로 섬세하고 일식에 어울리는 와인이 만들어집니다.",
+   "steps": [
+    [
+     "수확",
+     "포도가 익는 가을에 수확하고 상한 송이를 골라냅니다."
+    ],
+    [
+     "제경・파쇄・압착",
+     "화이트 와인은 바로 짜서 즙만, 레드 와인은 껍질과 씨째 발효시킵니다."
+    ],
+    [
+     "발효",
+     "효모가 포도의 당을 알코올로 바꿉니다. 레드는 껍질에서 색과 떫은맛이 우러납니다."
+    ],
+    [
+     "숙성",
+     "탱크나 오크통에서 재워 맛을 어우러지게 합니다. 오크통 숙성은 바닐라 같은 향을 더합니다."
+    ],
+    [
+     "병입",
+     "여과・청징을 거쳐 병에 담고, 병 안에서 더 숙성하기도 합니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "화이트 와인",
+     "고슈・샤르도네 등. 깔끔한 산미가 매력."
+    ],
+    [
+     "레드 와인",
+     "머스캣 베일리 A・메를로 등. 과일 맛과 부드러운 떫은맛."
+    ],
+    [
+     "로제",
+     "적포도 껍질을 짧게만 담가 옅은 색을 낸 와인."
+    ],
+    [
+     "스파클링",
+     "병이나 탱크에서 발효시킨 발포성 와인."
+    ],
+    [
+     "과실주",
+     "매실이나 사과 등 포도 이외의 과일을 쓴 것."
+    ]
+   ],
+   "history": [
+    [
+     "나라 시대",
+     "고슈 포도 재배는 나라 시대나 가마쿠라 시대에 시작되었다는 전승이 있습니다."
+    ],
+    [
+     "1877년",
+     "야마나시에 일본 최초의 본격 와인 회사가 세워졌고, 청년들을 프랑스에 보내 배우게 했습니다."
+    ],
+    [
+     "1927년",
+     "가와카미 젠베가 머스캣 베일리 A를 만들어 냈습니다."
+    ],
+    [
+     "2018년",
+     "'일본 와인'(국산 포도만으로 국내에서 만든 와인) 표시 규칙이 시작되었습니다."
+    ]
+   ],
+   "famous": [
+    "야마나시 가쓰누마 — 일본 와인의 중심지",
+    "고슈 — 일본 고유의 청포도(OIV 등록)",
+    "머스캣 베일리 A — 일본에서 태어난 적포도",
+    "나가노・홋카이도 — 서늘한 기후의 와인 산지"
+   ],
+   "enjoy": "화이트와 스파클링은 차갑게, 레드는 살짝만 차갑게 하는 것을 추천합니다. 고슈의 깔끔한 맛은 회나 튀김 등 일식과 잘 어울립니다."
+  },
+  "es": {
+   "lead": "El vino se elabora fermentando uvas y otras frutas. Las principales regiones japonesas son Yamanashi, Nagano y Hokkaido, donde variedades autóctonas como la blanca Koshu y la tinta Muscat Bailey A dan vinos delicados que combinan bien con la cocina japonesa.",
+   "steps": [
+    [
+     "Vendimia",
+     "Las uvas maduras se recogen en otoño y se retiran los racimos dañados."
+    ],
+    [
+     "Despalillado, estrujado y prensado",
+     "El blanco se prensa enseguida para usar solo el mosto; el tinto fermenta con hollejos y pepitas."
+    ],
+    [
+     "Fermentación",
+     "La levadura convierte el azúcar de la uva en alcohol; el tinto extrae color y taninos de los hollejos."
+    ],
+    [
+     "Crianza",
+     "El vino reposa en depósitos o barricas; el roble aporta aromas avainillados."
+    ],
+    [
+     "Embotellado",
+     "Tras filtrar y clarificar se embotella, y puede seguir madurando en botella."
+    ]
+   ],
+   "kinds": [
+    [
+     "Blanco",
+     "Koshu, Chardonnay y otros; acidez fresca."
+    ],
+    [
+     "Tinto",
+     "Muscat Bailey A, Merlot y otros; afrutado y de taninos suaves."
+    ],
+    [
+     "Rosado",
+     "Uvas tintas con breve contacto con los hollejos, de color pálido."
+    ],
+    [
+     "Espumoso",
+     "Fermentado en botella o depósito para obtener burbujas."
+    ],
+    [
+     "Vino de frutas",
+     "Elaborado con ume, manzana y otras frutas distintas de la uva."
+    ]
+   ],
+   "history": [
+    [
+     "Periodo Nara",
+     "La tradición dice que el cultivo de la uva Koshu comenzó en el periodo Nara o Kamakura."
+    ],
+    [
+     "1877",
+     "Se fundó en Yamanashi la primera empresa vinícola japonesa a gran escala, que envió a jóvenes a aprender a Francia."
+    ],
+    [
+     "1927",
+     "Zenbei Kawakami creó la Muscat Bailey A."
+    ],
+    [
+     "2018",
+     "Entraron en vigor las normas de etiquetado del «vino de Japón» (elaborado en Japón solo con uva japonesa)."
+    ]
+   ],
+   "famous": [
+    "Katsunuma (Yamanashi): el corazón del vino japonés",
+    "Koshu: uva blanca autóctona registrada en la OIV",
+    "Muscat Bailey A: uva tinta nacida en Japón",
+    "Nagano y Hokkaido: regiones de clima fresco"
+   ],
+   "enjoy": "Sirve bien fríos los blancos y espumosos, y los tintos solo ligeramente frescos. La frescura del Koshu combina de maravilla con sashimi, tempura y otros platos japoneses."
+  }
+ },
+ "リキュール・その他": {
+  "ja": {
+   "lead": "お酒に果実や植物を漬け込んだり、香りや甘みを加えたりして造るお酒です。日本では梅酒が代表で、柚子やみかん、桃、緑茶など、その土地の素材を生かしたリキュールが各地で造られています。日本酒や焼酎の蔵が、自分たちの酒をベースに造るものも多くあります。",
+   "steps": [
+    [
+     "素材を選ぶ",
+     "梅・柚子・桃・お茶など、地域の旬の素材を選びます。"
+    ],
+    [
+     "ベースの酒",
+     "日本酒・焼酎・ブランデー・ホワイトリカーなど、ベースの酒で味わいの方向が決まります。"
+    ],
+    [
+     "漬け込み・抽出",
+     "素材を酒に漬け込み、時間をかけて香りと味を引き出します。果汁を加える方法もあります。"
+    ],
+    [
+     "熟成・調合",
+     "梅酒などは数か月〜数年寝かせ、甘さや酸味のバランスを整えます。"
+    ]
+   ],
+   "kinds": [
+    [
+     "梅酒",
+     "青梅を氷砂糖とお酒に漬けた、日本を代表するリキュール。日本酒仕込みや黒糖仕込みも。"
+    ],
+    [
+     "柑橘のリキュール",
+     "柚子・みかん・すだち・じゃばらなど、爽やかな酸味と香り。"
+    ],
+    [
+     "果実のリキュール",
+     "桃・いちご・りんごなど、とろりとした果実感。"
+    ],
+    [
+     "お茶・ヨーグルトなど",
+     "緑茶や紅茶、ヨーグルトなど、和洋の素材を使ったもの。"
+    ],
+    [
+     "その他の酒",
+     "みりんや保命酒、どぶろくなど、伝統的な酒もここに含まれます。"
+    ]
+   ],
+   "history": [
+    [
+     "江戸時代",
+     "家庭で梅を漬ける梅酒づくりが広まり、薬用酒も造られました。"
+    ],
+    [
+     "1962年",
+     "酒税法の改正で、家庭で果実酒を漬けることが認められるようになりました。"
+    ],
+    [
+     "2000年代",
+     "酒蔵や焼酎蔵が地域の果実を使ったリキュールを次々に発売しました。"
+    ],
+    [
+     "現在",
+     "和歌山の南高梅を使った梅酒などが、海外でも人気を集めています。"
+    ]
+   ],
+   "famous": [
+    "和歌山の南高梅と梅酒",
+    "高知・徳島の柚子",
+    "愛媛のみかんなどの柑橘",
+    "酒蔵が造る日本酒ベースのリキュール"
+   ],
+   "enjoy": "ロックやソーダ割りが定番です。冷やしてデザートの代わりに、またアイスクリームにかけても楽しめます。甘さ控えめのものは食前酒にも向きます。"
+  },
+  "en": {
+   "lead": "Liqueurs are made by steeping fruit or plants in alcohol, or by adding aroma and sweetness. Umeshu is the classic Japanese example, and liqueurs made from local yuzu, mandarin, peach, green tea and more are produced across the country. Many are made by sake and shochu breweries using their own drinks as the base.",
+   "steps": [
+    [
+     "Choosing ingredients",
+     "Seasonal local ingredients such as ume, yuzu, peach or tea are selected."
+    ],
+    [
+     "Base spirit",
+     "Sake, shochu, brandy or white liquor sets the direction of the flavor."
+    ],
+    [
+     "Steeping and extraction",
+     "Ingredients are steeped over time to draw out aroma and flavor; some use juice instead."
+    ],
+    [
+     "Aging and blending",
+     "Umeshu and others rest for months or years, and sweetness and acidity are balanced."
+    ]
+   ],
+   "kinds": [
+    [
+     "Umeshu",
+     "Green ume steeped with rock sugar and alcohol; also made with sake or brown sugar."
+    ],
+    [
+     "Citrus liqueurs",
+     "Yuzu, mandarin, sudachi, jabara and more; bright acidity and aroma."
+    ],
+    [
+     "Fruit liqueurs",
+     "Peach, strawberry, apple and others with a lush, fruity texture."
+    ],
+    [
+     "Tea, yogurt and more",
+     "Green tea, black tea, yogurt and other Japanese and Western ingredients."
+    ],
+    [
+     "Other drinks",
+     "Traditional drinks such as mirin, homeishu and doburoku are also included here."
+    ]
+   ],
+   "history": [
+    [
+     "Edo period",
+     "Steeping ume at home spread, and medicinal liqueurs were also made."
+    ],
+    [
+     "1962",
+     "A liquor tax law change allowed households to steep fruit liqueurs."
+    ],
+    [
+     "2000s",
+     "Sake and shochu breweries launched liqueurs made with local fruit."
+    ],
+    [
+     "Today",
+     "Umeshu made with Wakayama's Nanko ume and others are popular overseas."
+    ]
+   ],
+   "famous": [
+    "Wakayama's Nanko ume and umeshu",
+    "Yuzu from Kochi and Tokushima",
+    "Mandarins and other citrus from Ehime",
+    "Sake-based liqueurs from sake breweries"
+   ],
+   "enjoy": "On the rocks or with soda are classic. Serve chilled instead of dessert, or pour over ice cream. Less-sweet styles make good aperitifs."
+  },
+  "zh": {
+   "lead": "利口酒是在酒中浸泡水果或植物，或加入香气与甜味制成的酒。日本以梅酒为代表，各地都在用柚子、橘子、桃、绿茶等当地原料酿造利口酒。也有不少是日本酒或烧酒酒藏以自家的酒为基酒制作的。",
+   "steps": [
+    [
+     "挑选原料",
+     "选用梅子、柚子、桃、茶叶等当季的地方原料。"
+    ],
+    [
+     "基酒",
+     "日本酒、烧酒、白兰地、白色利口酒等基酒决定风味的方向。"
+    ],
+    [
+     "浸泡・萃取",
+     "将原料浸泡在酒中，花时间引出香气与味道。也有加入果汁的做法。"
+    ],
+    [
+     "熟成・调配",
+     "梅酒等会静置数月至数年，调整甜度与酸度的平衡。"
+    ]
+   ],
+   "kinds": [
+    [
+     "梅酒",
+     "将青梅与冰糖浸泡在酒中，日本代表性的利口酒。也有日本酒或黑糖酿制的。"
+    ],
+    [
+     "柑橘利口酒",
+     "柚子、橘子、酢橘、邪払柑等，清爽的酸味与香气。"
+    ],
+    [
+     "水果利口酒",
+     "桃、草莓、苹果等，浓郁的果实感。"
+    ],
+    [
+     "茶・酸奶等",
+     "使用绿茶、红茶、酸奶等和洋原料。"
+    ],
+    [
+     "其他酒类",
+     "味醂、保命酒、浊酒（Doburoku）等传统酒也归入此类。"
+    ]
+   ],
+   "history": [
+    [
+     "江户时代",
+     "在家中用梅子泡酒的梅酒制作普及，也出现了药用酒。"
+    ],
+    [
+     "1962年",
+     "酒税法修订后，允许家庭自行浸泡果实酒。"
+    ],
+    [
+     "2000年代",
+     "酒藏和烧酒藏相继推出使用当地水果的利口酒。"
+    ],
+    [
+     "现在",
+     "使用和歌山南高梅的梅酒等在海外也颇受欢迎。"
+    ]
+   ],
+   "famous": [
+    "和歌山的南高梅与梅酒",
+    "高知・德岛的柚子",
+    "爱媛的橘子等柑橘",
+    "酒藏酿造的日本酒基利口酒"
+   ],
+   "enjoy": "加冰或兑苏打水是经典喝法。冰镇后可代替甜点，也可淋在冰淇淋上。甜度较低的适合作为餐前酒。"
+  },
+  "zht": {
+   "lead": "利口酒是在酒中浸泡水果或植物，或加入香氣與甜味製成的酒。日本以梅酒為代表，各地都在用柚子、橘子、桃、綠茶等當地原料釀造利口酒。也有不少是日本酒或燒酒酒藏以自家的酒為基酒製作的。",
+   "steps": [
+    [
+     "挑選原料",
+     "選用梅子、柚子、桃、茶葉等當季的地方原料。"
+    ],
+    [
+     "基酒",
+     "日本酒、燒酒、白蘭地、白色利口酒等基酒決定風味的方向。"
+    ],
+    [
+     "浸泡・萃取",
+     "將原料浸泡在酒中，花時間引出香氣與味道。也有加入果汁的做法。"
+    ],
+    [
+     "熟成・調配",
+     "梅酒等會靜置數月至數年，調整甜度與酸度的平衡。"
+    ]
+   ],
+   "kinds": [
+    [
+     "梅酒",
+     "將青梅與冰糖浸泡在酒中，日本代表性的利口酒。也有日本酒或黑糖釀製的。"
+    ],
+    [
+     "柑橘利口酒",
+     "柚子、橘子、酢橘、邪払柑等，清爽的酸味與香氣。"
+    ],
+    [
+     "水果利口酒",
+     "桃、草莓、蘋果等，濃郁的果實感。"
+    ],
+    [
+     "茶・酸奶等",
+     "使用綠茶、紅茶、酸奶等和洋原料。"
+    ],
+    [
+     "其他酒類",
+     "味醂、保命酒、濁酒（Doburoku）等傳統酒也歸入此類。"
+    ]
+   ],
+   "history": [
+    [
+     "江戶時代",
+     "在家中用梅子泡酒的梅酒製作普及，也出現了藥用酒。"
+    ],
+    [
+     "1962年",
+     "酒稅法修訂後，允許家庭自行浸泡果實酒。"
+    ],
+    [
+     "2000年代",
+     "酒藏和燒酒藏相繼推出使用當地水果的利口酒。"
+    ],
+    [
+     "現在",
+     "使用和歌山南高梅的梅酒等在海外也頗受歡迎。"
+    ]
+   ],
+   "famous": [
+    "和歌山的南高梅與梅酒",
+    "高知・德島的柚子",
+    "愛媛的橘子等柑橘",
+    "酒藏釀造的日本酒基利口酒"
+   ],
+   "enjoy": "加冰或兌蘇打水是經典喝法。冰鎮後可代替甜點，也可淋在冰淇淋上。甜度較低的適合作為餐前酒。"
+  },
+  "ko": {
+   "lead": "리큐어는 술에 과일이나 식물을 담그거나 향과 단맛을 더해 만드는 술입니다. 일본에서는 우메슈(매실주)가 대표적이며, 유자・귤・복숭아・녹차 등 그 지역의 재료를 살린 리큐어가 각지에서 만들어집니다. 사케나 소주 양조장이 자기 술을 베이스로 만드는 것도 많습니다.",
+   "steps": [
+    [
+     "재료 고르기",
+     "매실・유자・복숭아・차 등 지역의 제철 재료를 고릅니다."
+    ],
+    [
+     "베이스 술",
+     "사케・소주・브랜디・화이트 리커 등 베이스 술에 따라 맛의 방향이 정해집니다."
+    ],
+    [
+     "담금・추출",
+     "재료를 술에 담가 시간을 들여 향과 맛을 끌어냅니다. 과즙을 더하는 방법도 있습니다."
+    ],
+    [
+     "숙성・조합",
+     "우메슈 등은 몇 달에서 몇 년 재워 단맛과 산미의 균형을 맞춥니다."
+    ]
+   ],
+   "kinds": [
+    [
+     "우메슈",
+     "청매실을 얼음설탕과 술에 담근 일본을 대표하는 리큐어. 사케나 흑당으로 담근 것도."
+    ],
+    [
+     "감귤 리큐어",
+     "유자・귤・스다치・자바라 등 상큼한 산미와 향."
+    ],
+    [
+     "과일 리큐어",
+     "복숭아・딸기・사과 등 진한 과일감."
+    ],
+    [
+     "차・요구르트 등",
+     "녹차・홍차・요구르트 등 일본과 서양의 재료를 쓴 것."
+    ],
+    [
+     "기타 술",
+     "미림・호메이슈・도부로쿠 등 전통 술도 여기에 포함됩니다."
+    ]
+   ],
+   "history": [
+    [
+     "에도 시대",
+     "집에서 매실을 담그는 우메슈 만들기가 퍼졌고, 약용주도 만들어졌습니다."
+    ],
+    [
+     "1962년",
+     "주세법 개정으로 가정에서 과실주를 담그는 것이 인정되었습니다."
+    ],
+    [
+     "2000년대",
+     "사케・소주 양조장이 지역 과일을 쓴 리큐어를 잇따라 내놓았습니다."
+    ],
+    [
+     "현재",
+     "와카야마의 난코우메로 만든 우메슈 등이 해외에서도 인기를 얻고 있습니다."
+    ]
+   ],
+   "famous": [
+    "와카야마의 난코우메와 우메슈",
+    "고치・도쿠시마의 유자",
+    "에히메의 귤 등 감귤",
+    "양조장이 만드는 사케 베이스 리큐어"
+   ],
+   "enjoy": "온더록이나 탄산수에 타는 것이 정석입니다. 차갑게 해서 디저트 대신, 아이스크림에 뿌려 즐길 수도 있습니다. 단맛이 적은 것은 식전주로도 좋습니다."
+  },
+  "es": {
+   "lead": "Los licores se elaboran macerando fruta o plantas en alcohol, o añadiendo aroma y dulzor. El umeshu es el ejemplo japonés por excelencia, y en todo el país se elaboran licores con yuzu, mandarina, melocotón, té verde y otros ingredientes locales. Muchos los hacen bodegas de sake y shochu usando sus propias bebidas como base.",
+   "steps": [
+    [
+     "Elegir ingredientes",
+     "Se eligen ingredientes locales de temporada, como ume, yuzu, melocotón o té."
+    ],
+    [
+     "Bebida base",
+     "El sake, el shochu, el brandy o el licor blanco marcan la dirección del sabor."
+    ],
+    [
+     "Maceración y extracción",
+     "Los ingredientes maceran con el tiempo para extraer aroma y sabor; algunos usan zumo."
+    ],
+    [
+     "Reposo y mezcla",
+     "El umeshu y otros reposan meses o años, y se equilibran dulzor y acidez."
+    ]
+   ],
+   "kinds": [
+    [
+     "Umeshu",
+     "Ume verde macerado con azúcar cande y alcohol; también con sake o azúcar moreno."
+    ],
+    [
+     "Licores cítricos",
+     "Yuzu, mandarina, sudachi, jabara y más; acidez y aroma vivos."
+    ],
+    [
+     "Licores de fruta",
+     "Melocotón, fresa, manzana y otros, con textura afrutada."
+    ],
+    [
+     "Té, yogur y más",
+     "Té verde, té negro, yogur y otros ingredientes japoneses y occidentales."
+    ],
+    [
+     "Otras bebidas",
+     "También se incluyen bebidas tradicionales como el mirin, el homeishu y el doburoku."
+    ]
+   ],
+   "history": [
+    [
+     "Era Edo",
+     "Se extendió la costumbre de macerar ume en casa y se elaboraban licores medicinales."
+    ],
+    [
+     "1962",
+     "Un cambio en la ley de impuestos sobre el alcohol permitió macerar licores de fruta en casa."
+    ],
+    [
+     "Años 2000",
+     "Bodegas de sake y shochu lanzaron licores con fruta local."
+    ],
+    [
+     "Hoy",
+     "El umeshu elaborado con el ume Nanko de Wakayama, entre otros, es popular en el extranjero."
+    ]
+   ],
+   "famous": [
+    "El ume Nanko de Wakayama y el umeshu",
+    "Yuzu de Kochi y Tokushima",
+    "Mandarinas y otros cítricos de Ehime",
+    "Licores a base de sake de bodegas de sake"
+   ],
+   "enjoy": "Con hielo o con soda son clásicos. Sírvelo frío en lugar del postre o sobre helado. Los menos dulces son buenos aperitivos."
+  }
+ }
+}

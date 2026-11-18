@@ -775,3 +775,32 @@ header.top .logo .word small{font-size:15px;letter-spacing:.2em;margin-top:0;lin
 .rmakers .chip small{margin-left:6px;color:var(--mute);font-size:11px}
 .rbody .btn{display:inline-block}
 @media (max-width:760px){.rbody{grid-template-columns:1fr;padding:18px 16px 20px}.rhead>div{padding:18px 16px}.rhead h3{font-size:22px}}
+
+/* 日本のお酒を知る：詳しい解説（2026/11/18） */
+button.lcard{font:inherit;color:inherit;text-align:left;cursor:pointer;padding:0;width:100%}
+button.lcard:hover{border-color:var(--gold-hi)}
+.lmore{display:block;margin-top:10px;font-size:12.5px;color:var(--gold-deep,var(--gold));letter-spacing:.06em}
+.learnx .lhero{margin:-4px -4px 18px;aspect-ratio:16/7;min-height:170px;background-size:cover;background-position:center 60%;border-radius:var(--r);position:relative;display:flex;align-items:flex-end;overflow:hidden}
+.learnx .lhero::before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,12,10,.82) 0%,rgba(14,12,10,.2) 60%,rgba(14,12,10,0) 100%)}
+.learnx .lhero>div{position:relative;padding:18px 22px;color:#fff}
+.learnx .lhero .latin{color:var(--gold-hi);font-size:13px;letter-spacing:.14em}
+.learnx .lhero h2{margin:2px 0 0;color:#fff;font-family:var(--f-display);font-size:28px;letter-spacing:.1em}
+.llead{font-size:15px;line-height:1.95;margin:0 0 8px}
+.learnx .lh{font-family:var(--f-display);font-size:16px;letter-spacing:.14em;margin:26px 0 12px;padding-left:10px;border-left:3px solid var(--cc,var(--gold))}
+.lsteps{list-style:none;counter-reset:st;margin:0;padding:0;display:grid;gap:10px}
+.lsteps li{counter-increment:st;display:grid;grid-template-columns:34px 1fr;gap:4px 12px;align-items:start}
+.lsteps li::before{content:counter(st);grid-row:span 2;width:30px;height:30px;border-radius:50%;background:var(--cc,var(--gold));color:#fff;display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700}
+.lsteps b,.ltime b{font-size:14.5px}
+.lsteps span,.ltime span{font-size:14px;line-height:1.8;color:var(--ink)}
+.lkinds{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:10px;margin:0}
+.lkinds>div{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;background:var(--panel)}
+.lkinds dt{font-weight:700;font-size:14.5px;margin-bottom:4px}
+.lkinds dd{margin:0;font-size:13.5px;line-height:1.75;color:var(--mute)}
+.ltime{list-style:none;margin:0;padding:0 0 0 14px;border-left:2px solid var(--line);display:grid;gap:12px}
+.ltime li{position:relative;display:grid;gap:2px}
+.ltime li::before{content:"";position:absolute;left:-21px;top:6px;width:10px;height:10px;border-radius:50%;background:var(--cc,var(--gold))}
+.lfam{margin:0;padding-left:1.2em;font-size:14px;line-height:1.9}
+.lenjoy{font-size:14.5px;line-height:1.9;margin:0}
+.lfoot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin-top:26px;padding-top:16px;border-top:1px solid var(--line)}
+.lnav{display:flex;gap:8px;flex-wrap:wrap}
+@media (max-width:640px){.learnx .lhero{aspect-ratio:16/9;min-height:0}.learnx .lhero h2{font-size:22px}}

@@ -384,9 +384,37 @@ function renderLearn(){
    ["リキュール・その他","Liqueur & Others","梅酒や柚子酒など、果実や植物を漬け込んだ酒。食前酒やデザートの一杯にも向きます。","Fruit and botanical liqueurs such as umeshu and yuzushu, ideal before or after a meal."]
   ];
   const LIMG={"日本酒":"c-sake.jpg","焼酎":"c-shochu.jpg","ウイスキー":"c-whisky.jpg","泡盛":"c-awamori.jpg","スピリッツ":"c-spirits.jpg","ビール":"i-beer.png","ワイン":"i-wine.png","リキュール・その他":"c-liq.jpg"};
-  $("#learnCards").innerHTML=L.map(l=>`<div class="lcard" style="--cc:${ccVar(l[0])}"><img class="lphoto${LIMG[l[0]].startsWith("i-")?" icon":""}" src="img/${LIMG[l[0]]}" alt="" width="254" height="150" loading="lazy"><div class="lbody"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p></div></div>`).join("");
+  $("#learnCards").innerHTML=L.map(l=>{ const im=learnImg(l[0],LIMG[l[0]]); return `<button type="button" class="lcard" data-learn="${esc(l[0])}" style="--cc:${ccVar(l[0])}"><img class="lphoto${im.startsWith("i-")?" icon":""}" src="img/${im}" alt="" width="254" height="150" loading="lazy"><div class="lbody"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p><span class="lmore">${esc(T("製法・歴史を詳しく","Read the full story"))} →</span></div></button>`; }).join("");
   $("#scales").innerHTML=TYPES.map(t=>`<div class="scale" style="--cc:${ccVar(t.k)}"><b>${esc(T(t.k,t.en))}</b><p>${esc(T(...(TNOTE[t.k]||["",""])))}</p><ul>${axOf(t.k).map(a=>`<li><span>${T(a.ja,a.en)}</span><small>1 ${T(...a.lo)} ⇔ 5 ${T(...a.hi)}</small></li>`).join("")}</ul></div>`).join("");
 }
+// 解説の写真：img/l-<slug>.jpg が届いた種類だけ LREADY に入れる
+const LSLUG={"日本酒":"sake","焼酎":"shochu","泡盛":"awamori","ウイスキー":"whisky","スピリッツ":"spirits","ビール":"beer","ワイン":"wine","リキュール・その他":"liq"};
+const LREADY=new Set(["sake","shochu","awamori","whisky","spirits","beer","wine","liq"]);
+const learnImg=(k,fallback)=>LREADY.has(LSLUG[k])?`l-${LSLUG[k]}.jpg`:fallback;
+let LEARN=null;
+async function openLearn(k){
+  if(!LEARN){ try{ LEARN=await (await fetch("data/learn.json",{cache:"no-cache"})).json(); }catch(_){ return; } }
+  const d=LEARN[k]; if(!d) return; const x=d[lang]||d.en||d.ja, ty=typeOf(k);
+  const LIMG2={"日本酒":"c-sake.jpg","焼酎":"c-shochu.jpg","ウイスキー":"c-whisky.jpg","泡盛":"c-awamori.jpg","スピリッツ":"c-spirits.jpg","ビール":"","ワイン":"","リキュール・その他":"c-liq.jpg"};
+  const img=learnImg(k,LIMG2[k]);
+  const H=(ja,en)=>`<h3 class="lh">${esc(T(ja,en))}</h3>`;
+  const keys=Object.keys(LEARN), i=keys.indexOf(k), prev=keys[(i+keys.length-1)%keys.length], next=keys[(i+1)%keys.length];
+  const tn=t=>{ const y=typeOf(t); return esc(T(t,y?y.en:t)); };
+  const n=DB.products.filter(p=>p.type===k).length;
+  openDlg(`<article class="learnx" style="--cc:${ccVar(k)}">
+    <div class="lhero" style="${img?`background-image:url(img/${img})`:`background:linear-gradient(120deg,${ccVar(k)},#1c1712)`}"><div><span class="latin">${esc(ty?ty.en:k)}</span><h2>${esc(T(k,ty?ty.en:k))}</h2></div></div>
+    <p class="llead">${esc(x.lead)}</p>
+    ${H("製法","How it's made")}<ol class="lsteps">${x.steps.map(s=>`<li><b>${esc(s[0])}</b><span>${esc(s[1])}</span></li>`).join("")}</ol>
+    ${H("種類","Styles")}<dl class="lkinds">${x.kinds.map(s=>`<div><dt>${esc(s[0])}</dt><dd>${esc(s[1])}</dd></div>`).join("")}</dl>
+    ${H("歴史","History")}<ol class="ltime">${x.history.map(s=>`<li><b>${esc(s[0])}</b><span>${esc(s[1])}</span></li>`).join("")}</ol>
+    ${H("代表的な銘柄・産地","Notable names & places")}<ul class="lfam">${x.famous.map(s=>`<li>${esc(s)}</li>`).join("")}</ul>
+    ${H("楽しみ方","How to enjoy")}<p class="lenjoy">${esc(x.enjoy)}</p>
+    <div class="lfoot">${n?`<a class="btn" href="products.html?type=${encodeURIComponent(k)}">${esc(TN("このサイトの{n}本を見る","See {n} bottles on this site",n))}</a>`:""}
+      <span class="lnav"><button type="button" class="chip sm" data-learn="${esc(prev)}">← ${tn(prev)}</button><button type="button" class="chip sm" data-learn="${esc(next)}">${tn(next)} →</button></span></div>
+  </article>`,{t:"l",id:k});
+  $("#dlgBody").scrollTop=0; dlg.scrollTop=0;
+}
+document.addEventListener("click",e=>{ const l=e.target.closest("[data-learn]"); if(l){ e.preventDefault(); openLearn(l.dataset.learn); } });
 function renderImportRules(){
   const R=lang==="en"?[
    "One file per brewery. Sheets named 酒蔵情報 (brewery) and 商品情報 (products) are read.",
