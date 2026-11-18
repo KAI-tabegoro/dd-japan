@@ -52,13 +52,14 @@
 <section class="phead"><div class="ph" style="background-image:url(img/f-pair.jpg)"></div><div class="wrap"><div class="pt"><h1>Taste Finder</h1><p>味わい診断</p></div></div></section>
 
 <section class="block wrap page" id="finder">
-  <div class="sec-head"><h2 data-i="finder.h">味わい診断</h2><span class="latin">Find Your Taste</span><p data-i="finder.p">好みに近いところへ目盛りを動かすと、相性の良い順にお酒が並びます。地図上の点は一本一本のお酒です。</p></div>
+  <div class="sec-head"><h2 data-i="finder.h">味わい診断</h2><span class="latin">Find Your Taste</span><p data-i="finder.p">お酒の種類を選んでから、好みのタイプを選ぶか目盛りを動かすと、相性の良い順にお酒が並びます。地図上の点は一本一本のお酒です。</p></div>
   <div class="finder">
     <div class="panel">
+      <div class="flabel" style="margin-top:0" data-i="finder.types">① お酒の種類を選ぶ</div>
+      <div class="presets" id="ftypes"></div>
+      <div class="flabel" data-i="finder.style">② 好みのタイプを選ぶ、または目盛りを動かす</div>
       <div class="presets" id="presets"></div>
       <div id="sliders"></div>
-      <div class="flabel" data-i="finder.types">お酒の種類（未選択ならすべて）</div>
-      <div class="presets" id="ftypes" style="margin-bottom:0"></div>
     </div>
     <div class="panel mapbox">
       <div id="map"></div>

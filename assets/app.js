@@ -34,26 +34,79 @@ const REGIONS=[
  {k:"中国・四国",img:"r-chushi",en:"Chugoku & Shikoku",sky:["#2A3B58","#EBA15E"],hill:"#1C2436",prefs:["鳥取","島根","岡山","広島","山口","徳島","香川","愛媛","高知"]},
  {k:"九州・沖縄",img:"r-kyuoki",en:"Kyushu & Okinawa",sky:["#1C4A66","#5BB0C2"],hill:"#173246",prefs:["福岡","佐賀","長崎","熊本","大分","宮崎","鹿児島","沖縄"]}
 ];
-const AX=[
- {k:"sweet",ja:"甘辛",en:"Sweetness",lo:["辛口","Dry"],hi:["甘口","Sweet"]},
- {k:"body",ja:"濃淡",en:"Body",lo:["軽快","Light"],hi:["濃醇","Rich"]},
- {k:"aroma",ja:"香り",en:"Aroma",lo:["穏やか","Subtle"],hi:["華やか","Aromatic"]},
- {k:"char",ja:"個性",en:"Character",lo:["すっきり","Clean"],hi:["個性的","Bold"]}
-];
-const PRESETS=[
- {ja:"すっきり辛口",en:"Crisp & dry",v:{sweet:1.5,body:2,aroma:2,char:1.5}},
- {ja:"フルーティーで華やか",en:"Fruity & floral",v:{sweet:3.5,body:2.5,aroma:4.5,char:2}},
- {ja:"濃厚でコクがある",en:"Rich & full",v:{sweet:3,body:4.5,aroma:3,char:3.5}},
- {ja:"個性派・クセになる",en:"Bold & distinctive",v:{sweet:2.5,body:4,aroma:3,char:5}},
- {ja:"甘くて飲みやすい",en:"Sweet & easy",v:{sweet:4.5,body:2.5,aroma:4,char:1}}
-];
+// 味わいの軸はお酒の種類ごとに変える（1〜5）。地図は TMAP の2軸（横・縦）で描く。
+const A_=(k,ja,en,lo,hi)=>({k,ja,en,lo,hi});
+const TAX={
+ "日本酒":[A_("sweet","甘辛","Sweetness",["辛口","Dry"],["甘口","Sweet"]),A_("body","濃淡","Body",["軽快","Light"],["濃醇","Rich"]),A_("aroma","香り","Aroma",["穏やか","Subtle"],["華やか","Aromatic"]),A_("age","熟成感","Maturity",["フレッシュ","Fresh"],["熟成","Aged"])],
+ "焼酎":[A_("base","原料の風味","Base character",["穏やか","Gentle"],["力強い","Robust"]),A_("sweet","甘み","Sweetness",["ドライ","Dry"],["甘い","Sweet"]),A_("aroma","香り","Aroma",["すっきり","Clean"],["芳醇","Rich aroma"]),A_("finish","余韻","Finish",["キレ","Crisp"],["長い","Long"])],
+ "泡盛":[A_("base","風味","Character",["穏やか","Gentle"],["力強い","Robust"]),A_("sweet","甘み","Sweetness",["ドライ","Dry"],["甘い","Sweet"]),A_("aroma","香り","Aroma",["すっきり","Clean"],["芳醇","Rich aroma"]),A_("age","熟成感","Maturity",["一般酒","Young"],["古酒","Kusu (aged)"])],
+ "ウイスキー":[A_("smoky","スモーキー","Smokiness",["なし","None"],["強い","Heavy"]),A_("sweet","甘み","Sweetness",["ドライ","Dry"],["バニラ・はちみつ","Vanilla & honey"]),A_("body","ボディ","Body",["軽い","Light"],["重厚","Full"]),A_("fruit","果実感","Fruitiness",["控えめ","Subtle"],["フルーティー","Fruity"])],
+ "スピリッツ":[A_("aroma","香りの強さ","Aroma intensity",["控えめ","Subtle"],["華やか","Aromatic"]),A_("citrus","柑橘感","Citrus",["控えめ","Low"],["強い","High"]),A_("herb","スパイス・ハーブ","Spice & herbs",["控えめ","Low"],["強い","High"]),A_("sweet","甘み","Sweetness",["ドライ","Dry"],["甘い","Sweet"])],
+ "ビール":[A_("bitter","苦味","Bitterness",["弱い","Low"],["強い","High"]),A_("body","ボディ","Body",["軽い","Light"],["濃い","Full"]),A_("aroma","香り","Aroma",["控えめ","Subtle"],["ホップ香","Hoppy"]),A_("malt","モルト感・甘み","Malt & sweetness",["控えめ","Low"],["豊か","Rich"])],
+ "ワイン":[A_("sweet","甘辛","Sweetness",["辛口","Dry"],["甘口","Sweet"]),A_("body","ボディ","Body",["軽い","Light"],["重い","Full"]),A_("acid","酸味","Acidity",["穏やか","Soft"],["爽やか","Bright"]),A_("fruit","果実味","Fruitiness",["控えめ","Subtle"],["豊か","Rich"])],
+ "リキュール・その他":[A_("sweet","甘さ","Sweetness",["控えめ","Low"],["甘い","Sweet"]),A_("fruit","素材感","Ingredient character",["控えめ","Subtle"],["素材そのもの","Pronounced"]),A_("acid","酸味","Acidity",["穏やか","Soft"],["爽やか","Bright"]),A_("strength","アルコール感","Strength",["軽い","Light"],["しっかり","Strong"])]
+};
+const axOf=type=>TAX[type]||TAX["リキュール・その他"];
+const TMAP={"日本酒":["sweet","body"],"焼酎":["sweet","base"],"泡盛":["base","age"],"ウイスキー":["sweet","smoky"],"スピリッツ":["citrus","herb"],"ビール":["bitter","body"],"ワイン":["sweet","body"],"リキュール・その他":["sweet","strength"]};
+const P_=(ja,en,v)=>({ja,en,v});
+const TPRESETS={
+ "日本酒":[P_("華やかな吟醸系","Fragrant ginjo style",{sweet:3,body:2.5,aroma:5,age:1.5}),P_("すっきり辛口","Crisp & dry",{sweet:1.5,body:2,aroma:2,age:2}),P_("コクのある純米","Rich junmai",{sweet:2.5,body:4.5,aroma:2.5,age:3}),P_("熟成した古酒","Aged koshu",{sweet:3.5,body:4.5,aroma:3,age:5}),P_("甘口でやさしい","Sweet & gentle",{sweet:4.5,body:3,aroma:3.5,age:2})],
+ "焼酎":[P_("芋の力強さ","Bold sweet potato",{base:5,sweet:3.5,aroma:4.5,finish:4}),P_("麦の香ばしさ","Toasty barley",{base:3,sweet:2,aroma:3.5,finish:2.5}),P_("米のやわらかさ","Soft rice",{base:2,sweet:3,aroma:2.5,finish:2}),P_("すっきり飲みやすい","Clean & easy",{base:1.5,sweet:2,aroma:1.5,finish:1.5}),P_("個性派（黒糖・栗など）","Distinctive (brown sugar, chestnut…)",{base:3.5,sweet:4.5,aroma:4,finish:3.5})],
+ "泡盛":[P_("すっきり飲める","Clean & easy",{base:2,sweet:2,aroma:2,age:1.5}),P_("力強い一般酒","Bold young awamori",{base:4.5,sweet:2.5,aroma:3.5,age:2}),P_("古酒のまろやかさ","Mellow kusu",{base:3.5,sweet:3.5,aroma:4,age:5})],
+ "ウイスキー":[P_("軽やか","Light & easy",{smoky:1,sweet:2.5,body:2,fruit:3}),P_("甘くまろやか","Sweet & mellow",{smoky:1.5,sweet:4.5,body:3.5,fruit:3.5}),P_("スモーキー","Smoky",{smoky:5,sweet:2.5,body:4,fruit:2}),P_("フルーティー","Fruity",{smoky:1.5,sweet:3.5,body:3,fruit:5})],
+ "スピリッツ":[P_("柑橘系のジン","Citrus gin",{aroma:4,citrus:5,herb:2.5,sweet:2}),P_("ハーブ・スパイス系","Herbal & spicy",{aroma:4,citrus:2,herb:5,sweet:1.5}),P_("まろやかなラム","Mellow rum",{aroma:3.5,citrus:1,herb:2,sweet:4.5}),P_("クリアでドライ","Clear & dry",{aroma:1.5,citrus:1.5,herb:1.5,sweet:1})],
+ "ビール":[P_("ゴクゴク飲める","Easy drinking",{bitter:2,body:1.5,aroma:2,malt:2}),P_("香り豊か","Aromatic",{bitter:3.5,body:3,aroma:5,malt:2.5}),P_("苦味しっかり","Bitter & bold",{bitter:5,body:3.5,aroma:4,malt:2.5}),P_("黒ビール・濃厚","Dark & rich",{bitter:3.5,body:5,aroma:3,malt:5})],
+ "ワイン":[P_("辛口すっきり","Dry & crisp",{sweet:1.5,body:2,acid:4.5,fruit:2.5}),P_("果実味たっぷり","Fruit-forward",{sweet:3,body:3.5,acid:3,fruit:5}),P_("甘口","Sweet",{sweet:5,body:3,acid:3,fruit:4}),P_("重厚","Full-bodied",{sweet:1.5,body:5,acid:2.5,fruit:4})],
+ "リキュール・その他":[P_("果実たっぷり","Fruit-packed",{sweet:4,fruit:5,acid:3,strength:2}),P_("甘さ控えめ","Less sweet",{sweet:2,fruit:3.5,acid:3.5,strength:2.5}),P_("軽く飲める","Light & easy",{sweet:3,fruit:3,acid:3,strength:1}),P_("しっかり濃厚","Rich & strong",{sweet:4.5,fruit:4,acid:2,strength:4})]
+};
+// 学ぶページの軸の説明（種類ごと）
+const TNOTE={
+ "日本酒":["香りと熟成の度合いで、華やかな吟醸系からコクのある純米、熟成古酒まで見分けます。","Aroma and maturity separate fragrant ginjo, rich junmai and aged koshu."],
+ "焼酎":["芋・麦・米など原料の風味の強さと、香りの立ち方、余韻の長さで表します。","How strongly the base ingredient shows, how aromatic it is, and how long it lingers."],
+ "泡盛":["一般酒か、3年以上寝かせた古酒（クース）かで味わいが大きく変わります。","Young awamori and kusu (aged three years or more) taste very different."],
+ "ウイスキー":["ピートのスモーキーさ、樽由来の甘み、果実のような香りで表します。","Peat smoke, cask sweetness and fruit-like aromas."],
+ "スピリッツ":["ジンは柑橘やハーブの香り、ラムは甘みのまろやかさが手がかりになります。","Citrus and herbs for gin; mellow sweetness for rum."],
+ "ビール":["ホップの苦味と香り、麦芽のコクと甘みで表します。","Hop bitterness and aroma, malt depth and sweetness."],
+ "ワイン":["甘辛と酸味、果実味の豊かさで表します。","Sweetness, acidity and fruit."],
+ "リキュール・その他":["甘さと素材の感じ方、酸味、アルコールの強さで表します。","Sweetness, how the fruit or botanical comes through, acidity and strength."]
+};
+
+
+// 種類別の詳しい情報（スペック表）。値は p.sx（日本語）と p.sxEn（英語）。p.spec（取引データから自動で読んだ値）より sx が優先。
+const S_=(k,ja,en)=>({k,ja,en});
+const SPEC={
+ "日本酒":[S_("rice","原料米","Rice"),S_("polish","精米歩合","Polishing ratio"),S_("smv","日本酒度","Sake Meter Value"),S_("acid","酸度","Acidity"),S_("amino","アミノ酸度","Amino acidity"),S_("yeast","酵母","Yeast"),S_("water","仕込み水","Brewing water"),S_("method","造り","Brewing method")],
+ "焼酎":[S_("base","主原料・品種","Main ingredient"),S_("koji","麹","Koji"),S_("still","蒸留","Distillation"),S_("aging","貯蔵・熟成","Aging")],
+ "泡盛":[S_("rice","原料米","Rice"),S_("koji","麹","Koji"),S_("aging","熟成年数・貯蔵","Aging"),S_("still","蒸留","Distillation")],
+ "ウイスキー":[S_("wtype","タイプ","Type"),S_("cask","樽","Casks"),S_("age","熟成年数","Age"),S_("peat","ピート","Peat")],
+ "スピリッツ":[S_("base","ベース・原料","Base"),S_("botanicals","ボタニカル","Botanicals"),S_("still","蒸留","Distillation"),S_("aging","熟成","Aging")],
+ "ビール":[S_("style","スタイル","Style"),S_("malt","麦芽","Malt"),S_("hops","ホップ","Hops"),S_("ibu","IBU（苦味の数値）","IBU (bitterness)")],
+ "ワイン":[S_("grape","ぶどう品種","Grape variety"),S_("color","色","Color"),S_("sweetness","甘辛","Sweetness"),S_("oak","樽熟成","Oak aging"),S_("vintage","収穫年","Vintage")],
+ "リキュール・その他":[S_("base","ベースのお酒","Base"),S_("ingredient","主な素材・産地","Key ingredients"),S_("sugar","糖類","Sugar"),S_("juice","果汁","Juice content")]
+};
+const specOf=p=>({...(p.spec||{}),...(p.sx||{})});
+// 値の表示：日本語はそのまま。英語は sxEn。中国語は訳がなければ日本語（漢字）、韓国語・スペイン語は訳がなければ英語。
+function specVal(p,k){
+  const ja=String(specOf(p)[k]??""), en=String((p.sxEn||{})[k]??"");
+  if(!ja) return "";
+  if(lang==="ja") return ja;
+  if(lang==="en") return en||ja;
+  const zh=lang==="zh"||lang==="zht"; if(!en) return ja;
+  const d=TRX.ui[en]; if(d&&d[lang]) return d[lang];
+  // 「A, B」のような組み合わせは1つずつ訳す。中国語で訳がないものは日本語（漢字）のまま
+  const parts=en.split(/, (?![^()]*\))/).map(t=>{ const x=TRX.ui[t]; return x&&x[lang]||(zh?null:t); });
+  if(parts.every(Boolean)) return parts.join(zh?"・":", ");
+  return zh?ja:en;
+}
+const SERVE_EN={"冷酒":"Chilled","冷や":"Chilled","花冷え":"Chilled","雪冷え":"Well chilled","常温":"Room temperature","ぬる燗":"Warm","人肌燗":"Lukewarm","上燗":"Warm","熱燗":"Hot","燗":"Warm","ストレート":"Neat","ロック":"On the rocks","水割り":"With water","お湯割り":"With hot water","ソーダ割り":"With soda","炭酸割り":"With soda","ハイボール":"Highball","前割り":"Pre-diluted","カクテル":"Cocktails","トニック割り":"With tonic"};
+const serveStr=p=>(p.serve||[]).map(x=>T(x,SERVE_EN[x]||x)).join(lang==="ja"||lang==="zh"||lang==="zht"?"、":", ");
 
 /* ---------- 言語 ---------- */
 const I18N={
  en:{"regions.p":"Choose a region to see drinks from its breweries and distilleries.","nav.products":"Products","nav.breweries":"Breweries","nav.finder":"Taste Finder","nav.regions":"Regions","nav.learn":"Learn","nav.import":"Import",
   "hero.title":"Japanese craft spirits,<br>to tables around the world.","hero.lead":"Sake, shochu, whisky, gin and rum from small breweries and distilleries across Japan. Explore the makers' stories and flavor profiles to find a bottle that suits you.",
   "hero.cta1":"Start the taste finder","hero.cta2":"Browse spirits","st.b":"breweries","st.p":"labels","st.r":"prefectures",
-  "finder.h":"Taste Finder","finder.p":"Move the sliders toward what you like. Bottles are ranked by how closely they match. Each dot on the map is one bottle.","finder.types":"Type (none selected = all)","finder.best":"Recommended for you",
+  "finder.h":"Taste Finder","finder.p":"Choose a type, then pick a style or move the sliders. Bottles are ranked by how closely they match. Each dot on the map is one bottle.","finder.types":"1. Choose a type","finder.style":"2. Pick a style, or adjust the sliders","finder.best":"Recommended for you",
   "regions.h":"Find by Region",
   "home.h1":"Japanese spirits,<br>to tables around the world.","home.lead":"Sake, shochu, whisky, gin, rum and more. We share the many spirits made across Japan, together with the stories of the people who make them.","home.cta":"Find a bottle",
   "home.bh":"The Spirit of Japan","home.bp":"Ingredients shaped by the land, refined brewing and distilling, and drinking cultures that differ from region to region. Discover the depth of Japanese spirits.","home.bcta":"Learn about Japanese spirits",
@@ -123,7 +176,8 @@ const SAMPLE={breweries:[
 ]};
 
 /* ---------- 状態 ---------- */
-const st={type:"",region:"",q:"",sort:"type",pref:{sweet:3,body:3,aroma:3,char:3},ftypes:new Set(),touched:false};
+const st={type:"",region:"",q:"",sort:"type",ftype:"日本酒",prefs:{},touched:false};
+const prefOf=type=>st.prefs[type]||(st.prefs[type]=Object.fromEntries(axOf(type).map(a=>[a.k,3])));
 function withIds(db){ db.products.forEach((p,i)=>{ if(!p.id) p.id=p.breweryId+"-"+i; }); return db; }
 const sampleDB=()=>withIds(JSON.parse(JSON.stringify(SAMPLE)));
 let DB=sampleDB();
@@ -147,13 +201,13 @@ const brewOf=id=>DB.breweries.find(b=>b.id===id)||Object.values(DRAFT).map(d=>d.
 const findProduct=id=>DB.products.find(x=>x.id===id)||Object.values(DRAFT).flatMap(d=>d.products||[]).find(x=>x.id===id)||Object.values(PUB).flatMap(d=>d.products||[]).find(x=>x.id===id);
 function regionOf(pref){ const p=String(pref||"").replace(/[都府県]$/,""); const r=REGIONS.find(r=>r.prefs.includes(p)||p==="北海道"&&r.k==="北海道"); return r?r.k:""; }
 const yen=n=>n?"¥"+Number(n).toLocaleString("ja-JP"):"—";
-const hasT=p=>!!(p&&p.t&&AX.every(a=>typeof p.t[a.k]==="number"));
+const hasT=p=>!!(p&&p.t&&axOf(p.type).every(a=>typeof p.t[a.k]==="number"));
 const CORP=/(株式会社|有限会社|合資会社|合名会社|合同会社|[(（]株[)）]|[(（]有[)）])/g;
 const bshort=b=>b?(b.short||String(b.name||"").normalize("NFKC").replace(CORP,"").replace(/\s+/g,"").trim()||b.name):"";
 const abvStr=p=>p.abvText||(p.abv?p.abv+"%":"");
 function score(p){
   if(!hasT(p)) return null;
-  let d=0; AX.forEach(a=>{ const x=p.t[a.k]-st.pref[a.k]; d+=x*x; });
+  const pf=prefOf(p.type); let d=0; axOf(p.type).forEach(a=>{ const x=p.t[a.k]-pf[a.k]; d+=x*x; });
   return Math.max(0,Math.round(100-Math.sqrt(d)/8*100));
 }
 const CLS_EN={"純米大吟醸":"Junmai Daiginjo","純米吟醸":"Junmai Ginjo","特別純米":"Tokubetsu Junmai","純米":"Junmai","山廃純米":"Yamahai Junmai","大吟醸":"Daiginjo","吟醸":"Ginjo","特別本醸造":"Tokubetsu Honjozo","本醸造":"Honjozo","清酒":"Seishu","スパークリング":"Sparkling","にごり":"Nigori (cloudy)","古酒":"Koshu (aged)","芋焼酎":"Imo (sweet potato)","麦焼酎":"Mugi (barley)","米焼酎":"Kome (rice)","黒糖焼酎":"Kokuto (brown sugar)","米":"Kome (rice)","黒糖":"Kokuto (brown sugar)","玄米":"Brown rice","酒粕":"Kasutori (sake lees)","そば":"Soba (buckwheat)","栗":"Chestnut","ごま":"Sesame","じゃがいも":"Potato","にんじん":"Carrot","かぼちゃ":"Pumpkin","ピーマン":"Green pepper","わさび":"Wasabi","ジンジャー":"Ginger","黒豆":"Black soybean","ブレンド":"Blend","牛乳":"Milk","珈琲":"Coffee","緑茶":"Green tea","スピリッツ":"Spirits","ジン":"Gin","クラフトジン":"Craft gin","ラム":"Rum","ホワイトラム":"White rum","ダークラム":"Dark rum","ウォッカ":"Vodka","グラッパ":"Grappa","ブランデー":"Brandy","シングルモルト":"Single malt","リキュール":"Liqueur","梅酒":"Umeshu (plum)","スパークリング梅酒":"Sparkling umeshu","柚子酒":"Yuzushu","ゆず":"Yuzu","みかん":"Mikan (mandarin)","レモン":"Lemon","いちご":"Strawberry","かぼす":"Kabosu citrus","じゃばら":"Jabara citrus","すもも":"Sumomo plum","たんかん":"Tankan orange","へべす":"Hebesu citrus","文旦":"Buntan pomelo","河内晩柑":"Kawachi bankan citrus","もも":"Peach","りんご":"Apple","ぶどう":"Grape","ブルーベリー":"Blueberry","マンゴー":"Mango","山桃":"Yamamomo (bayberry)","はちみつ":"Honey","ほうじ茶":"Hojicha","紅茶":"Black tea","抹茶":"Matcha","生姜":"Ginger","カルダモン":"Cardamom","キャラメル":"Caramel","ヨーグルト":"Yogurt","乳酸菌":"Lactic drink","ソフトクリーム":"Soft-serve","タピオカ":"Tapioca","サングリア":"Sangria","チューハイ":"Chuhai","どぶろく":"Doburoku (unfiltered)","保命酒":"Homeishu (herbal)","味醂":"Mirin","樽熟成焼酎":"Cask-aged shochu","山河":"Sanga","ノンアルコール":"Non-alcoholic","赤":"Red","白":"White","ロゼ":"Rosé"};
@@ -181,7 +235,7 @@ function cardHTML(p){
       <span class="typetag">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
       <h3>${esc(pname(p))}</h3>
       <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(prefName(b.pref)):""}</span>
-      ${hasT(p)?`<div class="mini">${AX.map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
+      ${hasT(p)?`<div class="mini">${axOf(p.type).map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
       <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}</span><span>${esc(T(b?.pref||"",regionName(b?.pref)))}</span></div>
     </div></button>`;
 }
@@ -196,41 +250,44 @@ function renderCats(){
   }).join("");
 }
 function renderFinderControls(){
-  $("#presets").innerHTML=PRESETS.map((p,i)=>`<button class="chip" type="button" data-preset="${i}">${esc(T(p.ja,p.en))}</button>`).join("");
-  $("#sliders").innerHTML=AX.map(a=>`<div class="slider"><label for="s-${a.k}">${T(a.ja,a.en)}</label>
-     <input type="range" id="s-${a.k}" min="1" max="5" step="0.5" value="${st.pref[a.k]}" data-ax="${a.k}">
+  const ft=st.ftype, pf=prefOf(ft);
+  $("#ftypes").innerHTML=TYPES.map(t=>`<button class="chip" type="button" data-ft="${esc(t.k)}" aria-pressed="${st.ftype===t.k}">${esc(T(t.k,t.en))}</button>`).join("");
+  $("#presets").innerHTML=(TPRESETS[ft]||[]).map((p,i)=>`<button class="chip" type="button" data-preset="${i}">${esc(T(p.ja,p.en))}</button>`).join("");
+  $("#sliders").innerHTML=axOf(ft).map(a=>`<div class="slider"><label for="s-${a.k}">${T(a.ja,a.en)}</label>
+     <input type="range" id="s-${a.k}" min="1" max="5" step="0.5" value="${pf[a.k]}" data-ax="${a.k}">
      <div class="ends"><span>${T(...a.lo)}</span><span>${T(...a.hi)}</span></div></div>`).join("");
-  $("#ftypes").innerHTML=TYPES.map(t=>`<button class="chip" type="button" data-ft="${esc(t.k)}" aria-pressed="${st.ftypes.has(t.k)}">${esc(T(t.k,t.en))}</button>`).join("");
-  $("#legend").innerHTML=TYPES.map(t=>`<span><i style="background:var(${t.c})"></i>${esc(T(t.k,t.en))}</span>`).join("")+`<span><i style="background:transparent;border:2px solid var(--gold-hi)"></i>${T("あなたの好み","You")}</span>`;
+  $("#legend").innerHTML=`<span><i style="background:${ccVar(ft)}"></i>${esc(T(typeOf(ft).k,typeOf(ft).en))}</span><span><i style="background:transparent;border:2px solid var(--gold-hi)"></i>${T("あなたの好み","You")}</span><span>${T("※味わいは目安です","Flavor values are estimates")}</span>`;
 }
-function finderPool(){ return DB.products.filter(p=>hasT(p)&&(!st.ftypes.size||st.ftypes.has(p.type))); }
+function finderPool(){ return DB.products.filter(p=>hasT(p)&&p.type===st.ftype); }
 function renderMap(){
   const W=420,H=380,L=46,R=20,TOP=24,B=44, iw=W-L-R, ih=H-TOP-B;
   const X=v=>L+(v-1)/4*iw, Y=v=>TOP+ih-(v-1)/4*ih;
+  const ft=st.ftype, ax=axOf(ft), [kx,ky]=TMAP[ft]||[ax[0].k,ax[1].k], axX=ax.find(a=>a.k===kx), axY=ax.find(a=>a.k===ky), pf=prefOf(ft);
   const pool=finderPool(), ranked=[...pool].sort((a,b)=>score(b)-score(a)), top=new Set(ranked.slice(0,3).map(p=>p.id));
   let g="";
   for(let i=1;i<=5;i++){ g+=`<line x1="${X(i)}" y1="${TOP}" x2="${X(i)}" y2="${TOP+ih}" stroke="var(--line)"/><line x1="${L}" y1="${Y(i)}" x2="${L+iw}" y2="${Y(i)}" stroke="var(--line)"/>`; }
   g+=`<line x1="${X(3)}" y1="${TOP}" x2="${X(3)}" y2="${TOP+ih}" stroke="var(--line-strong)"/><line x1="${L}" y1="${Y(3)}" x2="${L+iw}" y2="${Y(3)}" stroke="var(--line-strong)"/>`;
   const lab=(x,y,t,anchor)=>`<text x="${x}" y="${y}" fill="var(--mute)" font-size="12" text-anchor="${anchor||"middle"}" font-family="var(--f-body)">${esc(t)}</text>`;
-  g+=lab(L,H-14,T("← 辛口","← Dry"),"start")+lab(L+iw,H-14,T("甘口 →","Sweet →"),"end")+lab(X(3),H-14,T("甘辛","Sweetness"));
-  g+=`<text x="14" y="${TOP+6}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb">${esc(T("濃醇","Rich"))}</text>`;
-  g+=`<text x="14" y="${TOP+ih-30}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb">${esc(T("軽快","Light"))}</text>`;
-  const seen={};
-  const pts=DB.products.filter(hasT).map((p,i)=>{
-    const key=p.t.sweet+"_"+p.t.body; const n=seen[key]=(seen[key]||0)+1;
-    const ang=n*2.4, rad=n>1?9*Math.sqrt(n-1):0;
-    const cx=X(p.t.sweet)+Math.cos(ang)*rad, cy=Y(p.t.body)+Math.sin(ang)*rad;
-    const inPool=pool.includes(p), isTop=top.has(p.id);
-    return `<g class="pt" data-p="${esc(p.id)}" style="cursor:pointer" opacity="${inPool?1:.18}"><title>${esc(pname(p))}（${score(p)}%）</title>
-      ${isTop?`<circle cx="${cx}" cy="${cy}" r="11" fill="none" stroke="var(--gold-hi)" stroke-width="1.5"/>`:""}
-      <circle cx="${cx}" cy="${cy}" r="6.5" fill="${ccVar(p.type)}" stroke="var(--bg)" stroke-width="1.5"/></g>`;
+  g+=lab(L,H-14,"← "+T(...axX.lo),"start")+lab(L+iw,H-14,T(...axX.hi)+" →","end")+lab(X(3),H-14,T(axX.ja,axX.en));
+  g+=`<text x="14" y="${TOP+6}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb">${esc(T(...axY.hi))}</text>`;
+  g+=`<text x="14" y="${TOP+ih}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb" text-anchor="end">${esc(T(...axY.lo))}</text>`;
+  g+=`<text x="${L+6}" y="${TOP+14}" fill="var(--mute)" font-size="12" font-family="var(--f-body)">↑ ${esc(T(axY.ja,axY.en))}</text>`;
+  // 同じ位置のお酒は、その位置を中心にひまわり状に広げる（枠の外には出さない）
+  const cnt={}, seen={}; pool.forEach(p=>{ const k=p.t[kx]+"_"+p.t[ky]; cnt[k]=(cnt[k]||0)+1; });
+  const pts=pool.map(p=>{
+    const key=p.t[kx]+"_"+p.t[ky]; const n=seen[key]=(seen[key]||0)+1, N=cnt[key];
+    const Rmax=N>1?Math.min(iw/9,5*Math.sqrt(N)):0, ang=n*2.39996, rad=N>1?Rmax*Math.sqrt((n-.5)/N):0;
+    const cx=Math.max(L+4,Math.min(L+iw-4,X(p.t[kx])+Math.cos(ang)*rad)), cy=Math.max(TOP+4,Math.min(TOP+ih-4,Y(p.t[ky])+Math.sin(ang)*rad));
+    const isTop=top.has(p.id);
+    return `<g class="pt" data-p="${esc(p.id)}" style="cursor:pointer" opacity="${st.touched&&!isTop?.55:1}"><title>${esc(pname(p))}（${score(p)}%）</title>
+      ${isTop&&st.touched?`<circle cx="${cx}" cy="${cy}" r="11" fill="none" stroke="var(--gold-hi)" stroke-width="1.5"/>`:""}
+      <circle cx="${cx}" cy="${cy}" r="4.5" fill="${ccVar(p.type)}" stroke="var(--bg)" stroke-width="1"/></g>`;
   }).join("");
-  const ux=X(st.pref.sweet), uy=Y(st.pref.body);
-  if(!DB.products.some(hasT)) g+=`<text x="${X(3)}" y="${TOP+30}" fill="var(--mute)" font-size="13" text-anchor="middle" font-family="var(--f-body)">${esc(T("味わいの情報が届いたお酒から、ここに表示されます","Bottles appear here once tasting notes arrive"))}</text>`;
+  const ux=X(pf[kx]), uy=Y(pf[ky]);
+  if(!pool.length) g+=`<text x="${X(3)}" y="${TOP+30}" fill="var(--mute)" font-size="13" text-anchor="middle" font-family="var(--f-body)">${esc(T("味わいの情報が届いたお酒から、ここに表示されます","Bottles appear here once tasting notes arrive"))}</text>`;
   const you=`<g pointer-events="none"><circle cx="${ux}" cy="${uy}" r="22" fill="rgba(232,204,142,.08)" stroke="var(--gold-hi)" stroke-dasharray="3 3"/><circle cx="${ux}" cy="${uy}" r="3" fill="var(--gold-hi)"/></g>`;
-  $("#map").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T("味マップ：横軸が甘辛、縦軸が濃淡","Flavor map: sweetness by body"))}">${g}${you}${pts}</svg>`;
-  const nT=DB.products.filter(hasT).length;
-  $("#matches").innerHTML = ranked.length ? ranked.slice(0,4).map(p=>cardHTML(p)).join("") : `<div class="taste-wait" style="grid-column:1/-1">${nT?T("選んだ種類には、味わいの情報があるお酒がまだありません。","No bottles with tasting notes in the selected types yet."):T("味わいの情報は、各酒蔵さんから届きしだい順に掲載します。今は「お酒を探す」から種類や産地でお探しください。","Tasting notes will appear as breweries send them in. For now, browse by type or region.")}</div>`;
+  $("#map").innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(T("味マップ","Flavor map")+"："+T(axX.ja,axX.en)+" × "+T(axY.ja,axY.en))}">${g}${pts}${you}</svg>`;
+  $("#matches").innerHTML = ranked.length ? ranked.slice(0,8).map(p=>cardHTML(p)).join("") : `<div class="taste-wait" style="grid-column:1/-1">${T("この種類には、味わいの情報があるお酒がまだありません。","No bottles of this type have tasting notes yet.")}</div>`;
 }
 function renderRegions(){
   $("#regionTiles").innerHTML=REGIONS.map(r=>{
@@ -305,11 +362,7 @@ function renderLearn(){
   ];
   const LIMG={"日本酒":"c-sake.jpg","焼酎":"c-shochu.jpg","ウイスキー":"c-whisky.jpg","泡盛":"c-awamori.jpg","スピリッツ":"c-spirits.jpg","ビール":"i-beer.png","ワイン":"i-wine.png","リキュール・その他":"c-liq.jpg"};
   $("#learnCards").innerHTML=L.map(l=>`<div class="lcard" style="--cc:${ccVar(l[0])}"><img class="lphoto${LIMG[l[0]].startsWith("i-")?" icon":""}" src="img/${LIMG[l[0]]}" alt="" width="254" height="150" loading="lazy"><div class="lbody"><div class="bar"></div><h3>${esc(T(l[0],l[1]))}${lang==="ja"?`<span>${l[1]}</span>`:""}</h3><p>${esc(T(l[2],l[3]))}</p></div></div>`).join("");
-  const S={sweet:["口に含んだときの甘さの感じ方。日本酒度や残糖だけでなく、飲み手の感覚で表します。","How sweet it feels on the palate, judged by taste rather than numbers alone."],
-           body:["味の厚み・コク。軽快なものは食中に、濃醇なものはゆっくり一杯に。","Weight and depth. Light suits meals; rich suits slow sipping."],
-           aroma:["香りの立ち方。華やかな果実・花の香りから、穏やかな穀物の香りまで。","From vivid fruit and flowers to quiet grain."],
-           char:["クセや個性の強さ。ピート、黒麹、山廃の酸など、好みが分かれる要素です。","Distinctiveness, like peat, black koji or yamahai acidity."]};
-  $("#scales").innerHTML=AX.map(a=>`<div class="scale"><b>${T(a.ja,a.en)}</b><div class="ends"><span>1 ${T(...a.lo)}</span><span>5 ${T(...a.hi)}</span></div><p>${esc(T(...S[a.k]))}</p></div>`).join("");
+  $("#scales").innerHTML=TYPES.map(t=>`<div class="scale" style="--cc:${ccVar(t.k)}"><b>${esc(T(t.k,t.en))}</b><p>${esc(T(...(TNOTE[t.k]||["",""])))}</p><ul>${axOf(t.k).map(a=>`<li><span>${T(a.ja,a.en)}</span><small>1 ${T(...a.lo)} ⇔ 5 ${T(...a.hi)}</small></li>`).join("")}</ul></div>`).join("");
 }
 function renderImportRules(){
   const R=lang==="en"?[
@@ -344,7 +397,7 @@ function openDlg(html){
   $("#dlgBody").scrollTop=0;
 }
 function radar(p){
-  const c=100,R=70, n=AX.length;
+  const c=100,R=70, AX=axOf(p.type), n=AX.length;
   const pt=(i,v)=>{ const a=-Math.PI/2+i*2*Math.PI/n; return [c+Math.cos(a)*R*v/5, c+Math.sin(a)*R*v/5]; };
   let g="";
   for(let s=1;s<=5;s++){ g+=`<polygon points="${AX.map((_,i)=>pt(i,s).join(",")).join(" ")}" fill="none" stroke="var(--line)"/>`; }
@@ -363,19 +416,17 @@ function openProduct(id){
       <div class="specs">
         <div><small>${T("アルコール度数","ABV")}</small>${esc(abvStr(p))||"—"}</div>
         <div><small>${T("容量","Volume")}</small>${p.ml?p.ml+"ml":"—"}</div>
-        ${p.spec&&p.spec.polish?`<div><small>${T("精米歩合","Polishing ratio")}</small>${esc(p.spec.polish)}</div>`:""}
-        ${p.spec&&p.spec.smv?`<div><small>${T("日本酒度","SMV")}</small>${esc(p.spec.smv)}</div>`:""}
         ${hasT(p)?`<div><small>${T("味わい診断の相性","Your match")}</small>${score(p)}%</div>`:""}
       </div>
       ${D(p,"desc")?`<p class="desc">${esc(D(p,"desc"))}</p>`:""}
       <div class="two">
-        <div class="radar">${hasT(p)?radar(p):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
+        <div class="radar">${hasT(p)?radar(p)+(p.tEst?`<small class="t-est">${T("※味わいは商品情報からの目安です","Flavor values are estimates based on product information")}</small>`:""):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
         <dl class="kv">
           ${p.material?`<dt>${T("原料","Ingredients")}</dt><dd>${esc(D(p,"material"))}</dd>`:""}
-          ${p.spec&&p.spec.rice?`<dt>${T("使用米","Rice")}</dt><dd>${esc(p.spec.rice)}</dd>`:""}
+          ${(SPEC[p.type]||[]).map(f=>{ const v=specVal(p,f.k); return v?`<dt>${T(f.ja,f.en)}</dt><dd>${esc(v)}</dd>`:""; }).join("")}
           ${p.storage?`<dt>${T("保存方法","Storage")}</dt><dd>${esc(D(p,"storage"))}</dd>`:""}
           ${p.tags?.length?`<dt>${T("香味","Notes")}</dt><dd class="tags">${p.tags.map(t=>`<span class="pill">${esc(t)}</span>`).join("")}</dd>`:""}
-          ${p.serve?.length?`<dt>${T("おすすめの飲み方","Serve")}</dt><dd>${esc(p.serve.join("、"))}</dd>`:""}
+          ${p.serve?.length?`<dt>${T(p.type==="日本酒"?"おすすめの温度":"おすすめの飲み方",p.type==="日本酒"?"Serving temperature":"Serve")}</dt><dd>${esc(serveStr(p))}</dd>`:""}
           ${p.food?`<dt>${T("合う料理","Pairing")}</dt><dd>${esc(p.food)}</dd>`:""}
         </dl>
       </div>
@@ -449,7 +500,7 @@ function parseWorkbook(wb){
     const tRaw=String(get("type")).normalize("NFKC").trim(); const type=TYPE_ALIASES[tRaw]||TYPE_ALIASES[tRaw.toLowerCase()];
     if(!tRaw) e.push(T("種類が空欄","type missing")); else if(!type) e.push(T(`種類「${tRaw}」はリストにありません`,`unknown type ${tRaw}`));
     const t={};
-    AX.forEach(a=>{ const v=num(get(a.k)); if(v==null) e.push(T(`${a.ja}が空欄`,`${a.en} missing`)); else if(isNaN(v)||v<1||v>5) e.push(T(`${a.ja}は1〜5で入力（現在：${get(a.k)}）`,`${a.en} must be 1–5`)); else t[a.k]=Math.round(v*2)/2; });
+    const OLDK=["sweet","body","aroma","char"]; (type?axOf(type):[]).forEach((a,ai)=>{ const v=num(get(OLDK[ai])); if(v==null) e.push(T(`${a.ja}が空欄`,`${a.en} missing`)); else if(isNaN(v)||v<1||v>5) e.push(T(`${a.ja}は1〜5で入力（現在：${get(a.k)}）`,`${a.en} must be 1–5`)); else t[a.k]=Math.round(v*2)/2; });
     const abv=num(get("abv")); if(abv==null) e.push(T("アルコール度数が空欄","ABV missing")); else if(isNaN(abv)||abv<0||abv>100) e.push(T("アルコール度数が数字ではありません","ABV invalid"));
     const desc=String(get("desc")).trim(); if(!desc) e.push(T("商品説明が空欄","description missing"));
     if(e.length){ rowErrors.push({row:excelRow,name:name||"（無題）",msgs:e}); return; }
@@ -533,7 +584,7 @@ function parseMaster(wb){
   return {groups:[...groups.values()],stats,unknownSub:[...unknownSub]};
 }
 // 既にある内容（酒蔵さんが入力した味わい・紹介文など）を残して、取引データの項目だけを更新する
-const KEEP_P=["t","tags","serve","food","buyUrl","photo","hidden","ord","typeFix","clsFix"];
+const KEEP_P=["sx","sxEn","sxSrc","t","tEst","tags","serve","food","buyUrl","photo","hidden","ord","typeFix","clsFix"];
 let PHOTOS=new Set();
 function photoKey(src){ const m=String(src||"").match(/^\/uploads\/maker\/([^/]*)\/([^/]+)$/); return m?`${m[1]||"_root"}/${m[2].replace(/\.[^.]+$/,"")}.webp`:""; }
 async function loadPhotos(){ try{ const r=await fetch("img/products/index.json",{cache:"no-cache"}); if(r.ok) PHOTOS=new Set(await r.json()); }catch(_){} }
@@ -804,15 +855,15 @@ function applyQuery(){
 document.addEventListener("click",e=>{
   const c=e.target.closest("[data-type]"); if(c){ e.preventDefault(); location.href="products.html?type="+encodeURIComponent(c.dataset.type); return; }
   const r=e.target.closest("[data-region]"); if(r){ e.preventDefault(); location.href="products.html?region="+encodeURIComponent(r.dataset.region); return; }
-  const pr=e.target.closest("[data-preset]"); if(pr){ Object.assign(st.pref,PRESETS[+pr.dataset.preset].v); st.touched=true; renderFinderControls(); renderMap(); renderProducts(); return; }
-  const ft=e.target.closest("[data-ft]"); if(ft){ const k=ft.dataset.ft; st.ftypes.has(k)?st.ftypes.delete(k):st.ftypes.add(k); ft.setAttribute("aria-pressed",st.ftypes.has(k)); renderMap(); return; }
+  const pr=e.target.closest("[data-preset]"); if(pr){ Object.assign(prefOf(st.ftype),TPRESETS[st.ftype][+pr.dataset.preset].v); st.touched=true; renderFinderControls(); renderMap(); renderProducts(); return; }
+  const ft=e.target.closest("[data-ft]"); if(ft){ st.ftype=ft.dataset.ft; st.touched=false; renderFinderControls(); renderMap(); return; }
   const fd=e.target.closest("[data-food]"); if(fd){ st.q=st.q===fd.dataset.food?"":fd.dataset.food; $("#q").value=st.q; renderProducts(); return; }
   if(e.target.closest("#pairBtn")){ location.href="products.html#foods"; return; }
   const p=e.target.closest("[data-p]"); if(p){ openProduct(p.dataset.p); return; }
   const b=e.target.closest("[data-b]"); if(b){ openBrewery(b.dataset.b); return; }
 });
 document.addEventListener("input",e=>{
-  if(e.target.dataset.ax){ st.pref[e.target.dataset.ax]=+e.target.value; st.touched=true; renderMap(); renderProducts(); }
+  if(e.target.dataset.ax){ prefOf(st.ftype)[e.target.dataset.ax]=+e.target.value; st.touched=true; renderMap(); renderProducts(); }
   if(e.target.id==="q"){ st.q=e.target.value; renderProducts(); }
 });
 $("#fType").addEventListener("change",e=>{ st.type=e.target.value; renderCats(); renderProducts(); });
