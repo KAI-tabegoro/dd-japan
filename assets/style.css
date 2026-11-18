@@ -777,7 +777,8 @@ header.top .logo .word small{font-size:15px;letter-spacing:.2em;margin-top:0;lin
 @media (max-width:760px){.rbody{grid-template-columns:1fr;padding:18px 16px 20px}.rhead>div{padding:18px 16px}.rhead h3{font-size:22px}}
 
 /* 日本のお酒を知る：詳しい解説（2026/11/18） */
-button.lcard{font:inherit;color:inherit;text-align:left;cursor:pointer;padding:0;width:100%}
+button.lcard{font:inherit;color:inherit;text-align:left;cursor:pointer;padding:0;width:100%;display:flex;flex-direction:column;justify-content:flex-start;align-items:stretch}
+button.lcard .lbody{flex:1}
 button.lcard:hover{border-color:var(--gold-hi)}
 .lmore{display:block;margin-top:10px;font-size:12.5px;color:var(--gold-deep,var(--gold));letter-spacing:.06em}
 .learnx .lhero{margin:-4px -4px 18px;aspect-ratio:16/7;min-height:170px;background-size:cover;background-position:center 60%;border-radius:var(--r);position:relative;display:flex;align-items:flex-end;overflow:hidden}
