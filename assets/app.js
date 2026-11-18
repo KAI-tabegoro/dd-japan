@@ -391,7 +391,10 @@ function renderAll(){
 
 /* ---------- 詳細ダイアログ ---------- */
 const dlg=$("#dlg");
-function openDlg(html){
+// 詳細画面の行き来：酒蔵 → 商品 と進んだときは、× で酒蔵の一覧に戻る
+let dlgView=null, dlgBack=null;
+function openDlg(html,view){
+  dlgView=view||null;
   $("#dlgBody").innerHTML=`<button class="close" type="button" aria-label="${T("閉じる","Close")}" data-close>×</button>`+html;
   if(typeof dlg.showModal==="function"){ if(!dlg.open) dlg.showModal(); } else dlg.setAttribute("open","");
   $("#dlgBody").scrollTop=0;
@@ -408,7 +411,10 @@ function radar(p){
 }
 function openProduct(id){
   const p=findProduct(id); if(!p) return; const b=brewOf(p.breweryId), ty=typeOf(p.type);
-  openDlg(`<div class="pd">
+  if(dlg.open&&dlgView&&dlgView.t==="b") dlgBack={...dlgView,scroll:[$("#dlgBody").scrollTop,dlg.scrollTop]};
+  else if(!(dlg.open&&dlgView&&dlgView.t==="p")) dlgBack=null;
+  const bk=dlgBack&&brewOf(dlgBack.id);
+  openDlg(`${bk?`<button class="dback" type="button" data-back>‹ ${esc(TN("{n} のお酒一覧に戻る","Back to {n}",bshort(bk)))}</button>`:""}<div class="pd">
     ${labelHTML(p,true)}
     <div>
       <span class="typetag" style="--cc:${ccVar(p.type)}">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
@@ -419,6 +425,8 @@ function openProduct(id){
         ${hasT(p)?`<div><small>${T("味わい診断の相性","Your match")}</small>${score(p)}%</div>`:""}
       </div>
       ${D(p,"desc")?`<p class="desc">${esc(D(p,"desc"))}</p>`:""}
+    </div>
+    <div class="pd-more">
       <div class="two">
         <div class="radar">${hasT(p)?radar(p)+(p.tEst?`<small class="t-est">${T("※味わいは商品情報からの目安です","Flavor values are estimates based on product information")}</small>`:""):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
         <dl class="kv">
@@ -432,9 +440,10 @@ function openProduct(id){
       </div>
       ${/^https:\/\//.test(p.buyUrl||"")?`<a class="btn solid" style="margin-top:16px" href="${esc(p.buyUrl)}" target="_blank" rel="noopener">${T("酒蔵の販売ページで見る","View on the maker's shop")} ›</a>`:""}
       ${b?`<button class="brewlink" type="button" data-b="${esc(b.id)}"><span><small style="color:var(--gold);display:block;font-size:11px">${T("造り手","Made by")}</small><b style="font-family:var(--f-display);font-size:17px">${esc(bname(b))}</b> <span style="color:var(--mute);font-size:12px">${esc(prefName(b.pref))}</span>${BC(b)?`<small style="display:block;color:var(--ink);font-size:13px;margin-top:4px;line-height:1.6">${esc(BC(b))}</small>`:""}</span><span>›</span></button>`:""}
-    </div></div>`);
+    </div></div>`,{t:"p",id});
 }
 function openBrewery(id,src){
+  dlgBack=null;
   const doc=src==="draft"?DRAFT[id]:src==="pub"?PUB[id]:null;
   const b=doc?doc.brewery:brewOf(id); if(!b) return; const list=doc?visibleP(doc.products):DB.products.filter(p=>p.breweryId===id);
   const pre=src==="draft"?`<p class="notice" style="margin:0 0 14px">${T("下書きのプレビューです。まだサイトには公開されていません。","Draft preview — not published yet.")}</p>`:"";
@@ -451,9 +460,18 @@ function openBrewery(id,src){
     ${b.points?.length?`<div class="tags" style="margin-bottom:16px">${b.points.map(t=>`<span class="pill" style="font-size:12.5px;padding:2px 12px">${esc(t)}</span>`).join("")}</div>`:""}
     ${b.web?`<p style="font-size:13px"><a href="${esc(b.web)}" target="_blank" rel="noopener">${esc(b.web)}</a></p>`:""}
     <h3 style="font-size:17px;margin:22px 0 12px">${T("この蔵のお酒","Bottles from this maker")}</h3>
-    <div class="grid">${list.slice(0,120).map(cardHTML).join("")}</div>${list.length>120?`<p style="color:var(--mute);font-size:13px;margin-top:12px">${TN("ほか {n} 銘柄は「お酒を探す」で酒蔵名を検索してください。","{n} more: search this maker on the Browse page.",list.length-120)}</p>`:""}`);
+    <div class="grid">${list.slice(0,120).map(cardHTML).join("")}</div>${list.length>120?`<p style="color:var(--mute);font-size:13px;margin-top:12px">${TN("ほか {n} 銘柄は「お酒を探す」で酒蔵名を検索してください。","{n} more: search this maker on the Browse page.",list.length-120)}</p>`:""}`,src?null:{t:"b",id});
 }
-dlg.addEventListener("click",e=>{ if(e.target===dlg||e.target.closest("[data-close]")) dlg.close(); });
+function dlgGoBack(){
+  const v=dlgBack; dlgBack=null; openBrewery(v.id);
+  requestAnimationFrame(()=>{ $("#dlgBody").scrollTop=v.scroll[0]; dlg.scrollTop=v.scroll[1]; });
+}
+dlg.addEventListener("click",e=>{
+  if(e.target===dlg){ dlg.close(); return; }
+  if(e.target.closest("[data-back]")||(e.target.closest("[data-close]")&&dlgBack&&dlgView&&dlgView.t==="p")){ dlgGoBack(); return; }
+  if(e.target.closest("[data-close]")) dlg.close();
+});
+dlg.addEventListener("close",()=>{ dlgBack=null; dlgView=null; });
 
 /* ---------- Excel 取込 ---------- */
 const N=s=>String(s??"").normalize("NFKC").replace(/\s|　/g,"").replace(/\*?必須/,"").replace(/[*＊]/g,"");
