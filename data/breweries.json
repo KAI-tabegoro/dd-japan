@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T08:35:52.000Z",
+ "updatedAt": "2026-11-18T10:11:09.000Z",
  "breweries": [
   {
    "brewery": {
@@ -3494,7 +3494,16 @@
      "id": "m103-4762",
      "photo": "103/ODYAK10.webp",
      "clsFix": "わさび",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "山葵・米"
+     },
+     "sxEn": {
+      "base": "Wasabi, rice"
+     }
     },
     {
      "mid": "4763",
@@ -3530,7 +3539,16 @@
      "id": "m103-4763",
      "photo": "103/ODYAK09.webp",
      "clsFix": "栗",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "栗（島根県産）・米"
+     },
+     "sxEn": {
+      "base": "Chestnut (Shimane), rice"
+     }
     },
     {
      "mid": "4764",
@@ -3565,7 +3583,16 @@
      "breweryId": "m103",
      "id": "m103-4764",
      "photo": "103/ODYAK04.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4765",
@@ -3600,7 +3627,16 @@
      "breweryId": "m103",
      "id": "m103-4765",
      "photo": "103/ODYAK05.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4766",
@@ -3635,7 +3671,16 @@
      "breweryId": "m103",
      "id": "m103-4766",
      "photo": "103/ODYAK06.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4767",
@@ -3670,7 +3715,16 @@
      "breweryId": "m103",
      "id": "m103-4767",
      "photo": "103/ODYAK07.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4768",
@@ -3705,7 +3759,16 @@
      "breweryId": "m103",
      "id": "m103-4768",
      "photo": "103/ODYAK08.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4769",
@@ -3740,7 +3803,16 @@
      "breweryId": "m103",
      "id": "m103-4769",
      "photo": "103/ODYAK09.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/shochu"
+     ],
+     "sx": {
+      "base": "麦・クロモジ"
+     },
+     "sxEn": {
+      "base": "Barley, kuromoji (spicebush)"
+     }
     },
     {
      "mid": "4770",
@@ -3883,7 +3955,17 @@
      "breweryId": "m103",
      "id": "m103-4773",
      "photo": "103/ODYAK12.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/sake"
+     ],
+     "sx": {
+      "rice": "五百万石（島根県産）",
+      "polish": "60%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku (Shimane)"
+     }
     },
     {
      "mid": "4774",
@@ -3918,7 +4000,17 @@
      "breweryId": "m103",
      "id": "m103-4774",
      "photo": "103/ODYAK13.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/sake"
+     ],
+     "sx": {
+      "rice": "五百万石（島根県産）",
+      "polish": "50%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku (Shimane)"
+     }
     },
     {
      "mid": "4775",
@@ -3953,7 +4045,17 @@
      "breweryId": "m103",
      "id": "m103-4775",
      "photo": "103/ODYAK14.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.kikuyasaka.co.jp/sake"
+     ],
+     "sx": {
+      "rice": "コシヒカリ（島根県産）",
+      "polish": "70%"
+     },
+     "sxEn": {
+      "rice": "Koshihikari (Shimane)"
+     }
     },
     {
      "mid": "4776",
@@ -3988,7 +4090,13 @@
      "breweryId": "m103",
      "id": "m103-4776",
      "photo": "103/ODYAK11.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "麦焼酎"
+     },
+     "sxEn": {
+      "base": "Barley shochu"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -8945,7 +9053,18 @@
      "typeFix": "スピリッツ",
      "ord": 7,
      "clsFix": "ラム",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://ryukyushimpo.jp/living-style/entry-1185285.html"
+     ],
+     "sx": {
+      "base": "さとうきび（宮古島）",
+      "still": "泡盛造りで培った蒸留技術"
+     },
+     "sxEn": {
+      "base": "Sugarcane (Miyako Island)",
+      "still": "Distilled with the brewery's awamori know-how"
+     }
     },
     {
      "mid": "1649",
@@ -8981,7 +9100,18 @@
      "id": "m222-1649",
      "photo": "222/yu.jpg.webp",
      "ord": 8,
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/miyako-gin"
+     ],
+     "sx": {
+      "base": "泡盛",
+      "botanicals": "黒胡椒・レモンピール・沖縄の黒糖など6種類"
+     },
+     "sxEn": {
+      "base": "Awamori",
+      "botanicals": "6 botanicals including black pepper, lemon peel and Okinawan kokuto sugar"
+     }
     },
     {
      "mid": "7831",
@@ -14764,7 +14894,15 @@
      "breweryId": "m529",
      "id": "m529-8191",
      "photo": "529/FUKUSI88.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "二条大麦（岡山県産）",
+      "still": "ステンレスと銅製の蒸留器で数回蒸留・白樺炭ろ過"
+     },
+     "sxEn": {
+      "base": "Two-row barley (Okayama)",
+      "still": "Distilled several times in stainless and copper stills, birch-charcoal filtered"
+     }
     },
     {
      "mid": "8192",
@@ -14799,7 +14937,17 @@
      "breweryId": "m529",
      "id": "m529-8192",
      "photo": "529/FUKUSI89.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "米焼酎（自社製）",
+      "botanicals": "ジュニパーベリー・コリアンダー・レモンピール・アンジェリカの根・モルト・ラベンダー・オレンジ・ホップ・シナモン・ジンジャー・オールスパイス",
+      "still": "銅製のポットスチル"
+     },
+     "sxEn": {
+      "base": "Rice shochu (made in-house)",
+      "botanicals": "Juniper, coriander, lemon peel, angelica root, malt, lavender, orange, hops, cinnamon, ginger, allspice",
+      "still": "Copper pot still"
+     }
     },
     {
      "mid": "8193",
@@ -14834,7 +14982,19 @@
      "breweryId": "m529",
      "id": "m529-8193",
      "photo": "529/FUKUSI90.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "米焼酎（自社製）",
+      "botanicals": "ジュニパーベリー・コリアンダー・レモンピール・アンジェリカの根・ラベンダー・オレンジ・ホップ・シナモン・ジンジャー・オールスパイス・モルト・白桃・ピオーネピール・パクチー（岡山県産）",
+      "still": "ドイツ製のポットスチル",
+      "aging": "樽貯蔵"
+     },
+     "sxEn": {
+      "base": "Rice shochu (made in-house)",
+      "botanicals": "Juniper, coriander, lemon peel, angelica root, lavender, orange, hops, cinnamon, ginger, allspice, malt, white peach, Pione grape peel, coriander leaf (Okayama)",
+      "still": "German-made pot still",
+      "aging": "Cask-aged"
+     }
     },
     {
      "mid": "8194",
@@ -14869,7 +15029,19 @@
      "breweryId": "m529",
      "id": "m529-8194",
      "photo": "529/FUKUSI91.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "米焼酎（自社製）",
+      "botanicals": "ジュニパーベリー・コリアンダー・レモンピール・アンジェリカの根・ラベンダー・オレンジ・ホップ・シナモン・ジンジャー・オールスパイス・モルト・白桃・ピオーネピール・パクチー（岡山県産）",
+      "still": "ドイツ製のポットスチル",
+      "aging": "樽貯蔵"
+     },
+     "sxEn": {
+      "base": "Rice shochu (made in-house)",
+      "botanicals": "Juniper, coriander, lemon peel, angelica root, lavender, orange, hops, cinnamon, ginger, allspice, malt, white peach, Pione grape peel, coriander leaf (Okayama)",
+      "still": "German-made pot still",
+      "aging": "Cask-aged"
+     }
     },
     {
      "mid": "8195",
@@ -18524,7 +18696,17 @@
      "breweryId": "m527",
      "id": "m527-8145",
      "photo": "527/FUKUSI47.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK002.html"
+     ],
+     "sx": {
+      "rice": "山田錦",
+      "polish": "35%"
+     },
+     "sxEn": {
+      "rice": "Yamada Nishiki"
+     }
     },
     {
      "mid": "8146",
@@ -18559,7 +18741,17 @@
      "breweryId": "m527",
      "id": "m527-8146",
      "photo": "527/FUKUSI46.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK002.html"
+     ],
+     "sx": {
+      "rice": "山田錦",
+      "polish": "35%"
+     },
+     "sxEn": {
+      "rice": "Yamada Nishiki"
+     }
     },
     {
      "mid": "8147",
@@ -18594,7 +18786,17 @@
      "breweryId": "m527",
      "id": "m527-8147",
      "photo": "527/FUKUSI48.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK002.html"
+     ],
+     "sx": {
+      "rice": "山田錦",
+      "polish": "35%"
+     },
+     "sxEn": {
+      "rice": "Yamada Nishiki"
+     }
     },
     {
      "mid": "8149",
@@ -18623,13 +18825,27 @@
       "age": 1.5
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m527",
      "id": "m527-8149",
      "photo": "527/FUKUSI50.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK001.html"
+     ],
+     "sx": {
+      "rice": "祝",
+      "polish": "50%",
+      "water": "軟水"
+     },
+     "sxEn": {
+      "rice": "Iwai",
+      "water": "Soft water"
+     }
     },
     {
      "mid": "8150",
@@ -18658,13 +18874,27 @@
       "age": 1.5
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m527",
      "id": "m527-8150",
      "photo": "527/FUKUSI51.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK001.html"
+     ],
+     "sx": {
+      "rice": "祝",
+      "polish": "50%",
+      "water": "軟水"
+     },
+     "sxEn": {
+      "rice": "Iwai",
+      "water": "Soft water"
+     }
     },
     {
      "mid": "8151",
@@ -18693,13 +18923,27 @@
       "age": 1.5
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m527",
      "id": "m527-8151",
      "photo": "527/FUKUSI52.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK001.html"
+     ],
+     "sx": {
+      "rice": "祝",
+      "polish": "50%",
+      "water": "軟水"
+     },
+     "sxEn": {
+      "rice": "Iwai",
+      "water": "Soft water"
+     }
     },
     {
      "mid": "8152",
@@ -18734,7 +18978,17 @@
      "breweryId": "m527",
      "id": "m527-8152",
      "photo": "527/FUKUSI53.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK004.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "65%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8153",
@@ -18769,7 +19023,17 @@
      "breweryId": "m527",
      "id": "m527-8153",
      "photo": "527/FUKUSI54.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK004.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "65%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8154",
@@ -18804,7 +19068,17 @@
      "breweryId": "m527",
      "id": "m527-8154",
      "photo": "527/FUKUSI54.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK004.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "65%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8155",
@@ -19028,7 +19302,17 @@
      "breweryId": "m527",
      "id": "m527-8160",
      "photo": "527/FUKUSI59.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK003.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "55%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8161",
@@ -19063,7 +19347,17 @@
      "breweryId": "m527",
      "id": "m527-8161",
      "photo": "527/FUKUSI60.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK003.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "55%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8162",
@@ -19098,7 +19392,17 @@
      "breweryId": "m527",
      "id": "m527-8162",
      "photo": "527/FUKUSI60.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK003.html"
+     ],
+     "sx": {
+      "rice": "五百万石",
+      "polish": "55%"
+     },
+     "sxEn": {
+      "rice": "Gohyakumangoku"
+     }
     },
     {
      "mid": "8163",
@@ -19135,11 +19439,17 @@
      "photo": "527/FUKUSI61.webp",
      "tEst": true,
      "sx": {
-      "method": "生貯蔵"
+      "method": "生貯蔵",
+      "rice": "五百万石",
+      "polish": "65%"
      },
      "sxEn": {
-      "method": "Nama-chozo"
-     }
+      "method": "Nama-chozo",
+      "rice": "Gohyakumangoku"
+     },
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK010.html"
+     ]
     },
     {
      "mid": "8164",
@@ -19176,11 +19486,17 @@
      "photo": "527/FUKUSI61.webp",
      "tEst": true,
      "sx": {
-      "method": "生貯蔵"
+      "method": "生貯蔵",
+      "rice": "五百万石",
+      "polish": "65%"
      },
      "sxEn": {
-      "method": "Nama-chozo"
-     }
+      "method": "Nama-chozo",
+      "rice": "Gohyakumangoku"
+     },
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK010.html"
+     ]
     },
     {
      "mid": "8165",
@@ -19217,11 +19533,15 @@
      "photo": "527/FUKUSI62.webp",
      "tEst": true,
      "sx": {
-      "method": "生酒"
+      "method": "生酒",
+      "polish": "65%"
      },
      "sxEn": {
       "method": "Nama (unpasteurized)"
-     }
+     },
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK005.html"
+     ]
     },
     {
      "mid": "8166",
@@ -19258,11 +19578,15 @@
      "photo": "527/FUKUSI62.webp",
      "tEst": true,
      "sx": {
-      "method": "生酒"
+      "method": "生酒",
+      "polish": "65%"
      },
      "sxEn": {
       "method": "Nama (unpasteurized)"
-     }
+     },
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK005.html"
+     ]
     },
     {
      "mid": "8167",
@@ -19649,11 +19973,17 @@
      "photo": "527/FUKUSI66.webp",
      "tEst": true,
      "sx": {
-      "method": "原酒"
+      "method": "原酒",
+      "rice": "五百万石",
+      "polish": "65%"
      },
      "sxEn": {
-      "method": "Genshu (undiluted)"
-     }
+      "method": "Genshu (undiluted)",
+      "rice": "Gohyakumangoku"
+     },
+     "sxSrc": [
+      "https://www.s-usui.jp/40wakamiya_s/AK011.html"
+     ]
     },
     {
      "mid": "8178",
@@ -20030,14 +20360,32 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温",
+      "燗"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7814",
      "photo": "490/JUMKI307.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年以上の長期熟成"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Aged 17+ years"
+     }
     },
     {
      "mid": "7815",
@@ -20066,14 +20414,32 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温",
+      "燗"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7815",
      "photo": "490/JUMKI308.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年以上の長期熟成"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Aged 17+ years"
+     }
     },
     {
      "mid": "7816",
@@ -20102,14 +20468,32 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "常温",
+      "燗"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7816",
      "photo": "490/JUMKI309.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年以上の長期熟成"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Aged 17+ years"
+     }
     },
     {
      "mid": "7817",
@@ -20138,14 +20522,31 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "冷酒"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7817",
      "photo": "490/JUMKI310.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年熟成と8年熟成のブレンド"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Blend of 17- and 8-year-old sake"
+     }
     },
     {
      "mid": "7818",
@@ -20174,14 +20575,31 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "冷酒"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7818",
      "photo": "490/JUMKI311.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年熟成と8年熟成のブレンド"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Blend of 17- and 8-year-old sake"
+     }
     },
     {
      "mid": "7819",
@@ -20210,14 +20628,31 @@
       "age": 5.0
      },
      "tags": [],
-     "serve": [],
+     "serve": [
+      "冷酒"
+     ],
      "food": "",
      "src": "master",
      "breweryId": "m490",
      "id": "m490-7819",
      "photo": "490/JUMKI312.webp",
      "clsFix": "古酒",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.makuake.com/project/shugetsu/"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産）",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "17年熟成と8年熟成のブレンド"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo)",
+      "method": "Blend of 17- and 8-year-old sake"
+     }
     },
     {
      "mid": "7820",
@@ -20252,7 +20687,22 @@
      "breweryId": "m490",
      "id": "m490-7820",
      "photo": "490/JUMKI313.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://shop.syuugetu.jp/c/sake/tokubetsujyunmai"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦・五百万石・日本晴",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "1年以上の熟成"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki, Gohyakumangoku, Nipponbare",
+      "method": "Aged over 1 year"
+     }
     },
     {
      "mid": "7821",
@@ -20287,7 +20737,22 @@
      "breweryId": "m490",
      "id": "m490-7821",
      "photo": "490/JUMKI314.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://shop.syuugetu.jp/c/sake/tokubetsujyunmai"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦・五百万石・日本晴",
+      "polish": "60%",
+      "smv": "±0",
+      "method": "1年以上の熟成"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki, Gohyakumangoku, Nipponbare",
+      "method": "Aged over 1 year"
+     }
     },
     {
      "mid": "7822",
@@ -20324,11 +20789,16 @@
      "photo": "490/JUMKI315.webp",
      "tEst": true,
      "sx": {
-      "method": "生酒"
+      "method": "生酒",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nama (unpasteurized)"
-     }
+      "method": "Nama (unpasteurized)",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7823",
@@ -20365,11 +20835,16 @@
      "photo": "490/JUMKI316.webp",
      "tEst": true,
      "sx": {
-      "method": "生酒"
+      "method": "生酒",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nama (unpasteurized)"
-     }
+      "method": "Nama (unpasteurized)",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7824",
@@ -20406,11 +20881,16 @@
      "photo": "490/JUMKI317.webp",
      "tEst": true,
      "sx": {
-      "method": "生酒"
+      "method": "生酒",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nama (unpasteurized)"
-     }
+      "method": "Nama (unpasteurized)",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7825",
@@ -20448,11 +20928,16 @@
      "clsFix": "にごり",
      "tEst": true,
      "sx": {
-      "method": "にごり"
+      "method": "にごり",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nigori"
-     }
+      "method": "Nigori",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7826",
@@ -20490,11 +20975,16 @@
      "clsFix": "にごり",
      "tEst": true,
      "sx": {
-      "method": "にごり"
+      "method": "にごり",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nigori"
-     }
+      "method": "Nigori",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7827",
@@ -20532,11 +21022,16 @@
      "clsFix": "にごり",
      "tEst": true,
      "sx": {
-      "method": "にごり"
+      "method": "にごり",
+      "water": "波賀野川の伏流水（井戸水）"
      },
      "sxEn": {
-      "method": "Nigori"
-     }
+      "method": "Nigori",
+      "water": "Underground water of the Hagano River (well)"
+     },
+     "sxSrc": [
+      "https://shop.syuugetu.jp/"
+     ]
     },
     {
      "mid": "7828",
@@ -20571,7 +21066,20 @@
      "breweryId": "m490",
      "id": "m490-7828",
      "photo": "490/JUMKI321.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://shop.syuugetu.jp/c/sake/sake_type/junmai_daiginjo/gd132"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産・特A地区）",
+      "polish": "50%",
+      "smv": "+2"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo, Special A district)"
+     }
     },
     {
      "mid": "7829",
@@ -20606,7 +21114,20 @@
      "breweryId": "m490",
      "id": "m490-7829",
      "photo": "490/JUMKI322.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://shop.syuugetu.jp/c/sake/sake_type/junmai_daiginjo/gd132"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産・特A地区）",
+      "polish": "50%",
+      "smv": "+2"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo, Special A district)"
+     }
     },
     {
      "mid": "7830",
@@ -20641,7 +21162,20 @@
      "breweryId": "m490",
      "id": "m490-7830",
      "photo": "490/JUMKI323.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://shop.syuugetu.jp/c/sake/sake_type/junmai_daiginjo/gd132"
+     ],
+     "sx": {
+      "water": "波賀野川の伏流水（井戸水）",
+      "rice": "山田錦（兵庫県産・特A地区）",
+      "polish": "50%",
+      "smv": "+2"
+     },
+     "sxEn": {
+      "water": "Underground water of the Hagano River (well)",
+      "rice": "Yamada Nishiki (Hyogo, Special A district)"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -20707,7 +21241,20 @@
      "breweryId": "m23",
      "id": "m23-1005",
      "photo": "23/27.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/omoya-gin"
+     ],
+     "sx": {
+      "base": "壱岐焼酎（麦）",
+      "botanicals": "ジュニパーベリー・柚子（2種類）",
+      "still": "ボタニカルを数週間漬け込んでから蒸留"
+     },
+     "sxEn": {
+      "base": "Iki shochu (barley)",
+      "botanicals": "Juniper, yuzu (2 botanicals)",
+      "still": "Botanicals macerated for several weeks, then distilled"
+     }
     },
     {
      "mid": "1006",
@@ -23023,7 +23570,22 @@
      "photo": "223/k0208 (81).webp",
      "ord": 0,
      "clsFix": "米",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/ja/collections/fukano-shuzo/products/saiva-japanese-kome-rice-shochu"
+     ],
+     "sx": {
+      "base": "米",
+      "koji": "白麹",
+      "still": "減圧蒸留",
+      "aging": "低温でじっくり熟成"
+     },
+     "sxEn": {
+      "base": "Rice",
+      "koji": "White koji",
+      "still": "Vacuum distillation",
+      "aging": "Slow low-temperature aging"
+     }
     },
     {
      "mid": "1652",
@@ -23060,7 +23622,22 @@
      "photo": "223/uytr.webp",
      "ord": 1,
      "clsFix": "米",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/ja/collections/fukano-shuzo/products/saiva-japanese-kome-rice-shochu"
+     ],
+     "sx": {
+      "base": "米",
+      "koji": "白麹",
+      "still": "減圧蒸留",
+      "aging": "低温でじっくり熟成"
+     },
+     "sxEn": {
+      "base": "Rice",
+      "koji": "White koji",
+      "still": "Vacuum distillation",
+      "aging": "Slow low-temperature aging"
+     }
     },
     {
      "mid": "1653",
@@ -23097,7 +23674,22 @@
      "photo": "223/uyt.webp",
      "ord": 2,
      "clsFix": "米",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/ja/collections/fukano-shuzo/products/homare-no-tsuyu-japanese-kome-rice-shochu"
+     ],
+     "sx": {
+      "base": "米",
+      "koji": "黒麹",
+      "still": "常圧蒸留",
+      "aging": "江戸時代後期の古い土槽で発酵・熟成"
+     },
+     "sxEn": {
+      "base": "Rice",
+      "koji": "Black koji",
+      "still": "Atmospheric distillation",
+      "aging": "Fermented and aged in an earthen tank from the late Edo period"
+     }
     },
     {
      "mid": "1655",
@@ -23134,7 +23726,22 @@
      "photo": "223/k0208 (86).webp",
      "ord": 3,
      "clsFix": "米",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/ja/collections/fukano-shuzo/products/homare-no-tsuyu-japanese-kome-rice-shochu"
+     ],
+     "sx": {
+      "base": "米",
+      "koji": "黒麹",
+      "still": "常圧蒸留",
+      "aging": "江戸時代後期の古い土槽で発酵・熟成"
+     },
+     "sxEn": {
+      "base": "Rice",
+      "koji": "Black koji",
+      "still": "Atmospheric distillation",
+      "aging": "Fermented and aged in an earthen tank from the late Edo period"
+     }
     },
     {
      "mid": "1656",
@@ -23429,7 +24036,16 @@
      "photo": "223/k0208 (97).webp",
      "ord": 11,
      "clsFix": "栗",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/ja/collections/fukano-shuzo/products/fukano-kuri-cheastnut-japanese-kome-rice-shochu"
+     ],
+     "sx": {
+      "base": "栗・米"
+     },
+     "sxEn": {
+      "base": "Chestnut, rice"
+     }
     },
     {
      "mid": "1670",
@@ -23466,7 +24082,18 @@
      "photo": "223/k0208 (101).webp",
      "ord": 12,
      "clsFix": "米",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://kumashochu.thebase.in/items/74287329"
+     ],
+     "sx": {
+      "base": "米",
+      "still": "減圧蒸留"
+     },
+     "sxEn": {
+      "base": "Rice",
+      "still": "Vacuum distillation"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -23534,7 +24161,13 @@
      "photo": "342/SANFUJI013.webp",
      "typeFix": "スピリッツ",
      "clsFix": "ラム",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "さとうきび（愛媛県産）"
+     },
+     "sxEn": {
+      "base": "Sugarcane (Ehime)"
+     }
     },
     {
      "mid": "4355",
@@ -23571,7 +24204,13 @@
      "photo": "342/SANFUJI014.webp",
      "typeFix": "スピリッツ",
      "clsFix": "ラム",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "さとうきび（愛媛県産）"
+     },
+     "sxEn": {
+      "base": "Sugarcane (Ehime)"
+     }
     },
     {
      "mid": "4356",
@@ -23606,7 +24245,15 @@
      "breweryId": "m342",
      "id": "m342-4356",
      "photo": "342/SANFUJI018.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "本格焼酎（愛媛県製造）",
+      "botanicals": "せとか・紅まどんな・ジュニパーベリー・キウイ・七折小梅・柚子・レモン・久万の檜チップ・新宮茶・カルダモン・シナモン・山椒"
+     },
+     "sxEn": {
+      "base": "Honkaku shochu (made in Ehime)",
+      "botanicals": "Setoka and Beni Madonna citrus, juniper, kiwi, Nanaore ume, yuzu, lemon, Kuma hinoki chips, Shingu tea, cardamom, cinnamon, sansho pepper"
+     }
     },
     {
      "mid": "4357",
@@ -23641,7 +24288,15 @@
      "breweryId": "m342",
      "id": "m342-4357",
      "photo": "342/SANFUJI019.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "本格焼酎（愛媛県製造）",
+      "botanicals": "せとか・紅まどんな・ジュニパーベリー・キウイ・七折小梅・柚子・レモン・久万の檜チップ・新宮茶・カルダモン・シナモン・山椒"
+     },
+     "sxEn": {
+      "base": "Honkaku shochu (made in Ehime)",
+      "botanicals": "Setoka and Beni Madonna citrus, juniper, kiwi, Nanaore ume, yuzu, lemon, Kuma hinoki chips, Shingu tea, cardamom, cinnamon, sansho pepper"
+     }
     },
     {
      "mid": "4358",
@@ -24163,7 +24818,13 @@
      "breweryId": "m188",
      "id": "m188-1012",
      "photo": "188/hug.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "米・米こうじ（国産）"
+     },
+     "sxEn": {
+      "base": "Rice and rice koji (Japan)"
+     }
     },
     {
      "mid": "1013",
@@ -24198,7 +24859,13 @@
      "breweryId": "m188",
      "id": "m188-1013",
      "photo": "188/20.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "botanicals": "ジュニパーベリー・ミカンピール・抹茶・生姜・山椒・キャラウェイシード・レモンピール・シナモン・カモミール・コリアンダー（10種類）"
+     },
+     "sxEn": {
+      "botanicals": "Juniper, mikan peel, matcha, ginger, sansho, caraway, lemon peel, cinnamon, chamomile, coriander (10 botanicals)"
+     }
     },
     {
      "mid": "1014",
@@ -24373,7 +25040,13 @@
      "breweryId": "m188",
      "id": "m188-7507",
      "photo": "188/JUMKI03.webp",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "botanicals": "ジュニパーベリー・ミカンピール・抹茶・生姜・山椒・キャラウェイシード・レモンピール・シナモン・カモミール・コリアンダー（10種類）"
+     },
+     "sxEn": {
+      "botanicals": "Juniper, mikan peel, matcha, ginger, sansho, caraway, lemon peel, cinnamon, chamomile, coriander (10 botanicals)"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -28806,7 +29479,13 @@
      "photo": "182/jih.webp",
      "typeFix": "スピリッツ",
      "clsFix": "グラッパ",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "ぶどう（ネオマスカット）"
+     },
+     "sxEn": {
+      "base": "Grapes (Neo Muscat)"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.344Z",
@@ -34953,7 +35632,18 @@
      "breweryId": "m486",
      "id": "m486-7769",
      "photo": "486/JUMKI265.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/blogs/news/wa-japanese-premium-craft-gin"
+     ],
+     "sx": {
+      "base": "10年熟成の日本酒",
+      "botanicals": "ジュニパーベリー・シナモン・レモンピール・オレンジピールなど7種類"
+     },
+     "sxEn": {
+      "base": "10-year-aged sake",
+      "botanicals": "7 botanicals including juniper, cinnamon, lemon peel and orange peel"
+     }
     },
     {
      "mid": "7770",
@@ -34988,7 +35678,18 @@
      "breweryId": "m486",
      "id": "m486-7770",
      "photo": "486/JUMKI266.webp",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://www.mizunaratheshop.com/blogs/news/wa-japanese-premium-craft-gin"
+     ],
+     "sx": {
+      "base": "10年熟成の日本酒",
+      "botanicals": "ジュニパーベリー・シナモン・レモンピール・オレンジピールなど7種類"
+     },
+     "sxEn": {
+      "base": "10-year-aged sake",
+      "botanicals": "7 botanicals including juniper, cinnamon, lemon peel and orange peel"
+     }
     },
     {
      "mid": "7771",
@@ -35268,7 +35969,18 @@
      "photo": "436/SUNAP01.webp",
      "clsFix": "ブランデー",
      "typeFix": "スピリッツ",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://furunavi.jp/product_detail.aspx?pid=550409"
+     ],
+     "sx": {
+      "base": "りんご（青森県産のみ）",
+      "aging": "樽の色・香りを付けないホワイトブランデー"
+     },
+     "sxEn": {
+      "base": "Apples (Aomori only)",
+      "aging": "Unaged-style white brandy (no cask color or aroma)"
+     }
     },
     {
      "mid": "6988",
@@ -35305,7 +36017,18 @@
      "photo": "436/SUNAP02.webp",
      "clsFix": "ブランデー",
      "typeFix": "スピリッツ",
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://furunavi.jp/product_detail.aspx?pid=550409"
+     ],
+     "sx": {
+      "base": "りんご（青森県産のみ）",
+      "aging": "樽の色・香りを付けないホワイトブランデー"
+     },
+     "sxEn": {
+      "base": "Apples (Aomori only)",
+      "aging": "Unaged-style white brandy (no cask color or aroma)"
+     }
     },
     {
      "mid": "6989",
@@ -35342,7 +36065,13 @@
      "photo": "436/SUNAP03.webp",
      "clsFix": "ブランデー",
      "typeFix": "スピリッツ",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "りんご（青森県産）"
+     },
+     "sxEn": {
+      "base": "Apples (Aomori)"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -36106,7 +36835,20 @@
      "id": "m102-900",
      "photo": "102/JUMKI518.webp",
      "ord": 0,
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/jin7-limited"
+     ],
+     "sx": {
+      "base": "芋焼酎",
+      "botanicals": "21種類（ジュニパーベリー以外は鹿児島県産。パッションフルーツが主役）",
+      "still": "パッションフルーツの果肉と皮を別々に蒸留"
+     },
+     "sxEn": {
+      "base": "Sweet potato shochu",
+      "botanicals": "21 botanicals, all from Kagoshima except juniper; passion fruit is the key botanical",
+      "still": "Passion fruit flesh and peel distilled separately"
+     }
     },
     {
      "mid": "901",
@@ -36142,7 +36884,18 @@
      "id": "m102-901",
      "photo": "102/JUMKI517.webp",
      "ord": 1,
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/jin7-00"
+     ],
+     "sx": {
+      "base": "芋焼酎",
+      "botanicals": "ジュニパーベリー・ローズゼラニウム・ローズマリー・レモングラス・知覧茶・ミント・メキシカンマリーゴールド・黒胡椒・唐辛子・鬼北柚子・ホウショウの葉（11種類）"
+     },
+     "sxEn": {
+      "base": "Sweet potato shochu",
+      "botanicals": "Juniper, rose geranium, rosemary, lemongrass, Chiran tea, mint, Mexican marigold, black pepper, red pepper, Kihoku yuzu, ho leaf (11 botanicals)"
+     }
     },
     {
      "mid": "902",
@@ -36178,7 +36931,18 @@
      "id": "m102-902",
      "photo": "102/JUMKI520.webp",
      "ord": 2,
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/jin7-series-01"
+     ],
+     "sx": {
+      "base": "芋焼酎（黒麹）",
+      "botanicals": "辺塚だいだい・ジュニパーベリー・南九州の緑茶・ローズマリー・ローズゼラニウム・青もみじ（6種類）"
+     },
+     "sxEn": {
+      "base": "Sweet potato shochu (black koji)",
+      "botanicals": "Hetsuka daidai citrus, juniper, Minami-Kyushu green tea, rosemary, rose geranium, green maple leaves (6 botanicals)"
+     }
     },
     {
      "mid": "903",
@@ -36214,7 +36978,20 @@
      "id": "m102-903",
      "photo": "192/155465774.webp",
      "ord": 3,
-     "tEst": true
+     "tEst": true,
+     "sxSrc": [
+      "https://en.ginza-berlin.com/products/jin7-02"
+     ],
+     "sx": {
+      "base": "芋焼酎（黒麹）",
+      "botanicals": "ジュニパーベリー・青もみじ・シナモン・緑茶・月桃・ローズゼラニウム・唐辛子・黒胡椒・ローズマリー・柚子（10種類）",
+      "aging": "桜の木の樽で6か月熟成"
+     },
+     "sxEn": {
+      "base": "Sweet potato shochu (black koji)",
+      "botanicals": "Juniper, green maple leaves, cinnamon, green tea, shell ginger, rose geranium, chili, black pepper, rosemary, yuzu (10 botanicals)",
+      "aging": "6 months in cherry-wood casks"
+     }
     },
     {
      "mid": "907",
@@ -36578,7 +37355,13 @@
      "ord": 13,
      "typeFix": "スピリッツ",
      "clsFix": "ラム",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "黒糖（鹿児島県製造）"
+     },
+     "sxEn": {
+      "base": "Kokuto brown sugar (made in Kagoshima)"
+     }
     },
     {
      "mid": "7984",
@@ -36616,7 +37399,13 @@
      "ord": 14,
      "typeFix": "スピリッツ",
      "clsFix": "ラム",
-     "tEst": true
+     "tEst": true,
+     "sx": {
+      "base": "黒糖（鹿児島県製造）"
+     },
+     "sxEn": {
+      "base": "Kokuto brown sugar (made in Kagoshima)"
+     }
     }
    ],
    "importedAt": "2026-11-11T01:13:11.344Z",
