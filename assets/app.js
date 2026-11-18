@@ -458,7 +458,7 @@ function openBrewery(id,src){
       <div><small>${T("掲載銘柄","Labels")}</small>${list.length}</div>
     </div>
     ${b.points?.length?`<div class="tags" style="margin-bottom:16px">${b.points.map(t=>`<span class="pill" style="font-size:12.5px;padding:2px 12px">${esc(t)}</span>`).join("")}</div>`:""}
-    ${b.web?`<p style="font-size:13px"><a href="${esc(b.web)}" target="_blank" rel="noopener">${esc(b.web)}</a></p>`:""}
+    ${/^https?:\/\//.test(b.web||"")?`<p style="margin:0 0 6px"><a class="btn" href="${esc(b.web)}" target="_blank" rel="noopener">${T("公式サイト","Official website")} ↗</a> <span style="color:var(--mute);font-size:12px;margin-left:6px;word-break:break-all">${esc(b.web.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,""))}</span></p>`:""}
     <h3 style="font-size:17px;margin:22px 0 12px">${T("この蔵のお酒","Bottles from this maker")}</h3>
     <div class="grid">${list.slice(0,120).map(cardHTML).join("")}</div>${list.length>120?`<p style="color:var(--mute);font-size:13px;margin-top:12px">${TN("ほか {n} 銘柄は「お酒を探す」で酒蔵名を検索してください。","{n} more: search this maker on the Browse page.",list.length-120)}</p>`:""}`,src?null:{t:"b",id});
 }

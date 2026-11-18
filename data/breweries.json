@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-18T03:11:08.000Z",
+ "updatedAt": "2026-11-18T05:00:07.000Z",
  "breweries": [
   {
    "brewery": {
@@ -19,7 +19,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.aseedbp.co.jp/",
     "sample": false,
     "kana": "アシードビバレッジプラス",
     "supType": "メーカー"
@@ -587,7 +587,7 @@
      "花酵母の麦焼酎「産声」"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.bungomeijyo.co.jp/",
     "sample": false,
     "kana": "ブンゴメイジョウ",
     "supType": "メーカー"
@@ -829,7 +829,7 @@
      "藩主から授かった銘「加賀鶴」"
     ],
     "visit": "",
-    "web": "",
+    "web": "http://www.yachiya-sake.co.jp/",
     "sample": false,
     "kana": "ヤチヤシュゾウ",
     "supType": "メーカー"
@@ -1590,7 +1590,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.tomitsuru.co.jp/",
     "sample": false,
     "kana": "エチシュゾウ",
     "supType": "メーカー"
@@ -1727,7 +1727,7 @@
      "デーツ焼酎など新しい挑戦"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.obisugi.co.jp/",
     "sample": false,
     "kana": "イノウエシュゾウ",
     "supType": "メーカー"
@@ -1794,7 +1794,7 @@
      "予約制の蔵見学"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.okuhida-sake.jp/",
     "sample": false,
     "kana": "オクヒダシュゾウ",
     "supType": "メーカー"
@@ -2156,7 +2156,7 @@
      "有田の原料にこだわる"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.hanano-shokuhin.jp/",
     "sample": false,
     "kana": "ハナノショクヒン",
     "supType": "メーカー"
@@ -2512,7 +2512,7 @@
      "ゼロウェイストをめざす"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kspyakusou.com/",
     "sample": false,
     "kana": "ケーエスピー",
     "supType": "メーカー"
@@ -3114,7 +3114,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.seawings-group.com/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -3353,7 +3353,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.yamaya.com/",
     "sample": false,
     "kana": "ヤマヤコミュニケーションズ",
     "supType": "メーカー"
@@ -3454,7 +3454,7 @@
      "食事に合う酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kikuyasaka.co.jp/",
     "sample": false,
     "kana": "オカダヤホンテン",
     "supType": "メーカー"
@@ -4016,7 +4016,7 @@
      "水鳥記"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://kakuboshi.mystrikingly.com/",
     "sample": false,
     "kana": "カクボシ",
     "supType": "メーカー"
@@ -4349,7 +4349,7 @@
      "当主自ら酒を造る家訓"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kitaya.co.jp/",
     "sample": false,
     "kana": "キタヤ",
     "supType": "メーカー"
@@ -4756,7 +4756,7 @@
      "紀州の梅酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.nihonsyu-nihonjyou.co.jp/",
     "sample": false,
     "kana": "ヨシムラヒデオショウテン",
     "supType": "メーカー"
@@ -5746,7 +5746,7 @@
      "蔵を改装したレストラン"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.hakusan-takasago.jp/",
     "sample": false,
     "kana": "カナヤシュゾウテン",
     "supType": "メーカー"
@@ -5849,7 +5849,7 @@
      "淡路島の古酒専門店"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://awaji-seikaiha.com/kosyunoya/",
     "sample": false,
     "kana": "コシュノヤ",
     "supType": "商社"
@@ -5992,7 +5992,7 @@
      "樽・甕での長期熟成"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://beniotome.co.jp/",
     "sample": false,
     "kana": "ベニオトメシュゾウ",
     "supType": "メーカー"
@@ -6251,7 +6251,7 @@
      "辛口へのこだわり"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.michisakari.com/",
     "sample": false,
     "kana": "ミチサカリ",
     "supType": "メーカー"
@@ -6349,7 +6349,7 @@
     "introEn": "Makes the plum liqueur Shokibai in Wakayama City.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://shoki-bai.co.jp/",
     "sample": false,
     "kana": "ショウキバイ",
     "supType": "メーカー"
@@ -6452,7 +6452,7 @@
      "日本初の古酒専門蔵"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://oldvintage.jp/",
     "sample": false,
     "kana": "タクミソウセイ",
     "supType": "メーカー"
@@ -6628,7 +6628,7 @@
      "無濾過生原酒「百春」"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://hyakusyun.myshopify.com/",
     "sample": false,
     "kana": "シュゾウジョウ",
     "supType": "メーカー"
@@ -7334,7 +7334,7 @@
      "石川県産梅の加賀梅酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://manzairaku.co.jp/",
     "sample": false,
     "kana": "コボリシュゾウテン",
     "supType": "メーカー"
@@ -7830,7 +7830,7 @@
      "廃棄柑橘の皮を活用"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kamikatz.jp/",
     "sample": false,
     "kana": "カミカツカイタクダン",
     "supType": "メーカー"
@@ -8543,7 +8543,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://nara-izumiya.co.jp/",
     "sample": false,
     "kana": "イズミヤ",
     "supType": "商社"
@@ -8642,7 +8642,7 @@
      "泡盛・ラム・ジン"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://taragawa.co.jp/",
     "sample": false,
     "kana": "タラガワ",
     "supType": "メーカー"
@@ -9086,7 +9086,7 @@
      "地域の6次産業化"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://tango-kingdom.com/",
     "sample": false,
     "kana": "タンゴオウコクブルワリー",
     "supType": "メーカー"
@@ -9900,7 +9900,7 @@
      "蔵見学・日本酒教室"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.watanabesahei.co.jp/",
     "sample": false,
     "kana": "ワタナベサヘイショウテン",
     "supType": "メーカー"
@@ -10925,7 +10925,7 @@
     "introEn": "Makes plum liqueur in Minabe, Wakayama, Japan's best-known plum-growing town.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.baijuen.co.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -11027,7 +11027,7 @@
      "白馬錦"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://hakubanishiki.co.jp/",
     "sample": false,
     "kana": "ウスイショウテン",
     "supType": "メーカー"
@@ -11350,7 +11350,7 @@
      "黒牛"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://kuroushi.co.jp/",
     "sample": false,
     "kana": "ナテシュゾウテン",
     "supType": "メーカー"
@@ -11750,7 +11750,7 @@
      "米国へ輸出"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://ochiaishuzojyo.jp/",
     "sample": false,
     "kana": "オチアイシュゾウジョウ",
     "supType": "メーカー"
@@ -11850,7 +11850,7 @@
     "introEn": "Makes HAMADA plum liqueurs, including a five-year aged version, in Tanabe, Wakayama.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://ume-hamada.co.jp/",
     "sample": false,
     "kana": "ハマダ",
     "supType": "メーカー"
@@ -12436,7 +12436,7 @@
      "国登録有形文化財"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kankyo-shuzo.co.jp/",
     "sample": false,
     "kana": "カンキョウシュゾウ",
     "supType": "メーカー"
@@ -12758,7 +12758,7 @@
      "昭和30年代からの古酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.iwanoi.com/",
     "sample": false,
     "kana": "イワセシュゾウ",
     "supType": "メーカー"
@@ -13586,7 +13586,7 @@
      "高知の柑橘"
     ],
     "visit": "",
-    "web": "",
+    "web": "http://www.tosa-kikusui.co.jp/",
     "sample": false,
     "kana": "キクスイシュゾウ",
     "supType": "メーカー"
@@ -14652,7 +14652,7 @@
      "日本酒・ビール・ウイスキー"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.msb.co.jp/",
     "sample": false,
     "kana": "ミヤシタシュゾウ",
     "supType": "メーカー"
@@ -15618,7 +15618,7 @@
      "筑後平野の大麦"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://e-kenjou.com/",
     "sample": false,
     "kana": "ケンジョウ",
     "supType": "メーカー"
@@ -15963,7 +15963,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://furusawa.co.jp/",
     "sample": false,
     "kana": "フルサワシュゾウ",
     "supType": "メーカー"
@@ -16182,7 +16182,7 @@
      "国士無双"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.takasagoshuzo.com/",
     "sample": false,
     "kana": "タカサゴシュゾウ",
     "supType": "メーカー"
@@ -16649,7 +16649,7 @@
      "仁淀川"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://kochisake.com/",
     "sample": false,
     "kana": "コウチシュゾウ",
     "supType": "メーカー"
@@ -17155,7 +17155,7 @@
     "introEn": "A shochu maker in Usuki, Oita, producing Dotton honkaku shochu.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "http://akamineshuzou.co.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -17324,7 +17324,7 @@
     "introEn": "Makes Kuma shochu in Mizukami, Kumamoto, a mountain village near the source of the Kuma River; flagship label Oishi.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://ohishi-shuzohjyo.jp/",
     "sample": false,
     "kana": "オオイシシュゾウジョウ",
     "supType": "メーカー"
@@ -17391,7 +17391,7 @@
      "球磨焼酎"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.yamato1.com/",
     "sample": false,
     "kana": "ヤマトイチシュゾウモト",
     "supType": "メーカー"
@@ -17603,7 +17603,7 @@
      "生酛造り"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kunimare.co.jp/",
     "sample": false,
     "kana": "クニマレシュゾウ",
     "supType": "メーカー"
@@ -17937,7 +17937,7 @@
     "introEn": "A shochu maker in Makurazaki, Kagoshima, known for Satsuma Shiranami.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "http://www.satsuma.co.jp/",
     "sample": false,
     "kana": "サツマシュゾウ",
     "supType": "メーカー"
@@ -18073,7 +18073,7 @@
      "地酒は文化"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://zuikan.jp/",
     "sample": false,
     "kana": "ヤマオカシュゾウ",
     "supType": "メーカー"
@@ -18315,7 +18315,7 @@
      "奥丹波"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://okutamba.co.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -18378,7 +18378,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://wakamiyasyuzou-kyoto.com/",
     "sample": false,
     "kana": "ワカミヤシュゾウ",
     "supType": "メーカー"
@@ -19784,7 +19784,7 @@
      "自社工場で一貫製造"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://benichu.net/",
     "sample": false,
     "kana": "ワカサミカタビバレッジ",
     "supType": "メーカー"
@@ -19995,7 +19995,7 @@
      "全商品60%精米"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://syuugetu.jp/",
     "sample": false,
     "kana": "カリバイチシュゾウ",
     "supType": "メーカー"
@@ -20666,7 +20666,7 @@
      "島の日本酒を復活"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.omoyashuzo.com/",
     "sample": false,
     "kana": "オモイエシュゾウ",
     "supType": "メーカー"
@@ -20804,7 +20804,7 @@
      "木樽蒸留と甕仕込み"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.izumi-syuzou.co.jp/",
     "sample": false,
     "kana": "イズミシュゾウ",
     "supType": "メーカー"
@@ -21147,7 +21147,7 @@
      "地元天野の酒米"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://hatsusakurashuzo.com/",
     "sample": false,
     "kana": "ハツサクラシュゾウ",
     "supType": "メーカー"
@@ -21420,7 +21420,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://ogidistillery.jp/",
     "sample": false,
     "kana": "オギカンコウマチヅクリ",
     "supType": "メーカー"
@@ -21484,7 +21484,7 @@
     "introEn": "Makes Kuma shochu in Mizukami, Kumamoto; flagship Saikogura.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.matsushitashuzo.com/",
     "sample": false,
     "kana": "マツシタジョウゾウジョウ",
     "supType": "メーカー"
@@ -21589,7 +21589,7 @@
      "六角牛山の伏流水"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://kamihei-shuzo.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -21988,7 +21988,7 @@
      "京都府産米"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://joyo-shuzo.co.jp/",
     "sample": false,
     "kana": "ジョウヨウシュゾウ",
     "supType": "メーカー"
@@ -22917,7 +22917,7 @@
      "沖縄戦からの再出発"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://shinzato-shuzo.co.jp/",
     "sample": false,
     "kana": "シンザトシュゾウ",
     "supType": "メーカー"
@@ -22980,7 +22980,7 @@
     "introEn": "A Kuma shochu maker in Hitoyoshi, Kumamoto, producing Iroha.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.shop-fukano.jp/",
     "sample": false,
     "kana": "フカノシュゾウ",
     "supType": "メーカー"
@@ -23491,7 +23491,7 @@
      "仁喜多津・道後ビール"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://minakuchi-shuzo.jp/",
     "sample": false,
     "kana": "ミナクチシュゾウ",
     "supType": "メーカー"
@@ -24052,7 +24052,7 @@
     "introEn": "A brewery in Kiyosu, Aichi, known for its Onikoroshi sake.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://onikoroshi.co.jp/",
     "sample": false,
     "kana": "キヨスサクラシュゾウ",
     "supType": "メーカー"
@@ -24397,7 +24397,7 @@
      "清里産じゃがいも"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://kiyosato-shochu.com/",
     "sample": false,
     "kana": "キヨシサトショウチュウジョウゾウジョ",
     "supType": "メーカー"
@@ -24500,7 +24500,7 @@
      "麦焼酎つくし"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://nishiyoshida.jp/",
     "sample": false,
     "kana": "ニシヨシダシュゾウ",
     "supType": "メーカー"
@@ -24743,7 +24743,7 @@
      "浅間山系の伏流水"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.chikumanishiki.com/",
     "sample": false,
     "kana": "チクマニシキ",
     "supType": "メーカー"
@@ -24845,7 +24845,7 @@
      "鑑評会金賞6回"
     ],
     "visit": "",
-    "web": "",
+    "web": "http://www.sentoku.com/",
     "sample": false,
     "kana": "セントクシュゾウ",
     "supType": "メーカー"
@@ -25409,7 +25409,7 @@
     "introEn": "A shochu maker in Kagoshima City producing Sagara sweet-potato shochu.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://sagarasyuzou.com/",
     "sample": false,
     "kana": "サガラシュゾウ",
     "supType": "メーカー"
@@ -25612,7 +25612,7 @@
     "introEn": "A brewery in Shiroishi, Miyagi, with an exhibition hall on site.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.zaoshuzo.com/",
     "sample": false,
     "kana": "ザオウシュゾウ",
     "supType": "メーカー"
@@ -25710,7 +25710,7 @@
     "introEn": "A shochu maker in Osaki, Kagoshima; flagship Hanayakko.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://ookuboshuzo.com/",
     "sample": false,
     "kana": "フトクボシュゾウ",
     "supType": "メーカー"
@@ -25916,7 +25916,7 @@
      "滋賀県産の原料"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.ohta-shuzou.co.jp/",
     "sample": false,
     "kana": "オオタシュゾウ",
     "supType": "メーカー"
@@ -26199,7 +26199,7 @@
     "introEn": "A brewery in Haguro, Tsuruoka, Yamagata, making Hakuro Suishu.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.takenotsuyu.com/",
     "sample": false,
     "kana": "タケノツユ",
     "supType": "メーカー"
@@ -27248,7 +27248,7 @@
     "introEn": "A brewery in Ikoma, Nara, making Yamatsuru.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://yamaturu.com/",
     "sample": false,
     "kana": "ナカモトシュゾウテン",
     "supType": "メーカー"
@@ -27385,7 +27385,7 @@
      "長期貯蔵"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://satoake.jp/",
     "sample": false,
     "kana": "マチダシュゾウ",
     "supType": "メーカー"
@@ -27701,7 +27701,7 @@
     "introEn": "A brewery in Chikuma, Nagano, making the long-loved local label Obasute Masamune.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "http://www.obasute.co.jp/",
     "sample": false,
     "kana": "ナガノメイジョウ",
     "supType": "メーカー"
@@ -27869,7 +27869,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.sozaigura.com/",
     "sample": false,
     "kana": "テンネンソザイグラ",
     "supType": "メーカー"
@@ -27969,7 +27969,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://harunomine.com/",
     "sample": false,
     "kana": "タナカシュゾウ",
     "supType": "メーカー"
@@ -28137,7 +28137,7 @@
     "introEn": "A brewery in Sakai, Ibaraki, whose Hagiwara junmai daiginjo won gold at the 2025 Bishu Concours.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.tokumasamune.com/",
     "sample": false,
     "kana": "ハギワラシュゾウ",
     "supType": "メーカー"
@@ -28371,7 +28371,7 @@
      "旧長岡藩主の酒蔵"
     ],
     "visit": "",
-    "web": "",
+    "web": "http://www.hakuroshuzo.co.jp/",
     "sample": false,
     "kana": "ハクロシュゾウ",
     "supType": "メーカー"
@@ -28520,7 +28520,7 @@
      "西郷隆盛の言い伝え"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.shirakane.jp/",
     "sample": false,
     "kana": "シロガネシュゾウ",
     "supType": "メーカー"
@@ -28763,7 +28763,7 @@
      "勝沼の甲州"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://shirayuriwine.com/",
     "sample": false,
     "kana": "シラユリジョウゾウ",
     "supType": "メーカー"
@@ -28831,7 +28831,7 @@
      "樽貯蔵への挑戦"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://yaesen.com/",
     "sample": false,
     "kana": "ヤエセンシュゾウ",
     "supType": "メーカー"
@@ -28903,7 +28903,7 @@
      "4代目による再建"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://houmeishu.jp/",
     "sample": false,
     "kana": "ハッタホウメイシュホ",
     "supType": "メーカー"
@@ -29150,7 +29150,7 @@
      "対岸の湧水"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.himeizumi.co.jp/",
     "sample": false,
     "kana": "ヒメイズミシュゾウ",
     "supType": "メーカー"
@@ -29305,7 +29305,7 @@
      "鑑評会金賞常連"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.naebasan.com/",
     "sample": false,
     "kana": "ナエバシュゾウ",
     "supType": "メーカー"
@@ -29868,7 +29868,7 @@
      "能登杜氏の流れ"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://fuji-takasago.com/",
     "sample": false,
     "kana": "フジタカサゴシュゾウ",
     "supType": "メーカー"
@@ -34424,7 +34424,7 @@
     "introEn": "A Kuma shochu maker in Hitoyoshi, Kumamoto, producing Sanga and Taru Mikoshi.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://fukudashuzo.com/",
     "sample": false,
     "kana": "フクダシュゾウ",
     "supType": "メーカー"
@@ -34740,7 +34740,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.musashino-asahara.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -34809,7 +34809,7 @@
     "introEn": "",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "https://www.meimon.co.jp/",
     "sample": false,
     "kana": "メイモンサカイ",
     "supType": "メーカー"
@@ -34912,7 +34912,7 @@
      "百年梅酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://meirishurui.com/",
     "sample": false,
     "kana": "メイリシュルイ",
     "supType": "メーカー"
@@ -35225,7 +35225,7 @@
      "白神酵母"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.mohodori.shop/",
     "sample": false,
     "kana": "サンアップルジョウゾウジャパン",
     "supType": "メーカー"
@@ -35435,7 +35435,7 @@
      "ヒノキの麹棚"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://nakijinshuzo.jp/",
     "sample": false,
     "kana": "ナキジンジンシュゾウ",
     "supType": "メーカー"
@@ -35501,7 +35501,7 @@
      "名取川の伏流水"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://housen-naminooto.com/",
     "sample": false,
     "kana": "ササキシュゾウテン",
     "supType": "メーカー"
@@ -35747,7 +35747,7 @@
      "焙煎・燻蒸の技法"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.jyotokuya.com/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -36064,7 +36064,7 @@
     "introEn": "A shochu maker in Ibusuki, Kagoshima, producing Satsuma no Homare.",
     "points": [],
     "visit": "",
-    "web": "",
+    "web": "http://www.jin7.co.jp/",
     "sample": false,
     "kana": "オオヤマジンシチショウテン",
     "supType": "メーカー"
@@ -36641,7 +36641,7 @@
      "加水しない原酒"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://niseko-shuzo.com/",
     "sample": false,
     "kana": "ニセコシュゾウ",
     "supType": "メーカー"
@@ -36708,7 +36708,7 @@
      "大手門"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.sakekura.net/",
     "sample": false,
     "kana": "スズキシュゾウ",
     "supType": "メーカー"
@@ -36992,7 +36992,7 @@
      "有田みかん・梅"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://yuasa-winery.jp/",
     "sample": false,
     "supType": "メーカー"
    },
@@ -37512,7 +37512,7 @@
      "海童"
     ],
     "visit": "",
-    "web": "",
+    "web": "https://www.hamadasyuzou.co.jp/",
     "sample": false,
     "supType": "メーカー"
    },
