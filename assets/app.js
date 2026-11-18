@@ -448,6 +448,8 @@ function openDlg(html,view){
   dlgView=view||null;
   $("#dlgBody").innerHTML=`<button class="close" type="button" aria-label="${T("閉じる","Close")}" data-close>×</button>`+html;
   if(typeof dlg.showModal==="function"){ if(!dlg.open) dlg.showModal(); } else dlg.setAttribute("open","");
+  // iPhone の Safari は、ダイアログの中の loading="lazy" の画像を読み込まないことがあるので、ダイアログ内はすぐ読み込む（2026/11/18）
+  $("#dlgBody").querySelectorAll('img[loading="lazy"]').forEach(i=>{ i.loading="eager"; });
   $("#dlgBody").scrollTop=0;
 }
 function radar(p){

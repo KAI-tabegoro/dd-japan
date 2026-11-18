@@ -817,3 +817,6 @@ button.lcard:hover{border-color:var(--gold-hi)}
 .hero3 .bg.slide.on{opacity:1}
 .hero3:has(.bg.slide.on) .bg:not(.slide){opacity:0}
 @media (max-width:1000px){.hero3 .bg.slide{inset:0 0 auto 0;height:clamp(230px,52vw,380px)}}
+
+/* 「料理から探す」は準備中のため非表示（2026/11/18）。公開するときはこの行を消す */
+.foods{display:none}
