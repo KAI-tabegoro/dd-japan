@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-12T01:57:35.000Z",
+ "updatedAt": "2026-11-17T09:59:54.316Z",
  "breweries": [
   {
    "brewery": {
@@ -14595,7 +14595,8 @@
      "src": "master",
      "breweryId": "m523",
      "id": "m523-8112",
-     "photo": "523/FUKUSI27.webp"
+     "photo": "523/FUKUSI27.webp",
+     "ord": 0
     },
     {
      "mid": "8113",
@@ -14624,7 +14625,8 @@
      "src": "master",
      "breweryId": "m523",
      "id": "m523-8113",
-     "photo": "523/FUKUSI30.webp"
+     "photo": "523/FUKUSI30.webp",
+     "ord": 1
     },
     {
      "mid": "8114",
@@ -14653,36 +14655,8 @@
      "src": "master",
      "breweryId": "m523",
      "id": "m523-8114",
-     "photo": "523/FUKUSI28.webp"
-    },
-    {
-     "mid": "8115",
-     "name": "瑞冠 純米吟醸 きもと中汲み",
-     "nameEn": "Zuikan Junmai Ginjou Kimoto Nakakumi (ALC.16%)",
-     "nameZh": "瑞冠　純米吟釀　生酛中取",
-     "type": "日本酒",
-     "cls": "純米吟醸",
-     "material": "",
-     "materialEn": "",
-     "abv": 16,
-     "abvText": "16%",
-     "ml": 720,
-     "spec": null,
-     "storage": "",
-     "storageEn": "",
-     "desc": "蔵付き酵母を使用した伝統のきもと仕込み酒の味わいのきれいな部分のみで詰めた中汲み酒。豊かな味わい、爽やかな酸味、熟成による旨味が食事を一層引き立てます。",
-     "descEn": "A nakakumi (middle-drawn) sake using only the cleanest portion of a traditional kimoto brew made with house-cultivated yeast. Rich flavor, refreshing acidity, and aged umami that beautifully complements any meal.",
-     "descZh": "使用蔵付酵母以傳統生酛釀製，僅取最純淨部分裝瓶的中取酒。風味豐富，酸味清爽，熟成鮮味突出，能充分提升餐食的整體風味。",
-     "jan": "",
-     "imgSrc": "/uploads/maker/523/FUKUSI32.png",
-     "t": null,
-     "tags": [],
-     "serve": [],
-     "food": "",
-     "src": "master",
-     "breweryId": "m523",
-     "id": "m523-8115",
-     "photo": "523/FUKUSI32.webp"
+     "photo": "523/FUKUSI28.webp",
+     "ord": 2
     },
     {
      "mid": "8116",
@@ -14713,36 +14687,8 @@
      "src": "master",
      "breweryId": "m523",
      "id": "m523-8116",
-     "photo": "523/FUKUSI31.webp"
-    },
-    {
-     "mid": "8117",
-     "name": "瑞冠 純米きもと 合鴨米",
-     "nameEn": "Zuikan Junmai Kimoto Aigamo-mai (ALC.15%)",
-     "nameZh": "瑞冠　純米生酛　合鴨米",
-     "type": "日本酒",
-     "cls": "純米",
-     "material": "",
-     "materialEn": "",
-     "abv": 15,
-     "abvText": "15%",
-     "ml": 720,
-     "spec": null,
-     "storage": "",
-     "storageEn": "",
-     "desc": "農薬＆化学肥料を使用しない合鴨農法米使用。蔵内の微生物が醸し出すきもと仕込みを、蔵内と自社トンネルで４年間長期貯蔵。旨味がまろやかに成長した豊潤辛口の秘蔵酒です。",
-     "descEn": "Made with rice grown using the aigamo (duck-farming) method, free from pesticides and chemical fertilizers. The kimoto brew, fermented by the brewery's natural microorganisms, is stored for 4 years in the brewery and its private tunnel cellar. A richly flavorful, dry reserve sake with beautifully mellowed umami.",
-     "descZh": "使用不施農藥及化學肥料的合鴨農法米釀造。以蔵內微生物進行生酛釀製，在酒藏及自有隧道中長期貯藏4年。鮮味圓潤成熟，是一款豐潤辛口的珍藏清酒。",
-     "jan": "",
-     "imgSrc": "/uploads/maker/523/FUKUSI33.png",
-     "t": null,
-     "tags": [],
-     "serve": [],
-     "food": "",
-     "src": "master",
-     "breweryId": "m523",
-     "id": "m523-8117",
-     "photo": "523/FUKUSI33.webp"
+     "photo": "523/FUKUSI31.webp",
+     "ord": 3
     },
     {
      "mid": "8118",
@@ -14771,7 +14717,8 @@
      "src": "master",
      "breweryId": "m523",
      "id": "m523-8118",
-     "photo": "523/FUKUSI29.webp"
+     "photo": "523/FUKUSI29.webp",
+     "ord": 4
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
