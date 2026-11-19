@@ -7212,7 +7212,8 @@
       "rice": "Mino Nishiki (Gifu)",
       "method": "Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5302",
