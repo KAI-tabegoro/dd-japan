@@ -3818,7 +3818,7 @@
      "src": "master",
      "breweryId": "m103",
      "id": "m103-4769",
-     "photo": "103/ODYAK09.webp",
+     "photo": "103/ODYAK15.webp",
      "tEst": true,
      "sxSrc": [
       "https://www.kikuyasaka.co.jp/shochu"
@@ -18685,12 +18685,16 @@
     "nameEn": "Wakamiya Shuzo",
     "pref": "京都府",
     "city": "綾部市",
-    "founded": "",
+    "founded": "1920年",
     "maker": "",
-    "catch": "",
-    "intro": "",
-    "introEn": "",
-    "points": [],
+    "catch": "「蚕都」綾部の名を映す酒、綾小町",
+    "intro": "京都府綾部市の酒蔵。明治のころから地元で親しまれていた三丹酒造を受け継ぎ、1920年に若宮酒造となりました。このとき若宮神社の宮水を使い始め、銘柄も「綾小町」に改めています。かつて養蚕で栄え「蚕都」と呼ばれた綾部で機を織る娘の姿と、「綾部の酒」という意味が込められた名前です。丹波・但馬の杜氏から受け継いだ手造りを守り、綾部産の酒米「祝」を使った純米大吟醸など、地元の米と水にこだわった酒を、ビール会社での経験を持つ蔵元自らが杜氏となって醸しています。",
+    "introEn": "A sake brewery in Ayabe, Kyoto. It took over Santan Shuzo, a local favorite since the Meiji era, and became Wakamiya Shuzo in 1920. At that time it began using water from Wakamiya Shrine and renamed its sake Ayakomachi, a name that evokes the young weavers of Ayabe, once known as the \"silk capital,\" and means \"sake of Ayabe.\" Keeping the handcrafted methods handed down by Tanba and Tajima brewers, the owner, who previously worked at a beer company, now serves as toji himself, making sake from local water and rice, including a junmai daiginjo brewed with Iwai rice grown in Ayabe.",
+    "points": [
+     "1920年から続く綾部の蔵",
+     "若宮神社の宮水",
+     "綾部産の酒米「祝」"
+    ],
     "visit": "",
     "web": "https://wakamiyasyuzou-kyoto.com/",
     "sample": false,
@@ -28640,7 +28644,8 @@
      "id": "m193-7778",
      "photo": "193/JUMKI274.webp",
      "clsFix": "たんかん",
-     "tEst": true
+     "tEst": true,
+     "hidden": true
     }
    ],
    "importedAt": "2026-11-11T01:13:11.345Z",
@@ -35797,7 +35802,7 @@
     ],
     "nameEn": "Asahara Shuzo",
     "pref": "埼玉県",
-    "city": "",
+    "city": "入間郡毛呂山町",
     "founded": "",
     "maker": "",
     "catch": "",
@@ -36299,26 +36304,27 @@
    "brewery": {
     "id": "m436",
     "name": "有限会社サンアップル醸造ジャパン",
-    "short": "サンアップル醸造ジャパン",
+    "short": "モホドリ蒸溜研究所",
     "srcIds": [
      "436"
     ],
-    "nameEn": "Sun Apple Brewing Japan",
+    "nameEn": "Mohodori Distillery",
     "pref": "青森県",
-    "city": "つがる市",
-    "founded": "",
+    "city": "五所川原市",
+    "founded": "2021年",
     "maker": "",
-    "catch": "青森りんごのブランデー",
-    "intro": "青森県産のりんごと白神山地の酵母でアップルブランデー「LOVEVADOS」を造っています。蒸留所は五所川原市の「モホドリ蒸溜研究所」です。",
-    "introEn": "Makes LOVEVADOS apple brandy from Aomori apples and Shirakami yeast at the Mohodori distilling lab in Goshogawara.",
+    "catch": "津軽のりんごから生まれる、白いアップルブランデー",
+    "intro": "青森県五所川原市の蒸溜所。2021年に開業し、五所川原周辺で育った加工用りんごからアップルブランデー「LOVEVADOS（ラブヴァドス）」を造っています。原料は津軽のりんご、世界遺産・白神山地で採取された酵母、岩木山麓の伏流水と、すべて青森県産。中心となるのは樽で寝かせない白いブランデーで、りんごのみずみずしい香りとすっきりした味わいが持ち味です。「モホドリ」は津軽弁でフクロウのこと。りんご畑を守るフクロウのように、りんご農家とりんご産業を支えたいという思いが込められています。",
+    "introEn": "A distillery in Goshogawara, Aomori, opened in 2021. It makes the apple brandy LOVEVADOS from processing-grade apples grown around Goshogawara. Everything comes from Aomori: Tsugaru apples, yeast collected in the Shirakami-Sanchi World Heritage forest, and spring water from the foot of Mount Iwaki. Its core spirit is a white brandy that is not aged in barrels, bringing out a fresh apple aroma and a clean finish. \"Mohodori\" means owl in the Tsugaru dialect: like the owls that guard the orchards, the distillery hopes to support local apple growers and the apple industry.",
     "points": [
-     "青森県産りんご",
-     "白神酵母"
+     "100%青森県産のアップルブランデー",
+     "白神山地の酵母",
+     "津軽弁で「フクロウ」"
     ],
     "visit": "",
     "web": "https://www.mohodori.shop/",
     "sample": false,
-    "kana": "サンアップルジョウゾウジャパン",
+    "kana": "モホドリジョウリュウケンキュウジョ",
     "supType": "メーカー"
    },
    "products": [
@@ -36904,7 +36910,8 @@
      "breweryId": "m335",
      "id": "m335-4370",
      "photo": "335/830-7.webp",
-     "tEst": true
+     "tEst": true,
+     "hidden": true
     },
     {
      "mid": "4371",
