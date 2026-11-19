@@ -716,17 +716,21 @@
     "srcIds": [
      "533"
     ],
-    "nameEn": "",
+    "nameEn": "Maruyama Shokuhin (Umemizuki)",
     "pref": "和歌山県",
     "city": "日高郡みなべ町",
     "founded": "",
     "maker": "",
-    "catch": "",
-    "intro": "",
-    "introEn": "",
-    "points": [],
+    "catch": "梅の里みなべの、梅干し一筋の造り手",
+    "intro": "和歌山県みなべ町の梅干しメーカーで、「梅見月」のブランドで知られます。「日本一の梅の里」みなべで、大粒で完熟した南高梅を選び抜き、伝統の製法に新しい技を合わせて梅干し一筋に取り組んできました。その梅を生かした梅酒も手がけ、雪室で熟成させた「REKISHI」や「蒼の雫」を造っています。",
+    "introEn": "An umeboshi (pickled plum) maker in Minabe, Wakayama, known for its Umemizuki brand. In Minabe, often called Japan's top plum village, it selects large, fully ripe Nanko plums and has devoted itself to umeboshi, combining traditional methods with new techniques. It also makes umeshu from these plums, including REKISHI, aged in a snow storehouse, and Ao no Shizuku.",
+    "points": [
+     "みなべ産の南高梅",
+     "梅干し一筋",
+     "雪室熟成の梅酒"
+    ],
     "visit": "",
-    "web": "",
+    "web": "https://www.umemizuki.co.jp/",
     "sample": false,
     "kana": "マルヤマショクヒン",
     "supType": "メーカー"
@@ -2947,23 +2951,27 @@
    "brewery": {
     "id": "m453",
     "name": "株式会社サンフェステ",
-    "short": "サンフェステ",
+    "short": "亀岡蒸留所",
     "srcIds": [
      "453"
     ],
-    "nameEn": "Sun Feste",
+    "nameEn": "Kameoka Distillery",
     "pref": "京都府",
     "city": "亀岡市",
     "founded": "1994",
     "maker": "",
-    "catch": "亀岡の地域密着の造り手",
-    "intro": "1994年に京都・亀岡で創業した地域密着の会社で、スーパーや飲食の事業とともに焼酎づくりを手がけています。",
-    "introEn": "Founded in 1994 in Kameoka, Kyoto, this community-rooted company runs supermarkets and restaurants and also makes shochu.",
-    "points": [],
+    "catch": "京都で育った芋を、京都で醸す",
+    "intro": "京都府亀岡市の焼酎蒸留所（運営：株式会社サンフェステ）。亀岡で育てた紫芋「パープルスイートロード」を原料に、日本酒の技を取り入れた芋焼酎を造っています。保津川・桂川が流れ、昼夜の寒暖差が生む深い朝霧に包まれる亀岡盆地の風土を生かし、上品さと力強さをあわせ持つ味わいをめざしています。",
+    "introEn": "A shochu distillery in Kameoka, Kyoto, run by Sun Feste Co., Ltd. It makes sweet potato shochu from Purple Sweet Road potatoes grown in Kameoka, applying sake-brewing techniques. Set in the Kameoka basin, with the Hozu and Katsura rivers and the deep morning fog that comes from large swings between day and night temperatures, it aims for a style that is both refined and bold.",
+    "points": [
+     "亀岡産の紫芋",
+     "日本酒の技を生かした焼酎",
+     "オーク樽貯蔵も"
+    ],
     "visit": "",
-    "web": "",
+    "web": "https://www.kameoka-distillery.com/",
     "sample": false,
-    "kana": "サンフェステ",
+    "kana": "カメオカジョウリュウジョ",
     "supType": "メーカー"
    },
    "products": [
@@ -3339,23 +3347,27 @@
    "brewery": {
     "id": "m469",
     "name": "株式会社やまやコミュニケーションズ",
-    "short": "やまやコミュニケーションズ",
+    "short": "やまや蒸留所",
     "srcIds": [
      "469"
     ],
-    "nameEn": "",
-    "pref": "福岡県",
-    "city": "糟屋郡篠栗町",
-    "founded": "",
+    "nameEn": "Yamaya Distillery",
+    "pref": "宮崎県",
+    "city": "西都市",
+    "founded": "明治初期",
     "maker": "",
-    "catch": "",
-    "intro": "",
-    "introEn": "",
-    "points": [],
+    "catch": "「吉田の焼酎」から150年、西都の小さな蒸留所",
+    "intro": "宮崎県西都市の焼酎蔵。明治初期に西都の吉田地区で「吉田の焼酎」として始まり、約150年続く小さな蔵です。昔ながらの製法と地元の自然・水を大切にしながら、本格芋焼酎「正春」「逢初」や甕貯蔵の焼酎、芋焼酎をベースにした果実のリキュール、クラフトジン「MASAHARU」まで手がけています。Kura Master や ISC、IWSC などの国際コンペティションでも受賞を重ねています。",
+    "introEn": "A shochu distillery in Saito, Miyazaki. It began in the early Meiji era as \"Yoshida shochu\" in the town's Yoshida district and has continued for about 150 years as a small, traditional maker that values local nature and water. Alongside honkaku sweet-potato shochu such as Masaharu and Aisome and clay-pot-aged shochu, it makes fruit liqueurs based on imo shochu and the Japanese craft gin MASAHARU, and has won awards at competitions including Kura Master, ISC and IWSC.",
+    "points": [
+     "明治初期から約150年",
+     "芋焼酎の蔵が造るジン",
+     "国際コンペで受賞"
+    ],
     "visit": "",
-    "web": "https://www.yamaya.com/",
+    "web": "https://yamayadistillery.com/",
     "sample": false,
-    "kana": "ヤマヤコミュニケーションズ",
+    "kana": "ヤマヤジョウリュウジョ",
     "supType": "メーカー"
    },
    "products": [
@@ -7938,7 +7950,7 @@
      "廃棄柑橘の皮を活用"
     ],
     "visit": "",
-    "web": "https://www.kamikatz.jp/",
+    "web": "https://komeshu.kaitakudan.net/",
     "sample": false,
     "kana": "カミカツカイタクダン",
     "supType": "メーカー"
@@ -26075,16 +26087,20 @@
      "244"
     ],
     "nameEn": "Sagara Shuzo",
-    "pref": "鹿児島県",
-    "city": "鹿児島市",
-    "founded": "",
+    "pref": "栃木県",
+    "city": "栃木市",
+    "founded": "1831",
     "maker": "",
-    "catch": "鹿児島市の焼酎蔵",
-    "intro": "鹿児島市の焼酎蔵で、芋焼酎「相良」を造っています。",
-    "introEn": "A shochu maker in Kagoshima City producing Sagara sweet-potato shochu.",
-    "points": [],
+    "catch": "日光連山の伏流水で醸す、岩舟の蔵",
+    "intro": "栃木県栃木市岩舟町の酒蔵。1831年（天保2年）、越後から酒造りに適した水を求めてこの地に移り創業しました。敷地内の井戸から汲む日光連山の伏流水（軟水）で仕込み、十代目の蔵元が自ら杜氏を務めています。代表銘柄は「朝日榮」。地元の山の名を冠した「三毳山」、「東照」も醸しています。",
+    "introEn": "A sake brewery in Iwafune, Tochigi City, founded in 1831 when its founder moved from Echigo in search of water suited to brewing. It brews with soft underground water from the Nikko mountains drawn from its own well, and the tenth-generation owner serves as toji. Its main label is Asahi Sakae; it also makes Mikamoyama, named after a local mountain, and Tosho.",
+    "points": [
+     "1831年創業",
+     "日光連山の伏流水（軟水）",
+     "十代目の蔵元が杜氏"
+    ],
     "visit": "",
-    "web": "https://sagarasyuzou.com/",
+    "web": "https://asahisakae.com/",
     "sample": false,
     "kana": "サガラシュゾウ",
     "supType": "メーカー"
@@ -37482,26 +37498,27 @@
    "brewery": {
     "id": "m488",
     "name": "鈴木酒造株式会社",
-    "short": "鈴木酒造",
+    "short": "鈴木酒造店",
     "srcIds": [
      "488"
     ],
-    "nameEn": "Suzuki Shuzo",
-    "pref": "埼玉県",
-    "city": "さいたま市",
-    "founded": "1871",
+    "nameEn": "Suzuki Shuzoten (Hideyoshi)",
+    "pref": "秋田県",
+    "city": "大仙市",
+    "founded": "1688〜1704",
     "maker": "",
-    "catch": "城下町岩槻の蔵",
-    "intro": "明治4年（1871年）創業、さいたま市岩槻区の蔵です。杜氏の確かな技で深みのある酒を醸し、「大手門」や久伊豆神社の奉納酒「万両」で知られます。",
-    "introEn": "Founded in 1871 in the castle town of Iwatsuki, Saitama, it is known for Otemon and Manryo, the sacred sake of Hisaizu Shrine.",
+    "catch": "「秀よし」で知られる、秋田・大仙の老舗",
+    "intro": "秋田県大仙市長野の酒蔵で、元禄年間（1688〜1704年）の創業。江戸時代には佐竹藩の御用達を務めました。代表銘柄は「秀よし」。秋田の良質な原料で酒を醸し、純米大吟醸は2019年のIWC（インターナショナル・ワイン・チャレンジ）でトロフィーを受賞しています。明治期の本店・蔵が残り、文庫蔵では古い酒造りの記録や美術品を見られます（見学は予約制）。",
+    "introEn": "A brewery in Nagano, Daisen City, Akita, founded in the Genroku era (1688–1704), which served as purveyor to the Satake domain in the Edo period. Its flagship label is Hideyoshi, brewed from quality Akita ingredients; its junmai daiginjo won a trophy at the 2019 International Wine Challenge. Its Meiji-era main house and brewery still stand, and the Bunko-gura storehouse displays old brewing records and art (tours by reservation).",
     "points": [
-     "城下町の蔵",
-     "大手門"
+     "元禄年間創業",
+     "佐竹藩御用達",
+     "IWC2019 トロフィー"
     ],
     "visit": "",
-    "web": "https://www.sakekura.net/",
+    "web": "https://www.hideyoshi.co.jp/",
     "sample": false,
-    "kana": "スズキシュゾウ",
+    "kana": "スズキシュゾウテン",
     "supType": "メーカー"
    },
    "products": [
