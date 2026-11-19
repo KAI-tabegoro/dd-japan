@@ -111,7 +111,7 @@ const I18N={
   "home.h1":"Japanese spirits,<br>to tables around the world.","home.lead":"Sake, shochu, whisky, gin, rum and more. We share the many spirits made across Japan, together with the stories of the people who make them.","home.cta":"Find a bottle",
   "home.bh":"The Spirit of Japan","home.bp":"Ingredients shaped by the land, refined brewing and distilling, and drinking cultures that differ from region to region. Discover the depth of Japanese spirits.","home.bcta":"Learn about Japanese spirits",
   "home.f1":"How It's Made","home.f1s":"Production methods and styles","home.f2":"Visit the Makers","home.f2s":"The people and their craft","home.f3":"Food Pairing","home.f3s":"Spirits that bring out the best in food","products.h":"Browse Spirits","products.clear":"Clear filters","products.note":"Items marked SAMPLE are fictional placeholders shown until the first brewery is published.",
-  "brew.h":"Visit the Makers","brew.p":"We feature small, local makers rather than famous national brands.","learn.h":"Know Japanese Spirits",
+  "brew.h":"Visit the Makers","brew.p":"Breweries and distilleries that make drinks rooted in their land, with local rice, water and fruit.","learn.h":"Know Japanese Spirits",
   "imp.h":"Import","imp.p":"Load the data sheets filled in by breweries. Brewery profiles and product pages update instantly.","imp.drop":"Drop Excel files here","imp.drop2":"or click to choose (.xlsx, multiple OK)","imp.how":"Import rules","imp.reset":"Restore sample data",
   "foot":"Please drink responsibly. Must be of legal drinking age."},
  ja:{}
