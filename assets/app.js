@@ -234,6 +234,20 @@ function labelHTML(p,big){
   const face = p.photo ? `<img class="ph" src="img/products/${esc(p.photo)}" alt="${esc(p.name)}" loading="lazy">` : brewOf(p.breweryId)?.sample ? `<div class="paper">${inner}</div>` : NOIMG;
   return `<div class="label" style="--cc:${ccVar(p.type)}">${face}${!big&&st.touched&&hasT(p)?`<span class="match">${T("相性","Match")} ${score(p)}%</span>`:""}${brewOf(p.breweryId)?.sample&&!big?`<span class="sample">SAMPLE</span>`:""}</div>`;
 }
+// 味わいの目盛り：左端・右端に意味（辛口…甘口など）を書き、位置を点で示す（2026/11/19）
+function tWord(a,v){
+  const lc=x=>lang==="en"||lang==="es"?x.charAt(0).toLowerCase()+x.slice(1):x;
+  if(v<=1.5) return T(...a.lo);
+  if(v<=2.5) return TN("やや{n}","Slightly {n}",lc(T(...a.lo)));
+  if(v<3.5) return T("中くらい","Medium");
+  if(v<4.5) return TN("やや{n}","Slightly {n}",lc(T(...a.hi)));
+  return T(...a.hi);
+}
+function tTrack(v){ const x=Math.max(0,Math.min(100,(v-1)/4*100)); return `<span class="trk" aria-hidden="true"><b></b><b></b><b></b><b></b><b></b><i style="left:${x}%"></i></span>`; }
+function tScale(p,big){
+  return `<div class="tscale${big?" big":""}">`+axOf(p.type).map(a=>{ const v=p.t[a.k], nm=T(a.ja,a.en), w=tWord(a,v);
+    return (big?`<span class="nm">${esc(nm)}<em>${esc(w)}</em></span>`:`<span class="nm">${esc(nm)}</span>`)+`<span class="lo">${esc(T(...a.lo))}</span>${tTrack(v)}<span class="hi" title="${esc(nm+"："+w)}">${esc(T(...a.hi))}</span>`; }).join("")+`</div>`;
+}
 function dots(v){ let h=""; for(let i=1;i<=5;i++) h+=`<i class="${i<=Math.round(v)?"on":""}"></i>`; return `<span class="dots">${h}</span>`; }
 function cardHTML(p){
   const b=brewOf(p.breweryId), ty=typeOf(p.type);
@@ -243,7 +257,7 @@ function cardHTML(p){
       <span class="typetag">${esc(T(ty.k,ty.en))}${p.cls?" · "+esc(clsName(p.cls)):""}</span>
       <h3>${esc(pname(p))}</h3>
       <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(prefName(b.pref)):""}</span>
-      ${hasT(p)?`<div class="mini">${axOf(p.type).map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
+      ${hasT(p)?tScale(p,false):`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
       <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}${OTHERML[p.id]?`<span class="moreml">${esc(T("他の容量あり","More sizes"))}</span>`:""}</span><span>${esc(T(b?.pref||"",regionName(b?.pref)))}</span></div>
     </div></button>`;
 }
@@ -279,7 +293,8 @@ function renderMap(){
   g+=lab(L,H-14,"← "+T(...axX.lo),"start")+lab(L+iw,H-14,T(...axX.hi)+" →","end")+lab(X(3),H-14,T(axX.ja,axX.en));
   g+=`<text x="14" y="${TOP+6}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb">${esc(T(...axY.hi))}</text>`;
   g+=`<text x="14" y="${TOP+ih}" fill="var(--mute)" font-size="12" font-family="var(--f-body)" writing-mode="tb" text-anchor="end">${esc(T(...axY.lo))}</text>`;
-  g+=`<text x="${L+6}" y="${TOP+14}" fill="var(--mute)" font-size="12" font-family="var(--f-body)">↑ ${esc(T(axY.ja,axY.en))}</text>`;
+  const cl=(x,y,t,an)=>`<text x="${x}" y="${y}" fill="var(--mute)" font-size="11" text-anchor="${an}" font-family="var(--f-body)" stroke="var(--bg2,#fff)" stroke-width="3" paint-order="stroke">${esc(t)}</text>`, sep=lang==="ja"||lang==="zh"||lang==="zht"?"・":" / ";
+  g+=cl(L+6,TOP+15,T(...axX.lo)+sep+T(...axY.hi),"start")+cl(L+iw-6,TOP+15,T(...axX.hi)+sep+T(...axY.hi),"end")+cl(L+6,TOP+ih-7,T(...axX.lo)+sep+T(...axY.lo),"start")+cl(L+iw-6,TOP+ih-7,T(...axX.hi)+sep+T(...axY.lo),"end");
   // 同じ位置のお酒は、その位置を中心にひまわり状に広げる（枠の外には出さない）
   const cnt={}, seen={}; pool.forEach(p=>{ const k=p.t[kx]+"_"+p.t[ky]; cnt[k]=(cnt[k]||0)+1; });
   const pts=pool.map(p=>{
@@ -520,7 +535,7 @@ function openProduct(id){
     </div>
     <div class="pd-more">
       <div class="two">
-        <div class="radar">${hasT(p)?radar(p)+(p.tEst?`<small class="t-est">${T("※味わいは商品情報からの目安です","Flavor values are estimates based on product information")}</small>`:""):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
+        <div class="radar">${hasT(p)?`<h4 class="tsh">${T("味わい","Flavor profile")}</h4>`+tScale(p,true)+(p.tEst?`<small class="t-est">${T("※味わいは商品情報からの目安です","Flavor values are estimates based on product information")}</small>`:""):`<div class="taste-wait">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}</div>
         <dl class="kv">
           ${p.material?`<dt>${T("原料","Ingredients")}</dt><dd>${esc(D(p,"material"))}</dd>`:""}
           ${(SPEC[p.type]||[]).map(f=>{ const v=specVal(p,f.k); return v?`<dt>${T(f.ja,f.en)}</dt><dd>${esc(v)}</dd>`:""; }).join("")}

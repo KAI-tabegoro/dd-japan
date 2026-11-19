@@ -828,3 +828,24 @@ button.lcard:hover{border-color:var(--gold-hi)}
 .subs{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px}
 .subs[hidden]{display:none}
 .subs .chip small{margin-left:6px;font-size:11px;opacity:.7;font-variant-numeric:tabular-nums}
+
+/* 味わいの目盛り（2026/11/19）：端に意味を書いた横棒＋位置の点 */
+.tscale{display:grid;grid-template-columns:max-content max-content minmax(36px,1fr) max-content;gap:5px 8px;align-items:center;font-size:10.5px;color:var(--mute);margin-top:4px;line-height:1.2}
+.tscale .hi{text-align:right}
+.tscale .nm{color:var(--ink);padding-right:2px}
+.tscale .lo,.tscale .hi{font-size:10px}
+.tscale .trk{position:relative;height:9px;display:flex;justify-content:space-between;align-items:center}
+.tscale .trk::before{content:"";position:absolute;left:0;right:0;top:4px;height:1px;background:var(--line-strong)}
+.tscale .trk b{position:relative;width:1px;height:5px;background:var(--line-strong)}
+.tscale .trk i{position:absolute;top:0;width:9px;height:9px;margin-left:-4.5px;border-radius:50%;background:var(--gold);box-shadow:0 0 0 2px var(--bg2,#fff)}
+.tscale.big{grid-template-columns:max-content max-content minmax(60px,1fr) max-content;gap:12px 10px;font-size:12px;margin:0}
+.tscale.big .nm{color:var(--ink);font-weight:700;font-size:13px;padding-right:6px}
+.tscale.big .nm em{display:block;font-style:normal;font-weight:400;font-size:11.5px;color:var(--gold)}
+.tscale.big .trk{height:12px}
+.tscale.big .trk::before{top:5.5px;height:2px}
+.tscale.big .trk b{height:8px}
+.tscale.big .trk i{width:12px;height:12px;margin-left:-6px}
+.tsh{font-size:13px;margin:0 0 10px;color:var(--ink)}
+@media (min-width:641px){.pd .two{grid-template-columns:minmax(260px,320px) minmax(0,1fr);align-items:start}}
+@media (max-width:640px){.pd .two{align-items:start}}
+@media (max-width:640px){.card .tscale{grid-template-columns:max-content minmax(20px,1fr) max-content;gap:1px 5px}.card .tscale .nm{grid-column:1/-1;margin-top:3px;font-size:10px}.card .tscale .lo,.card .tscale .hi{font-size:9.5px}}
