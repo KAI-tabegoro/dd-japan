@@ -6828,7 +6828,8 @@
       "rice": "Mino Nishiki (Gifu)",
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5294",
@@ -6874,7 +6875,8 @@
      "sxEn": {
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5295",
@@ -6920,7 +6922,8 @@
      "sxEn": {
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5296",
@@ -6968,7 +6971,8 @@
       "rice": "Gohyakumangoku, Oyama Nishiki",
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5297",
@@ -7016,7 +7020,8 @@
       "rice": "Yamada Nishiki",
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5298",
@@ -7064,7 +7069,8 @@
       "rice": "Oyama Nishiki",
       "method": "Nama (unpasteurized), Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     }
+     },
+     "hidden": true
     },
     {
      "mid": "5299",
@@ -7212,8 +7218,7 @@
       "rice": "Mino Nishiki (Gifu)",
       "method": "Genshu (undiluted), Muroka (unfiltered)",
       "water": "Underground water of the Nagara River"
-     },
-     "hidden": true
+     }
     },
     {
      "mid": "5302",
