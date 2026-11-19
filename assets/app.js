@@ -715,7 +715,7 @@ function photoKey(src){ const m=String(src||"").match(/^\/uploads\/maker\/([^/]*
 async function loadPhotos(){ try{ const r=await fetch("img/products/index.json",{cache:"no-cache"}); if(r.ok) PHOTOS=new Set(await r.json()); }catch(_){} }
 function mergeMaster(g,old){
   const ob=old?old.brewery:null, oldP=new Map(((old&&old.products)||[]).filter(p=>p.mid).map(p=>[p.mid,p]));
-  const brewery=ob?{...ob,name:g.brewery.name,short:ob.short||g.brewery.short,srcIds:g.brewery.srcIds}:{...g.brewery,nameEn:"",pref:"",city:"",founded:"",maker:"",catch:"",intro:"",introEn:"",points:[],visit:"",web:"",sample:false};
+  const brewery=ob?{...ob,name:ob.nameFix?ob.name:g.brewery.name,short:ob.short||g.brewery.short,srcIds:g.brewery.srcIds}:{...g.brewery,nameEn:"",pref:"",city:"",founded:"",maker:"",catch:"",intro:"",introEn:"",points:[],visit:"",web:"",sample:false};
   let kept=0;
   const products=g.products.map(p=>{
     const pk=photoKey(p.imgSrc); if(pk&&PHOTOS.has(pk)) p.photo=pk;

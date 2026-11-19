@@ -7969,17 +7969,18 @@
     "srcIds": [
      "537"
     ],
-    "nameEn": "RISE & WIN Brewing Co. (Kamikatsu Kaitakudan)",
+    "nameEn": "Kamikatsu Kaitakudan (Hermitage Valley Sake Brewery)",
     "pref": "徳島県",
     "city": "勝浦郡上勝町",
-    "founded": "",
+    "founded": "2022年",
     "maker": "",
-    "catch": "ゼロ・ウェイストの町のビール",
-    "intro": "ごみの45分別で知られる徳島県上勝町のブルワリーです。廃材の窓枠や空き瓶を使った建物で、剥がしやすいラベルを採用するなど、ビールを通じて社会の課題を問いかけています。捨てられていた柚香の皮を使ったホワイトビールなどが人気です。",
-    "introEn": "A brewery in Kamikatsu, Tokushima, the town famous for sorting waste into 45 categories. Built with salvaged windows and bottles and using easy-to-peel labels, it uses beer to raise social questions; its white ale uses discarded yuko citrus peel.",
+    "catch": "棚田を守るために生まれた、山あいのどぶろく蔵",
+    "intro": "徳島県上勝町の山あいで、古民家レストランに併設した小さな酒蔵「エルミタージュ・バレー酒ブリュワリー」を営んでいます。上勝町の棚田は機械が入れず手間がかかるうえ、高齢化で担い手が減っています。この棚田を守ろうと2021年春から自ら棚田を借りて米作りを始め、2022年に酒蔵を開業しました。かつて農村の暮らしにあったどぶろくを復活させ、原料米は上勝町産100%。山椒や阿波晩茶、ゆこう、すだち、ゆずなど町の素材を合わせたどぶろくやリキュールも造っています。",
+    "introEn": "A small sake brewery, Hermitage Valley Sake Brewery, attached to a restaurant in an old farmhouse in the mountains of Kamikatsu, Tokushima. Kamikatsu's terraced rice paddies cannot be worked by machine, and with an aging population there are fewer people to farm them. To protect them, the company began growing rice on rented terraces in spring 2021 and opened the brewery in 2022, reviving doburoku, the cloudy home-brewed sake of rural Japan. All of its rice is grown in Kamikatsu, and it also makes doburoku and liqueurs with local ingredients such as sansho pepper, Awa bancha tea, yuko, sudachi and yuzu.",
     "points": [
-     "ゼロ・ウェイスト",
-     "廃棄柑橘の皮を活用"
+     "上勝町の棚田の米100%",
+     "農村のどぶろくを復活",
+     "山椒・阿波晩茶など町の素材"
     ],
     "visit": "",
     "web": "https://komeshu.kaitakudan.net/",
@@ -26337,7 +26338,7 @@
   {
    "brewery": {
     "id": "m244",
-    "name": "相良酒造株式会社",
+    "name": "株式会社相良酒造",
     "short": "相良酒造",
     "srcIds": [
      "244"
@@ -26359,7 +26360,8 @@
     "web": "https://asahisakae.com/",
     "sample": false,
     "kana": "サガラシュゾウ",
-    "supType": "メーカー"
+    "supType": "メーカー",
+    "nameFix": true
    },
    "products": [
     {
@@ -37888,7 +37890,7 @@
   {
    "brewery": {
     "id": "m488",
-    "name": "鈴木酒造株式会社",
+    "name": "合名会社 鈴木酒造店",
     "short": "鈴木酒造店",
     "srcIds": [
      "488"
@@ -37910,7 +37912,8 @@
     "web": "https://www.hideyoshi.co.jp/",
     "sample": false,
     "kana": "スズキシュゾウテン",
-    "supType": "メーカー"
+    "supType": "メーカー",
+    "nameFix": true
    },
    "products": [
     {
