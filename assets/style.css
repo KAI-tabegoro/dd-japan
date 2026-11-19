@@ -820,3 +820,11 @@ button.lcard:hover{border-color:var(--gold-hi)}
 
 /* 「料理から探す」は準備中のため非表示（2026/11/18）。公開するときはこの行を消す */
 .foods{display:none}
+
+/* 容量違いの案内（2026/11/19） */
+.card .meta .moreml{margin-left:6px;font-size:10px;color:var(--mute);border:1px solid var(--line);border-radius:3px;padding:0 4px;white-space:nowrap}
+.specs .moreml{display:block;margin-top:2px;font-size:11px;color:var(--mute);line-height:1.4}
+/* 第2カテゴリの絞り込み（2026/11/19） */
+.subs{display:flex;flex-wrap:wrap;gap:8px;margin:-6px 0 18px}
+.subs[hidden]{display:none}
+.subs .chip small{margin-left:6px;font-size:11px;opacity:.7;font-variant-numeric:tabular-nums}

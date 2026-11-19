@@ -176,7 +176,7 @@ const SAMPLE={breweries:[
 ]};
 
 /* ---------- 状態 ---------- */
-const st={type:"",region:"",q:"",sort:"type",ftype:"日本酒",prefs:{},touched:false};
+const st={type:"",sub:"",region:"",q:"",sort:"type",ftype:"日本酒",prefs:{},touched:false};
 const prefOf=type=>st.prefs[type]||(st.prefs[type]=Object.fromEntries(axOf(type).map(a=>[a.k,3])));
 function withIds(db){ db.products.forEach((p,i)=>{ if(!p.id) p.id=p.breweryId+"-"+i; }); return db; }
 const sampleDB=()=>withIds(JSON.parse(JSON.stringify(SAMPLE)));
@@ -184,8 +184,16 @@ let DB=sampleDB();
 let PUB={}, DRAFT={};            // 共有DBの公開分・下書き分（id → 文書）
 let BASE=null;   // サイトに公開中の breweries.json
 const visibleP=ps=>(ps||[]).filter(p=>p&&!p.hidden);
+const OTHERML={};   // 残した商品ID → 非表示にした容量違いの容量（ml の配列）
+function buildOtherMl(docs){
+  for(const k in OTHERML) delete OTHERML[k];
+  docs.forEach(d=>{ const ps=d.products||[]; const own={}; ps.forEach(p=>{ if(p&&!p.hidden) own[p.id]=p.ml; });
+    ps.forEach(p=>{ if(p&&p.hidden&&p.dupOf&&(p.dupOf in own)&&p.ml&&p.ml!==own[p.dupOf]){ const a=OTHERML[p.dupOf]||(OTHERML[p.dupOf]=[]); if(!a.includes(p.ml)) a.push(p.ml); } }); });
+  for(const k in OTHERML) OTHERML[k].sort((a,b)=>a-b);
+}
 function rebuildPublic(){
   const docs=Object.values(PUB).filter(d=>d&&d.brewery);
+  buildOtherMl(docs);
   if(docs.length){ DB={breweries:docs.map(d=>d.brewery),products:docs.flatMap(d=>visibleP(d.products))}; }
   else DB=sampleDB();
 }
@@ -236,7 +244,7 @@ function cardHTML(p){
       <h3>${esc(pname(p))}</h3>
       <span class="brew">${esc(bname(b))}${b&&b.pref?"｜"+esc(prefName(b.pref)):""}</span>
       ${hasT(p)?`<div class="mini">${axOf(p.type).map(a=>`<span>${T(a.ja,a.en)}</span>${dots(p.t[a.k])}`).join("")}</div>`:`<div class="mini pending">${T("味わいの情報は準備中です","Tasting notes coming soon")}</div>`}
-      <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}</span><span>${esc(T(b?.pref||"",regionName(b?.pref)))}</span></div>
+      <div class="meta"><span>${esc(abvStr(p))}${p.ml?(abvStr(p)?" / ":"")+p.ml+"ml":""}${OTHERML[p.id]?`<span class="moreml">${esc(T("他の容量あり","More sizes"))}</span>`:""}</span><span>${esc(T(b?.pref||"",regionName(b?.pref)))}</span></div>
     </div></button>`;
 }
 
@@ -323,11 +331,28 @@ function renderFoods(){
   const terms=["刺身","焼き鳥","チーズ","豚","天ぷら","燻製","アイス"];
   $("#foods").innerHTML=`<span>${T("料理から探す","By food")}</span>`+F.map((f,i)=>`<button class="chip sm" type="button" data-food="${esc(terms[i])}" aria-pressed="${st.q===terms[i]}">${esc(T(f[0],f[1]))}</button>`).join("");
 }
-function filtered(){
+/* ---------- 第2カテゴリ（種類ごとの小分類。2026/11/19） ---------- */
+// m：分類（cls）がこれに当たれば該当。n：分類が空のとき商品名にこの語があれば該当。最後の1つは「その他」（どれにも当たらないもの）
+const SUBCATS={
+ "日本酒":[{k:"純米大吟醸",en:"Junmai Daiginjo",m:["純米大吟醸"]},{k:"純米吟醸",en:"Junmai Ginjo",m:["純米吟醸"]},{k:"特別純米",en:"Tokubetsu Junmai",m:["特別純米"]},{k:"純米",en:"Junmai",m:["純米","山廃純米"]},{k:"大吟醸",en:"Daiginjo",m:["大吟醸"]},{k:"吟醸",en:"Ginjo",m:["吟醸"]},{k:"本醸造",en:"Honjozo",m:["本醸造","特別本醸造"]},{k:"スパークリング",en:"Sparkling",m:["スパークリング"]},{k:"にごり",en:"Nigori (cloudy)",m:["にごり"],n:["にごり"]},{k:"古酒",en:"Koshu (aged)",m:["古酒"]},{k:"普通酒・その他",en:"Futsushu & others"}],
+ "焼酎":[{k:"芋焼酎",en:"Imo (sweet potato)",m:["芋焼酎","芋"]},{k:"麦焼酎",en:"Mugi (barley)",m:["麦焼酎","麦"]},{k:"米焼酎",en:"Kome (rice)",m:["米焼酎","米","玄米"]},{k:"黒糖焼酎",en:"Kokuto (brown sugar)",m:["黒糖焼酎","黒糖"]},{k:"粕取焼酎",en:"Kasutori (sake lees)",m:["酒粕"]},{k:"その他の原料",en:"Other ingredients"}],
+ "泡盛":[{k:"古酒",en:"Kusu (aged)",n:["古酒"]},{k:"一般酒",en:"Ippanshu (young)"}],
+ "スピリッツ":[{k:"ジン",en:"Gin",m:["ジン","クラフトジン"]},{k:"ラム",en:"Rum",m:["ラム","ホワイトラム","ダークラム"]},{k:"ウォッカ",en:"Vodka",m:["ウォッカ"]},{k:"ブランデー・グラッパ",en:"Brandy & Grappa"}],
+ "ワイン":[{k:"赤",en:"Red",m:["赤"]},{k:"白",en:"White",m:["白"]},{k:"その他",en:"Others"}],
+ "リキュール・その他":[{k:"梅酒",en:"Umeshu (plum)",m:["梅酒","スパークリング梅酒"]},{k:"柑橘",en:"Citrus fruits",m:["ゆず","柚子酒","みかん","レモン","じゃばら","かぼす","へべす","たんかん","文旦","河内晩柑"]},{k:"果実",en:"Fruit",m:["ぶどう","もも","いちご","りんご","ブルーベリー","マンゴー","山桃","すもも"]},{k:"茶・コーヒー",en:"Tea & coffee",m:["紅茶","ほうじ茶","珈琲","抹茶","緑茶"]},{k:"ヨーグルト・ミルク",en:"Yogurt & milk",m:["ヨーグルト","ソフトクリーム","乳酸菌","牛乳"]},{k:"チューハイ・スパークリング",en:"Chu-hi & sparkling",m:["チューハイ","スパークリング"]},{k:"どぶろく",en:"Doburoku (unfiltered)",m:["どぶろく"]},{k:"その他",en:"Others"}]
+};
+function subOf(p){
+  const g=SUBCATS[p.type]; if(!g) return "";
+  const c=p.cls||"";
+  for(const x of g){ if(x.m&&c&&x.m.includes(c)) return x.k; if(x.n&&(!c||!x.m)&&x.n.some(w=>(p.name||"").includes(w))) return x.k; }
+  return g[g.length-1].k;
+}
+function filtered(ignoreSub){
   const q=st.q.trim().toLowerCase();
   let list=DB.products.filter(p=>{
     const b=brewOf(p.breweryId);
     if(st.type&&p.type!==st.type) return false;
+    if(st.sub&&!ignoreSub&&subOf(p)!==st.sub) return false;
     if(st.region&&regionOf(b?.pref)!==st.region) return false;
     if(q){ const hay=[p.name,p.nameEn,p.nameZh,p.cls,p.material,p.food,p.desc,(p.tags||[]).join(" "),b?.name,bshort(b),b?.nameEn,b?.pref,PREF_EN[prefKey(b?.pref)]].join(" ").normalize("NFKC").toLowerCase(); if(!hay.includes(q.normalize("NFKC"))) return false; }
     return true;
@@ -346,10 +371,24 @@ function renderToolbar(){
   $("#sort").innerHTML=sorts.map(s=>`<option value="${s[0]}"${st.sort===s[0]?" selected":""}>${T(s[1],s[2])}</option>`).join("");
 }
 let lastKey="";
+function renderSubs(){
+  const el=document.getElementById("subs"); if(!el) return;
+  const g=st.type&&SUBCATS[st.type];
+  if(!g){ el.hidden=true; el.innerHTML=""; st.sub=""; return; }
+  const cnt={}; filtered(true).forEach(p=>{ const k=subOf(p); cnt[k]=(cnt[k]||0)+1; });
+  const use=g.filter(x=>cnt[x.k]);
+  if(use.length<2&&!st.sub){ el.hidden=true; el.innerHTML=""; return; }
+  const all=Object.values(cnt).reduce((a,b)=>a+b,0);
+  el.hidden=false;
+  el.innerHTML=`<button class="chip sm" type="button" data-sub="" aria-pressed="${!st.sub}">${esc(T("すべて","All"))}<small>${all}</small></button>`+
+    g.filter(x=>cnt[x.k]||st.sub===x.k).map(x=>`<button class="chip sm" type="button" data-sub="${esc(x.k)}" aria-pressed="${st.sub===x.k}">${esc(T(x.k,x.en))}<small>${cnt[x.k]||0}</small></button>`).join("");
+}
 function renderProducts(){
+  if(st.sub&&!(SUBCATS[st.type]||[]).some(x=>x.k===st.sub)) st.sub="";
+  renderSubs();
   const list=filtered();
-  const k=[st.type,st.region,st.q,st.sort].join("|"); if(k!==lastKey){ st.limit=60; lastKey=k; }
-  const parts=[]; if(st.type) parts.push(T(st.type,typeOf(st.type).en)); if(st.region) parts.push(T(st.region,REGIONS.find(r=>r.k===st.region).en));
+  const k=[st.type,st.sub,st.region,st.q,st.sort].join("|"); if(k!==lastKey){ st.limit=60; lastKey=k; }
+  const parts=[]; if(st.type) parts.push(T(st.type,typeOf(st.type).en)); if(st.sub){ const x=SUBCATS[st.type].find(y=>y.k===st.sub); parts.push(T(x.k,x.en)); } if(st.region) parts.push(T(st.region,REGIONS.find(r=>r.k===st.region).en));
   $("#count").textContent=(parts.length?parts.join("・")+"　":"")+list.length+T(" 銘柄"," labels");
   const shown=list.slice(0,st.limit||60);
   const mb=document.getElementById("moreBtn");
@@ -474,7 +513,7 @@ function openProduct(id){
       <h2>${esc(p.name)}</h2>${(()=>{ const s=lang==="ja"?p.nameEn:D(p,"name"); return s&&s!==p.name?`<div class="en-name">${esc(s)}</div>`:""; })()}
       <div class="specs">
         <div><small>${T("アルコール度数","ABV")}</small>${esc(abvStr(p))||"—"}</div>
-        <div><small>${T("容量","Volume")}</small>${p.ml?p.ml+"ml":"—"}</div>
+        <div><small>${T("容量","Volume")}</small>${p.ml?p.ml+"ml":"—"}${OTHERML[p.id]?`<span class="moreml">${esc(TN("ほかに {n}","Also in {n}",OTHERML[p.id].map(v=>v+"ml").join(" / ")))}</span>`:""}</div>
         ${hasT(p)?`<div><small>${T("味わい診断の相性","Your match")}</small>${score(p)}%</div>`:""}
       </div>
       ${D(p,"desc")?`<p class="desc">${esc(D(p,"desc"))}</p>`:""}
@@ -655,7 +694,7 @@ function parseMaster(wb){
   return {groups:[...groups.values()],stats,unknownSub:[...unknownSub]};
 }
 // 既にある内容（酒蔵さんが入力した味わい・紹介文など）を残して、取引データの項目だけを更新する
-const KEEP_P=["sx","sxEn","sxSrc","t","tEst","tags","serve","food","buyUrl","photo","hidden","ord","typeFix","clsFix"];
+const KEEP_P=["dupOf","sx","sxEn","sxSrc","t","tEst","tags","serve","food","buyUrl","photo","hidden","ord","typeFix","clsFix"];
 let PHOTOS=new Set();
 function photoKey(src){ const m=String(src||"").match(/^\/uploads\/maker\/([^/]*)\/([^/]+)$/); return m?`${m[1]||"_root"}/${m[2].replace(/\.[^.]+$/,"")}.webp`:""; }
 async function loadPhotos(){ try{ const r=await fetch("img/products/index.json",{cache:"no-cache"}); if(r.ok) PHOTOS=new Set(await r.json()); }catch(_){} }
@@ -917,6 +956,7 @@ async function loadData(){
 function applyQuery(){
   const q=new URLSearchParams(location.search);
   if(q.get("type")) st.type=q.get("type");
+  if(q.get("sub")) st.sub=q.get("sub");
   if(q.get("region")) st.region=q.get("region");
   if(q.get("q")) st.q=q.get("q");
   const qi=document.getElementById("q"); if(qi) qi.value=st.q;
@@ -928,6 +968,7 @@ document.addEventListener("click",e=>{
   const r=e.target.closest("[data-region]"); if(r){ e.preventDefault(); location.href="products.html?region="+encodeURIComponent(r.dataset.region); return; }
   const pr=e.target.closest("[data-preset]"); if(pr){ Object.assign(prefOf(st.ftype),TPRESETS[st.ftype][+pr.dataset.preset].v); st.touched=true; renderFinderControls(); renderMap(); renderProducts(); return; }
   const ft=e.target.closest("[data-ft]"); if(ft){ st.ftype=ft.dataset.ft; st.touched=false; renderFinderControls(); renderMap(); return; }
+  const sb=e.target.closest("[data-sub]"); if(sb){ st.sub=sb.dataset.sub; renderProducts(); return; }
   const fd=e.target.closest("[data-food]"); if(fd){ st.q=st.q===fd.dataset.food?"":fd.dataset.food; $("#q").value=st.q; renderProducts(); return; }
   if(e.target.closest("#pairBtn")){ location.href="products.html#foods"; return; }
   const p=e.target.closest("[data-p]"); if(p){ openProduct(p.dataset.p); return; }
@@ -937,11 +978,11 @@ document.addEventListener("input",e=>{
   if(e.target.dataset.ax){ prefOf(st.ftype)[e.target.dataset.ax]=+e.target.value; st.touched=true; renderMap(); renderProducts(); }
   if(e.target.id==="q"){ st.q=e.target.value; renderProducts(); }
 });
-$("#fType").addEventListener("change",e=>{ st.type=e.target.value; renderCats(); renderProducts(); });
+$("#fType").addEventListener("change",e=>{ st.type=e.target.value; st.sub=""; renderCats(); renderProducts(); });
 { const mb=document.getElementById("moreBtn"); if(mb) mb.addEventListener("click",()=>{ st.limit=(st.limit||60)+60; renderProducts(); }); }
 $("#fRegion").addEventListener("change",e=>{ st.region=e.target.value; renderRegions(); renderProducts(); });
 $("#sort").addEventListener("change",e=>{ st.sort=e.target.value; renderProducts(); });
-$("#clear").addEventListener("click",()=>{ st.type="";st.region="";st.q=""; $("#q").value=""; renderCats(); renderRegions(); renderToolbar(); renderProducts(); });
+$("#clear").addEventListener("click",()=>{ st.type="";st.sub="";st.region="";st.q=""; $("#q").value=""; renderCats(); renderRegions(); renderToolbar(); renderProducts(); });
 LANGS.forEach(l=>{ const b=document.getElementById("lang-"+l); if(b) b.addEventListener("click",()=>{ lang=l; renderAll(); document.activeElement&&document.activeElement.blur(); }); });
 { const mb=document.getElementById("menuBtn"), dr=document.getElementById("drawer");
   const close=()=>{ dr.hidden=true; mb.setAttribute("aria-expanded","false"); };
